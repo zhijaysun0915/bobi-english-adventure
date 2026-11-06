@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>波波英語大冒險 (小學四年級) - Duolingo 闖關學習樂園</title>
+  <title>波波英語大冒險 (小學四年級) - 熱血棒球・噴射飛機・撞球神童 Duolingo 學習樂園</title>
   <style>
     :root {
       --primary: #58cc02;
@@ -20,11 +20,15 @@
       --gold-dark: #e5b400;
       --teal: #00cd9c;
       --teal-dark: #00a47d;
-      --bg-page: #f7f9fa;
+      --baseball-red: #e63946;
+      --aviation-blue: #023e8a;
+      --pool-green: #2a9d8f;
+      --dino-orange: #f77f00;
+      --bg-page: #f4f7fb;
       --card-bg: #ffffff;
-      --text-main: #3c3c3c;
-      --text-sub: #777777;
-      --border-color: #e5e5e5;
+      --text-main: #2b3a4a;
+      --text-sub: #6c7a89;
+      --border-color: #e2e8f0;
       --correct-bg: #d7ffb8;
       --correct-border: #58a700;
       --wrong-bg: #ffdfe0;
@@ -56,173 +60,324 @@
       top: 0;
       z-index: 100;
       background: #ffffff;
-      border-bottom: 2px solid var(--border-color);
+      border-bottom: 3px solid #e2e8f0;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 10px 18px;
-      max-width: 900px;
+      max-width: 960px;
       margin: 0 auto;
       width: 100%;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
     }
 
     .brand {
       display: flex;
       align-items: center;
       gap: 10px;
-      font-weight: 800;
+      font-weight: 900;
       font-size: 1.15rem;
       color: var(--primary-dark);
       cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+
+    .brand:hover {
+      transform: scale(1.03);
     }
 
     .brand .logo-icon {
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
       background: #e5f9d7;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
+      border: 2px solid #58cc02;
+      animation: gentleWiggle 3s infinite ease-in-out;
+    }
+
+    @keyframes gentleWiggle {
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(-6deg); }
+      75% { transform: rotate(6deg); }
     }
 
     .stats-group {
       display: flex;
       align-items: center;
-      gap: 12px;
-      font-weight: 700;
-      font-size: 0.95rem;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 0.92rem;
     }
 
     .stat-badge {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
       padding: 6px 12px;
-      border-radius: 12px;
-      background: #f4f5f6;
-      transition: transform 0.15s ease;
+      border-radius: 14px;
+      background: #f1f5f9;
+      border: 1.5px solid #e2e8f0;
+      transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
     .stat-badge:hover {
-      transform: scale(1.05);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.06);
     }
 
-    .stat-badge.streak { color: var(--warning-dark); }
-    .stat-badge.gems { color: var(--secondary-dark); }
-    .stat-badge.hearts { color: var(--danger-dark); }
-    .stat-badge.action-icon-btn { cursor: pointer; color: #555; }
+    .stat-badge.streak { color: var(--warning-dark); background: #fff7ed; border-color: #ffedd5; }
+    .stat-badge.gems { color: var(--secondary-dark); background: #f0f9ff; border-color: #e0f2fe; }
+    .stat-badge.hearts { color: var(--danger-dark); background: #fef2f2; border-color: #fee2e2; }
+    .stat-badge.action-icon-btn { cursor: pointer; color: #475569; }
 
-    /* 主容器 */
+    /* 快速連續答對 (Combo) 浮動提示 */
+    .combo-banner {
+      position: fixed;
+      top: 68px;
+      left: 50%;
+      transform: translateX(-50%) scale(0);
+      background: linear-gradient(135deg, #ff9600, #ff4b4b);
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 900;
+      padding: 8px 24px;
+      border-radius: 30px;
+      box-shadow: 0 8px 20px rgba(255, 75, 75, 0.35);
+      z-index: 120;
+      pointer-events: none;
+      transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .combo-banner.show {
+      transform: translateX(-50%) scale(1);
+    }
+
+    /* 主視區容器 */
     main.app-viewport {
       flex: 1;
-      max-width: 820px;
+      max-width: 860px;
       width: 100%;
       margin: 0 auto;
-      padding: 18px 16px 80px;
+      padding: 18px 16px 90px;
       position: relative;
     }
 
-    /* 視圖切換 */
+    /* 視圖切換動畫 */
     .view-screen {
       display: none;
-      animation: fadeIn 0.25s ease-out;
+      animation: popView 0.25s cubic-bezier(0.2, 0.9, 0.3, 1);
     }
 
     .view-screen.active {
       display: block;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes popView {
+      from { opacity: 0; transform: translateY(12px) scale(0.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
     }
 
     /* =========================================================
-       地圖視圖 (MAP VIEW)
+       1. 地圖視圖 (MAP VIEW)
     ========================================================= */
+    .map-summary-box {
+      background: #fff;
+      border: 3px solid #e2e8f0;
+      border-radius: 24px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mascot-avatar-small {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      cursor: pointer;
+    }
+
+    /* 飛行員貓頭鷹波波 SVG 動畫 */
+    .mascot-svg-wrap {
+      width: 76px;
+      height: 76px;
+      flex-shrink: 0;
+      position: relative;
+      transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .mascot-svg-wrap:hover {
+      transform: scale(1.1) rotate(-4deg);
+    }
+
+    .mascot-svg-wrap:active {
+      transform: scale(0.95);
+    }
+
+    .mascot-svg {
+      width: 100%;
+      height: 100%;
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.12));
+    }
+
+    .speech-bubble {
+      background: #f0f7ff;
+      border: 2px solid #bae6fd;
+      border-radius: 18px;
+      padding: 10px 16px;
+      font-size: 0.95rem;
+      color: #0369a1;
+      font-weight: 700;
+      position: relative;
+      max-width: 440px;
+      line-height: 1.45;
+    }
+
+    .speech-bubble::before {
+      content: "";
+      position: absolute;
+      left: -9px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-width: 7px 9px 7px 0;
+      border-style: solid;
+      border-color: transparent #bae6fd transparent transparent;
+    }
+
+    .speech-bubble .click-hint {
+      display: block;
+      font-size: 0.75rem;
+      color: #0ea5e9;
+      font-weight: 600;
+      margin-top: 3px;
+    }
+
+    .practice-btn {
+      background: #fff;
+      border: 2.5px solid var(--secondary);
+      color: var(--secondary-dark);
+      padding: 10px 18px;
+      border-radius: 16px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 0 var(--secondary);
+      transition: all 0.1s ease;
+      white-space: nowrap;
+    }
+
+    .practice-btn:active {
+      transform: translateY(3px);
+      box-shadow: 0 1px 0 var(--secondary);
+    }
+
+    /* 單元卡片樣式 */
     .unit-card {
       background: #fff;
-      border: 2px solid var(--border-color);
-      border-radius: 20px;
-      margin-bottom: 30px;
+      border: 3px solid #e2e8f0;
+      border-radius: 26px;
+      margin-bottom: 34px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+      transition: transform 0.2s ease;
     }
 
     .unit-banner {
-      padding: 18px 24px;
+      padding: 20px 24px;
       color: #fff;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
     }
 
-    .unit-banner.u1 { background: linear-gradient(135deg, #58cc02, #3eb100); }
-    .unit-banner.u2 { background: linear-gradient(135deg, #1cb0f6, #0e96d9); }
-    .unit-banner.u3 { background: linear-gradient(135deg, #ff9600, #e07f00); }
-    .unit-banner.u4 { background: linear-gradient(135deg, #ce82ff, #a855f7); }
-    .unit-banner.u5 { background: linear-gradient(135deg, #00cd9c, #00a47d); }
-    .unit-banner.u6 { background: linear-gradient(135deg, #ff4b4b, #df2a2a); }
-    .unit-banner.u7 { background: linear-gradient(135deg, #ffc800, #d9a000); color: #3c3c3c; }
+    /* 酷炫各主題專屬色系漸層 */
+    .unit-banner.u-school { background: linear-gradient(135deg, #10b981, #059669); }
+    .unit-banner.u-plane { background: linear-gradient(135deg, #0284c7, #0369a1); }
+    .unit-banner.u-baseball { background: linear-gradient(135deg, #ef4444, #dc2626); }
+    .unit-banner.u-pool { background: linear-gradient(135deg, #0d9488, #0f766e); }
+    .unit-banner.u-dino { background: linear-gradient(135deg, #f97316, #ea580c); }
+    .unit-banner.u-supercar { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+    .unit-banner.u-safari { background: linear-gradient(135deg, #f59e0b, #d97706); }
+    .unit-banner.u-food { background: linear-gradient(135deg, #ec4899, #db2777); }
+    .unit-banner.u-space { background: linear-gradient(135deg, #6366f1, #4f46e5); }
+    .unit-banner.u-hero { background: linear-gradient(135deg, #14b8a6, #0d9488); }
+    .unit-banner.u-boss { background: linear-gradient(135deg, #eab308, #ca8a04); color: #1e293b; }
 
     .unit-banner-left h2 {
-      font-size: 1.25rem;
-      font-weight: 800;
+      font-size: 1.35rem;
+      font-weight: 900;
       margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .unit-banner-left p {
-      font-size: 0.9rem;
-      opacity: 0.92;
-      font-weight: 500;
+      font-size: 0.92rem;
+      opacity: 0.95;
+      font-weight: 600;
     }
 
     .unit-banner-actions {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
     }
 
     .wordlist-btn {
-      background: rgba(255, 255, 255, 0.25);
-      border: 1.5px solid rgba(255, 255, 255, 0.6);
+      background: rgba(255, 255, 255, 0.28);
+      border: 2px solid rgba(255, 255, 255, 0.7);
       color: #fff;
-      padding: 6px 14px;
-      border-radius: 12px;
-      font-size: 0.85rem;
-      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 14px;
+      font-size: 0.88rem;
+      font-weight: 800;
       cursor: pointer;
-      backdrop-filter: blur(4px);
+      backdrop-filter: blur(6px);
       transition: all 0.15s ease;
       display: flex;
       align-items: center;
-      gap: 4px;
+      gap: 5px;
     }
 
-    .unit-banner.u7 .wordlist-btn {
-      color: #3c3c3c;
-      border-color: rgba(60, 60, 60, 0.4);
-      background: rgba(255, 255, 255, 0.5);
+    .unit-banner.u-boss .wordlist-btn {
+      color: #1e293b;
+      border-color: rgba(30, 41, 59, 0.4);
+      background: rgba(255, 255, 255, 0.6);
     }
 
     .wordlist-btn:hover {
-      background: rgba(255, 255, 255, 0.4);
-      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.45);
+      transform: scale(1.06);
     }
 
     .unit-trophy-badge {
-      font-size: 2.2rem;
+      font-size: 2.4rem;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
     }
 
-    /* 節點路徑地圖 */
+    /* 關卡蛇形曲折節點路徑 */
     .nodes-path {
-      padding: 30px 10px;
+      padding: 34px 10px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 24px;
+      gap: 28px;
       background: #fafbfc;
       position: relative;
     }
@@ -235,39 +390,39 @@
       cursor: pointer;
     }
 
-    /* 波浪擺動偏移效果 (Duolingo 經典蛇形闖關路徑) */
-    .level-node-wrapper:nth-child(2) { transform: translateX(-45px); }
-    .level-node-wrapper:nth-child(3) { transform: translateX(45px); }
-    .level-node-wrapper:nth-child(4) { transform: translateX(-35px); }
-    .level-node-wrapper:nth-child(5) { transform: translateX(35px); }
+    /* 趣味曲折偏移效果 */
+    .level-node-wrapper:nth-child(2) { transform: translateX(-48px); }
+    .level-node-wrapper:nth-child(3) { transform: translateX(48px); }
+    .level-node-wrapper:nth-child(4) { transform: translateX(-38px); }
+    .level-node-wrapper:nth-child(5) { transform: translateX(38px); }
 
     .level-node-circle {
-      width: 74px;
-      height: 70px;
+      width: 78px;
+      height: 74px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.85rem;
+      font-size: 2rem;
       position: relative;
-      box-shadow: 0 6px 0 rgba(0,0,0,0.18);
-      transition: all 0.15s ease;
-      background: #e5e5e5;
-      color: #999;
-      border: 3px solid #d0d0d0;
+      box-shadow: 0 7px 0 rgba(0,0,0,0.18);
+      transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      background: #e2e8f0;
+      color: #94a3b8;
+      border: 3.5px solid #cbd5e1;
     }
 
     .level-node-circle:active {
-      transform: translateY(4px);
+      transform: translateY(5px);
       box-shadow: 0 2px 0 rgba(0,0,0,0.18);
     }
 
-    /* 狀態色彩 */
+    /* 狀態色彩與動畫 */
     .level-node-wrapper.active .level-node-circle {
       background: var(--primary);
       border-color: #46a302;
       color: #fff;
-      box-shadow: 0 6px 0 var(--primary-dark);
+      box-shadow: 0 7px 0 var(--primary-dark);
       animation: pulseNode 2s infinite ease-in-out;
     }
 
@@ -275,114 +430,45 @@
       background: var(--gold);
       border-color: var(--gold-dark);
       color: #fff;
-      box-shadow: 0 6px 0 var(--gold-dark);
+      box-shadow: 0 7px 0 var(--gold-dark);
     }
 
     .level-node-wrapper.locked .level-node-circle {
-      background: #e5e5e5;
-      border-color: #ccc;
-      color: #a0a0a0;
-      box-shadow: 0 5px 0 #bbb;
+      background: #e2e8f0;
+      border-color: #cbd5e1;
+      color: #94a3b8;
+      box-shadow: 0 6px 0 #94a3b8;
       cursor: not-allowed;
     }
 
     @keyframes pulseNode {
       0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.08); }
+      50% { transform: scale(1.09); }
     }
 
     .level-node-label {
-      margin-top: 8px;
-      font-size: 0.85rem;
-      font-weight: 700;
+      margin-top: 10px;
+      font-size: 0.9rem;
+      font-weight: 800;
       color: var(--text-main);
       background: #fff;
-      padding: 3px 12px;
-      border-radius: 12px;
-      border: 1px solid var(--border-color);
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      padding: 4px 14px;
+      border-radius: 14px;
+      border: 2px solid #e2e8f0;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.04);
       white-space: nowrap;
     }
 
     .node-star-row {
       position: absolute;
-      top: -10px;
+      top: -12px;
       display: flex;
-      gap: 2px;
-      font-size: 0.85rem;
-    }
-
-    /* 地圖側邊快捷懸浮卡 */
-    .map-summary-box {
-      background: #fff;
-      border: 2px solid var(--border-color);
-      border-radius: 16px;
-      padding: 16px 20px;
-      margin-bottom: 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
-    }
-
-    .mascot-avatar-small {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .mascot-svg {
-      width: 62px;
-      height: 62px;
-      flex-shrink: 0;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-    }
-
-    .speech-bubble {
-      background: #f1f7ff;
-      border: 2px solid #b8daff;
-      border-radius: 14px;
-      padding: 10px 14px;
-      font-size: 0.9rem;
-      color: #0b5394;
-      font-weight: 600;
-      position: relative;
-    }
-
-    .speech-bubble::before {
-      content: "";
-      position: absolute;
-      left: -8px;
-      top: 50%;
-      transform: translateY(-50%);
-      border-width: 6px 8px 6px 0;
-      border-style: solid;
-      border-color: transparent #b8daff transparent transparent;
-    }
-
-    .practice-btn {
-      background: #fff;
-      border: 2px solid var(--secondary);
-      color: var(--secondary-dark);
-      padding: 8px 16px;
-      border-radius: 14px;
-      font-weight: 700;
-      font-size: 0.9rem;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      box-shadow: 0 3px 0 var(--secondary);
-      transition: all 0.1s ease;
-    }
-
-    .practice-btn:active {
-      transform: translateY(2px);
-      box-shadow: 0 1px 0 var(--secondary);
+      gap: 3px;
+      font-size: 0.95rem;
     }
 
     /* =========================================================
-       測驗關卡視圖 (QUIZ / LESSON VIEW)
+       2. 測驗關卡視圖 (QUIZ / LESSON VIEW)
     ========================================================= */
     .lesson-header {
       display: flex;
@@ -394,22 +480,23 @@
     .close-lesson-btn {
       background: none;
       border: none;
-      font-size: 1.6rem;
-      color: #999;
+      font-size: 1.8rem;
+      color: #94a3b8;
       cursor: pointer;
       padding: 4px;
       line-height: 1;
+      transition: color 0.15s ease;
     }
 
     .close-lesson-btn:hover {
-      color: #444;
+      color: #334155;
     }
 
     .progress-track {
       flex: 1;
-      height: 16px;
-      background: #e5e5e5;
-      border-radius: 10px;
+      height: 18px;
+      background: #e2e8f0;
+      border-radius: 12px;
       overflow: hidden;
       position: relative;
     }
@@ -417,7 +504,7 @@
     .progress-fill {
       height: 100%;
       background: linear-gradient(90deg, #58cc02, #7ee02a);
-      border-radius: 10px;
+      border-radius: 12px;
       width: 0%;
       transition: width 0.3s ease;
     }
@@ -425,20 +512,21 @@
     .lesson-heart-badge {
       display: flex;
       align-items: center;
-      gap: 4px;
+      gap: 5px;
       color: var(--danger-dark);
-      font-weight: 800;
-      font-size: 1.15rem;
+      font-weight: 900;
+      font-size: 1.25rem;
     }
 
     /* 題型主體容器 */
     .question-container {
       background: #fff;
-      border: 2px solid var(--border-color);
-      border-radius: 20px;
-      padding: 24px;
-      margin-bottom: 120px; /* 給底部操作條留足夠空間 */
-      box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+      border: 3px solid #e2e8f0;
+      border-radius: 26px;
+      padding: 26px;
+      margin-bottom: 125px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+      position: relative;
     }
 
     .question-prompt {
@@ -449,56 +537,57 @@
     }
 
     .prompt-content h3 {
-      font-size: 1.35rem;
-      font-weight: 800;
+      font-size: 1.4rem;
+      font-weight: 900;
       color: var(--text-main);
       margin-bottom: 6px;
       line-height: 1.4;
     }
 
     .prompt-content p.instruction {
-      font-size: 0.95rem;
+      font-size: 0.98rem;
       color: var(--text-sub);
-      font-weight: 600;
+      font-weight: 700;
     }
 
     /* 朗讀發音按鈕 */
     .audio-speaker-btn {
-      background: #eaf6ff;
-      border: 2px solid #bde3ff;
-      color: var(--secondary-dark);
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
+      background: #e0f2fe;
+      border: 2px solid #7dd3fc;
+      color: #0284c7;
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      font-size: 1.3rem;
-      box-shadow: 0 3px 0 #95d2fc;
+      font-size: 1.4rem;
+      box-shadow: 0 4px 0 #38bdf8;
       transition: all 0.1s ease;
       flex-shrink: 0;
     }
 
     .audio-speaker-btn:active {
-      transform: translateY(2px);
-      box-shadow: 0 1px 0 #95d2fc;
+      transform: translateY(3px);
+      box-shadow: 0 1px 0 #38bdf8;
     }
 
     .audio-speaker-btn.big {
-      width: 76px;
-      height: 76px;
-      border-radius: 22px;
-      font-size: 2.2rem;
-      margin: 12px auto;
+      width: 82px;
+      height: 82px;
+      border-radius: 26px;
+      font-size: 2.4rem;
+      margin: 14px auto;
       display: flex;
+      box-shadow: 0 6px 0 #38bdf8;
     }
 
     /* 題型 1: 圖文單選卡片網格 */
     .options-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
+      gap: 15px;
     }
 
     @media (max-width: 520px) {
@@ -509,48 +598,50 @@
 
     .option-card {
       background: #fff;
-      border: 2px solid var(--border-color);
-      border-radius: 16px;
-      padding: 16px;
+      border: 2.5px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 18px 14px;
       cursor: pointer;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       gap: 8px;
-      box-shadow: 0 4px 0 #e0e0e0;
-      transition: all 0.1s ease;
+      box-shadow: 0 5px 0 #cbd5e1;
+      transition: all 0.12s ease;
     }
 
     .option-card:hover {
-      background: #f7fbff;
-      border-color: #84d8ff;
+      background: #f8fafc;
+      border-color: #93c5fd;
+      transform: translateY(-2px);
     }
 
     .option-card:active {
-      transform: translateY(3px);
-      box-shadow: 0 1px 0 #e0e0e0;
+      transform: translateY(4px);
+      box-shadow: 0 1px 0 #cbd5e1;
     }
 
     .option-card.selected {
-      background: #ddf4ff;
+      background: #e0f2fe;
       border-color: var(--secondary);
-      box-shadow: 0 4px 0 var(--secondary-dark);
+      box-shadow: 0 5px 0 var(--secondary-dark);
     }
 
     .option-card .card-emoji {
-      font-size: 2.4rem;
+      font-size: 2.6rem;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
     }
 
     .option-card .card-en {
-      font-size: 1.15rem;
-      font-weight: 700;
+      font-size: 1.25rem;
+      font-weight: 800;
       color: var(--text-main);
     }
 
     .option-card .card-zh {
-      font-size: 0.9rem;
-      font-weight: 500;
+      font-size: 0.95rem;
+      font-weight: 600;
       color: var(--text-sub);
     }
 
@@ -562,15 +653,15 @@
     }
 
     .scramble-dropzone {
-      min-height: 80px;
-      border-bottom: 2.5px solid #d0d0d0;
-      padding: 12px 6px;
+      min-height: 84px;
+      border-bottom: 3px solid #cbd5e1;
+      padding: 14px 10px;
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       align-items: center;
-      background: #fafafa;
-      border-radius: 12px 12px 0 0;
+      background: #f8fafc;
+      border-radius: 16px 16px 0 0;
     }
 
     .word-tile-pool {
@@ -583,13 +674,13 @@
 
     .word-tile {
       background: #fff;
-      border: 2px solid var(--border-color);
-      border-radius: 14px;
-      padding: 10px 18px;
-      font-size: 1.1rem;
-      font-weight: 700;
+      border: 2.5px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 12px 20px;
+      font-size: 1.15rem;
+      font-weight: 800;
       color: var(--text-main);
-      box-shadow: 0 4px 0 #d8d8d8;
+      box-shadow: 0 5px 0 #cbd5e1;
       cursor: pointer;
       transition: all 0.12s ease;
       display: inline-flex;
@@ -598,17 +689,18 @@
     }
 
     .word-tile:hover {
-      border-color: #b0c4de;
+      border-color: #94a3b8;
+      transform: translateY(-2px);
     }
 
     .word-tile:active {
-      transform: translateY(3px);
-      box-shadow: 0 1px 0 #d8d8d8;
+      transform: translateY(4px);
+      box-shadow: 0 1px 0 #cbd5e1;
     }
 
     .word-tile.used {
-      background: #e8e8e8;
-      border-color: #d0d0d0;
+      background: #e2e8f0;
+      border-color: #cbd5e1;
       color: transparent;
       box-shadow: none;
       cursor: default;
@@ -619,60 +711,64 @@
     .matching-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-top: 10px;
+      gap: 14px;
+      margin-top: 12px;
     }
 
     .match-tile {
       background: #fff;
-      border: 2px solid var(--border-color);
-      border-radius: 14px;
-      padding: 14px 10px;
-      font-size: 1.05rem;
-      font-weight: 700;
+      border: 2.5px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 16px 12px;
+      font-size: 1.15rem;
+      font-weight: 800;
       text-align: center;
-      box-shadow: 0 3px 0 #ddd;
+      box-shadow: 0 4px 0 #cbd5e1;
       cursor: pointer;
       transition: all 0.15s ease;
     }
 
+    .match-tile:hover {
+      border-color: #93c5fd;
+    }
+
     .match-tile.selected {
-      background: #e1f5fe;
+      background: #e0f2fe;
       border-color: var(--secondary);
-      box-shadow: 0 3px 0 var(--secondary-dark);
+      box-shadow: 0 4px 0 var(--secondary-dark);
       color: var(--secondary-dark);
     }
 
     .match-tile.matched {
-      background: #e8f5e9;
-      border-color: #81c784;
-      color: #2e7d32;
+      background: #dcfce7;
+      border-color: #86efac;
+      color: #15803d;
       box-shadow: none;
       cursor: default;
-      opacity: 0.75;
-      transform: scale(0.97);
+      opacity: 0.8;
+      transform: scale(0.96);
     }
 
     /* 題型 4: 填空填詞 (Cloze) */
     .cloze-sentence-box {
-      background: #fdfefe;
-      border: 2px dashed #b8daff;
-      border-radius: 14px;
-      padding: 20px;
-      font-size: 1.3rem;
-      font-weight: 700;
+      background: #f8fafc;
+      border: 2.5px dashed #93c5fd;
+      border-radius: 18px;
+      padding: 22px;
+      font-size: 1.4rem;
+      font-weight: 800;
       text-align: center;
       line-height: 1.6;
-      margin-bottom: 20px;
-      color: #2b3d52;
+      margin-bottom: 22px;
+      color: #1e293b;
     }
 
     .cloze-blank {
       display: inline-block;
-      min-width: 90px;
-      border-bottom: 3px solid var(--secondary);
+      min-width: 95px;
+      border-bottom: 3.5px solid var(--secondary);
       color: var(--secondary-dark);
-      padding: 0 8px;
+      padding: 0 10px;
     }
 
     /* 底部反饋操作欄 (Duolingo 經典底欄) */
@@ -682,17 +778,17 @@
       left: 0;
       right: 0;
       background: #ffffff;
-      border-top: 2px solid var(--border-color);
-      padding: 16px 24px;
+      border-top: 3px solid #e2e8f0;
+      padding: 18px 24px;
       z-index: 99;
       display: flex;
       justify-content: center;
-      box-shadow: 0 -4px 16px rgba(0,0,0,0.06);
+      box-shadow: 0 -6px 20px rgba(0,0,0,0.06);
       transition: background 0.2s ease, border-color 0.2s ease;
     }
 
     .feedback-inner {
-      max-width: 820px;
+      max-width: 860px;
       width: 100%;
       display: flex;
       align-items: center;
@@ -713,60 +809,61 @@
     .feedback-message {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 16px;
     }
 
     .feedback-icon-bubble {
-      width: 48px;
-      height: 48px;
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
 
     .feedback-text h4 {
-      font-size: 1.2rem;
-      font-weight: 800;
+      font-size: 1.25rem;
+      font-weight: 900;
       margin-bottom: 3px;
     }
 
-    .feedback-sheet.correct .feedback-text h4 { color: #327500; }
+    .feedback-sheet.correct .feedback-text h4 { color: #2e7d32; }
     .feedback-sheet.wrong .feedback-text h4 { color: var(--danger-dark); }
 
     .feedback-text p {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #444;
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: #334155;
     }
 
-    /* 經典 Duolingo 3D 按鈕風格 */
+    /* 經典 Duolingo 3D 按鈕 */
     .duo-btn {
       font-family: inherit;
-      font-size: 1.05rem;
-      font-weight: 800;
-      padding: 13px 28px;
-      border-radius: 16px;
+      font-size: 1.1rem;
+      font-weight: 900;
+      padding: 14px 30px;
+      border-radius: 18px;
       border: none;
       cursor: pointer;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      box-shadow: 0 4px 0 rgba(0,0,0,0.2);
+      box-shadow: 0 5px 0 rgba(0,0,0,0.2);
       transition: all 0.1s ease;
       white-space: nowrap;
     }
 
     .duo-btn:active {
-      transform: translateY(3px);
+      transform: translateY(4px);
       box-shadow: 0 1px 0 rgba(0,0,0,0.2);
     }
 
     .duo-btn.btn-primary {
       background: var(--primary);
       color: #fff;
-      box-shadow: 0 4px 0 var(--primary-dark);
+      box-shadow: 0 5px 0 var(--primary-dark);
     }
 
     .duo-btn.btn-primary:active {
@@ -776,90 +873,90 @@
     .duo-btn.btn-secondary {
       background: var(--secondary);
       color: #fff;
-      box-shadow: 0 4px 0 var(--secondary-dark);
+      box-shadow: 0 5px 0 var(--secondary-dark);
     }
 
     .duo-btn.btn-danger {
       background: var(--danger);
       color: #fff;
-      box-shadow: 0 4px 0 var(--danger-dark);
+      box-shadow: 0 5px 0 var(--danger-dark);
     }
 
     /* =========================================================
-       結算畫面 (LESSON COMPLETE SCREEN)
+       3. 結算畫面 (LESSON COMPLETE SCREEN)
     ========================================================= */
     .summary-card {
       background: #fff;
-      border: 2px solid var(--border-color);
-      border-radius: 24px;
-      padding: 36px 20px;
+      border: 3px solid #e2e8f0;
+      border-radius: 28px;
+      padding: 40px 24px;
       text-align: center;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-      max-width: 540px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      max-width: 580px;
       margin: 20px auto;
     }
 
     .summary-trophy {
-      font-size: 4.5rem;
-      animation: bounce 1s infinite alternate;
+      font-size: 5rem;
+      animation: bounce 1s infinite alternate cubic-bezier(0.175, 0.885, 0.32, 1.275);
       margin-bottom: 12px;
     }
 
     @keyframes bounce {
       from { transform: translateY(0); }
-      to { transform: translateY(-12px); }
+      to { transform: translateY(-16px); }
     }
 
     .summary-title {
-      font-size: 1.8rem;
-      font-weight: 800;
+      font-size: 1.9rem;
+      font-weight: 900;
       color: var(--gold-dark);
       margin-bottom: 8px;
     }
 
     .summary-subtitle {
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       color: var(--text-sub);
-      font-weight: 600;
+      font-weight: 700;
       margin-bottom: 28px;
     }
 
     .stats-reward-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-bottom: 30px;
+      gap: 14px;
+      margin-bottom: 32px;
     }
 
     .reward-box {
-      border: 2px solid var(--border-color);
-      border-radius: 16px;
-      padding: 14px 8px;
+      border: 2px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 16px 10px;
       background: #fafafa;
     }
 
-    .reward-box.xp { border-color: #ffd070; background: #fffbe6; }
-    .reward-box.acc { border-color: #a2e88a; background: #f2fdeb; }
-    .reward-box.streak { border-color: #ffb875; background: #fff4ea; }
+    .reward-box.xp { border-color: #fde047; background: #fefce8; }
+    .reward-box.acc { border-color: #86efac; background: #f0fdf4; }
+    .reward-box.streak { border-color: #fdba74; background: #fff7ed; }
 
     .reward-val {
-      font-size: 1.4rem;
-      font-weight: 800;
+      font-size: 1.5rem;
+      font-weight: 900;
       margin-top: 4px;
     }
 
     .reward-label {
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       color: var(--text-sub);
-      font-weight: 700;
+      font-weight: 800;
       text-transform: uppercase;
     }
 
-    /* 畢業榮譽證書彈窗 */
+    /* 畢業榮譽大師證書 */
     .certificate-modal-overlay {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.7);
+      background: rgba(0,0,0,0.75);
       z-index: 220;
       display: none;
       align-items: center;
@@ -872,19 +969,19 @@
     }
 
     .certificate-sheet {
-      background: #fffdf7;
+      background: #fffdf5;
       border: 8px double #c59b27;
-      border-radius: 20px;
-      padding: 30px 24px;
-      max-width: 560px;
+      border-radius: 24px;
+      padding: 34px 26px;
+      max-width: 580px;
       width: 100%;
       text-align: center;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.35);
       position: relative;
     }
 
     .certificate-sheet h1 {
-      font-size: 1.8rem;
+      font-size: 1.9rem;
       color: #946c00;
       margin: 10px 0;
       font-weight: 900;
@@ -892,28 +989,29 @@
 
     .cert-student-input {
       border: none;
-      border-bottom: 2px dashed #946c00;
+      border-bottom: 2.5px dashed #946c00;
       background: transparent;
-      font-size: 1.3rem;
-      font-weight: 800;
+      font-size: 1.35rem;
+      font-weight: 900;
       text-align: center;
-      color: #333;
+      color: #1e293b;
       padding: 6px;
       margin: 14px 0;
-      width: 60%;
+      width: 65%;
       outline: none;
     }
 
     .cert-seal {
-      font-size: 3.5rem;
-      margin: 12px 0;
+      font-size: 3.8rem;
+      margin: 10px 0;
+      filter: drop-shadow(0 2px 5px rgba(0,0,0,0.15));
     }
 
-    /* 通用彈窗與遮罩 */
+    /* 彈窗遮罩 */
     .generic-modal-overlay {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.6);
+      background: rgba(0,0,0,0.65);
       z-index: 200;
       display: none;
       align-items: center;
@@ -927,13 +1025,13 @@
 
     .modal-box {
       background: #fff;
-      border-radius: 24px;
-      padding: 30px 24px;
-      max-width: 480px;
+      border-radius: 26px;
+      padding: 32px 24px;
+      max-width: 500px;
       width: 100%;
       text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      animation: popIn 0.25s ease-out;
+      box-shadow: 0 12px 36px rgba(0,0,0,0.22);
+      animation: popIn 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       max-height: 85vh;
       overflow-y: auto;
     }
@@ -944,30 +1042,30 @@
     }
 
     .modal-box h3 {
-      font-size: 1.45rem;
-      font-weight: 800;
+      font-size: 1.5rem;
+      font-weight: 900;
       color: var(--text-main);
       margin: 12px 0 8px;
     }
 
     .modal-box p {
       color: var(--text-sub);
-      font-size: 0.95rem;
+      font-size: 0.98rem;
       line-height: 1.5;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
 
     .modal-actions {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
     }
 
     /* 單字卡預習列表 */
     .wordlist-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
+      gap: 12px;
       margin: 18px 0;
       text-align: left;
     }
@@ -980,13 +1078,18 @@
 
     .wordlist-item {
       background: #f8fafc;
-      border: 1.5px solid #e2e8f0;
-      border-radius: 12px;
-      padding: 10px 14px;
+      border: 2px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 12px 14px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 8px;
+      transition: border-color 0.15s ease;
+    }
+
+    .wordlist-item:hover {
+      border-color: #7dd3fc;
     }
 
     .wordlist-item .w-left {
@@ -995,13 +1098,14 @@
     }
 
     .wordlist-item .w-en {
-      font-size: 1rem;
-      font-weight: 700;
+      font-size: 1.05rem;
+      font-weight: 800;
       color: var(--text-main);
     }
 
     .wordlist-item .w-zh {
-      font-size: 0.85rem;
+      font-size: 0.88rem;
+      font-weight: 600;
       color: var(--text-sub);
     }
 
@@ -1009,18 +1113,24 @@
       background: #e0f2fe;
       border: none;
       color: #0284c7;
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1rem;
+      font-size: 1.15rem;
       flex-shrink: 0;
+      box-shadow: 0 2px 0 #7dd3fc;
     }
 
-    /* 慶祝彩帶畫布 */
+    .w-speaker-btn:active {
+      transform: translateY(2px);
+      box-shadow: none;
+    }
+
+    /* 彩帶與飛行特效 Canvas */
     #confetti-canvas {
       position: fixed;
       top: 0; left: 0;
@@ -1033,11 +1143,17 @@
 </head>
 <body>
 
-  <!-- 頂部狀態列 -->
+  <!-- 頂部連續答對浮動橫幅 -->
+  <div class="combo-banner" id="combo-banner">
+    <span>🔥</span>
+    <span id="combo-banner-text">2 COMBO! 全壘打擊掌！</span>
+  </div>
+
+  <!-- 頂部導覽狀態列 -->
   <header class="top-bar">
     <div class="brand" onclick="game.showScreen('map')">
-      <div class="logo-icon">🦉</div>
-      <span>波波英語探險</span>
+      <div class="logo-icon">🛩️</div>
+      <span>波波熱血英語</span>
     </div>
     <div class="stats-group">
       <div class="stat-badge streak" title="連勝天數">
@@ -1046,7 +1162,7 @@
       </div>
       <div class="stat-badge gems" title="獲得寶石">
         <span>💎</span>
-        <span id="gem-count">120</span>
+        <span id="gem-count">150</span>
       </div>
       <div class="stat-badge hearts" title="剩餘體力">
         <span>❤️</span>
@@ -1067,27 +1183,40 @@
     <!-- ==================== SCREEN 1: 冒險地圖 ==================== -->
     <div id="screen-map" class="view-screen active">
       
-      <!-- 貓頭鷹波波對話框 -->
+      <!-- 飛行員波波貓頭鷹互動看板 -->
       <div class="map-summary-box">
-        <div class="mascot-avatar-small">
-          <svg class="mascot-svg" viewBox="0 0 100 100" id="bobi-avatar">
-            <!-- 身體主體 -->
-            <ellipse cx="50" cy="55" rx="36" ry="40" fill="#58cc02" />
-            <ellipse cx="50" cy="62" rx="26" ry="28" fill="#e5f9d7" />
-            <!-- 雙眼 -->
-            <circle cx="36" cy="45" r="14" fill="#ffffff" />
-            <circle cx="64" cy="45" r="14" fill="#ffffff" />
-            <circle cx="38" cy="45" r="7" fill="#3c3c3c" />
-            <circle cx="62" cy="45" r="7" fill="#3c3c3c" />
-            <circle cx="40" cy="42" r="2.5" fill="#ffffff" />
-            <circle cx="64" cy="42" r="2.5" fill="#ffffff" />
-            <!-- 鳥喙與腮紅 -->
-            <polygon points="50,49 43,59 57,59" fill="#ff9600" />
-            <ellipse cx="26" cy="58" rx="5" ry="3" fill="#ffb4a2" opacity="0.7"/>
-            <ellipse cx="74" cy="58" rx="5" ry="3" fill="#ffb4a2" opacity="0.7"/>
-          </svg>
+        <div class="mascot-avatar-small" onclick="game.tapMascot()">
+          <div class="mascot-svg-wrap" id="bobi-mascot-box">
+            <!-- 飛行員波波貓頭鷹 SVG -->
+            <svg class="mascot-svg" viewBox="0 0 100 100">
+              <!-- 貓頭鷹身體 -->
+              <ellipse cx="50" cy="56" rx="36" ry="40" fill="#58cc02" />
+              <ellipse cx="50" cy="64" rx="26" ry="28" fill="#e5f9d7" />
+              <!-- 飛行員皮革帽 / 防護帽 -->
+              <path d="M 20 44 Q 50 16 80 44 L 84 56 Q 78 54 74 48 L 26 48 Q 22 54 16 56 Z" fill="#935116" />
+              <!-- 護目鏡鏡片 (超帥飛行眼鏡) -->
+              <circle cx="37" cy="40" r="11" fill="#bae6fd" stroke="#451a03" stroke-width="3" />
+              <circle cx="63" cy="40" r="11" fill="#bae6fd" stroke="#451a03" stroke-width="3" />
+              <line x1="48" y1="40" x2="52" y2="40" stroke="#451a03" stroke-width="3" />
+              <!-- 護目鏡高光反光 -->
+              <ellipse cx="34" cy="37" rx="3" ry="1.5" fill="#ffffff" transform="rotate(-30 34 37)" />
+              <ellipse cx="60" cy="37" rx="3" ry="1.5" fill="#ffffff" transform="rotate(-30 60 37)" />
+              <!-- 眼睛 -->
+              <circle cx="36" cy="54" r="12" fill="#ffffff" />
+              <circle cx="64" cy="54" r="12" fill="#ffffff" />
+              <circle cx="38" cy="54" r="6" fill="#1e293b" id="bobi-eye-l" />
+              <circle cx="62" cy="54" r="6" fill="#1e293b" id="bobi-eye-r" />
+              <circle cx="40" cy="52" r="2.2" fill="#ffffff" />
+              <circle cx="64" cy="52" r="2.2" fill="#ffffff" />
+              <!-- 鳥喙與腮紅 -->
+              <polygon points="50,57 43,67 57,67" fill="#ff9600" />
+              <ellipse cx="25" cy="65" rx="5" ry="3" fill="#ffb4a2" opacity="0.8"/>
+              <ellipse cx="75" cy="65" rx="5" ry="3" fill="#ffb4a2" opacity="0.8"/>
+            </svg>
+          </div>
           <div class="speech-bubble" id="bobi-quote">
-            嗨！四年級探險家！今天準備好挑戰全新英語關卡了嗎？
+            嗨！四年級飛行員！戴好護目鏡，今天我們要挑戰棒球、噴射機與恐龍王國喔！
+            <span class="click-hint">👉 點點我，聽聽波波為你加油！</span>
           </div>
         </div>
         <button class="practice-btn" onclick="game.startPractice()">
@@ -1095,9 +1224,9 @@
         </button>
       </div>
 
-      <!-- 單元關卡列表 (Unit 1 到 Unit 7) -->
+      <!-- 單元關卡列表 (Unit 1 到 Unit 11) -->
       <div id="units-container">
-        <!-- 由 JavaScript 動態渲染關卡與曲折路徑 -->
+        <!-- 由 JavaScript 動態填入 11 大單元與曲折節點 -->
       </div>
     </div>
 
@@ -1122,14 +1251,14 @@
     <!-- ==================== SCREEN 3: 關卡結算慶祝 ==================== -->
     <div id="screen-summary" class="view-screen">
       <div class="summary-card">
-        <div class="summary-trophy">🏆</div>
-        <h2 class="summary-title">太棒了！關卡完成！</h2>
-        <p class="summary-subtitle" id="summary-msg">你掌握了新的英語能力，繼續保持！</p>
+        <div class="summary-trophy" id="summary-trophy-icon">🏆</div>
+        <h2 class="summary-title">太熱血了！順利通關！</h2>
+        <p class="summary-subtitle" id="summary-msg">你擊出了漂亮的英語全壘打！</p>
         
         <div class="stats-reward-grid">
           <div class="reward-box xp">
             <div class="reward-label">經驗值</div>
-            <div class="reward-val" style="color: #e5a000;">+<span id="summary-xp">25</span> XP</div>
+            <div class="reward-val" style="color: #e5a000;">+<span id="summary-xp">30</span> XP</div>
           </div>
           <div class="reward-box acc">
             <div class="reward-label">答對率</div>
@@ -1142,7 +1271,7 @@
         </div>
 
         <button class="duo-btn btn-primary" style="width: 100%;" onclick="game.finishLesson()">
-          繼續探險
+          繼續前進！出發下一關 🚀
         </button>
       </div>
     </div>
@@ -1155,7 +1284,7 @@
       <div class="feedback-message">
         <div class="feedback-icon-bubble" id="feedback-icon">🎉</div>
         <div class="feedback-text">
-          <h4 id="feedback-title">非常好！</h4>
+          <h4 id="feedback-title">非常完美！</h4>
           <p id="feedback-detail">正確答案：...</p>
         </div>
       </div>
@@ -1168,12 +1297,12 @@
   <!-- 愛心耗盡彈窗 -->
   <div class="generic-modal-overlay" id="hearts-modal">
     <div class="modal-box">
-      <div style="font-size: 3.5rem;">💔</div>
+      <div style="font-size: 3.8rem;">💔</div>
       <h3 style="color: var(--danger-dark);">愛心用完囉！</h3>
-      <p>別灰心！探險家需要休息或做一次「快速練習」，答對題目就能補滿愛心繼續闖關喔！</p>
+      <p>探險家別灰心！做一次快速複習練習，只要答對 3 題就能立刻補滿 5 顆愛心喔！</p>
       <div class="modal-actions">
         <button class="duo-btn btn-primary" onclick="game.startPracticeFromModal()">
-          做複習練習補滿愛心 ❤️
+          做複習小練習補滿愛心 ❤️
         </button>
         <button class="duo-btn btn-secondary" onclick="game.closeHeartsModal()">
           返回冒險地圖 🗺️
@@ -1185,9 +1314,9 @@
   <!-- 單字預習卡彈窗 -->
   <div class="generic-modal-overlay" id="wordlist-modal">
     <div class="modal-box">
-      <div style="font-size: 2.8rem;" id="wordlist-icon">📖</div>
+      <div style="font-size: 3rem;" id="wordlist-icon">📖</div>
       <h3 id="wordlist-title">單元重點單字表</h3>
-      <p id="wordlist-desc">點擊小喇叭可以反覆聆聽標準美式發音喔！</p>
+      <p id="wordlist-desc">點擊小喇叭可以反覆聆聽標準美語發音喔！</p>
       
       <div class="wordlist-grid" id="wordlist-items-container">
         <!-- 動態填入單元單字 -->
@@ -1195,7 +1324,7 @@
 
       <div class="modal-actions">
         <button class="duo-btn btn-primary" onclick="game.closeWordlistModal()">
-          我記住了，開始闖關！
+          我記住了，出發闖關！
         </button>
       </div>
     </div>
@@ -1204,19 +1333,19 @@
   <!-- 設定與進度重置彈窗 -->
   <div class="generic-modal-overlay" id="settings-modal">
     <div class="modal-box">
-      <div style="font-size: 2.8rem;">⚙️</div>
-      <h3>學習設定與進度</h3>
-      <p>目前累積 XP: <b id="settings-xp-val">0</b> 點<br>已解鎖關卡數: <b id="settings-unlocked-val">0</b> 個</p>
+      <div style="font-size: 3rem;">⚙️</div>
+      <h3>學習設定與成就</h3>
+      <p>目前累積 XP: <b id="settings-xp-val" style="color:var(--gold-dark);">0</b> 點<br>已解鎖關卡數: <b id="settings-unlocked-val" style="color:var(--secondary-dark);">0</b> 個</p>
       
       <div class="modal-actions">
         <button class="duo-btn btn-secondary" onclick="game.showCertificateModal()">
-          榮譽大師證書 📜
+          四年級全能認證證書 📜
         </button>
         <button class="duo-btn btn-danger" onclick="game.resetProgressPrompt()">
-          重設所有進度（重新挑戰）🔄
+          重設學習進度（重新挑戰）🔄
         </button>
         <button class="duo-btn btn-primary" onclick="game.closeSettingsModal()">
-          關閉
+          關閉返回
         </button>
       </div>
     </div>
@@ -1225,33 +1354,33 @@
   <!-- 榮譽結業證書彈窗 -->
   <div class="certificate-modal-overlay" id="certificate-modal">
     <div class="certificate-sheet">
-      <div style="font-size: 3rem;">🎓</div>
-      <h1>四年級英語闖關榮譽證書</h1>
-      <p style="color: #666; font-size: 1.05rem;">頒發給優秀的小學四年級英語小達人：</p>
-      <input type="text" class="cert-student-input" id="cert-name-input" value="四年級探險家" placeholder="輸入你的名字">
-      <p style="color: #444; font-size: 0.95rem; line-height: 1.6; margin: 10px 0;">
-        恭喜完成波波英語大冒險！熟練掌握了校園生活、動物自然、美食喜好、身體情緒、空間方位與才藝能力等七大核心單元！
+      <div style="font-size: 3.4rem;">🏆</div>
+      <h1>四年級英語全能大師證書</h1>
+      <p style="color: #64748b; font-size: 1.05rem;">頒發給超強英語探險家：</p>
+      <input type="text" class="cert-student-input" id="cert-name-input" value="四年級王牌探險家" placeholder="輸入你的大名">
+      <p style="color: #334155; font-size: 0.98rem; line-height: 1.6; margin: 12px 0;">
+        恭喜完成波波熱血英語大冒險！熟練征服了棒球熱血對決、超音速噴射機、精準撞球推進、侏儸紀暴龍、機械超跑等十一大精采單元！
       </p>
       <div class="cert-seal">🏅</div>
-      <div style="font-weight: 800; color: #946c00; font-size: 0.9rem;">
-        波波英語探險認證委員會 敬頒
+      <div style="font-weight: 800; color: #946c00; font-size: 0.95rem;">
+        波波英語探險榮譽委員會 敬頒
       </div>
-      <div style="margin-top: 20px;">
+      <div style="margin-top: 22px;">
         <button class="duo-btn btn-primary" onclick="game.closeCertificateModal()">
-          太讚了！收下證書
+          太酷了！收下金牌證書
         </button>
       </div>
     </div>
   </div>
 
-  <!-- 勝利彩帶畫布 -->
+  <!-- 特效畫布 (彩帶、棒球、飛機粒子) -->
   <canvas id="confetti-canvas"></canvas>
 
   <script>
     /* ==========================================================================
-       1. 音效合成器 (純 Web Audio API，無需外部音檔，100% 離線穩定可用)
+       1. 超可愛動態遊戲音效合成器 (純 Web Audio API，可愛卡通泡泡音與獎勵音)
     ========================================================================== */
-    class SoundSynthesizer {
+    class CuteSoundSynthesizer {
       constructor() {
         this.ctx = null;
         this.isMuted = false;
@@ -1274,59 +1403,89 @@
           const now = this.ctx.currentTime;
 
           if (type === 'click') {
+            // 可愛高音木質泡泡 Pop 聲 (400Hz -> 880Hz)
             const osc = this.ctx.createOscillator();
             const gain = this.ctx.createGain();
-            osc.frequency.setValueAtTime(600, now);
-            osc.frequency.exponentialRampToValueAtTime(800, now + 0.05);
-            gain.gain.setValueAtTime(0.12, now);
-            gain.gain.linearRampToValueAtTime(0.01, now + 0.05);
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(450, now);
+            osc.frequency.exponentialRampToValueAtTime(880, now + 0.06);
+            gain.gain.setValueAtTime(0.18, now);
+            gain.gain.linearRampToValueAtTime(0.01, now + 0.06);
             osc.connect(gain);
             gain.connect(this.ctx.destination);
             osc.start(now);
-            osc.stop(now + 0.05);
+            osc.stop(now + 0.06);
           } else if (type === 'correct') {
-            // 歡樂大三度向上琶音 (C5 -> E5 -> G5 -> C6)
-            const notes = [523.25, 659.25, 783.99, 1046.50];
+            // 耀眼卡比/瑪利歐風格閃亮升調 (C5 -> E5 -> G5 -> C6 -> E6)
+            const notes = [523.25, 659.25, 783.99, 1046.50, 1318.51];
             notes.forEach((freq, idx) => {
               const osc = this.ctx.createOscillator();
               const gain = this.ctx.createGain();
               osc.type = 'triangle';
-              osc.frequency.setValueAtTime(freq, now + idx * 0.07);
-              gain.gain.setValueAtTime(0.18, now + idx * 0.07);
-              gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.07 + 0.22);
+              osc.frequency.setValueAtTime(freq, now + idx * 0.06);
+              gain.gain.setValueAtTime(0.2, now + idx * 0.06);
+              gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.06 + 0.25);
               osc.connect(gain);
               gain.connect(this.ctx.destination);
-              osc.start(now + idx * 0.07);
-              osc.stop(now + idx * 0.07 + 0.22);
+              osc.start(now + idx * 0.06);
+              osc.stop(now + idx * 0.06 + 0.25);
             });
-          } else if (type === 'wrong') {
-            // 溫和低音提示音
+          } else if (type === 'combo') {
+            // 熱血 Combo 音效：快速滑音 + 雙音高頻鳴響
             const osc = this.ctx.createOscillator();
             const gain = this.ctx.createGain();
             osc.type = 'sawtooth';
-            osc.frequency.setValueAtTime(260, now);
-            osc.frequency.linearRampToValueAtTime(180, now + 0.25);
+            osc.frequency.setValueAtTime(400, now);
+            osc.frequency.exponentialRampToValueAtTime(1200, now + 0.15);
             gain.gain.setValueAtTime(0.15, now);
+            gain.gain.linearRampToValueAtTime(0.01, now + 0.15);
+            osc.connect(gain);
+            gain.connect(this.ctx.destination);
+            osc.start(now);
+            osc.stop(now + 0.15);
+          } else if (type === 'wrong') {
+            // 可愛卡通彈簧彈跳 "Boing" 音 (不刺耳、生動有趣)
+            const osc = this.ctx.createOscillator();
+            const gain = this.ctx.createGain();
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(320, now);
+            osc.frequency.linearRampToValueAtTime(140, now + 0.25);
+            gain.gain.setValueAtTime(0.18, now);
             gain.gain.linearRampToValueAtTime(0.01, now + 0.25);
             osc.connect(gain);
             gain.connect(this.ctx.destination);
             osc.start(now);
             osc.stop(now + 0.25);
+          } else if (type === 'hop') {
+            // 點擊波波時的俏皮跳躍啾啾聲
+            const osc = this.ctx.createOscillator();
+            const gain = this.ctx.createGain();
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(600, now);
+            osc.frequency.exponentialRampToValueAtTime(1100, now + 0.1);
+            gain.gain.setValueAtTime(0.2, now);
+            gain.gain.linearRampToValueAtTime(0.01, now + 0.1);
+            osc.connect(gain);
+            gain.connect(this.ctx.destination);
+            osc.start(now);
+            osc.stop(now + 0.1);
           } else if (type === 'win') {
-            // 關卡勝利號角
+            // 大滿貫全壘打通關勝利號角
             const melody = [
-              { f: 523.25, d: 0.12 },
-              { f: 659.25, d: 0.12 },
-              { f: 783.99, d: 0.12 },
-              { f: 1046.50, d: 0.35 }
+              { f: 523.25, d: 0.1 },
+              { f: 659.25, d: 0.1 },
+              { f: 783.99, d: 0.1 },
+              { f: 1046.50, d: 0.15 },
+              { f: 880.00, d: 0.1 },
+              { f: 1046.50, d: 0.4 }
             ];
             let offset = 0;
             melody.forEach(m => {
               const osc = this.ctx.createOscillator();
               const gain = this.ctx.createGain();
-              osc.type = 'sine';
+              osc.type = 'triangle';
               osc.frequency.setValueAtTime(m.f, now + offset);
-              gain.gain.setValueAtTime(0.2, now + offset);
+              gain.gain.setValueAtTime(0.22, now + offset);
               gain.gain.exponentialRampToValueAtTime(0.001, now + offset + m.d);
               osc.connect(gain);
               gain.connect(this.ctx.destination);
@@ -1346,31 +1505,31 @@
       }
     }
 
-    const audioPlayer = new SoundSynthesizer();
+    const audioPlayer = new CuteSoundSynthesizer();
 
     /* ==========================================================================
-       2. 美式英文發音朗讀 (Web Speech API)
+       2. 美式英文標準發音 (Web Speech API)
     ========================================================================== */
     function speakText(text) {
       if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
         const utter = new SpeechSynthesisUtterance(text);
         utter.lang = 'en-US';
-        utter.rate = 0.85; // 適合四年級學生的慢速標準美語發音
+        utter.rate = 0.85; // 專為小學四年級學童設計的清晰慢速發音
         utter.pitch = 1.05;
         window.speechSynthesis.speak(utter);
       }
     }
 
     /* ==========================================================================
-       3. 國小四年級完整課綱題庫 (7大單元、共 15 關卡、由淺入深、正體繁體中文)
+       3. 專屬小男生熱門主題！11 大漸進單元題庫 (棒球、飛機、撞球、恐龍、超跑)
     ========================================================================== */
     const CURRICULUM = [
       {
         id: "unit-1",
-        title: "第一單元：晨間日常與學校生活",
-        desc: "學習校園用品、生活作息與時間表達",
-        colorClass: "u1",
+        title: "第 1 單元：活力校園與晨間日常",
+        desc: "文具小夥伴、課堂作息與時間表達",
+        colorClass: "u-school",
         icon: "🎒",
         vocabularies: [
           { en: "backpack", zh: "背包" },
@@ -1379,19 +1538,19 @@
           { en: "ruler", zh: "直尺" },
           { en: "classroom", zh: "教室" },
           { en: "breakfast", zh: "早餐" },
-          { en: "o'clock", zh: "...點整" }
+          { en: "o'clock", zh: "...點鐘" }
         ],
         lessons: [
           {
             id: "u1-l1",
-            title: "文具小幫手",
+            title: "文具小夥伴",
             questions: [
               {
                 type: "choice",
                 prompt: "選出正確的單字",
                 en: "backpack",
                 audioText: "backpack",
-                instruction: "請問「backpack」的繁體中文是什麼？",
+                instruction: "請問「backpack」的中文是什麼？",
                 options: [
                   { en: "backpack", zh: "背包", emoji: "🎒", correct: true },
                   { en: "pencil", zh: "鉛筆", emoji: "✏️", correct: false },
@@ -1401,9 +1560,9 @@
               },
               {
                 type: "scramble",
-                prompt: "重組出正確的英文句子",
+                prompt: "重組出正確的句子",
                 audioText: "This is my new pencil.",
-                instruction: "將下方單字組合成：「這是我的新鉛筆。」",
+                instruction: "組裝句子：「這是我的新鉛筆。」",
                 targetTokens: ["This", "is", "my", "new", "pencil."],
                 pool: ["pencil.", "new", "is", "This", "my", "your", "are"]
               },
@@ -1442,14 +1601,14 @@
                 sentence: "What time is ___? It is seven o'clock.",
                 blankAnswer: "it",
                 audioText: "What time is it? It is seven o'clock.",
-                instruction: "請填入缺少的代名詞：",
+                instruction: "請填入詢問時間缺少的代名詞：",
                 options: ["it", "he", "she", "they"]
               },
               {
                 type: "scramble",
                 prompt: "重組出正確的英文句子",
                 audioText: "It is eight o'clock.",
-                instruction: "將下方單字組合成：「現在是八點整。」",
+                instruction: "組裝句子：「現在是八點整。」",
                 targetTokens: ["It", "is", "eight", "o'clock."],
                 pool: ["o'clock.", "is", "eight", "It", "seven", "at"]
               },
@@ -1472,94 +1631,94 @@
       },
       {
         id: "unit-2",
-        title: "第二單元：可愛動物與大自然探險",
-        desc: "認識野生動物、森林自然特徵與形容詞",
-        colorClass: "u2",
-        icon: "🐘",
+        title: "第 2 單元：飛行家出任務！超音速噴射機",
+        desc: "認識噴射機、跑道、飛行員與衝上雲霄",
+        colorClass: "u-plane",
+        icon: "✈️",
         vocabularies: [
-          { en: "elephant", zh: "大象" },
-          { en: "monkey", zh: "猴子" },
-          { en: "tiger", zh: "老虎" },
-          { en: "zebra", zh: "斑馬" },
-          { en: "river", zh: "河流" },
-          { en: "tree", zh: "樹木" },
-          { en: "strong", zh: "強壯的" }
+          { en: "airplane", zh: "飛機" },
+          { en: "jet", zh: "噴射機" },
+          { en: "pilot", zh: "飛行員" },
+          { en: "airport", zh: "機場" },
+          { en: "sky", zh: "天空" },
+          { en: "rocket", zh: "火箭" },
+          { en: "fast", zh: "快速的" }
         ],
         lessons: [
           {
             id: "u2-l1",
-            title: "動物園巡禮",
+            title: "天空中的噴射機",
             questions: [
               {
                 type: "choice",
-                prompt: "選出對應的動物",
-                en: "elephant",
-                audioText: "The elephant has a long nose.",
-                instruction: "請問「elephant」是哪一種動物？",
+                prompt: "認識航空單字",
+                en: "airplane",
+                audioText: "Look at the big airplane.",
+                instruction: "「airplane」指的是什麼？",
                 options: [
-                  { en: "elephant", zh: "大象", emoji: "🐘", correct: true },
-                  { en: "monkey", zh: "猴子", emoji: "🐒", correct: false },
-                  { en: "tiger", zh: "老虎", emoji: "🐯", correct: false },
-                  { en: "zebra", zh: "斑馬", emoji: "🦓", correct: false }
+                  { en: "airplane", zh: "飛機", emoji: "✈️", correct: true },
+                  { en: "car", zh: "汽車", emoji: "🚗", correct: false },
+                  { en: "ship", zh: "輪船", emoji: "🚢", correct: false },
+                  { en: "bike", zh: "腳踏車", emoji: "🚲", correct: false }
                 ]
               },
               {
                 type: "scramble",
-                prompt: "重組出正確的句子",
-                audioText: "The monkey is in the tree.",
-                instruction: "重組成：「猴子在樹上。」",
-                targetTokens: ["The", "monkey", "is", "in", "the", "tree."],
-                pool: ["tree.", "in", "monkey", "is", "The", "the", "on", "a"]
-              },
-              {
-                type: "match",
-                prompt: "動物詞彙配對",
-                instruction: "配對英文與繁體中文：",
-                pairs: [
-                  { en: "tiger", zh: "老虎" },
-                  { en: "zebra", zh: "斑馬" },
-                  { en: "monkey", zh: "猴子" },
-                  { en: "elephant", zh: "大象" }
-                ]
+                prompt: "飛行任務重組",
+                audioText: "The pilot can fly the airplane.",
+                instruction: "重組成：「飛行員會開飛機。」",
+                targetTokens: ["The", "pilot", "can", "fly", "the", "airplane."],
+                pool: ["airplane.", "fly", "pilot", "The", "can", "the", "car", "swim"]
               },
               {
                 type: "listen",
-                prompt: "聽力測驗",
-                audioText: "Look at the zebra. It can run fast.",
-                instruction: "句子中提到跑得很快的是哪種動物？",
+                prompt: "聽力測驗：衝向天空",
+                audioText: "The jet flies fast in the sky.",
+                instruction: "噴射機在哪裡飛得很快？",
                 options: [
-                  { text: "zebra (斑馬)", correct: true },
-                  { text: "elephant (大象)", correct: false },
-                  { text: "turtle (烏龜)", correct: false },
-                  { text: "bear (熊)", correct: false }
+                  { text: "in the sky (在天空中)", correct: true },
+                  { text: "in the river (在河流中)", correct: false },
+                  { text: "under the desk (在書桌下)", correct: false },
+                  { text: "on the bed (在床上)", correct: false }
+                ]
+              },
+              {
+                type: "match",
+                prompt: "飛行詞彙配對",
+                instruction: "配對英文與中文：",
+                pairs: [
+                  { en: "pilot", zh: "飛行員" },
+                  { en: "rocket", zh: "火箭" },
+                  { en: "airport", zh: "機場" },
+                  { en: "jet", zh: "噴射機" }
                 ]
               }
             ]
           },
           {
             id: "u2-l2",
-            title: "森林與大自然",
+            title: "火箭發射倒數！",
             questions: [
               {
                 type: "cloze",
-                prompt: "完成句子",
-                sentence: "Fish swim in the ___.",
-                blankAnswer: "river",
-                audioText: "Fish swim in the river.",
-                instruction: "魚兒游在哪裡？（提示：河流）",
-                options: ["river", "desk", "clock", "pencil"]
+                prompt: "選詞填空",
+                sentence: "The rocket is flying to ___.",
+                blankAnswer: "space",
+                audioText: "The rocket is flying to space.",
+                instruction: "火箭正飛往「太空」：",
+                options: ["space", "school", "pencil", "stomach"]
               },
               {
                 type: "choice",
-                prompt: "選出形容詞意思",
-                en: "strong",
-                audioText: "The lion is big and strong.",
-                instruction: "「strong」的意思是？",
+                prompt: "超音速形容詞",
+                en: "fast",
+                audioText: "The jet is super fast.",
+                instruction: "「fast」的意思是？",
                 options: [
-                  { en: "strong", zh: "強壯的", emoji: "💪", correct: true },
-                  { en: "tired", zh: "疲累的", emoji: "🥱", correct: false },
-                  { en: "small", zh: "小巧的", emoji: "🐜", correct: false },
-                  { en: "hungry", zh: "飢餓的", emoji: "🤤", correct: false }
+                  { en: "fast", zh: "快速的", emoji: "⚡", correct: true },
+                  { en: "slow", zh: "緩慢的", emoji: "🐢", correct: false },
+                  { en: "hungry", zh: "肚子餓的", emoji: "🤤", correct: false },
+                  { en: "cold", zh: "寒冷的", emoji: "🥶", correct: false }
                 ]
               }
             ]
@@ -1568,90 +1727,90 @@
       },
       {
         id: "unit-3",
-        title: "第三單元：美味野餐與飲食喜好",
-        desc: "表達喜歡、想要、肚子餓與口渴",
-        colorClass: "u3",
-        icon: "🥪",
+        title: "第 3 單元：全壘打旋風！熱血棒球場",
+        desc: "棒球、球棒、手套與擊出全壘打！",
+        colorClass: "u-baseball",
+        icon: "⚾",
         vocabularies: [
-          { en: "sandwich", zh: "三明治" },
-          { en: "pizza", zh: "披薩" },
-          { en: "orange juice", zh: "柳橙汁" },
-          { en: "milk", zh: "牛奶" },
-          { en: "hungry", zh: "肚子餓的" },
-          { en: "thirsty", zh: "口渴的" },
-          { en: "delicious", zh: "美味的" }
+          { en: "baseball", zh: "棒球" },
+          { en: "bat", zh: "球棒" },
+          { en: "glove", zh: "棒球手套" },
+          { en: "home run", zh: "全壘打" },
+          { en: "pitcher", zh: "投手" },
+          { en: "catch", zh: "接球" },
+          { en: "stadium", zh: "球場 / 球館" }
         ],
         lessons: [
           {
             id: "u3-l1",
-            title: "野餐點心盒",
+            title: "擊出全壘打！",
             questions: [
               {
                 type: "choice",
-                prompt: "認識美味食物",
-                en: "sandwich",
-                audioText: "I want a yummy sandwich.",
-                instruction: "「sandwich」是哪一種好吃的食物？",
+                prompt: "棒球裝備認識",
+                en: "bat",
+                audioText: "He swings the baseball bat.",
+                instruction: "「bat」在棒球場上指的是？",
                 options: [
-                  { en: "sandwich", zh: "三明治", emoji: "🥪", correct: true },
-                  { en: "pizza", zh: "披薩", emoji: "🍕", correct: false },
-                  { en: "apple", zh: "蘋果", emoji: "🍎", correct: false },
-                  { en: "milk", zh: "牛奶", emoji: "🥛", correct: false }
+                  { en: "bat", zh: "球棒", emoji: "🏏", correct: true },
+                  { en: "glove", zh: "手套", emoji: "🥊", correct: false },
+                  { en: "cap", zh: "帽子", emoji: "🧢", correct: false },
+                  { en: "ball", zh: "球", emoji: "⚾", correct: false }
                 ]
               },
               {
                 type: "scramble",
-                prompt: "重組句子：表達喜好",
-                audioText: "Do you like apples?",
-                instruction: "重組成問句：「你喜歡蘋果嗎？」",
-                targetTokens: ["Do", "you", "like", "apples?"],
-                pool: ["apples?", "like", "Do", "you", "does", "apple"]
+                prompt: "全壘打歡呼句重組",
+                audioText: "He hit a home run!",
+                instruction: "重組成：「他擊出了一支全壘打！」",
+                targetTokens: ["He", "hit", "a", "home", "run!"],
+                pool: ["run!", "home", "He", "hit", "a", "she", "catch"]
               },
               {
-                type: "cloze",
-                prompt: "口渴時的選擇",
-                sentence: "I am thirsty. I want some ___ juice.",
-                blankAnswer: "orange",
-                audioText: "I am thirsty. I want some orange juice.",
-                instruction: "我想要喝點「柳橙」果汁：",
-                options: ["orange", "bread", "pencil", "ruler"]
+                type: "listen",
+                prompt: "聽力測驗：接住球",
+                audioText: "I can catch the baseball.",
+                instruction: "我能做到什麼事？",
+                options: [
+                  { text: "接住棒球 (catch the baseball)", correct: true },
+                  { text: "買新背包 (buy a backpack)", correct: false },
+                  { text: "開噴射機 (fly a jet)", correct: false },
+                  { text: "吃大漢堡 (eat a burger)", correct: false }
+                ]
               },
               {
                 type: "match",
-                prompt: "食物與飲料配對",
-                instruction: "連連看：",
+                prompt: "棒球詞彙大連線",
+                instruction: "配對英文與繁體中文：",
                 pairs: [
-                  { en: "milk", zh: "牛奶" },
-                  { en: "juice", zh: "果汁" },
-                  { en: "pizza", zh: "披薩" },
-                  { en: "water", zh: "開水" }
+                  { en: "glove", zh: "棒球手套" },
+                  { en: "pitcher", zh: "投手" },
+                  { en: "home run", zh: "全壘打" },
+                  { en: "stadium", zh: "棒球場" }
                 ]
               }
             ]
           },
           {
             id: "u3-l2",
-            title: "我肚子好餓！",
+            title: "球場上的王牌投手",
             questions: [
               {
-                type: "listen",
-                prompt: "聽力測驗",
-                audioText: "I am hungry. Let's eat lunch.",
-                instruction: "說這句話的人現在感覺如何？",
-                options: [
-                  { text: "hungry (肚子很餓)", correct: true },
-                  { text: "happy (很開心)", correct: false },
-                  { text: "cold (覺得冷)", correct: false },
-                  { text: "sleepy (想睡覺)", correct: false }
-                ]
+                type: "cloze",
+                prompt: "選詞填空",
+                sentence: "Do you have a baseball ___? Yes, I do.",
+                blankAnswer: "glove",
+                audioText: "Do you have a baseball glove? Yes, I do.",
+                instruction: "你有棒球「手套」嗎？",
+                options: ["glove", "eraser", "pencil", "clock"]
               },
               {
                 type: "scramble",
-                prompt: "重組英文句子",
-                audioText: "She likes delicious pizza.",
-                instruction: "重組成：「她喜歡好吃的披薩。」",
-                targetTokens: ["She", "likes", "delicious", "pizza."],
-                pool: ["delicious", "likes", "pizza.", "She", "like", "He"]
+                prompt: "詢問喜好句型",
+                audioText: "Do you like to play baseball?",
+                instruction: "重組問句：「你喜歡打棒球嗎？」",
+                targetTokens: ["Do", "you", "like", "to", "play", "baseball?"],
+                pool: ["baseball?", "play", "to", "Do", "like", "you", "does"]
               }
             ]
           }
@@ -1659,82 +1818,66 @@
       },
       {
         id: "unit-4",
-        title: "第四單元：身體部位與心情感受",
-        desc: "學會認識五官器官與表達喜怒哀樂",
-        colorClass: "u4",
-        icon: "👀",
+        title: "第 4 單元：撞球小神童！精準進球大挑戰",
+        desc: "撞球桿、母球、袋口與精準角度幾何！",
+        colorClass: "u-pool",
+        icon: "🎱",
         vocabularies: [
-          { en: "eyes", zh: "眼睛" },
-          { en: "ears", zh: "耳朵" },
-          { en: "stomach", zh: "肚子 / 胃" },
-          { en: "mouth", zh: "嘴巴" },
-          { en: "nose", zh: "鼻子" },
-          { en: "happy", zh: "開心的" },
-          { en: "tired", zh: "疲憊的" }
+          { en: "cue stick", zh: "撞球桿" },
+          { en: "billiard ball", zh: "撞球" },
+          { en: "pocket", zh: "球袋 / 袋口" },
+          { en: "corner", zh: "角落" },
+          { en: "strike", zh: "推桿 / 擊球" },
+          { en: "chalk", zh: "巧克 / 擦粉" },
+          { en: "angle", zh: "角度" }
         ],
         lessons: [
           {
             id: "u4-l1",
-            title: "身體密碼",
+            title: "精準進球！",
             questions: [
               {
-                type: "match",
-                prompt: "器官詞彙配對",
-                instruction: "將英文器官與繁體中文配對：",
-                pairs: [
-                  { en: "eyes", zh: "眼睛" },
-                  { en: "ears", zh: "耳朵" },
-                  { en: "nose", zh: "鼻子" },
-                  { en: "mouth", zh: "嘴巴" }
-                ]
-              },
-              {
                 type: "choice",
-                prompt: "選出單字意思",
-                en: "stomach",
-                audioText: "My stomach hurts.",
-                instruction: "「stomach」指的是身體的哪裡？",
+                prompt: "撞球重要用具",
+                en: "cue stick",
+                audioText: "Hold the cue stick firmly.",
+                instruction: "打撞球用來推球的「cue stick」是？",
                 options: [
-                  { en: "stomach", zh: "胃 / 肚子", emoji: "🫃", correct: true },
-                  { en: "head", zh: "頭部", emoji: "🧒", correct: false },
-                  { en: "foot", zh: "腳丫", emoji: "🦶", correct: false },
-                  { en: "hand", zh: "雙手", emoji: "✋", correct: false }
+                  { en: "cue stick", zh: "撞球桿", emoji: "🪄", correct: true },
+                  { en: "baseball bat", zh: "棒球棒", emoji: "🏏", correct: false },
+                  { en: "ruler", zh: "直尺", emoji: "📏", correct: false },
+                  { en: "pencil", zh: "鉛筆", emoji: "✏️", correct: false }
                 ]
               },
               {
                 type: "scramble",
-                prompt: "聽指令做動作",
-                audioText: "Touch your ears.",
-                instruction: "組裝句子：「摸摸你的耳朵。」",
-                targetTokens: ["Touch", "your", "ears."],
-                pool: ["ears.", "Touch", "your", "eyes.", "Close", "my"]
-              }
-            ]
-          },
-          {
-            id: "u4-l2",
-            title: "今天心情好嗎？",
-            questions: [
-              {
-                type: "cloze",
-                prompt: "問候句型填空",
-                sentence: "How ___ you? I am very happy!",
-                blankAnswer: "are",
-                audioText: "How are you? I am very happy!",
-                instruction: "選擇最正確的 be 動詞：",
-                options: ["are", "is", "am", "do"]
+                prompt: "進球口令重組",
+                audioText: "Hit the ball into the pocket.",
+                instruction: "重組句子：「把球打進球袋裡。」",
+                targetTokens: ["Hit", "the", "ball", "into", "the", "pocket."],
+                pool: ["pocket.", "the", "ball", "Hit", "into", "the", "run", "in"]
               },
               {
-                type: "choice",
-                prompt: "心情狀態對應",
-                en: "tired",
-                audioText: "He is tired after playing soccer.",
-                instruction: "「tired」代表什麼心情或狀態？",
+                type: "listen",
+                prompt: "聽力測驗",
+                audioText: "That was an amazing shot!",
+                instruction: "這句話是在稱讚什麼？",
                 options: [
-                  { en: "tired", zh: "疲倦想睡", emoji: "🥱", correct: true },
-                  { en: "excited", zh: "興奮期待", emoji: "🤩", correct: false },
-                  { en: "angry", zh: "生氣氣憤", emoji: "😡", correct: false },
-                  { en: "happy", zh: "開心快樂", emoji: "😄", correct: false }
+                  { text: "那球打得太神奇精彩了！", correct: true },
+                  { text: "現在該去吃晚餐了！", correct: false },
+                  { text: "飛機要準備起飛了！", correct: false },
+                  { text: "今天天氣很冷！", correct: false }
+                ]
+              },
+              {
+                type: "match",
+                prompt: "撞球術語配對",
+                instruction: "配對英文與中文：",
+                pairs: [
+                  { en: "pocket", zh: "球袋" },
+                  { en: "angle", zh: "角度" },
+                  { en: "corner", zh: "角落" },
+                  { en: "strike", zh: "擊球" }
                 ]
               }
             ]
@@ -1743,29 +1886,257 @@
       },
       {
         id: "unit-5",
-        title: "第五單元：捉迷藏！神奇方位大搜查",
-        desc: "掌握 in, on, under, behind, next to 空間介系詞",
-        colorClass: "u5",
-        icon: "🧭",
+        title: "第 5 單元：侏儸紀暴龍與恐龍王國",
+        desc: "霸王龍、尖銳牙齒、巨型化石與怒吼",
+        colorClass: "u-dino",
+        icon: "🦖",
         vocabularies: [
-          { en: "in", zh: "在...裡面" },
-          { en: "on", zh: "在...上面" },
-          { en: "under", zh: "在...下面" },
-          { en: "behind", zh: "在...後面" },
-          { en: "next to", zh: "在...隔壁/旁邊" },
-          { en: "desk", zh: "書桌" },
-          { en: "chair", zh: "椅子" }
+          { en: "dinosaur", zh: "恐龍" },
+          { en: "T-Rex", zh: "暴龍 / 霸王龍" },
+          { en: "teeth", zh: "牙齒" },
+          { en: "fossil", zh: "化石" },
+          { en: "giant", zh: "巨大的" },
+          { en: "roar", zh: "咆哮 / 怒吼" },
+          { en: "tail", zh: "尾巴" }
         ],
         lessons: [
           {
             id: "u5-l1",
-            title: "貓咪躲在哪裡？",
+            title: "暴龍現身！",
             questions: [
               {
                 type: "choice",
-                prompt: "空間方位選擇",
+                prompt: "恐龍之王",
+                en: "T-Rex",
+                audioText: "The T-Rex is the king of dinosaurs.",
+                instruction: "「T-Rex」是指哪一種著名的恐龍？",
+                options: [
+                  { en: "T-Rex", zh: "霸王龍 / 暴龍", emoji: "🦖", correct: true },
+                  { en: "elephant", zh: "大象", emoji: "🐘", correct: false },
+                  { en: "monkey", zh: "猴子", emoji: "🐒", correct: false },
+                  { en: "tiger", zh: "老虎", emoji: "🐯", correct: false }
+                ]
+              },
+              {
+                type: "scramble",
+                prompt: "暴龍特徵重組",
+                audioText: "The T-Rex has sharp teeth.",
+                instruction: "重組成：「暴龍有非常鋒利的牙齒。」",
+                targetTokens: ["The", "T-Rex", "has", "sharp", "teeth."],
+                pool: ["teeth.", "has", "T-Rex", "sharp", "The", "have", "big"]
+              },
+              {
+                type: "cloze",
+                prompt: "填入形容詞",
+                sentence: "The dinosaur has a long ___.",
+                blankAnswer: "tail",
+                audioText: "The dinosaur has a long tail.",
+                instruction: "恐龍有一條長長的「尾巴」：",
+                options: ["tail", "pencil", "clock", "airplane"]
+              },
+              {
+                type: "match",
+                prompt: "恐龍世界配對",
+                instruction: "配對英文與中文：",
+                pairs: [
+                  { en: "fossil", zh: "化石" },
+                  { en: "giant", zh: "巨大的" },
+                  { en: "roar", zh: "大吼聲" },
+                  { en: "dinosaur", zh: "恐龍" }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "unit-6",
+        title: "第 6 單元：極速狂飆！機械超跑與機器人",
+        desc: "帥氣跑車、強大引擎、安全帽與變形機器人",
+        colorClass: "u-supercar",
+        icon: "🏎️",
+        vocabularies: [
+          { en: "sports car", zh: "跑車" },
+          { en: "engine", zh: "引擎" },
+          { en: "wheel", zh: "車輪" },
+          { en: "helmet", zh: "安全帽" },
+          { en: "robot", zh: "機器人" },
+          { en: "transform", zh: "變形" }
+        ],
+        lessons: [
+          {
+            id: "u6-l1",
+            title: "超級跑車加速！",
+            questions: [
+              {
+                type: "choice",
+                prompt: "認識帥氣車輛",
+                en: "sports car",
+                audioText: "The red sports car is super fast.",
+                instruction: "「sports car」指的是什麼車？",
+                options: [
+                  { en: "sports car", zh: "跑車 / 賽車", emoji: "🏎️", correct: true },
+                  { en: "airplane", zh: "飛機", emoji: "✈️", correct: false },
+                  { en: "bus", zh: "公車", emoji: "🚌", correct: false },
+                  { en: "bike", zh: "腳踏車", emoji: "🚲", correct: false }
+                ]
+              },
+              {
+                type: "scramble",
+                prompt: "安全第一",
+                audioText: "Wear your helmet.",
+                instruction: "組裝句子：「戴上你的安全帽。」",
+                targetTokens: ["Wear", "your", "helmet."],
+                pool: ["helmet.", "your", "Wear", "backpack.", "gloves", "Close"]
+              },
+              {
+                type: "listen",
+                prompt: "機器人能力聽力題",
+                audioText: "The cool robot can transform.",
+                instruction: "酷炫的機器人可以做到什麼？",
+                options: [
+                  { text: "可以變形 (transform)", correct: true },
+                  { text: "可以睡覺 (sleep)", correct: false },
+                  { text: "可以吃草 (eat grass)", correct: false },
+                  { text: "在河裡游泳 (swim in river)", correct: false }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "unit-7",
+        title: "第 7 單元：狂野動物園與神奇猛獸",
+        desc: "獵豹、獅子、老鷹與大自然生存法則",
+        colorClass: "u-safari",
+        icon: "🐆",
+        vocabularies: [
+          { en: "cheetah", zh: "獵豹" },
+          { en: "lion", zh: "獅子" },
+          { en: "eagle", zh: "老鷹" },
+          { en: "tiger", zh: "老虎" },
+          { en: "forest", zh: "森林" },
+          { en: "claws", zh: "利爪" }
+        ],
+        lessons: [
+          {
+            id: "u7-l1",
+            title: "森林速度之王",
+            questions: [
+              {
+                type: "choice",
+                prompt: "跑最快的動物",
+                en: "cheetah",
+                audioText: "The cheetah runs faster than a car.",
+                instruction: "陸地上跑得最快的「cheetah」是？",
+                options: [
+                  { en: "cheetah", zh: "獵豹", emoji: "🐆", correct: true },
+                  { en: "elephant", zh: "大象", emoji: "🐘", correct: false },
+                  { en: "turtle", zh: "烏龜", emoji: "🐢", correct: false },
+                  { en: "zebra", zh: "斑馬", emoji: "🦓", correct: false }
+                ]
+              },
+              {
+                type: "scramble",
+                prompt: "老鷹飛翔句型",
+                audioText: "The eagle flies in the sky.",
+                instruction: "重組成：「老鷹在空中翱翔。」",
+                targetTokens: ["The", "eagle", "flies", "in", "the", "sky."],
+                pool: ["sky.", "the", "in", "eagle", "The", "flies", "runs", "on"]
+              },
+              {
+                type: "match",
+                prompt: "猛獸詞彙對對碰",
+                instruction: "配對英文與中文：",
+                pairs: [
+                  { en: "lion", zh: "獅子" },
+                  { en: "eagle", zh: "老鷹" },
+                  { en: "tiger", zh: "老虎" },
+                  { en: "cheetah", zh: "獵豹" }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "unit-8",
+        title: "第 8 單元：能量補給站！大漢堡與野餐點心",
+        desc: "美味漢堡、披薩、薯條與肚子餓口渴",
+        colorClass: "u-food",
+        icon: "🍔",
+        vocabularies: [
+          { en: "hamburger", zh: "漢堡" },
+          { en: "french fries", zh: "薯條" },
+          { en: "pizza", zh: "披薩" },
+          { en: "hot dog", zh: "熱狗" },
+          { en: "hungry", zh: "肚子餓的" },
+          { en: "thirsty", zh: "口渴的" }
+        ],
+        lessons: [
+          {
+            id: "u8-l1",
+            title: "大口吃漢堡！",
+            questions: [
+              {
+                type: "choice",
+                prompt: "補充能量點心",
+                en: "hamburger",
+                audioText: "I want a big hamburger.",
+                instruction: "「hamburger」是哪種美食？",
+                options: [
+                  { en: "hamburger", zh: "漢堡", emoji: "🍔", correct: true },
+                  { en: "pizza", zh: "披薩", emoji: "🍕", correct: false },
+                  { en: "hot dog", zh: "熱狗", emoji: "🌭", correct: false },
+                  { en: "milk", zh: "牛奶", emoji: "🥛", correct: false }
+                ]
+              },
+              {
+                type: "scramble",
+                prompt: "運動後好餓",
+                audioText: "I am hungry after playing baseball.",
+                instruction: "重組成：「打完棒球後我肚子好餓。」",
+                targetTokens: ["I", "am", "hungry", "after", "playing", "baseball."],
+                pool: ["baseball.", "playing", "after", "hungry", "I", "am", "thirsty", "fast"]
+              },
+              {
+                type: "cloze",
+                prompt: "口渴喝果汁",
+                sentence: "I am thirsty. I want some ___ juice.",
+                blankAnswer: "apple",
+                audioText: "I am thirsty. I want some apple juice.",
+                instruction: "我想喝點「蘋果」汁：",
+                options: ["apple", "bat", "glove", "pocket"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "unit-9",
+        title: "第 9 單元：空間秘密基地！捉迷藏與方位探尋",
+        desc: "掌握 in, on, under, behind, next to 空間介系詞",
+        colorClass: "u-space",
+        icon: "🧭",
+        vocabularies: [
+          { en: "under", zh: "在...下方" },
+          { en: "on", zh: "在...上方" },
+          { en: "in", zh: "在...裡面" },
+          { en: "behind", zh: "在...後面" },
+          { en: "next to", zh: "在...隔壁" },
+          { en: "inside", zh: "在...內部" }
+        ],
+        lessons: [
+          {
+            id: "u9-l1",
+            title: "尋找我的棒球手套！",
+            questions: [
+              {
+                type: "choice",
+                prompt: "方位選擇題",
                 en: "under",
-                audioText: "The cat is under the chair.",
+                audioText: "The baseball is under the bed.",
                 instruction: "「under」是哪一個方位？",
                 options: [
                   { en: "under", zh: "在...下方", emoji: "⬇️", correct: true },
@@ -1776,208 +2147,134 @@
               },
               {
                 type: "scramble",
-                prompt: "重組問答句",
-                audioText: "Where is the book? It is on the desk.",
-                instruction: "重組成：「書在書桌上面。」",
-                targetTokens: ["It", "is", "on", "the", "desk."],
-                pool: ["desk.", "on", "the", "It", "is", "under", "in"]
+                prompt: "尋找位置問答句",
+                audioText: "Where is my baseball glove?",
+                instruction: "組裝問句：「我的棒球手套在哪裡？」",
+                targetTokens: ["Where", "is", "my", "baseball", "glove?"],
+                pool: ["glove?", "baseball", "my", "is", "Where", "under", "cue"]
               },
               {
                 type: "match",
-                prompt: "空間介系詞連連看",
-                instruction: "將介系詞與繁體中文配對：",
+                prompt: "方位詞連連看",
+                instruction: "配對介系詞與中文：",
                 pairs: [
                   { en: "in", zh: "在...裡面" },
                   { en: "on", zh: "在...上面" },
                   { en: "under", zh: "在...下面" },
                   { en: "behind", zh: "在...後面" }
                 ]
-              },
-              {
-                type: "listen",
-                prompt: "聽力測驗",
-                audioText: "The ball is behind the door.",
-                instruction: "球躲在哪裡？",
-                options: [
-                  { text: "門的後面 (behind)", correct: true },
-                  { text: "門的上面 (on)", correct: false },
-                  { text: "桌子底下 (under)", correct: false },
-                  { text: "盒子裡面 (in)", correct: false }
-                ]
-              }
-            ]
-          },
-          {
-            id: "u5-l2",
-            title: "尋找失物大冒險",
-            questions: [
-              {
-                type: "cloze",
-                prompt: "選詞填空",
-                sentence: "The pencil case is ___ the backpack.",
-                blankAnswer: "in",
-                audioText: "The pencil case is in the backpack.",
-                instruction: "鉛筆盒放在背包「裡面」：",
-                options: ["in", "at", "to", "for"]
-              },
-              {
-                type: "scramble",
-                prompt: "詢問位置問句",
-                audioText: "Where are my keys?",
-                instruction: "重組問句：「我的鑰匙在哪裡？」",
-                targetTokens: ["Where", "are", "my", "keys?"],
-                pool: ["keys?", "Where", "my", "are", "is", "key"]
               }
             ]
           }
         ]
       },
       {
-        id: "unit-6",
-        title: "第六單元：週末運動與才藝達人",
-        desc: "運用 can 表達才藝能力與運動愛好",
-        colorClass: "u6",
-        icon: "⚽",
+        id: "unit-10",
+        title: "第 10 單元：週末英雄爭霸！我會的超能力與才藝",
+        desc: "運用 can 表達滑板、游泳、打棒球等超強才藝",
+        colorClass: "u-hero",
+        icon: "🛹",
         vocabularies: [
-          { en: "play soccer", zh: "踢足球" },
-          { en: "ride a bike", zh: "騎腳踏車" },
-          { en: "swim", zh: "游泳" },
-          { en: "draw pictures", zh: "畫圖畫" },
-          { en: "guitar", zh: "吉他" },
-          { en: "can", zh: "會 / 能夠" }
+          { en: "ride a skateboard", zh: "溜滑板" },
+          { en: "play baseball", zh: "打棒球" },
+          { en: "fly a drone", zh: "操縱無人機" },
+          { en: "swim fast", zh: "游得很快" },
+          { en: "can", zh: "能夠 / 會" }
         ],
         lessons: [
           {
-            id: "u6-l1",
-            title: "我會做的事",
+            id: "u10-l1",
+            title: "極限滑板高手",
             questions: [
               {
                 type: "choice",
-                prompt: "運動才藝單字",
-                en: "play soccer",
-                audioText: "We play soccer on Sunday.",
-                instruction: "「play soccer」指的是哪一項運動？",
+                prompt: "酷炫才藝活動",
+                en: "ride a skateboard",
+                audioText: "Can you ride a skateboard?",
+                instruction: "「ride a skateboard」是指哪項活動？",
                 options: [
-                  { en: "play soccer", zh: "踢足球", emoji: "⚽", correct: true },
-                  { en: "ride a bicycle", zh: "騎腳踏車", emoji: "🚲", correct: false },
+                  { en: "ride a skateboard", zh: "溜滑板", emoji: "🛹", correct: true },
+                  { en: "play baseball", zh: "打棒球", emoji: "⚾", correct: false },
                   { en: "swim", zh: "游泳", emoji: "🏊", correct: false },
-                  { en: "play guitar", zh: "彈吉他", emoji: "🎸", correct: false }
+                  { en: "drive a car", zh: "開車", emoji: "🚗", correct: false }
                 ]
               },
               {
                 type: "scramble",
-                prompt: "能力問答句重組",
-                audioText: "Can you ride a bicycle? Yes, I can.",
-                instruction: "重組成問句：「你會騎腳踏車嗎？」",
-                targetTokens: ["Can", "you", "ride", "a", "bicycle?"],
-                pool: ["bicycle?", "Can", "ride", "you", "a", "do", "swim"]
+                prompt: "能力問答句組裝",
+                audioText: "Can you ride a skateboard? Yes, I can.",
+                instruction: "重組成：「你會溜滑板嗎？」",
+                targetTokens: ["Can", "you", "ride", "a", "skateboard?"],
+                pool: ["skateboard?", "a", "ride", "Can", "you", "do", "fast"]
               },
               {
                 type: "cloze",
-                prompt: "選詞填空",
-                sentence: "She can play the ___ very well.",
-                blankAnswer: "guitar",
-                audioText: "She can play the guitar very well.",
-                instruction: "選出樂器名稱：",
-                options: ["guitar", "backpack", "eraser", "pencil"]
-              },
-              {
-                type: "match",
-                prompt: "才藝活動連連看",
-                instruction: "配對英文與中文：",
-                pairs: [
-                  { en: "ride a bike", zh: "騎腳踏車" },
-                  { en: "draw pictures", zh: "畫圖畫" },
-                  { en: "swim", zh: "游泳" },
-                  { en: "play soccer", zh: "踢足球" }
-                ]
-              }
-            ]
-          },
-          {
-            id: "u6-l2",
-            title: "週末好時光",
-            questions: [
-              {
-                type: "listen",
-                prompt: "聽力測驗",
-                audioText: "Can your brother swim? No, he cannot.",
-                instruction: "弟弟會游泳嗎？",
-                options: [
-                  { text: "不會游泳 (No, he cannot)", correct: true },
-                  { text: "很會游泳 (Yes, he can)", correct: false },
-                  { text: "喜歡跑步 (He likes running)", correct: false },
-                  { text: "正在睡覺 (He is sleeping)", correct: false }
-                ]
-              },
-              {
-                type: "scramble",
-                prompt: "肯定回答重組",
-                audioText: "Yes, I can swim fast.",
-                instruction: "重組成：「是的，我游得很快。」",
-                targetTokens: ["Yes,", "I", "can", "swim", "fast."],
-                pool: ["swim", "fast.", "can", "Yes,", "I", "cannot", "run"]
+                prompt: "回答能力",
+                sentence: "Yes, I ___ swim very fast.",
+                blankAnswer: "can",
+                audioText: "Yes, I can swim very fast.",
+                instruction: "是的，我「能夠」游得很快：",
+                options: ["can", "am", "do", "is"]
               }
             ]
           }
         ]
       },
       {
-        id: "unit-7",
-        title: "第七單元：終極榮譽！四年級闖關大師",
-        desc: "綜合跨單元大會考，挑戰大滿貫！",
-        colorClass: "u7",
+        id: "unit-11",
+        title: "第 11 單元：終極榮譽！四年級全能冒險大魔王",
+        desc: "跨領域大會考！噴射機對決全壘打、暴龍與撞球王牌！",
+        colorClass: "u-boss",
         icon: "👑",
         vocabularies: [
-          { en: "Good morning", zh: "早安" },
-          { en: "Time for breakfast", zh: "該吃早餐了" },
-          { en: "sweet apples", zh: "甜蘋果" },
-          { en: "under the tree", zh: "在樹下" },
-          { en: "ride a bike", zh: "騎腳踏車" }
+          { en: "Home run champion", zh: "全壘打冠軍" },
+          { en: "Supersonic jet", zh: "超音速噴射機" },
+          { en: "Pool master", zh: "撞球大師" },
+          { en: "King of dinosaurs", zh: "恐龍之王" }
         ],
         lessons: [
           {
-            id: "u7-boss",
-            title: "大魔王總結試煉",
+            id: "u11-boss",
+            title: "大滿貫魔王總結試煉",
             questions: [
               {
                 type: "listen",
-                prompt: "魔王題 1：日常對話理解",
-                audioText: "Good morning! It is seven o'clock. Time for breakfast.",
-                instruction: "這段話表達現在是幾點、該吃什麼？",
+                prompt: "魔王題 1：飛行員與球場對話",
+                audioText: "Look at the supersonic jet flying above the baseball stadium!",
+                instruction: "聽聽看！噴射機正飛越哪裡的上方？",
                 options: [
-                  { text: "早上七點，該吃早餐了", correct: true },
-                  { text: "中午十二點，該吃午餐了", correct: false },
-                  { text: "晚上八點，該上床睡覺了", correct: false },
-                  { text: "下午三點，該去踢足球了", correct: false }
+                  { text: "棒球場上方 (baseball stadium)", correct: true },
+                  { text: "教室桌子下 (under classroom desk)", correct: false },
+                  { text: "大恐龍肚子裡 (in dinosaur stomach)", correct: false },
+                  { text: "撞球袋裡面 (inside the pool pocket)", correct: false }
                 ]
               },
               {
                 type: "scramble",
-                prompt: "魔王題 2：完整長句重組",
-                audioText: "The big elephant likes sweet apples.",
-                instruction: "重組成：「那隻大象喜歡甜甜的蘋果。」",
-                targetTokens: ["The", "big", "elephant", "likes", "sweet", "apples."],
-                pool: ["apples.", "elephant", "likes", "big", "sweet", "The", "like", "an"]
+                prompt: "魔王題 2：王牌全壘打長句重組",
+                audioText: "He hit a big home run over the wall.",
+                instruction: "重組成：「他擊出了一記飛越全壘打牆的大號全壘打！」",
+                targetTokens: ["He", "hit", "a", "big", "home", "run", "over", "the", "wall."],
+                pool: ["wall.", "the", "over", "run", "home", "big", "hit", "He", "a", "fly"]
               },
               {
                 type: "cloze",
-                prompt: "魔王題 3：位置與物件綜合",
-                sentence: "Where is my pencil? Look! It is ___ the backpack.",
-                blankAnswer: "in",
-                audioText: "Where is my pencil? Look! It is in the backpack.",
-                instruction: "選出合適的介系詞（提示：在背包裡面）：",
-                options: ["in", "at", "to", "for"]
+                prompt: "魔王題 3：精準撞球推進",
+                sentence: "Use the cue stick to hit the ball into the ___.",
+                blankAnswer: "pocket",
+                audioText: "Use the cue stick to hit the ball into the pocket.",
+                instruction: "選出撞球的「球袋」：",
+                options: ["pocket", "airplane", "rocket", "eraser"]
               },
               {
                 type: "match",
-                prompt: "魔王題 4：四年級核心高頻詞",
-                instruction: "挑戰最快速度完成配對：",
+                prompt: "魔王題 4：四年級王牌英雄詞彙全集",
+                instruction: "以最快速度完成所有配對：",
                 pairs: [
-                  { en: "delicious", zh: "美味好吃的" },
-                  { en: "thirsty", zh: "口渴的" },
-                  { en: "stomach", zh: "肚子胃部" },
-                  { en: "behind", zh: "在...後面" }
+                  { en: "home run", zh: "全壘打" },
+                  { en: "cue stick", zh: "撞球桿" },
+                  { en: "pilot", zh: "飛行員" },
+                  { en: "T-Rex", zh: "暴龍霸王龍" }
                 ]
               }
             ]
@@ -1987,7 +2284,7 @@
     ];
 
     /* ==========================================================================
-       4. 遊戲狀態與進度管理 (LocalStorage 永久保存)
+       4. 遊戲核心引擎 (連擊 Combo、愛心管理、LocalStorage 進度永久保存)
     ========================================================================== */
     class GameEngine {
       constructor() {
@@ -1995,6 +2292,7 @@
         this.currentLesson = null;
         this.questionIndex = 0;
         this.correctCount = 0;
+        this.comboStreak = 0;
         this.selectedAnswer = null;
         this.matchedPairsCount = 0;
         this.totalPairs = 0;
@@ -2003,12 +2301,12 @@
       }
 
       loadState() {
-        const saved = localStorage.getItem('grade4_duo_save_v2');
+        const saved = localStorage.getItem('grade4_duo_save_v3');
         if (saved) {
           try {
             const data = JSON.parse(saved);
             this.streak = data.streak || 1;
-            this.gems = data.gems || 120;
+            this.gems = data.gems || 150;
             this.hearts = data.hearts !== undefined ? data.hearts : 5;
             this.completedLessons = data.completedLessons || [];
             this.xp = data.xp || 0;
@@ -2022,7 +2320,7 @@
 
       initDefaultState() {
         this.streak = 1;
-        this.gems = 120;
+        this.gems = 150;
         this.hearts = 5;
         this.completedLessons = [];
         this.xp = 0;
@@ -2036,7 +2334,7 @@
           completedLessons: this.completedLessons,
           xp: this.xp
         };
-        localStorage.setItem('grade4_duo_save_v2', JSON.stringify(data));
+        localStorage.setItem('grade4_duo_save_v3', JSON.stringify(data));
         this.updateHeaderStats();
       }
 
@@ -2098,7 +2396,7 @@
               status = 'completed';
             } else if (unlockNext) {
               status = 'active';
-              unlockNext = false; // 目前最新解鎖關卡只有這一個
+              unlockNext = false;
             }
 
             const wrapper = document.createElement('div');
@@ -2109,7 +2407,7 @@
               starHtml = `<div class="node-star-row"><span>⭐</span><span>⭐</span><span>⭐</span></div>`;
             }
 
-            const iconMap = ['⭐', '📖', '🎯', '🔥', '👑'];
+            const iconMap = ['⭐', '⚾', '✈️', '🎱', '🦖', '🏎️', '👑'];
             const nodeIcon = isCompleted ? '✓' : (status === 'locked' ? '🔒' : (iconMap[lIdx % iconMap.length]));
 
             wrapper.innerHTML = `
@@ -2139,6 +2437,30 @@
         });
       }
 
+      /* 點擊吉祥物波波的俏皮互動 */
+      tapMascot() {
+        audioPlayer.play('hop');
+        const mascot = document.getElementById('bobi-mascot-box');
+        mascot.style.transform = 'scale(1.25) rotate(10deg)';
+        setTimeout(() => {
+          mascot.style.transform = '';
+        }, 300);
+
+        const cheers = [
+          "Home run! 你是英語全壘打王！",
+          "Ready for takeoff! 噴射機準備起飛囉！",
+          "Great shot! 這記進球角度太神準啦！",
+          "Awesome! 暴龍都為你的英語拍手！",
+          "Super fast! 比超級跑車還要快！"
+        ];
+        const quote = cheers[Math.floor(Math.random() * cheers.length)];
+        document.getElementById('bobi-quote').innerHTML = `
+          ${quote}
+          <span class="click-hint">👉 再點點我，波波繼續為你加油！</span>
+        `;
+        speakText("Awesome! You are a superstar!");
+      }
+
       showWordlist(unitId) {
         audioPlayer.play('click');
         const unit = CURRICULUM.find(u => u.id === unitId);
@@ -2146,7 +2468,7 @@
 
         document.getElementById('wordlist-icon').textContent = unit.icon;
         document.getElementById('wordlist-title').textContent = `${unit.title} - 重點單字`;
-        document.getElementById('wordlist-desc').textContent = '點擊右側喇叭可反覆聆聽發音，熟記後闖關更容易喔！';
+        document.getElementById('wordlist-desc').textContent = '點擊小喇叭可聆聽標準美語發音，先練習等一下闖關更容易！';
 
         const listContainer = document.getElementById('wordlist-items-container');
         listContainer.innerHTML = '';
@@ -2183,6 +2505,7 @@
         this.currentLesson = lesson;
         this.questionIndex = 0;
         this.correctCount = 0;
+        this.comboStreak = 0;
         this.showScreen('lesson');
         this.loadCurrentQuestion();
       }
@@ -2195,33 +2518,33 @@
           questions: [
             {
               type: "choice",
-              prompt: "複習題：文具夥伴",
-              en: "pencil",
-              audioText: "pencil",
-              instruction: "選出「pencil」的中文意思：",
+              prompt: "熱血複習題：球場王牌",
+              en: "baseball",
+              audioText: "baseball",
+              instruction: "選出「baseball」的繁體中文：",
               options: [
-                { en: "pencil", zh: "鉛筆", emoji: "✏️", correct: true },
-                { en: "eraser", zh: "橡皮擦", emoji: "🧽", correct: false },
-                { en: "book", zh: "書本", emoji: "📖", correct: false },
-                { en: "desk", zh: "書桌", emoji: "🪑", correct: false }
+                { en: "baseball", zh: "棒球", emoji: "⚾", correct: true },
+                { en: "airplane", zh: "飛機", emoji: "✈️", correct: false },
+                { en: "cue stick", zh: "撞球桿", emoji: "🪄", correct: false },
+                { en: "T-Rex", zh: "暴龍", emoji: "🦖", correct: false }
               ]
             },
             {
               type: "scramble",
-              prompt: "複習題：自我表達",
-              audioText: "I am happy today.",
-              instruction: "重組成：「我今天很開心。」",
-              targetTokens: ["I", "am", "happy", "today."],
-              pool: ["happy", "today.", "am", "I", "are", "tired"]
+              prompt: "熱血複習題：全壘打口令",
+              audioText: "He hit a home run!",
+              instruction: "重組成：「他擊出了一支全壘打！」",
+              targetTokens: ["He", "hit", "a", "home", "run!"],
+              pool: ["run!", "home", "He", "hit", "a", "she", "fly"]
             },
             {
               type: "cloze",
-              prompt: "複習題：問候填空",
-              sentence: "What time is ___? It is seven o'clock.",
-              blankAnswer: "it",
-              audioText: "What time is it?",
-              instruction: "請填入空格：",
-              options: ["it", "he", "you", "she"]
+              prompt: "熱血複習題：超音速衝刺",
+              sentence: "The jet is super ___.",
+              blankAnswer: "fast",
+              audioText: "The jet is super fast.",
+              instruction: "噴射機非常「快」：",
+              options: ["fast", "slow", "tired", "hungry"]
             }
           ]
         };
@@ -2248,7 +2571,6 @@
         this.currentScrambleTokens = [];
         this.matchedPairsCount = 0;
 
-        // 自動播放發音（若為單字選擇或聽力題）
         if (currentQ.audioText && (currentQ.type === 'choice' || currentQ.type === 'listen')) {
           setTimeout(() => speakText(currentQ.audioText), 250);
         }
@@ -2281,7 +2603,7 @@
           innerHtml += `
             <div class="scramble-section">
               <div class="scramble-dropzone" id="scramble-dropzone">
-                <span style="color:#aaa; font-size:0.9rem;">(點擊下方字卡放到這裡)</span>
+                <span style="color:#94a3b8; font-size:0.95rem; font-weight:700;">(點擊下方字卡放進這裡)</span>
               </div>
               <div class="word-tile-pool" id="word-tile-pool">
           `;
@@ -2299,14 +2621,14 @@
               <button class="audio-speaker-btn big" onclick="speakText('${currentQ.audioText}')">
                 🔊
               </button>
-              <div style="font-weight: 700; color: #1cb0f6; margin-top: 8px;">點擊重新聆聽發音</div>
+              <div style="font-weight: 800; color: #0284c7; margin-top: 8px;">點擊重新聆聽發音</div>
             </div>
             <div class="options-grid">
           `;
           currentQ.options.forEach((opt, idx) => {
             innerHtml += `
               <div class="option-card" onclick="game.selectListenOption(${idx})">
-                <span style="font-size: 1.1rem; font-weight: 700;">${opt.text}</span>
+                <span style="font-size: 1.18rem; font-weight: 800;">${opt.text}</span>
               </div>
             `;
           });
@@ -2317,10 +2639,10 @@
             <div class="cloze-sentence-box">${sentenceHtml}</div>
             <div class="options-grid">
           `;
-          currentQ.options.forEach((opt, idx) => {
+          currentQ.options.forEach((opt) => {
             innerHtml += `
               <div class="option-card" onclick="game.selectClozeOption('${opt}', this)">
-                <span style="font-size: 1.15rem; font-weight: 700;">${opt}</span>
+                <span style="font-size: 1.25rem; font-weight: 800;">${opt}</span>
               </div>
             `;
           });
@@ -2346,7 +2668,7 @@
         this.updateCheckButtonState(false);
       }
 
-      /* 題型點擊互動事件 */
+      /* 題型點選事件 */
       selectChoice(idx) {
         audioPlayer.play('click');
         const cards = document.querySelectorAll('.option-card');
@@ -2403,7 +2725,7 @@
       renderScrambleDropzone() {
         const zone = document.getElementById('scramble-dropzone');
         if (this.currentScrambleTokens.length === 0) {
-          zone.innerHTML = `<span style="color:#aaa; font-size:0.9rem;">(點擊下方字卡放到這裡)</span>`;
+          zone.innerHTML = `<span style="color:#94a3b8; font-size:0.95rem; font-weight:700;">(點擊下方字卡放進這裡)</span>`;
           this.updateCheckButtonState(false);
           return;
         }
@@ -2441,7 +2763,6 @@
           const secondType = el.dataset.type;
 
           if (firstPair === secondPair && firstType !== secondType) {
-            // 配對成功！
             currentSelected.classList.remove('selected');
             currentSelected.classList.add('matched');
             el.classList.add('matched');
@@ -2454,7 +2775,6 @@
               setTimeout(() => this.checkAnswer(), 400);
             }
           } else {
-            // 配對錯誤
             currentSelected.classList.remove('selected');
             el.classList.add('selected');
             setTimeout(() => {
@@ -2469,8 +2789,8 @@
         sheet.style.display = 'flex';
         sheet.className = 'feedback-sheet';
         document.getElementById('feedback-icon').textContent = '🤔';
-        document.getElementById('feedback-title').textContent = '確認你的答案';
-        document.getElementById('feedback-title').style.color = '#3c3c3c';
+        document.getElementById('feedback-title').textContent = '確認答案';
+        document.getElementById('feedback-title').style.color = '#334155';
         document.getElementById('feedback-detail').textContent = '檢查無誤後請點擊右邊按鈕';
         
         const actionBtn = document.getElementById('feedback-action-btn');
@@ -2485,6 +2805,25 @@
         }
       }
 
+      /* 顯示 Combo 特效 */
+      triggerComboEffect(count) {
+        const banner = document.getElementById('combo-banner');
+        const bannerText = document.getElementById('combo-banner-text');
+
+        let msg = `${count} COMBO! 連勝加速！🔥`;
+        if (count === 2) msg = "2 COMBO! 棒球全壘打擊掌！⚾";
+        if (count === 3) msg = "3 COMBO! 噴射機超音速衝刺！✈️";
+        if (count >= 4) msg = `${count} COMBO! 撞球精準一桿進洞！🎱`;
+
+        bannerText.textContent = msg;
+        banner.classList.add('show');
+        audioPlayer.play('combo');
+
+        setTimeout(() => {
+          banner.classList.remove('show');
+        }, 1600);
+      }
+
       checkAnswer() {
         const isCorrect = !!this.selectedAnswer;
         const sheet = document.getElementById('feedback-sheet');
@@ -2494,12 +2833,19 @@
         if (isCorrect) {
           audioPlayer.play('correct');
           this.correctCount++;
+          this.comboStreak++;
+
+          if (this.comboStreak >= 2) {
+            this.triggerComboEffect(this.comboStreak);
+          }
+
           sheet.className = 'feedback-sheet correct';
           document.getElementById('feedback-icon').textContent = '🎉';
-          document.getElementById('feedback-title').textContent = '太厲害了！答對了！';
-          document.getElementById('feedback-detail').textContent = '繼續前進，越來越棒了！';
+          document.getElementById('feedback-title').textContent = '擊出全壘打！太強了！';
+          document.getElementById('feedback-detail').textContent = '保持熱血衝勁，下一題更精采！';
         } else {
           audioPlayer.play('wrong');
+          this.comboStreak = 0; // 重置連擊
           this.hearts = Math.max(0, this.hearts - 1);
           this.saveState();
 
@@ -2536,32 +2882,31 @@
         triggerConfetti();
 
         if (this.practiceMode) {
-          this.hearts = 5; // 練習完畢直接補滿5顆心！
-          this.gems += 20;
-          this.xp += 15;
+          this.hearts = 5;
+          this.gems += 25;
+          this.xp += 20;
           this.saveState();
-          document.getElementById('summary-msg').textContent = '恭喜完成補血複習！你的愛心已完全回滿 ❤️❤️❤️❤️❤️！';
+          document.getElementById('summary-msg').textContent = '恭喜完成補血複習！你的愛心已完全補滿 ❤️❤️❤️❤️❤️！';
         } else {
           if (!this.completedLessons.includes(this.currentLesson.id)) {
             this.completedLessons.push(this.currentLesson.id);
-            this.gems += 30;
+            this.gems += 35;
           }
-          this.xp += 25;
+          this.xp += 30;
           this.saveState();
-          document.getElementById('summary-msg').textContent = '恭喜通過關卡！你又掌握了一項重要的英語技能！';
+          document.getElementById('summary-msg').textContent = '恭喜通過關卡！你又掌握了一項超酷的四年級英語技能！';
         }
 
         const total = this.currentLesson.questions.length;
         const accuracy = Math.round((this.correctCount / total) * 100);
 
-        document.getElementById('summary-xp').textContent = this.practiceMode ? 15 : 25;
+        document.getElementById('summary-xp').textContent = this.practiceMode ? 20 : 30;
         document.getElementById('summary-acc').textContent = accuracy;
         document.getElementById('summary-streak').textContent = this.streak;
 
         this.showScreen('summary');
 
-        // 如果通過魔王關，主動跳出證書慶賀！
-        if (this.currentLesson.id === 'u7-boss') {
+        if (this.currentLesson.id === 'u11-boss') {
           setTimeout(() => {
             this.showCertificateModal();
           }, 1200);
@@ -2608,12 +2953,12 @@
 
       resetProgressPrompt() {
         if (confirm('確定要清除所有學習紀錄並重新開始嗎？')) {
-          localStorage.removeItem('grade4_duo_save_v2');
+          localStorage.removeItem('grade4_duo_save_v3');
           this.initDefaultState();
           this.saveState();
           this.closeSettingsModal();
           this.renderMap();
-          alert('進度已重置完成！祝你探險順利！');
+          alert('進度已重置完成！祝你熱血探險順利！');
         }
       }
     }
@@ -2625,7 +2970,7 @@
     });
 
     /* ==========================================================================
-       5. 勝利彩帶噴發粒子動畫 (Pure Canvas Confetti)
+       5. 勝利全壘打彩帶與動態飛行粒子動畫 (Canvas Confetti & Flying Stars)
     ========================================================================== */
     function triggerConfetti() {
       const canvas = document.getElementById('confetti-canvas');
@@ -2634,16 +2979,18 @@
       canvas.height = window.innerHeight;
 
       const particles = [];
-      const colors = ['#58cc02', '#1cb0f6', '#ff9600', '#ff4b4b', '#ce82ff', '#ffc800'];
+      const colors = ['#ef4444', '#0284c7', '#58cc02', '#f59e0b', '#8b5cf6', '#ffc800'];
+      const emojis = ['⚾', '✈️', '⭐', '🔥', '🎱', '🦖'];
 
       for (let i = 0; i < 90; i++) {
         particles.push({
           x: canvas.width / 2,
           y: canvas.height * 0.45,
-          r: Math.random() * 6 + 4,
-          dx: (Math.random() - 0.5) * 14,
-          dy: (Math.random() - 0.8) * 16,
+          r: Math.random() * 6 + 5,
+          dx: (Math.random() - 0.5) * 16,
+          dy: (Math.random() - 0.8) * 18,
           color: colors[Math.floor(Math.random() * colors.length)],
+          emoji: Math.random() > 0.65 ? emojis[Math.floor(Math.random() * emojis.length)] : null,
           tilt: Math.random() * 10,
           tiltAngle: Math.random() * Math.PI
         });
@@ -2657,19 +3004,24 @@
         particles.forEach(p => {
           p.x += p.dx;
           p.y += p.dy;
-          p.dy += 0.35;
+          p.dy += 0.38;
           p.tiltAngle += 0.1;
           p.tilt = Math.sin(p.tiltAngle) * 12;
 
-          ctx.beginPath();
-          ctx.lineWidth = p.r / 2;
-          ctx.strokeStyle = p.color;
-          ctx.moveTo(p.x + p.tilt + p.r / 4, p.y);
-          ctx.lineTo(p.x + p.tilt, p.y + p.tilt + p.r / 4);
-          ctx.stroke();
+          if (p.emoji) {
+            ctx.font = '20px sans-serif';
+            ctx.fillText(p.emoji, p.x, p.y);
+          } else {
+            ctx.beginPath();
+            ctx.lineWidth = p.r / 2;
+            ctx.strokeStyle = p.color;
+            ctx.moveTo(p.x + p.tilt + p.r / 4, p.y);
+            ctx.lineTo(p.x + p.tilt, p.y + p.tilt + p.r / 4);
+            ctx.stroke();
+          }
         });
 
-        if (frames < 120) {
+        if (frames < 130) {
           requestAnimationFrame(animate);
         } else {
           ctx.clearRect(0, 0, canvas.width, canvas.height);

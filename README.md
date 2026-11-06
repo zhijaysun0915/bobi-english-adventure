@@ -1,45 +1,61 @@
-# 🦉 波波英語大冒險 (Bobi English Adventure)
+# 🦉 波波熱血英語大冒險 (Bobi English Adventure)
 
-> 專為國小四年級學童量身打造的 **Duolingo 風格英語闖關學習網頁遊戲**！  
-> 100% 繁體中文介面、標準美式發音、免安裝即開即玩！
+> 專為國小四年級學童量身打造的 **Duolingo 風格熱血英語闖關學習遊戲**！  
+> 特別收錄小男生最愛的 **熱血棒球 ⚾・超音速噴射機 ✈️・撞球神童 🎱・侏儸紀暴龍 🦖・極速超跑 🏎️** 等 11 大豐富主題！  
+> 100% 繁體中文介面、可愛遊戲音效、標準美式發音、免安裝即開即玩！
 
 🎮 **線上直接玩（Live Demo）**：  
 👉 [https://zhijaysun0915.github.io/bobi-english-adventure/](https://zhijaysun0915.github.io/bobi-english-adventure/)
 
 ---
 
-## 🌟 遊戲特色與亮點
+## 🌟 全新升級亮點與遊戲化特色
 
-- 🗺️ **經典蛇形冒險地圖**：仿造 Duolingo 闖關路徑，包含關卡解鎖、三星評分、挑戰狀態與大魔王試煉。
-- 🦉 **可愛吉祥物「波波（Bobi）」**：隨機給予加油打氣，答題時即時給予生動的情境反饋。
-- 🔊 **標準美式發音朗讀（Web Speech API）**：針對國小學童調校至 0.85x 清晰慢速，點擊喇叭即可反覆聆聽發音。
-- 🎵 **純程式碼音效合成（Web Audio API）**：包含答對音、答錯音、按鍵音與通關勝利號角，無須外部音檔，100% 離線可用。
-- ❤️ **愛心體力與補血機制**：初始 5 顆愛心，答錯扣心；若愛心耗盡，可進行「快速複習練習」回滿體力，寓教於樂。
-- 🔥 **遊戲化養成元素**：累積連勝天數（Streak）、鑽石寶石（Gems）與經驗值（XP）。
-- 📖 **單元單字預習卡**：每一單元均附有單字學習卡，出發闖關前可先預習並點擊練習發音。
-- 📜 **四年級專屬結業榮譽證書**：完成大魔王關卡後，可輸入學生姓名，頒發專屬數位認證證書！
-- 🇹🇼 **純正繁體中文**：全題目與說明嚴格遵循臺灣國小課綱用語，無任何簡體字。
+- ✈️ **超帥氣飛行員貓頭鷹「波波（Bobi）」**：
+  - 戴著酷炫飛行員皮帽與護目鏡，隨時在畫面中為探險家打氣。
+  - **吉祥物互動隨點隨回**：隨時點擊波波，牠會開心地彈跳起來並用美語為你歡呼（*“Home run! You are a superstar!”*、*“Ready for takeoff!”*）。
+- 🎵 **超可愛卡通泡泡音效（Web Audio API）**：
+  - 輕快可愛的木質 Pop 水滴泡泡按鍵音、耀眼卡比升調星星通關音、生動彈簧 Boing 趣味答錯音、熱血全壘打勝利號角。
+  - 完全由瀏覽器晶片純代碼即時合成，零外部音檔依賴，100% 離線穩定暢玩。
+- 🔥 **連續答對 COMBO 加速系統**：
+  - 連續答對 2 題觸發 **「2 COMBO! 棒球全壘打擊掌！⚾」**
+  - 連續答對 3 題觸發 **「3 COMBO! 噴射機超音速衝刺！✈️」**
+  - 連續答對 4 題觸發 **「4 COMBO! 撞球精準一桿進洞！🎱」**
+- 🎊 **動態物理全壘打粒子慶祝**：
+  - 通關時全螢幕噴發彩色紙花彩帶，還有卡通棒球 ⚾、噴射機 ✈️、小星星 ⭐、暴龍 🦖 與火焰 🔥 從天而降！
+- 🔊 **美語真人語音發音（Web Speech API）**：
+  - 針對小學四年級慢速清晰調校（0.85x），每道題目與單字皆可點擊喇叭反覆練習聽力。
+- ❤️ **愛心體力與快速補血複習**：
+  - 起始 5 顆愛心，答錯扣心；愛心耗盡可進入「愛心補血特訓」快速答對 3 題補滿 5 顆愛心。
+- 📜 **四年級全能認證金牌榮譽證書**：
+  - 通過終極大魔王關卡後，可輸入學生大名，頒發專屬四年級數位獎狀！
+- 🇹🇼 **100% 正體繁體中文**：
+  - 嚴格遵循臺灣國小英文教學課綱常用詞彙，絕無簡體字。
 
 ---
 
-## 📚 七大單元漸進式學習課綱 (Grade 4)
+## 📚 11 大熱血漸進單元課綱 (Grade 4)
 
-| 單元 | 單元主題 | 核心字彙與文法句型 |
+| 單元 | 單元主題 | 男生超人氣核心字彙與文法句型 |
 | :--- | :--- | :--- |
-| **Unit 1** | **晨間日常與學校生活** | 文具 (`pencil, eraser, backpack, ruler`)、問時間與作息 (`What time is it? It is seven o'clock.`) |
-| **Unit 2** | **可愛動物與大自然探險** | 野生動物 (`elephant, monkey, tiger, zebra`)、特徵形容詞 (`The monkey is in the tree.`) |
-| **Unit 3** | **美味野餐與飲食喜好** | 美食飲品 (`sandwich, pizza, milk, juice`)、表達喜好與感受 (`Do you like apples? I am hungry.`) |
-| **Unit 4** | **身體部位與心情感受** | 五官身體 (`eyes, ears, stomach`)、情緒表達 (`How are you? I am very happy.`) |
-| **Unit 5** | **捉迷藏！神奇方位大搜查** | 空間介系詞 (`in, on, under, behind, next to`)、物品位置尋找問答 |
-| **Unit 6** | **週末運動與才藝達人** | 運動樂器 (`play soccer, ride a bike, swim, guitar`)、能力助動詞 (`Can you ride a bicycle? Yes, I can.`) |
-| **Unit 7** | **終極榮譽！闖關大師試煉** | 跨單元大綜合會考、情境聽力對話、長句拼字重組，通關領取**榮譽證書**！ |
+| **Unit 1** | **活力校園與晨間日常** 🎒 | 文具用品 (`backpack, pencil, eraser`)、問時間 (`What time is it? It is seven o'clock.`) |
+| **Unit 2** | **飛行家出任務！超音速噴射機** ✈️ | 飛機航空 (`airplane, jet, pilot, airport, rocket, sky`)、飛行員能力 (`The pilot can fly the airplane.`) |
+| **Unit 3** | **全壘打旋風！熱血棒球場** ⚾ | 棒球配備 (`baseball, bat, glove, home run, pitcher, catch`)、全壘打歡呼 (`He hit a home run!`) |
+| **Unit 4** | **撞球小神童！精準進球大挑戰** 🎱 | 撞球術語 (`cue stick, billiard ball, pocket, corner, strike`)、角度推進 (`Hit the ball into the pocket.`) |
+| **Unit 5** | **侏儸紀暴龍與恐龍王國** 🦖 | 霸王龍與古生物 (`dinosaur, T-Rex, sharp teeth, fossil, giant, roar`)、身體特徵形容詞 |
+| **Unit 6** | **極速狂飆！機械超跑與機器人** 🏎️ | 賽車與機械 (`sports car, engine, wheel, helmet, robot, transform`)、安全穿戴與命令句 |
+| **Unit 7** | **狂野動物園與神奇猛獸** 🐆 | 野生動物速度霸主 (`cheetah, lion, eagle, tiger, claws`)、比較級初探 (`runs faster than a car`) |
+| **Unit 8** | **能量補給站！大漢堡與野餐點心** 🍔 | 美食充能 (`hamburger, french fries, pizza, hot dog, hungry, thirsty`)、飲食喜好表達 |
+| **Unit 9** | **空間秘密基地！捉迷藏與方位探尋** 🧭 | 空間介系詞大運用 (`in, on, under, behind, next to`)、尋找失物問答 (`Where is my baseball glove?`) |
+| **Unit 10** | **週末英雄爭霸！我會的超能力與才藝** 🛹 | 極限運動才藝 (`ride a skateboard, play baseball, fly a drone, swim fast`)、能力助動詞問答句 |
+| **Unit 11** | **終極榮譽！四年級全能冒險大魔王** 👑 | 跨單元大會考！噴射機對決全壘打、暴龍與撞球王牌情境聽力與長句重組，解鎖金牌證書！ |
 
 ---
 
-## 🎯 題型介紹
+## 🎯 五大互動題型
 
-1. **圖文詞彙選擇題**：配對可愛 Emoji 圖示與英文單字。
-2. **句子磁貼重組 (Sentence Scramble)**：Duolingo 經典造句玩法，點擊單字磁貼組出完整句子。
+1. **圖文詞彙選擇題**：生動的大 Emoji 與英文單字，建立圖像聯想。
+2. **句子磁貼重組 (Sentence Scramble)**：Duolingo 經典造句玩法，點擊單字磁貼組出完整文法句子。
 3. **聽力測驗大挑戰**：專注聆聽標準美語發音，選出正確語義或單字。
 4. **詞彙對對碰 (Matching Pairs)**：8 張卡片隨機打散，配對中英文詞彙快速消除。
 5. **文法填空題 (Cloze)**：考驗介系詞、代名詞與動詞填空。
@@ -48,27 +64,14 @@
 
 ## 💻 本地離線遊玩
 
-本專案為零依賴的純前端 Single Page Application (SPA)，無須安裝 Node.js 或任何後端伺服器：
-
 1. 下載或 Clone 本專案：
    ```bash
    git clone https://github.com/zhijaysun0915/bobi-english-adventure.git
    ```
-2. 直接使用任何現代瀏覽器（Google Chrome、Safari、Microsoft Edge 等）雙擊開啟 `index.html` 即可立即開始遊玩！
-
----
-
-## 🛠️ 技術架構
-
-- **HTML5 & CSS3**：響應式 Flexbox / CSS Grid 版面，支援平板、手機與電腦螢幕。
-- **Modern JavaScript (ES6+)**：純原生 JavaScript，無需第三方前端框架。
-- **Web Speech API**：原生語音合成引擎 (`SpeechSynthesis`)。
-- **Web Audio API**：原生多波形振盪器音效即時合成。
-- **HTML5 Canvas**：通關慶祝全螢幕彩帶粒子動畫。
-- **LocalStorage API**：自動在本地端永久儲存學生的通關進度、XP 與愛心。
+2. 直接雙擊 `index.html` 即可在任何瀏覽器（Google Chrome、Safari、Edge 等）暢玩！
 
 ---
 
 ## 📄 授權條款 (License)
 
-本專案採用 [MIT License](LICENSE) 授權，歡迎教育工作者、家長與學童自由使用與交流學習。
+本專案採用 [MIT License](LICENSE) 授權，歡迎家長、國小師生與英語學習者自由分享與教學使用。
