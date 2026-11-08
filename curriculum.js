@@ -73,21 +73,23 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Hello, my good friend.",
-            "instruction": "重組成完整句子：「字母與打招呼」",
+            "instruction": "請看中文重組成英文句子：「你好，我的好朋友。」",
             "targetTokens": [
-              "friend.",
+              "Hello,",
               "my",
               "good",
-              "Hello,"
+              "friend."
             ],
             "pool": [
-              "friend.",
-              "my",
               "good",
+              "always",
               "Hello,",
+              "my",
               "often",
-              "always"
-            ]
+              "friend."
+            ],
+            "targetChinese": "你好，我的好朋友。",
+            "targetSentence": "Hello, my good friend."
           },
           {
             "type": "listen",
@@ -203,21 +205,23 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "I have two dogs.",
-            "instruction": "重組成完整句子：「數字大點名 1-5」",
+            "instruction": "請看中文重組成英文句子：「我有兩隻狗。」",
             "targetTokens": [
-              "dogs.",
-              "two",
+              "I",
               "have",
-              "I"
+              "two",
+              "dogs."
             ],
             "pool": [
-              "dogs.",
               "two",
               "have",
-              "I",
+              "dogs.",
+              "always",
               "often",
-              "always"
-            ]
+              "I"
+            ],
+            "targetChinese": "我有兩隻狗。",
+            "targetSentence": "I have two dogs."
           },
           {
             "type": "listen",
@@ -333,23 +337,25 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Count from six to ten.",
-            "instruction": "重組成完整句子：「數字加速前進 6-10」",
+            "instruction": "請看中文重組成英文句子：「從六數到十。」",
             "targetTokens": [
-              "ten.",
-              "to",
-              "six",
+              "Count",
               "from",
-              "Count"
+              "six",
+              "to",
+              "ten."
             ],
             "pool": [
-              "ten.",
               "to",
-              "six",
+              "ten.",
               "from",
-              "Count",
+              "six",
               "often",
-              "always"
-            ]
+              "always",
+              "Count"
+            ],
+            "targetChinese": "從六數到十。",
+            "targetSentence": "Count from six to ten."
           },
           {
             "type": "listen",
@@ -461,21 +467,23 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The apple is red.",
-            "instruction": "重組成完整句子：「繽紛色彩世界」",
+            "instruction": "請看中文重組成英文句子：「這顆蘋果是紅色的。」",
             "targetTokens": [
-              "red.",
-              "is",
+              "The",
               "apple",
-              "The"
+              "is",
+              "red."
             ],
             "pool": [
-              "red.",
-              "is",
-              "apple",
               "The",
+              "is",
+              "always",
+              "apple",
               "often",
-              "always"
-            ]
+              "red."
+            ],
+            "targetChinese": "這顆蘋果是紅色的。",
+            "targetSentence": "The apple is red."
           },
           {
             "type": "listen",
@@ -587,23 +595,25 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The cat is so cute.",
-            "instruction": "重組成完整句子：「可愛家庭寵物」",
+            "instruction": "請看中文重組成英文句子：「這隻貓咪真可愛。」",
             "targetTokens": [
-              "cute.",
-              "so",
-              "is",
+              "The",
               "cat",
-              "The"
+              "is",
+              "so",
+              "cute."
             ],
             "pool": [
-              "cute.",
-              "so",
-              "is",
               "cat",
               "The",
+              "so",
+              "is",
+              "cute.",
               "often",
               "always"
-            ]
+            ],
+            "targetChinese": "這隻貓咪真可愛。",
+            "targetSentence": "The cat is so cute."
           },
           {
             "type": "listen",
@@ -715,23 +725,25 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "I play with the ball.",
-            "instruction": "重組成完整句子：「我的神奇玩具箱」",
+            "instruction": "請看中文重組成英文句子：「我玩這顆球。」",
             "targetTokens": [
-              "ball.",
-              "the",
-              "with",
+              "I",
               "play",
-              "I"
+              "with",
+              "the",
+              "ball."
             ],
             "pool": [
+              "often",
+              "I",
               "ball.",
               "the",
-              "with",
               "play",
-              "I",
-              "often",
+              "with",
               "always"
-            ]
+            ],
+            "targetChinese": "我玩這顆球。",
+            "targetSentence": "I play with the ball."
           },
           {
             "type": "listen",
@@ -843,21 +855,23 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "This is my pencil.",
-            "instruction": "重組成完整句子：「教室文具小幫手」",
+            "instruction": "請看中文重組成英文句子：「這是我的鉛筆。」",
             "targetTokens": [
-              "pencil.",
-              "my",
+              "This",
               "is",
-              "This"
+              "my",
+              "pencil."
             ],
             "pool": [
-              "pencil.",
               "my",
+              "pencil.",
               "is",
-              "This",
               "often",
-              "always"
-            ]
+              "always",
+              "This"
+            ],
+            "targetChinese": "這是我的鉛筆。",
+            "targetSentence": "This is my pencil."
           },
           {
             "type": "listen",
@@ -969,19 +983,21 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Good morning, sunshine!",
-            "instruction": "重組成完整句子：「早安晨間日常」",
+            "instruction": "請看中文重組成英文句子：「早安，陽光！」",
             "targetTokens": [
-              "sunshine!",
+              "Good",
               "morning,",
-              "Good"
+              "sunshine!"
             ],
             "pool": [
+              "always",
               "sunshine!",
               "morning,",
-              "Good",
               "often",
-              "always"
-            ]
+              "Good"
+            ],
+            "targetChinese": "早安，陽光！",
+            "targetSentence": "Good morning, sunshine!"
           },
           {
             "type": "listen",
@@ -1093,23 +1109,25 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Touch your nose and eyes.",
-            "instruction": "重組成完整句子：「身體動一動」",
+            "instruction": "請看中文重組成英文句子：「摸摸你的鼻子和眼睛。」",
             "targetTokens": [
-              "eyes.",
-              "and",
-              "nose",
+              "Touch",
               "your",
-              "Touch"
+              "nose",
+              "and",
+              "eyes."
             ],
             "pool": [
+              "your",
+              "often",
+              "nose",
+              "always",
               "eyes.",
               "and",
-              "nose",
-              "your",
-              "Touch",
-              "often",
-              "always"
-            ]
+              "Touch"
+            ],
+            "targetChinese": "摸摸你的鼻子和眼睛。",
+            "targetSentence": "Touch your nose and eyes."
           },
           {
             "type": "listen",
@@ -1221,21 +1239,23 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "I like sweet apples.",
-            "instruction": "重組成完整句子：「水果點心攤」",
+            "instruction": "請看中文重組成英文句子：「我喜歡甜甜的蘋果。」",
             "targetTokens": [
-              "apples.",
+              "I",
+              "like",
               "sweet",
+              "apples."
+            ],
+            "pool": [
+              "sweet",
+              "apples.",
+              "often",
+              "always",
               "like",
               "I"
             ],
-            "pool": [
-              "apples.",
-              "sweet",
-              "like",
-              "I",
-              "often",
-              "always"
-            ]
+            "targetChinese": "我喜歡甜甜的蘋果。",
+            "targetSentence": "I like sweet apples."
           },
           {
             "type": "listen",
@@ -1347,21 +1367,23 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "I love my mother.",
-            "instruction": "重組成完整句子：「親愛的一家人」",
+            "instruction": "請看中文重組成英文句子：「我愛我的媽媽。」",
             "targetTokens": [
-              "mother.",
-              "my",
+              "I",
               "love",
-              "I"
+              "my",
+              "mother."
             ],
             "pool": [
-              "mother.",
-              "my",
-              "love",
               "I",
-              "often",
-              "always"
-            ]
+              "mother.",
+              "always",
+              "love",
+              "my",
+              "often"
+            ],
+            "targetChinese": "我愛我的媽媽。",
+            "targetSentence": "I love my mother."
           },
           {
             "type": "listen",
@@ -1473,23 +1495,25 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Put on your cool cap.",
-            "instruction": "重組成完整句子：「漂亮衣物帽子」",
+            "instruction": "請看中文重組成英文句子：「戴上你帥氣的帽子。」",
             "targetTokens": [
-              "cap.",
-              "cool",
-              "your",
+              "Put",
               "on",
-              "Put"
+              "your",
+              "cool",
+              "cap."
             ],
             "pool": [
               "cap.",
-              "cool",
-              "your",
               "on",
               "Put",
+              "your",
               "often",
-              "always"
-            ]
+              "always",
+              "cool"
+            ],
+            "targetChinese": "戴上你帥氣的帽子。",
+            "targetSentence": "Put on your cool cap."
           },
           {
             "type": "listen",
@@ -1601,23 +1625,25 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Look at the big star.",
-            "instruction": "重組成完整句子：「形狀與大小」",
+            "instruction": "請看中文重組成英文句子：「看那顆大星星。」",
             "targetTokens": [
-              "star.",
-              "big",
-              "the",
+              "Look",
               "at",
-              "Look"
+              "the",
+              "big",
+              "star."
             ],
             "pool": [
-              "star.",
-              "big",
-              "the",
+              "always",
               "at",
-              "Look",
+              "star.",
               "often",
-              "always"
-            ]
+              "the",
+              "big",
+              "Look"
+            ],
+            "targetChinese": "看那顆大星星。",
+            "targetSentence": "Look at the big star."
           },
           {
             "type": "listen",
@@ -1729,23 +1755,25 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The boys run and jump.",
-            "instruction": "重組成完整句子：「活力日常動作」",
+            "instruction": "請看中文重組成英文句子：「男孩們又跑又跳。」",
             "targetTokens": [
-              "jump.",
-              "and",
-              "run",
+              "The",
               "boys",
-              "The"
+              "run",
+              "and",
+              "jump."
             ],
             "pool": [
+              "often",
               "jump.",
-              "and",
+              "always",
               "run",
               "boys",
-              "The",
-              "often",
-              "always"
-            ]
+              "and",
+              "The"
+            ],
+            "targetChinese": "男孩們又跑又跳。",
+            "targetSentence": "The boys run and jump."
           },
           {
             "type": "listen",
@@ -1857,23 +1885,25 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "I am very happy today.",
-            "instruction": "重組成完整句子：「心情大晴天」",
+            "instruction": "請看中文重組成英文句子：「我今天非常開心。」",
             "targetTokens": [
-              "today.",
-              "happy",
-              "very",
+              "I",
               "am",
-              "I"
+              "very",
+              "happy",
+              "today."
             ],
             "pool": [
+              "always",
               "today.",
-              "happy",
-              "very",
-              "am",
               "I",
               "often",
-              "always"
-            ]
+              "am",
+              "very",
+              "happy"
+            ],
+            "targetChinese": "我今天非常開心。",
+            "targetSentence": "I am very happy today."
           },
           {
             "type": "listen",
@@ -1985,23 +2015,25 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Hello, I am happy today.",
-            "instruction": "重組成完整句子：「小學初級通關大魔王」",
+            "instruction": "請看中文重組成英文句子：「哈囉，我今天很開心。」",
             "targetTokens": [
-              "today.",
-              "happy",
-              "am",
+              "Hello,",
               "I",
-              "Hello,"
+              "am",
+              "happy",
+              "today."
             ],
             "pool": [
-              "today.",
+              "always",
               "happy",
               "am",
-              "I",
-              "Hello,",
               "often",
-              "always"
-            ]
+              "Hello,",
+              "today.",
+              "I"
+            ],
+            "targetChinese": "哈囉，我今天很開心。",
+            "targetSentence": "Hello, I am happy today."
           },
           {
             "type": "listen",
@@ -2128,23 +2160,25 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "This is my new backpack.",
-            "instruction": "重組成完整句子：「文具小幫手升級」",
+            "instruction": "請看中文重組成英文句子：「這是我的新背包。」",
             "targetTokens": [
-              "backpack.",
-              "new",
-              "my",
+              "This",
               "is",
-              "This"
+              "my",
+              "new",
+              "backpack."
             ],
             "pool": [
-              "backpack.",
-              "new",
               "my",
-              "is",
               "This",
               "often",
-              "always"
-            ]
+              "always",
+              "is",
+              "new",
+              "backpack."
+            ],
+            "targetChinese": "這是我的新背包。",
+            "targetSentence": "This is my new backpack."
           },
           {
             "type": "listen",
@@ -2256,23 +2290,25 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "What time is it now?",
-            "instruction": "重組成完整句子：「現在幾點鐘？」",
+            "instruction": "請看中文重組成英文句子：「現在幾點了？」",
             "targetTokens": [
-              "now?",
-              "it",
-              "is",
+              "What",
               "time",
-              "What"
+              "is",
+              "it",
+              "now?"
             ],
             "pool": [
-              "now?",
-              "it",
               "is",
               "time",
+              "always",
               "What",
-              "often",
-              "always"
-            ]
+              "now?",
+              "it",
+              "often"
+            ],
+            "targetChinese": "現在幾點了？",
+            "targetSentence": "What time is it now?"
           },
           {
             "type": "listen",
@@ -2384,25 +2420,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The pilot can fly the airplane.",
-            "instruction": "重組成完整句子：「超音速噴射機出任務」",
+            "instruction": "請看中文重組成英文句子：「飛行員會開飛機。」",
             "targetTokens": [
-              "airplane.",
-              "the",
-              "fly",
-              "can",
+              "The",
               "pilot",
-              "The"
+              "can",
+              "fly",
+              "the",
+              "airplane."
             ],
             "pool": [
-              "airplane.",
-              "the",
-              "fly",
-              "can",
               "pilot",
+              "the",
+              "airplane.",
+              "always",
               "The",
-              "often",
-              "always"
-            ]
+              "can",
+              "fly",
+              "often"
+            ],
+            "targetChinese": "飛行員會開飛機。",
+            "targetSentence": "The pilot can fly the airplane."
           },
           {
             "type": "listen",
@@ -2514,25 +2552,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The rocket is flying to space.",
-            "instruction": "重組成完整句子：「太空火箭發射升空」",
+            "instruction": "請看中文重組成英文句子：「火箭正飛向太空。」",
             "targetTokens": [
-              "space.",
-              "to",
-              "flying",
-              "is",
+              "The",
               "rocket",
-              "The"
+              "is",
+              "flying",
+              "to",
+              "space."
             ],
             "pool": [
-              "space.",
-              "to",
+              "often",
               "flying",
+              "The",
               "is",
               "rocket",
-              "The",
-              "often",
-              "always"
-            ]
+              "to",
+              "always",
+              "space."
+            ],
+            "targetChinese": "火箭正飛向太空。",
+            "targetSentence": "The rocket is flying to space."
           },
           {
             "type": "listen",
@@ -2644,23 +2684,25 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "He hit a home run!",
-            "instruction": "重組成完整句子：「熱血棒球場擊球！」",
+            "instruction": "請看中文重組成英文句子：「他擊出了一支全壘打！」",
             "targetTokens": [
-              "run!",
-              "home",
-              "a",
+              "He",
               "hit",
-              "He"
+              "a",
+              "home",
+              "run!"
             ],
             "pool": [
-              "run!",
-              "home",
               "a",
-              "hit",
-              "He",
               "often",
-              "always"
-            ]
+              "He",
+              "hit",
+              "always",
+              "home",
+              "run!"
+            ],
+            "targetChinese": "他擊出了一支全壘打！",
+            "targetSentence": "He hit a home run!"
           },
           {
             "type": "listen",
@@ -2772,23 +2814,25 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "I can catch the baseball.",
-            "instruction": "重組成完整句子：「王牌投手與接球」",
+            "instruction": "請看中文重組成英文句子：「我接得到這顆棒球。」",
             "targetTokens": [
-              "baseball.",
-              "the",
-              "catch",
+              "I",
               "can",
-              "I"
+              "catch",
+              "the",
+              "baseball."
             ],
             "pool": [
-              "baseball.",
-              "the",
               "catch",
+              "baseball.",
               "can",
-              "I",
               "often",
-              "always"
-            ]
+              "the",
+              "always",
+              "I"
+            ],
+            "targetChinese": "我接得到這顆棒球。",
+            "targetSentence": "I can catch the baseball."
           },
           {
             "type": "listen",
@@ -2900,23 +2944,25 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Hold the cue stick firmly.",
-            "instruction": "重組成完整句子：「撞球神童精準推桿」",
+            "instruction": "請看中文重組成英文句子：「握緊這支撞球桿。」",
             "targetTokens": [
-              "firmly.",
-              "stick",
-              "cue",
+              "Hold",
               "the",
-              "Hold"
+              "cue",
+              "stick",
+              "firmly."
             ],
             "pool": [
-              "firmly.",
+              "often",
+              "Hold",
               "stick",
               "cue",
-              "the",
-              "Hold",
-              "often",
-              "always"
-            ]
+              "always",
+              "firmly.",
+              "the"
+            ],
+            "targetChinese": "握緊這支撞球桿。",
+            "targetSentence": "Hold the cue stick firmly."
           },
           {
             "type": "listen",
@@ -3028,25 +3074,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Hit the ball into the pocket.",
-            "instruction": "重組成完整句子：「精準進球與角度幾何」",
+            "instruction": "請看中文重組成英文句子：「把球打進球袋裡。」",
             "targetTokens": [
-              "pocket.",
+              "Hit",
               "the",
-              "into",
               "ball",
+              "into",
               "the",
-              "Hit"
+              "pocket."
             ],
             "pool": [
-              "pocket.",
+              "the",
               "the",
               "into",
-              "ball",
-              "the",
+              "always",
+              "pocket.",
               "Hit",
-              "often",
-              "always"
-            ]
+              "ball",
+              "often"
+            ],
+            "targetChinese": "把球打進球袋裡。",
+            "targetSentence": "Hit the ball into the pocket."
           },
           {
             "type": "listen",
@@ -3158,23 +3206,25 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The T-Rex has sharp teeth.",
-            "instruction": "重組成完整句子：「侏儸紀霸王龍現身」",
+            "instruction": "請看中文重組成英文句子：「霸王龍有鋒利的牙齒。」",
             "targetTokens": [
-              "teeth.",
-              "sharp",
-              "has",
+              "The",
               "T-Rex",
-              "The"
+              "has",
+              "sharp",
+              "teeth."
             ],
             "pool": [
-              "teeth.",
-              "sharp",
-              "has",
-              "T-Rex",
-              "The",
               "often",
-              "always"
-            ]
+              "always",
+              "teeth.",
+              "T-Rex",
+              "sharp",
+              "The",
+              "has"
+            ],
+            "targetChinese": "霸王龍有鋒利的牙齒。",
+            "targetSentence": "The T-Rex has sharp teeth."
           },
           {
             "type": "listen",
@@ -3286,25 +3336,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The dinosaur has a long tail.",
-            "instruction": "重組成完整句子：「恐龍巨型怒吼」",
+            "instruction": "請看中文重組成英文句子：「恐龍有一條長尾巴。」",
             "targetTokens": [
-              "tail.",
-              "long",
-              "a",
-              "has",
+              "The",
               "dinosaur",
-              "The"
+              "has",
+              "a",
+              "long",
+              "tail."
             ],
             "pool": [
+              "dinosaur",
+              "always",
+              "a",
+              "often",
+              "has",
               "tail.",
               "long",
-              "a",
-              "has",
-              "dinosaur",
-              "The",
-              "often",
-              "always"
-            ]
+              "The"
+            ],
+            "targetChinese": "恐龍有一條長尾巴。",
+            "targetSentence": "The dinosaur has a long tail."
           },
           {
             "type": "listen",
@@ -3416,27 +3468,29 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The red sports car is super fast.",
-            "instruction": "重組成完整句子：「機械超跑極速狂飆」",
+            "instruction": "請看中文重組成英文句子：「這輛紅色跑車超級快。」",
             "targetTokens": [
-              "fast.",
-              "super",
-              "is",
-              "car",
-              "sports",
+              "The",
               "red",
-              "The"
+              "sports",
+              "car",
+              "is",
+              "super",
+              "fast."
             ],
             "pool": [
-              "fast.",
+              "sports",
               "super",
               "is",
-              "car",
-              "sports",
-              "red",
               "The",
+              "always",
               "often",
-              "always"
-            ]
+              "car",
+              "red",
+              "fast."
+            ],
+            "targetChinese": "這輛紅色跑車超級快。",
+            "targetSentence": "The red sports car is super fast."
           },
           {
             "type": "listen",
@@ -3548,23 +3602,25 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The cool robot can transform.",
-            "instruction": "重組成完整句子：「變形機器人防護」",
+            "instruction": "請看中文重組成英文句子：「這個酷炫機器人可以變形。」",
             "targetTokens": [
-              "transform.",
-              "can",
-              "robot",
+              "The",
               "cool",
-              "The"
+              "robot",
+              "can",
+              "transform."
             ],
             "pool": [
-              "transform.",
               "can",
+              "often",
+              "always",
               "robot",
               "cool",
               "The",
-              "often",
-              "always"
-            ]
+              "transform."
+            ],
+            "targetChinese": "這個酷炫機器人可以變形。",
+            "targetSentence": "The cool robot can transform."
           },
           {
             "type": "listen",
@@ -3676,23 +3732,25 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "I want a big hamburger.",
-            "instruction": "重組成完整句子：「能量補給大漢堡」",
+            "instruction": "請看中文重組成英文句子：「我想要一個大漢堡。」",
             "targetTokens": [
-              "hamburger.",
-              "big",
-              "a",
+              "I",
               "want",
-              "I"
+              "a",
+              "big",
+              "hamburger."
             ],
             "pool": [
               "hamburger.",
-              "big",
               "a",
-              "want",
               "I",
-              "often",
-              "always"
-            ]
+              "big",
+              "always",
+              "want",
+              "often"
+            ],
+            "targetChinese": "我想要一個大漢堡。",
+            "targetSentence": "I want a big hamburger."
           },
           {
             "type": "listen",
@@ -3804,25 +3862,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The cat is under the chair.",
-            "instruction": "重組成完整句子：「秘密基地捉迷藏」",
+            "instruction": "請看中文重組成英文句子：「貓咪在椅子下面。」",
             "targetTokens": [
-              "chair.",
-              "the",
-              "under",
-              "is",
+              "The",
               "cat",
-              "The"
+              "is",
+              "under",
+              "the",
+              "chair."
             ],
             "pool": [
               "chair.",
-              "the",
-              "under",
-              "is",
               "cat",
               "The",
+              "is",
+              "the",
               "often",
+              "under",
               "always"
-            ]
+            ],
+            "targetChinese": "貓咪在椅子下面。",
+            "targetSentence": "The cat is under the chair."
           },
           {
             "type": "listen",
@@ -3934,23 +3994,25 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Can you ride a skateboard?",
-            "instruction": "重組成完整句子：「極限滑板超能力」",
+            "instruction": "請看中文重組成英文句子：「你會溜滑板嗎？」",
             "targetTokens": [
-              "skateboard?",
-              "a",
-              "ride",
+              "Can",
               "you",
-              "Can"
+              "ride",
+              "a",
+              "skateboard?"
             ],
             "pool": [
-              "skateboard?",
+              "Can",
+              "always",
+              "you",
               "a",
               "ride",
-              "you",
-              "Can",
               "often",
-              "always"
-            ]
+              "skateboard?"
+            ],
+            "targetChinese": "你會溜滑板嗎？",
+            "targetSentence": "Can you ride a skateboard?"
           },
           {
             "type": "listen",
@@ -4062,25 +4124,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The pilot loves to play baseball.",
-            "instruction": "重組成完整句子：「四年級熱血大魔王」",
+            "instruction": "請看中文重組成英文句子：「這位飛行員很喜歡打棒球。」",
             "targetTokens": [
-              "baseball.",
-              "play",
-              "to",
-              "loves",
+              "The",
               "pilot",
-              "The"
+              "loves",
+              "to",
+              "play",
+              "baseball."
             ],
             "pool": [
-              "baseball.",
-              "play",
-              "to",
-              "loves",
-              "pilot",
-              "The",
               "often",
-              "always"
-            ]
+              "loves",
+              "The",
+              "pilot",
+              "play",
+              "always",
+              "baseball.",
+              "to"
+            ],
+            "targetChinese": "這位飛行員很喜歡打棒球。",
+            "targetSentence": "The pilot loves to play baseball."
           },
           {
             "type": "listen",
@@ -4207,25 +4271,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "What are you doing right now?",
-            "instruction": "重組成完整句子：「正在做什麼？現在進行式」",
+            "instruction": "請看中文重組成英文句子：「你現在正在做什麼？」",
             "targetTokens": [
-              "now?",
-              "right",
-              "doing",
-              "you",
+              "What",
               "are",
-              "What"
+              "you",
+              "doing",
+              "right",
+              "now?"
             ],
             "pool": [
-              "now?",
               "right",
-              "doing",
-              "you",
+              "now?",
               "are",
+              "you",
               "What",
               "often",
-              "always"
-            ]
+              "always",
+              "doing"
+            ],
+            "targetChinese": "你現在正在做什麼？",
+            "targetSentence": "What are you doing right now?"
           },
           {
             "type": "listen",
@@ -4337,25 +4403,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "We went to the park yesterday.",
-            "instruction": "重組成完整句子：「昨天去了哪裡？過去式初探」",
+            "instruction": "請看中文重組成英文句子：「我們昨天去了公園。」",
             "targetTokens": [
-              "yesterday.",
-              "park",
-              "the",
-              "to",
+              "We",
               "went",
-              "We"
+              "to",
+              "the",
+              "park",
+              "yesterday."
             ],
             "pool": [
-              "yesterday.",
+              "We",
+              "always",
+              "went",
               "park",
               "the",
+              "yesterday.",
               "to",
-              "went",
-              "We",
-              "often",
-              "always"
-            ]
+              "often"
+            ],
+            "targetChinese": "我們昨天去了公園。",
+            "targetSentence": "We went to the park yesterday."
           },
           {
             "type": "listen",
@@ -4467,27 +4535,29 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The jet is faster than a car.",
-            "instruction": "重組成完整句子：「速度與力量：比較級大比拼」",
+            "instruction": "請看中文重組成英文句子：「噴射機比汽車更快。」",
             "targetTokens": [
-              "car.",
-              "a",
-              "than",
-              "faster",
-              "is",
+              "The",
               "jet",
-              "The"
+              "is",
+              "faster",
+              "than",
+              "a",
+              "car."
             ],
             "pool": [
               "car.",
-              "a",
-              "than",
-              "faster",
+              "always",
               "is",
               "jet",
-              "The",
               "often",
-              "always"
-            ]
+              "than",
+              "a",
+              "The",
+              "faster"
+            ],
+            "targetChinese": "噴射機比汽車更快。",
+            "targetSentence": "The jet is faster than a car."
           },
           {
             "type": "listen",
@@ -4599,25 +4669,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "It is sunny and warm today.",
-            "instruction": "重組成完整句子：「一年四季與天氣晴雨」",
+            "instruction": "請看中文重組成英文句子：「今天天氣晴朗又溫暖。」",
             "targetTokens": [
-              "today.",
-              "warm",
-              "and",
-              "sunny",
+              "It",
               "is",
-              "It"
+              "sunny",
+              "and",
+              "warm",
+              "today."
             ],
             "pool": [
               "today.",
-              "warm",
-              "and",
-              "sunny",
-              "is",
-              "It",
               "often",
-              "always"
-            ]
+              "It",
+              "always",
+              "warm",
+              "is",
+              "and",
+              "sunny"
+            ],
+            "targetChinese": "今天天氣晴朗又溫暖。",
+            "targetSentence": "It is sunny and warm today."
           },
           {
             "type": "listen",
@@ -4729,25 +4801,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "We play baseball on the weekend.",
-            "instruction": "重組成完整句子：「行事曆與一週規劃」",
+            "instruction": "請看中文重組成英文句子：「我們週末會打棒球。」",
             "targetTokens": [
-              "weekend.",
-              "the",
-              "on",
-              "baseball",
+              "We",
               "play",
-              "We"
+              "baseball",
+              "on",
+              "the",
+              "weekend."
             ],
             "pool": [
-              "weekend.",
-              "the",
-              "on",
+              "always",
               "baseball",
+              "on",
+              "weekend.",
               "play",
               "We",
-              "often",
-              "always"
-            ]
+              "the",
+              "often"
+            ],
+            "targetChinese": "我們週末會打棒球。",
+            "targetSentence": "We play baseball on the weekend."
           },
           {
             "type": "listen",
@@ -4859,27 +4933,29 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "I want to travel around the world.",
-            "instruction": "重組成完整句子：「世界地圖與熱門城市」",
+            "instruction": "請看中文重組成英文句子：「我想要環遊世界。」",
             "targetTokens": [
-              "world.",
-              "the",
-              "around",
-              "travel",
-              "to",
+              "I",
               "want",
-              "I"
+              "to",
+              "travel",
+              "around",
+              "the",
+              "world."
             ],
             "pool": [
-              "world.",
-              "the",
-              "around",
-              "travel",
-              "to",
-              "want",
               "I",
+              "always",
+              "the",
+              "want",
+              "to",
               "often",
-              "always"
-            ]
+              "travel",
+              "around",
+              "world."
+            ],
+            "targetChinese": "我想要環遊世界。",
+            "targetSentence": "I want to travel around the world."
           },
           {
             "type": "listen",
@@ -4991,25 +5067,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Our team won the championship trophy.",
-            "instruction": "重組成完整句子：「少棒聯盟冠軍錦標賽」",
+            "instruction": "請看中文重組成英文句子：「我們球隊贏得了冠軍獎盃。」",
             "targetTokens": [
-              "trophy.",
-              "championship",
-              "the",
-              "won",
+              "Our",
               "team",
-              "Our"
+              "won",
+              "the",
+              "championship",
+              "trophy."
             ],
             "pool": [
-              "trophy.",
-              "championship",
               "the",
-              "won",
-              "team",
-              "Our",
               "often",
-              "always"
-            ]
+              "always",
+              "championship",
+              "trophy.",
+              "won",
+              "Our",
+              "team"
+            ],
+            "targetChinese": "我們球隊贏得了冠軍獎盃。",
+            "targetSentence": "Our team won the championship trophy."
           },
           {
             "type": "listen",
@@ -5121,25 +5199,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The international flight was very smooth.",
-            "instruction": "重組成完整句子：「國際航線客機飛行」",
+            "instruction": "請看中文重組成英文句子：「這趟國際航班飛行非常平穩。」",
             "targetTokens": [
-              "smooth.",
-              "very",
-              "was",
-              "flight",
+              "The",
               "international",
-              "The"
+              "flight",
+              "was",
+              "very",
+              "smooth."
             ],
             "pool": [
-              "smooth.",
-              "very",
               "was",
+              "always",
+              "The",
+              "smooth.",
+              "often",
               "flight",
               "international",
-              "The",
-              "often",
-              "always"
-            ]
+              "very"
+            ],
+            "targetChinese": "這趟國際航班飛行非常平穩。",
+            "targetSentence": "The international flight was very smooth."
           },
           {
             "type": "listen",
@@ -5251,27 +5331,29 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Use the cushion to hit the ball.",
-            "instruction": "重組成完整句子：「撞球競賽顆星解球」",
+            "instruction": "請看中文重組成英文句子：「利用球檯邊框顆星來擊球。」",
             "targetTokens": [
-              "ball.",
+              "Use",
               "the",
-              "hit",
-              "to",
               "cushion",
+              "to",
+              "hit",
               "the",
-              "Use"
+              "ball."
             ],
             "pool": [
+              "often",
+              "cushion",
+              "to",
               "ball.",
               "the",
               "hit",
-              "to",
-              "cushion",
-              "the",
               "Use",
-              "often",
-              "always"
-            ]
+              "always",
+              "the"
+            ],
+            "targetChinese": "利用球檯邊框顆星來擊球。",
+            "targetSentence": "Use the cushion to hit the ball."
           },
           {
             "type": "listen",
@@ -5383,25 +5465,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "We visited the natural history museum.",
-            "instruction": "重組成完整句子：「自然史博物館探險」",
+            "instruction": "請看中文重組成英文句子：「我們參觀了自然史博物館。」",
             "targetTokens": [
-              "museum.",
-              "history",
-              "natural",
-              "the",
+              "We",
               "visited",
-              "We"
+              "the",
+              "natural",
+              "history",
+              "museum."
             ],
             "pool": [
               "museum.",
-              "history",
               "natural",
-              "the",
               "visited",
+              "the",
+              "history",
               "We",
               "often",
               "always"
-            ]
+            ],
+            "targetChinese": "我們參觀了自然史博物館。",
+            "targetSentence": "We visited the natural history museum."
           },
           {
             "type": "listen",
@@ -5513,25 +5597,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The drone has a 4K camera.",
-            "instruction": "重組成完整句子：「操縱空拍無人機」",
+            "instruction": "請看中文重組成英文句子：「這架無人機配備了4K相機。」",
             "targetTokens": [
-              "camera.",
-              "4K",
-              "a",
-              "has",
+              "The",
               "drone",
-              "The"
+              "has",
+              "a",
+              "4K",
+              "camera."
             ],
             "pool": [
-              "camera.",
-              "4K",
-              "a",
-              "has",
               "drone",
+              "4K",
+              "has",
+              "camera.",
+              "a",
               "The",
-              "often",
-              "always"
-            ]
+              "always",
+              "often"
+            ],
+            "targetChinese": "這架無人機配備了4K相機。",
+            "targetSentence": "The drone has a 4K camera."
           },
           {
             "type": "listen",
@@ -5643,23 +5729,25 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Would you like some dessert?",
-            "instruction": "重組成完整句子：「西餐廳點餐好禮貌」",
+            "instruction": "請看中文重組成英文句子：「你想要來點甜點嗎？」",
             "targetTokens": [
-              "dessert?",
-              "some",
-              "like",
+              "Would",
               "you",
-              "Would"
+              "like",
+              "some",
+              "dessert?"
             ],
             "pool": [
-              "dessert?",
-              "some",
-              "like",
               "you",
-              "Would",
+              "like",
               "often",
-              "always"
-            ]
+              "Would",
+              "always",
+              "some",
+              "dessert?"
+            ],
+            "targetChinese": "你想要來點甜點嗎？",
+            "targetSentence": "Would you like some dessert?"
           },
           {
             "type": "listen",
@@ -5771,23 +5859,25 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "We must protect our earth.",
-            "instruction": "重組成完整句子：「守護地球環保小尖兵」",
+            "instruction": "請看中文重組成英文句子：「我們必須保護我們的地球。」",
             "targetTokens": [
-              "earth.",
-              "our",
-              "protect",
+              "We",
               "must",
-              "We"
+              "protect",
+              "our",
+              "earth."
             ],
             "pool": [
-              "earth.",
-              "our",
-              "protect",
-              "must",
               "We",
+              "protect",
+              "our",
+              "earth.",
               "often",
-              "always"
-            ]
+              "always",
+              "must"
+            ],
+            "targetChinese": "我們必須保護我們的地球。",
+            "targetSentence": "We must protect our earth."
           },
           {
             "type": "listen",
@@ -5899,23 +5989,25 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Go straight and turn left.",
-            "instruction": "重組成完整句子：「街角問路與方向指引」",
+            "instruction": "請看中文重組成英文句子：「直直走然後左轉。」",
             "targetTokens": [
-              "left.",
-              "turn",
-              "and",
+              "Go",
               "straight",
-              "Go"
+              "and",
+              "turn",
+              "left."
             ],
             "pool": [
-              "left.",
-              "turn",
               "and",
+              "left.",
               "straight",
-              "Go",
               "often",
-              "always"
-            ]
+              "always",
+              "Go",
+              "turn"
+            ],
+            "targetChinese": "直直走然後左轉。",
+            "targetSentence": "Go straight and turn left."
           },
           {
             "type": "listen",
@@ -6027,25 +6119,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "He wants to become an astronaut.",
-            "instruction": "重組成完整句子：「未來夢想大職業」",
+            "instruction": "請看中文重組成英文句子：「他想要成為一名太空人。」",
             "targetTokens": [
-              "astronaut.",
-              "an",
-              "become",
-              "to",
+              "He",
               "wants",
-              "He"
+              "to",
+              "become",
+              "an",
+              "astronaut."
             ],
             "pool": [
-              "astronaut.",
-              "an",
-              "become",
-              "to",
-              "wants",
-              "He",
               "often",
-              "always"
-            ]
+              "an",
+              "astronaut.",
+              "to",
+              "He",
+              "wants",
+              "always",
+              "become"
+            ],
+            "targetChinese": "他想要成為一名太空人。",
+            "targetSentence": "He wants to become an astronaut."
           },
           {
             "type": "listen",
@@ -6157,25 +6251,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Yesterday, our team won the game.",
-            "instruction": "重組成完整句子：「小學畢業榮譽總試煉」",
+            "instruction": "請看中文重組成英文句子：「昨天，我們球隊贏得了比賽。」",
             "targetTokens": [
-              "game.",
-              "the",
-              "won",
-              "team",
+              "Yesterday,",
               "our",
-              "Yesterday,"
+              "team",
+              "won",
+              "the",
+              "game."
             ],
             "pool": [
               "game.",
-              "the",
+              "always",
               "won",
-              "team",
-              "our",
               "Yesterday,",
+              "team",
               "often",
-              "always"
-            ]
+              "our",
+              "the"
+            ],
+            "targetChinese": "昨天，我們球隊贏得了比賽。",
+            "targetSentence": "Yesterday, our team won the game."
           },
           {
             "type": "listen",
@@ -6302,23 +6398,25 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Practice makes perfect every day.",
-            "instruction": "重組成完整句子：「國中必背動詞與時態」",
+            "instruction": "請看中文重組成英文句子：「每天練習才能熟能生巧。」",
             "targetTokens": [
-              "day.",
-              "every",
-              "perfect",
+              "Practice",
               "makes",
-              "Practice"
+              "perfect",
+              "every",
+              "day."
             ],
             "pool": [
-              "day.",
               "every",
-              "perfect",
               "makes",
               "Practice",
-              "often",
-              "always"
-            ]
+              "never",
+              "perfect",
+              "day.",
+              "seldom"
+            ],
+            "targetChinese": "每天練習才能熟能生巧。",
+            "targetSentence": "Practice makes perfect every day."
           },
           {
             "type": "listen",
@@ -6430,25 +6528,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "He always practices baseball after school.",
-            "instruction": "重組成完整句子：「頻率副詞百寶箱」",
+            "instruction": "請看中文重組成英文句子：「他放學後總是練習棒球。」",
             "targetTokens": [
-              "school.",
-              "after",
-              "baseball",
-              "practices",
+              "He",
               "always",
-              "He"
+              "practices",
+              "baseball",
+              "after",
+              "school."
             ],
             "pool": [
               "school.",
-              "after",
               "baseball",
+              "never",
+              "seldom",
               "practices",
+              "after",
               "always",
-              "He",
-              "often",
-              "always"
-            ]
+              "He"
+            ],
+            "targetChinese": "他放學後總是練習棒球。",
+            "targetSentence": "He always practices baseball after school."
           },
           {
             "type": "listen",
@@ -6560,23 +6660,25 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Science is my favorite subject.",
-            "instruction": "重組成完整句子：「學校科目大挑戰」",
+            "instruction": "請看中文重組成英文句子：「自然科學是我最喜歡的科目。」",
             "targetTokens": [
-              "subject.",
-              "favorite",
-              "my",
+              "Science",
               "is",
-              "Science"
+              "my",
+              "favorite",
+              "subject."
             ],
             "pool": [
-              "subject.",
-              "favorite",
+              "never",
               "my",
-              "is",
+              "seldom",
               "Science",
-              "often",
-              "always"
-            ]
+              "favorite",
+              "is",
+              "subject."
+            ],
+            "targetChinese": "自然科學是我最喜歡的科目。",
+            "targetSentence": "Science is my favorite subject."
           },
           {
             "type": "listen",
@@ -6688,25 +6790,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "How often do you go swimming?",
-            "instruction": "重組成完整句子：「詢問頻率與次數」",
+            "instruction": "請看中文重組成英文句子：「你多常去游泳？」",
             "targetTokens": [
-              "swimming?",
-              "go",
-              "you",
-              "do",
-              "often",
-              "How"
-            ],
-            "pool": [
-              "swimming?",
-              "go",
-              "you",
-              "do",
-              "often",
               "How",
               "often",
-              "always"
-            ]
+              "do",
+              "you",
+              "go",
+              "swimming?"
+            ],
+            "pool": [
+              "seldom",
+              "never",
+              "go",
+              "How",
+              "do",
+              "swimming?",
+              "you",
+              "often"
+            ],
+            "targetChinese": "你多常去游泳？",
+            "targetSentence": "How often do you go swimming?"
           },
           {
             "type": "listen",
@@ -6818,25 +6922,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Why did you choose this airplane?",
-            "instruction": "重組成完整句子：「六大疑問詞全方位」",
+            "instruction": "請看中文重組成英文句子：「你為什麼選擇這架飛機？」",
             "targetTokens": [
-              "airplane?",
-              "this",
-              "choose",
-              "you",
+              "Why",
               "did",
-              "Why"
+              "you",
+              "choose",
+              "this",
+              "airplane?"
             ],
             "pool": [
-              "airplane?",
-              "this",
-              "choose",
-              "you",
-              "did",
+              "seldom",
               "Why",
-              "often",
-              "always"
-            ]
+              "this",
+              "never",
+              "choose",
+              "airplane?",
+              "you",
+              "did"
+            ],
+            "targetChinese": "你為什麼選擇這架飛機？",
+            "targetSentence": "Why did you choose this airplane?"
           },
           {
             "type": "listen",
@@ -6948,25 +7054,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "We meet at seven on Sunday.",
-            "instruction": "重組成完整句子：「時間地點介系詞精熟」",
+            "instruction": "請看中文重組成英文句子：「我們星期天七點見面。」",
             "targetTokens": [
-              "Sunday.",
-              "on",
-              "seven",
-              "at",
+              "We",
               "meet",
-              "We"
+              "at",
+              "seven",
+              "on",
+              "Sunday."
             ],
             "pool": [
-              "Sunday.",
-              "on",
               "seven",
-              "at",
-              "meet",
+              "Sunday.",
               "We",
-              "often",
-              "always"
-            ]
+              "at",
+              "never",
+              "seldom",
+              "on",
+              "meet"
+            ],
+            "targetChinese": "我們星期天七點見面。",
+            "targetSentence": "We meet at seven on Sunday."
           },
           {
             "type": "listen",
@@ -7078,23 +7186,25 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Teamwork leads us to victory.",
-            "instruction": "重組成完整句子：「棒球校隊團隊默契」",
+            "instruction": "請看中文重組成英文句子：「團隊合作引領我們走向勝利。」",
             "targetTokens": [
-              "victory.",
-              "to",
-              "us",
+              "Teamwork",
               "leads",
-              "Teamwork"
+              "us",
+              "to",
+              "victory."
             ],
             "pool": [
-              "victory.",
               "to",
               "us",
-              "leads",
+              "seldom",
               "Teamwork",
-              "often",
-              "always"
-            ]
+              "victory.",
+              "never",
+              "leads"
+            ],
+            "targetChinese": "團隊合作引領我們走向勝利。",
+            "targetSentence": "Teamwork leads us to victory."
           },
           {
             "type": "listen",
@@ -7206,25 +7316,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Wings create lift for the airplane.",
-            "instruction": "重組成完整句子：「航空基本原理：升力推力」",
+            "instruction": "請看中文重組成英文句子：「機翼為飛機產生升力。」",
             "targetTokens": [
-              "airplane.",
-              "the",
-              "for",
-              "lift",
+              "Wings",
               "create",
-              "Wings"
+              "lift",
+              "for",
+              "the",
+              "airplane."
             ],
             "pool": [
-              "airplane.",
-              "the",
-              "for",
-              "lift",
+              "seldom",
+              "never",
               "create",
               "Wings",
-              "often",
-              "always"
-            ]
+              "for",
+              "the",
+              "lift",
+              "airplane."
+            ],
+            "targetChinese": "機翼為飛機產生升力。",
+            "targetSentence": "Wings create lift for the airplane."
           },
           {
             "type": "listen",
@@ -7336,27 +7448,29 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The billiard balls had an elastic collision.",
-            "instruction": "重組成完整句子：「撞球物理碰撞反彈」",
+            "instruction": "請看中文重組成英文句子：「撞球之間發生了彈性碰撞。」",
             "targetTokens": [
-              "collision.",
-              "elastic",
-              "an",
-              "had",
-              "balls",
+              "The",
               "billiard",
-              "The"
+              "balls",
+              "had",
+              "an",
+              "elastic",
+              "collision."
             ],
             "pool": [
-              "collision.",
-              "elastic",
-              "an",
+              "seldom",
               "had",
-              "balls",
-              "billiard",
+              "an",
+              "never",
               "The",
-              "often",
-              "always"
-            ]
+              "elastic",
+              "billiard",
+              "balls",
+              "collision."
+            ],
+            "targetChinese": "撞球之間發生了彈性碰撞。",
+            "targetSentence": "The billiard balls had an elastic collision."
           },
           {
             "type": "listen",
@@ -7468,25 +7582,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The asteroid theory explains dinosaur extinction.",
-            "instruction": "重組成完整句子：「恐龍滅絕假說與隕石」",
+            "instruction": "請看中文重組成英文句子：「小行星撞擊理論解釋了恐龍滅絕。」",
             "targetTokens": [
-              "extinction.",
-              "dinosaur",
-              "explains",
-              "theory",
+              "The",
               "asteroid",
-              "The"
+              "theory",
+              "explains",
+              "dinosaur",
+              "extinction."
             ],
             "pool": [
-              "extinction.",
-              "dinosaur",
-              "explains",
               "theory",
               "asteroid",
+              "extinction.",
+              "never",
+              "explains",
               "The",
-              "often",
-              "always"
-            ]
+              "seldom",
+              "dinosaur"
+            ],
+            "targetChinese": "小行星撞擊理論解釋了恐龍滅絕。",
+            "targetSentence": "The asteroid theory explains dinosaur extinction."
           },
           {
             "type": "listen",
@@ -7598,23 +7714,25 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Download the new learning application.",
-            "instruction": "重組成完整句子：「智慧手機與數位科技」",
+            "instruction": "請看中文重組成英文句子：「下載這個全新學習應用程式。」",
             "targetTokens": [
-              "application.",
-              "learning",
-              "new",
+              "Download",
               "the",
-              "Download"
+              "new",
+              "learning",
+              "application."
             ],
             "pool": [
-              "application.",
-              "learning",
+              "seldom",
               "new",
+              "learning",
               "the",
-              "Download",
-              "often",
-              "always"
-            ]
+              "application.",
+              "never",
+              "Download"
+            ],
+            "targetChinese": "下載這個全新學習應用程式。",
+            "targetSentence": "Download the new learning application."
           },
           {
             "type": "listen",
@@ -7726,25 +7844,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Pass the baton quickly and carefully.",
-            "instruction": "重組成完整句子：「學校運動會大隊接力」",
+            "instruction": "請看中文重組成英文句子：「迅速且小心地交接接力棒。」",
             "targetTokens": [
-              "carefully.",
-              "and",
-              "quickly",
-              "baton",
+              "Pass",
               "the",
-              "Pass"
+              "baton",
+              "quickly",
+              "and",
+              "carefully."
             ],
             "pool": [
-              "carefully.",
-              "and",
-              "quickly",
-              "baton",
-              "the",
               "Pass",
-              "often",
-              "always"
-            ]
+              "seldom",
+              "the",
+              "and",
+              "never",
+              "quickly",
+              "carefully.",
+              "baton"
+            ],
+            "targetChinese": "迅速且小心地交接接力棒。",
+            "targetSentence": "Pass the baton quickly and carefully."
           },
           {
             "type": "listen",
@@ -7856,23 +7976,25 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Books provide endless useful knowledge.",
-            "instruction": "重組成完整句子：「圖書館與閱讀世界」",
+            "instruction": "請看中文重組成英文句子：「書籍提供無窮無盡的實用知識。」",
             "targetTokens": [
-              "knowledge.",
-              "useful",
-              "endless",
+              "Books",
               "provide",
-              "Books"
+              "endless",
+              "useful",
+              "knowledge."
             ],
             "pool": [
-              "knowledge.",
               "useful",
-              "endless",
+              "never",
               "provide",
+              "seldom",
               "Books",
-              "often",
-              "always"
-            ]
+              "knowledge.",
+              "endless"
+            ],
+            "targetChinese": "書籍提供無窮無盡的實用知識。",
+            "targetSentence": "Books provide endless useful knowledge."
           },
           {
             "type": "listen",
@@ -7984,29 +8106,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Would you like to join our baseball match?",
-            "instruction": "重組成完整句子：「社交邀請與禮貌拒絕」",
+            "instruction": "請看中文重組成英文句子：「你想要參加我們的棒球比賽嗎？」",
             "targetTokens": [
-              "match?",
-              "baseball",
-              "our",
-              "join",
-              "to",
-              "like",
+              "Would",
               "you",
-              "Would"
+              "like",
+              "to",
+              "join",
+              "our",
+              "baseball",
+              "match?"
             ],
             "pool": [
+              "join",
+              "never",
+              "Would",
               "match?",
               "baseball",
               "our",
-              "join",
-              "to",
               "like",
               "you",
-              "Would",
-              "often",
-              "always"
-            ]
+              "to"
+            ],
+            "targetChinese": "你想要參加我們的棒球比賽嗎？",
+            "targetSentence": "Would you like to join our baseball match?"
           },
           {
             "type": "listen",
@@ -8118,25 +8241,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Today was an unforgettable, wonderful day.",
-            "instruction": "重組成完整句子：「國中英語日記書寫」",
+            "instruction": "請看中文重組成英文句子：「今天是一個難忘又美好的日子。」",
             "targetTokens": [
-              "day.",
-              "wonderful",
-              "unforgettable,",
-              "an",
+              "Today",
               "was",
-              "Today"
+              "an",
+              "unforgettable,",
+              "wonderful",
+              "day."
             ],
             "pool": [
-              "day.",
-              "wonderful",
               "unforgettable,",
               "an",
+              "seldom",
+              "day.",
+              "wonderful",
               "was",
-              "Today",
-              "often",
-              "always"
-            ]
+              "never",
+              "Today"
+            ],
+            "targetChinese": "今天是一個難忘又美好的日子。",
+            "targetSentence": "Today was an unforgettable, wonderful day."
           },
           {
             "type": "listen",
@@ -8248,23 +8373,25 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Regular practice brings amazing improvement.",
-            "instruction": "重組成完整句子：「國一綜合實力全能魔王」",
+            "instruction": "請看中文重組成英文句子：「規律的練習帶來驚人的進步。」",
             "targetTokens": [
-              "improvement.",
-              "amazing",
-              "brings",
+              "Regular",
               "practice",
-              "Regular"
+              "brings",
+              "amazing",
+              "improvement."
             ],
             "pool": [
-              "improvement.",
-              "amazing",
+              "seldom",
               "brings",
-              "practice",
               "Regular",
-              "often",
-              "always"
-            ]
+              "never",
+              "practice",
+              "amazing",
+              "improvement."
+            ],
+            "targetChinese": "規律的練習帶來驚人的進步。",
+            "targetSentence": "Regular practice brings amazing improvement."
           },
           {
             "type": "listen",
@@ -8391,29 +8518,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "I have lived in Taiwan for ten years.",
-            "instruction": "重組成完整句子：「現在完成式初登場」",
+            "instruction": "請看中文重組成英文句子：「我已經在台灣住了十年。」",
             "targetTokens": [
-              "years.",
-              "ten",
-              "for",
-              "Taiwan",
-              "in",
-              "lived",
+              "I",
               "have",
-              "I"
+              "lived",
+              "in",
+              "Taiwan",
+              "for",
+              "ten",
+              "years."
             ],
             "pool": [
+              "Taiwan",
+              "have",
+              "never",
+              "in",
+              "I",
+              "for",
               "years.",
               "ten",
-              "for",
-              "Taiwan",
-              "in",
-              "lived",
-              "have",
-              "I",
-              "often",
-              "always"
-            ]
+              "lived"
+            ],
+            "targetChinese": "我已經在台灣住了十年。",
+            "targetSentence": "I have lived in Taiwan for ten years."
           },
           {
             "type": "listen",
@@ -8525,29 +8653,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Have you ever seen a supersonic fighter jet?",
-            "instruction": "重組成完整句子：「完成式人生經驗歷練」",
+            "instruction": "請看中文重組成英文句子：「你曾見過超音速戰鬥機嗎？」",
             "targetTokens": [
-              "jet?",
-              "fighter",
-              "supersonic",
-              "a",
-              "seen",
-              "ever",
+              "Have",
               "you",
-              "Have"
+              "ever",
+              "seen",
+              "a",
+              "supersonic",
+              "fighter",
+              "jet?"
             ],
             "pool": [
-              "jet?",
-              "fighter",
-              "supersonic",
               "a",
+              "supersonic",
               "seen",
               "ever",
-              "you",
               "Have",
-              "often",
-              "always"
-            ]
+              "you",
+              "never",
+              "jet?",
+              "fighter"
+            ],
+            "targetChinese": "你曾見過超音速戰鬥機嗎？",
+            "targetSentence": "Have you ever seen a supersonic fighter jet?"
           },
           {
             "type": "listen",
@@ -8659,29 +8788,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The baseball was caught by the center fielder.",
-            "instruction": "重組成完整句子：「被動語態揭秘」",
+            "instruction": "請看中文重組成英文句子：「這顆棒球被中外野手接住了。」",
             "targetTokens": [
-              "fielder.",
-              "center",
-              "the",
-              "by",
-              "caught",
-              "was",
+              "The",
               "baseball",
-              "The"
+              "was",
+              "caught",
+              "by",
+              "the",
+              "center",
+              "fielder."
             ],
             "pool": [
               "fielder.",
               "center",
-              "the",
               "by",
-              "caught",
+              "the",
               "was",
               "baseball",
+              "never",
               "The",
-              "often",
-              "always"
-            ]
+              "caught"
+            ],
+            "targetChinese": "這顆棒球被中外野手接住了。",
+            "targetSentence": "The baseball was caught by the center fielder."
           },
           {
             "type": "listen",
@@ -8793,27 +8923,29 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Modern aircraft are guided by satellite radar.",
-            "instruction": "重組成完整句子：「現代科技被動應用」",
+            "instruction": "請看中文重組成英文句子：「現代飛機由衛星雷達導航。」",
             "targetTokens": [
-              "radar.",
-              "satellite",
-              "by",
-              "guided",
-              "are",
+              "Modern",
               "aircraft",
-              "Modern"
+              "are",
+              "guided",
+              "by",
+              "satellite",
+              "radar."
             ],
             "pool": [
-              "radar.",
-              "satellite",
-              "by",
-              "guided",
-              "are",
               "aircraft",
+              "are",
+              "seldom",
               "Modern",
-              "often",
-              "always"
-            ]
+              "by",
+              "satellite",
+              "never",
+              "guided",
+              "radar."
+            ],
+            "targetChinese": "現代飛機由衛星雷達導航。",
+            "targetSentence": "Modern aircraft are guided by satellite radar."
           },
           {
             "type": "listen",
@@ -8925,25 +9057,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Every player must respect the rules.",
-            "instruction": "重組成完整句子：「情態助動詞家族」",
+            "instruction": "請看中文重組成英文句子：「每位球員都必須遵守規則。」",
             "targetTokens": [
-              "rules.",
-              "the",
-              "respect",
-              "must",
+              "Every",
               "player",
-              "Every"
+              "must",
+              "respect",
+              "the",
+              "rules."
             ],
             "pool": [
-              "rules.",
-              "the",
-              "respect",
               "must",
-              "player",
               "Every",
-              "often",
-              "always"
-            ]
+              "player",
+              "the",
+              "never",
+              "rules.",
+              "seldom",
+              "respect"
+            ],
+            "targetChinese": "每位球員都必須遵守規則。",
+            "targetSentence": "Every player must respect the rules."
           },
           {
             "type": "listen",
@@ -9055,27 +9189,29 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The fresh burger tastes delicious and juicy.",
-            "instruction": "重組成完整句子：「連綴動詞與五感描述」",
+            "instruction": "請看中文重組成英文句子：「這份新鮮漢堡嚐起來多汁又美味。」",
             "targetTokens": [
-              "juicy.",
-              "and",
-              "delicious",
-              "tastes",
-              "burger",
+              "The",
               "fresh",
-              "The"
+              "burger",
+              "tastes",
+              "delicious",
+              "and",
+              "juicy."
             ],
             "pool": [
-              "juicy.",
-              "and",
-              "delicious",
               "tastes",
               "burger",
+              "juicy.",
+              "never",
+              "delicious",
+              "seldom",
               "fresh",
               "The",
-              "often",
-              "always"
-            ]
+              "and"
+            ],
+            "targetChinese": "這份新鮮漢堡嚐起來多汁又美味。",
+            "targetSentence": "The fresh burger tastes delicious and juicy."
           },
           {
             "type": "listen",
@@ -9187,29 +9323,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "We watched the batter hit a grand slam.",
-            "instruction": "重組成完整句子：「感官動詞生動用法」",
+            "instruction": "請看中文重組成英文句子：「我們看著打者擊出滿貫全壘打。」",
             "targetTokens": [
-              "slam.",
-              "grand",
-              "a",
-              "hit",
-              "batter",
-              "the",
+              "We",
               "watched",
-              "We"
+              "the",
+              "batter",
+              "hit",
+              "a",
+              "grand",
+              "slam."
             ],
             "pool": [
               "slam.",
-              "grand",
-              "a",
-              "hit",
-              "batter",
               "the",
-              "watched",
               "We",
-              "often",
-              "always"
-            ]
+              "batter",
+              "grand",
+              "watched",
+              "never",
+              "a",
+              "hit"
+            ],
+            "targetChinese": "我們看著打者擊出滿貫全壘打。",
+            "targetSentence": "We watched the batter hit a grand slam."
           },
           {
             "type": "listen",
@@ -9321,27 +9458,29 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "He loves baseball, and so do I.",
-            "instruction": "重組成完整句子：「附和句結構辨析」",
+            "instruction": "請看中文重組成英文句子：「他熱愛棒球，我也一樣。」",
             "targetTokens": [
-              "I.",
-              "do",
-              "so",
-              "and",
-              "baseball,",
+              "He",
               "loves",
-              "He"
+              "baseball,",
+              "and",
+              "so",
+              "do",
+              "I."
             ],
             "pool": [
-              "I.",
               "do",
-              "so",
-              "and",
-              "baseball,",
+              "I.",
+              "seldom",
               "loves",
+              "never",
+              "and",
+              "so",
               "He",
-              "often",
-              "always"
-            ]
+              "baseball,"
+            ],
+            "targetChinese": "他熱愛棒球，我也一樣。",
+            "targetSentence": "He loves baseball, and so do I."
           },
           {
             "type": "listen",
@@ -9453,27 +9592,29 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "He won the Most Valuable Player award.",
-            "instruction": "重組成完整句子：「大聯盟季後賽激戰」",
+            "instruction": "請看中文重組成英文句子：「他贏得了最有價值球員獎。」",
             "targetTokens": [
-              "award.",
-              "Player",
-              "Valuable",
-              "Most",
-              "the",
+              "He",
               "won",
-              "He"
+              "the",
+              "Most",
+              "Valuable",
+              "Player",
+              "award."
             ],
             "pool": [
-              "award.",
-              "Player",
-              "Valuable",
               "Most",
-              "the",
-              "won",
+              "award.",
+              "Valuable",
               "He",
-              "often",
-              "always"
-            ]
+              "Player",
+              "won",
+              "the",
+              "seldom",
+              "never"
+            ],
+            "targetChinese": "他贏得了最有價值球員獎。",
+            "targetSentence": "He won the Most Valuable Player award."
           },
           {
             "type": "listen",
@@ -9585,25 +9726,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Astronauts conduct experiments in space station.",
-            "instruction": "重組成完整句子：「國際太空站與微重力」",
+            "instruction": "請看中文重組成英文句子：「太空人在太空站進行實驗。」",
             "targetTokens": [
-              "station.",
-              "space",
-              "in",
-              "experiments",
+              "Astronauts",
               "conduct",
-              "Astronauts"
+              "experiments",
+              "in",
+              "space",
+              "station."
             ],
             "pool": [
-              "station.",
-              "space",
-              "in",
-              "experiments",
-              "conduct",
               "Astronauts",
-              "often",
-              "always"
-            ]
+              "seldom",
+              "space",
+              "experiments",
+              "in",
+              "never",
+              "station.",
+              "conduct"
+            ],
+            "targetChinese": "太空人在太空站進行實驗。",
+            "targetSentence": "Astronauts conduct experiments in space station."
           },
           {
             "type": "listen",
@@ -9715,27 +9858,29 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Backspin gives the cue ball amazing control.",
-            "instruction": "重組成完整句子：「撞球特技球與加塞旋轉」",
+            "instruction": "請看中文重組成英文句子：「下桿後旋給予母球驚人的控制力。」",
             "targetTokens": [
-              "control.",
-              "amazing",
-              "ball",
-              "cue",
-              "the",
+              "Backspin",
               "gives",
-              "Backspin"
+              "the",
+              "cue",
+              "ball",
+              "amazing",
+              "control."
             ],
             "pool": [
-              "control.",
-              "amazing",
               "ball",
-              "cue",
+              "Backspin",
+              "control.",
+              "seldom",
               "the",
               "gives",
-              "Backspin",
-              "often",
-              "always"
-            ]
+              "cue",
+              "never",
+              "amazing"
+            ],
+            "targetChinese": "下桿後旋給予母球驚人的控制力。",
+            "targetSentence": "Backspin gives the cue ball amazing control."
           },
           {
             "type": "listen",
@@ -9847,25 +9992,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Students learned coding and robotics algorithms.",
-            "instruction": "重組成完整句子：「機器人程式與演算法」",
+            "instruction": "請看中文重組成英文句子：「學生們學習了程式設計與機器人演算法。」",
             "targetTokens": [
-              "algorithms.",
-              "robotics",
-              "and",
-              "coding",
+              "Students",
               "learned",
-              "Students"
+              "coding",
+              "and",
+              "robotics",
+              "algorithms."
             ],
             "pool": [
-              "algorithms.",
-              "robotics",
-              "and",
               "coding",
-              "learned",
+              "and",
               "Students",
-              "often",
-              "always"
-            ]
+              "learned",
+              "algorithms.",
+              "never",
+              "seldom",
+              "robotics"
+            ],
+            "targetChinese": "學生們學習了程式設計與機器人演算法。",
+            "targetSentence": "Students learned coding and robotics algorithms."
           },
           {
             "type": "listen",
@@ -9977,27 +10124,29 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "We use solar energy to protect nature.",
-            "instruction": "重組成完整句子：「全球暖化與再生能源」",
+            "instruction": "請看中文重組成英文句子：「我們使用太陽能來保護大自然。」",
             "targetTokens": [
-              "nature.",
-              "protect",
-              "to",
-              "energy",
-              "solar",
+              "We",
               "use",
-              "We"
+              "solar",
+              "energy",
+              "to",
+              "protect",
+              "nature."
             ],
             "pool": [
-              "nature.",
-              "protect",
-              "to",
-              "energy",
-              "solar",
-              "use",
               "We",
-              "often",
-              "always"
-            ]
+              "energy",
+              "nature.",
+              "never",
+              "use",
+              "seldom",
+              "solar",
+              "protect",
+              "to"
+            ],
+            "targetChinese": "我們使用太陽能來保護大自然。",
+            "targetSentence": "We use solar energy to protect nature."
           },
           {
             "type": "listen",
@@ -10109,27 +10258,29 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Volunteers spent their weekend helping elderly people.",
-            "instruction": "重組成完整句子：「志工服務與社區關懷」",
+            "instruction": "請看中文重組成英文句子：「志工們週末花時間幫助長輩。」",
             "targetTokens": [
-              "people.",
-              "elderly",
-              "helping",
-              "weekend",
-              "their",
+              "Volunteers",
               "spent",
-              "Volunteers"
+              "their",
+              "weekend",
+              "helping",
+              "elderly",
+              "people."
             ],
             "pool": [
-              "people.",
-              "elderly",
-              "helping",
-              "weekend",
-              "their",
               "spent",
+              "their",
+              "never",
+              "weekend",
+              "helping",
               "Volunteers",
-              "often",
-              "always"
-            ]
+              "elderly",
+              "seldom",
+              "people."
+            ],
+            "targetChinese": "志工們週末花時間幫助長輩。",
+            "targetSentence": "Volunteers spent their weekend helping elderly people."
           },
           {
             "type": "listen",
@@ -10241,27 +10392,29 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "A clear introduction grabs the audience attention.",
-            "instruction": "重組成完整句子：「英語簡報發表技巧」",
+            "instruction": "請看中文重組成英文句子：「清晰的引言吸引聽眾的注意。」",
             "targetTokens": [
-              "attention.",
-              "audience",
-              "the",
-              "grabs",
-              "introduction",
+              "A",
               "clear",
-              "A"
+              "introduction",
+              "grabs",
+              "the",
+              "audience",
+              "attention."
             ],
             "pool": [
-              "attention.",
-              "audience",
-              "the",
+              "never",
               "grabs",
               "introduction",
+              "audience",
               "clear",
+              "the",
+              "attention.",
               "A",
-              "often",
-              "always"
-            ]
+              "seldom"
+            ],
+            "targetChinese": "清晰的引言吸引聽眾的注意。",
+            "targetSentence": "A clear introduction grabs the audience attention."
           },
           {
             "type": "listen",
@@ -10373,27 +10526,29 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The pilot has flown across the Pacific.",
-            "instruction": "重組成完整句子：「國二進階大會考」",
+            "instruction": "請看中文重組成英文句子：「這位飛行員已經飛越了太平洋。」",
             "targetTokens": [
-              "Pacific.",
-              "the",
-              "across",
-              "flown",
-              "has",
+              "The",
               "pilot",
-              "The"
+              "has",
+              "flown",
+              "across",
+              "the",
+              "Pacific."
             ],
             "pool": [
-              "Pacific.",
-              "the",
-              "across",
-              "flown",
-              "has",
               "pilot",
+              "across",
+              "Pacific.",
               "The",
-              "often",
-              "always"
-            ]
+              "has",
+              "seldom",
+              "the",
+              "flown",
+              "never"
+            ],
+            "targetChinese": "這位飛行員已經飛越了太平洋。",
+            "targetSentence": "The pilot has flown across the Pacific."
           },
           {
             "type": "listen",
@@ -10520,33 +10675,34 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The boy who hit the home run is my teammate.",
-            "instruction": "重組成完整句子：「關係代名詞：人 (who)」",
+            "instruction": "請看中文重組成英文句子：「擊出全壘打的男孩是我的隊友。」",
             "targetTokens": [
-              "teammate.",
-              "my",
-              "is",
-              "run",
-              "home",
-              "the",
-              "hit",
-              "who",
+              "The",
               "boy",
-              "The"
+              "who",
+              "hit",
+              "the",
+              "home",
+              "run",
+              "is",
+              "my",
+              "teammate."
             ],
             "pool": [
-              "teammate.",
-              "my",
-              "is",
-              "run",
-              "home",
-              "the",
               "hit",
-              "who",
-              "boy",
               "The",
-              "often",
-              "always"
-            ]
+              "who",
+              "never",
+              "my",
+              "the",
+              "run",
+              "boy",
+              "teammate.",
+              "home",
+              "is"
+            ],
+            "targetChinese": "擊出全壘打的男孩是我的隊友。",
+            "targetSentence": "The boy who hit the home run is my teammate."
           },
           {
             "type": "listen",
@@ -10658,31 +10814,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The jet which broke the sound barrier is legendary.",
-            "instruction": "重組成完整句子：「關係代名詞：物 (which/that)」",
+            "instruction": "請看中文重組成英文句子：「突破音障的噴射機具有傳奇色彩。」",
             "targetTokens": [
-              "legendary.",
-              "is",
-              "barrier",
-              "sound",
-              "the",
-              "broke",
-              "which",
+              "The",
               "jet",
-              "The"
+              "which",
+              "broke",
+              "the",
+              "sound",
+              "barrier",
+              "is",
+              "legendary."
             ],
             "pool": [
+              "which",
+              "the",
+              "The",
+              "broke",
+              "jet",
               "legendary.",
-              "is",
+              "never",
               "barrier",
               "sound",
-              "the",
-              "broke",
-              "which",
-              "jet",
-              "The",
-              "often",
-              "always"
-            ]
+              "is"
+            ],
+            "targetChinese": "突破音障的噴射機具有傳奇色彩。",
+            "targetSentence": "The jet which broke the sound barrier is legendary."
           },
           {
             "type": "listen",
@@ -10794,29 +10951,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The girl whose drone won first prize smiled.",
-            "instruction": "重組成完整句子：「關係代名詞：所有格 (whose)」",
+            "instruction": "請看中文重組成英文句子：「那架無人機榮獲首獎的女孩露出了微笑。」",
             "targetTokens": [
-              "smiled.",
-              "prize",
-              "first",
-              "won",
-              "drone",
-              "whose",
+              "The",
               "girl",
-              "The"
+              "whose",
+              "drone",
+              "won",
+              "first",
+              "prize",
+              "smiled."
             ],
             "pool": [
-              "smiled.",
-              "prize",
               "first",
+              "smiled.",
+              "whose",
+              "never",
+              "The",
+              "prize",
               "won",
               "drone",
-              "whose",
-              "girl",
-              "The",
-              "often",
-              "always"
-            ]
+              "girl"
+            ],
+            "targetChinese": "那架無人機榮獲首獎的女孩露出了微笑。",
+            "targetSentence": "The girl whose drone won first prize smiled."
           },
           {
             "type": "listen",
@@ -10928,29 +11086,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "I believe that perseverance leads to great achievement.",
-            "instruction": "重組成完整句子：「名詞子句：that 引導」",
+            "instruction": "請看中文重組成英文句子：「我相信堅持不懈會帶來偉大的成就。」",
             "targetTokens": [
-              "achievement.",
-              "great",
-              "to",
-              "leads",
-              "perseverance",
-              "that",
+              "I",
               "believe",
-              "I"
+              "that",
+              "perseverance",
+              "leads",
+              "to",
+              "great",
+              "achievement."
             ],
             "pool": [
-              "achievement.",
-              "great",
-              "to",
               "leads",
+              "great",
               "perseverance",
+              "never",
               "that",
-              "believe",
               "I",
-              "often",
-              "always"
-            ]
+              "achievement.",
+              "believe",
+              "to"
+            ],
+            "targetChinese": "我相信堅持不懈會帶來偉大的成就。",
+            "targetSentence": "I believe that perseverance leads to great achievement."
           },
           {
             "type": "listen",
@@ -11062,29 +11221,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Do you know where the airport is located?",
-            "instruction": "重組成完整句子：「間接問句轉換法則」",
+            "instruction": "請看中文重組成英文句子：「你知道機場位於何處嗎？」",
             "targetTokens": [
-              "located?",
-              "is",
-              "airport",
-              "the",
-              "where",
-              "know",
+              "Do",
               "you",
-              "Do"
+              "know",
+              "where",
+              "the",
+              "airport",
+              "is",
+              "located?"
             ],
             "pool": [
-              "located?",
-              "is",
-              "airport",
-              "the",
-              "where",
+              "never",
               "know",
+              "where",
               "you",
               "Do",
-              "often",
-              "always"
-            ]
+              "the",
+              "airport",
+              "is",
+              "located?"
+            ],
+            "targetChinese": "你知道機場位於何處嗎？",
+            "targetSentence": "Do you know where the airport is located?"
           },
           {
             "type": "listen",
@@ -11196,29 +11356,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "I wonder whether the baseball match will continue.",
-            "instruction": "重組成完整句子：「whether / if 條件疑問子句」",
+            "instruction": "請看中文重組成英文句子：「我想知道棒球賽是否會繼續進行。」",
             "targetTokens": [
-              "continue.",
-              "will",
-              "match",
-              "baseball",
-              "the",
-              "whether",
+              "I",
               "wonder",
-              "I"
+              "whether",
+              "the",
+              "baseball",
+              "match",
+              "will",
+              "continue."
             ],
             "pool": [
               "continue.",
+              "wonder",
               "will",
-              "match",
               "baseball",
               "the",
-              "whether",
-              "wonder",
+              "match",
+              "never",
               "I",
-              "often",
-              "always"
-            ]
+              "whether"
+            ],
+            "targetChinese": "我想知道棒球賽是否會繼續進行。",
+            "targetSentence": "I wonder whether the baseball match will continue."
           },
           {
             "type": "listen",
@@ -11330,29 +11491,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "It took two hours to finish the project.",
-            "instruction": "重組成完整句子：「花費動詞四重奏辨析」",
+            "instruction": "請看中文重組成英文句子：「花了兩個小時才完成這個專案。」",
             "targetTokens": [
-              "project.",
-              "the",
-              "finish",
-              "to",
-              "hours",
-              "two",
+              "It",
               "took",
-              "It"
+              "two",
+              "hours",
+              "to",
+              "finish",
+              "the",
+              "project."
             ],
             "pool": [
               "project.",
-              "the",
               "finish",
-              "to",
-              "hours",
               "two",
-              "took",
+              "to",
               "It",
-              "often",
-              "always"
-            ]
+              "took",
+              "never",
+              "hours",
+              "the"
+            ],
+            "targetChinese": "花了兩個小時才完成這個專案。",
+            "targetSentence": "It took two hours to finish the project."
           },
           {
             "type": "listen",
@@ -11464,29 +11626,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The pitcher gave the baseball to the coach.",
-            "instruction": "重組成完整句子：「授與動詞雙賓語結構」",
+            "instruction": "請看中文重組成英文句子：「投手把棒球遞給了教練。」",
             "targetTokens": [
-              "coach.",
-              "the",
-              "to",
-              "baseball",
-              "the",
-              "gave",
+              "The",
               "pitcher",
-              "The"
+              "gave",
+              "the",
+              "baseball",
+              "to",
+              "the",
+              "coach."
             ],
             "pool": [
-              "coach.",
               "the",
-              "to",
+              "never",
+              "coach.",
+              "The",
               "baseball",
               "the",
               "gave",
-              "pitcher",
-              "The",
-              "often",
-              "always"
-            ]
+              "to",
+              "pitcher"
+            ],
+            "targetChinese": "投手把棒球遞給了教練。",
+            "targetSentence": "The pitcher gave the baseball to the coach."
           },
           {
             "type": "listen",
@@ -11598,29 +11761,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "His remarkable story inspired millions of young athletes.",
-            "instruction": "重組成完整句子：「會考素養閱讀：傳奇運動員」",
+            "instruction": "請看中文重組成英文句子：「他的精彩故事激勵了數百萬名年輕運動員。」",
             "targetTokens": [
-              "athletes.",
-              "young",
-              "of",
-              "millions",
-              "inspired",
-              "story",
+              "His",
               "remarkable",
-              "His"
+              "story",
+              "inspired",
+              "millions",
+              "of",
+              "young",
+              "athletes."
             ],
             "pool": [
+              "millions",
+              "His",
+              "remarkable",
+              "never",
+              "story",
               "athletes.",
               "young",
-              "of",
-              "millions",
               "inspired",
-              "story",
-              "remarkable",
-              "His",
-              "often",
-              "always"
-            ]
+              "of"
+            ],
+            "targetChinese": "他的精彩故事激勵了數百萬名年輕運動員。",
+            "targetSentence": "His remarkable story inspired millions of young athletes."
           },
           {
             "type": "listen",
@@ -11732,27 +11896,29 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The graph illustrates wind speed during flight.",
-            "instruction": "重組成完整句子：「會考圖表閱讀：航線與氣候」",
+            "instruction": "請看中文重組成英文句子：「這張圖表說明了飛行期間的風速。」",
             "targetTokens": [
-              "flight.",
-              "during",
-              "speed",
-              "wind",
-              "illustrates",
+              "The",
               "graph",
-              "The"
+              "illustrates",
+              "wind",
+              "speed",
+              "during",
+              "flight."
             ],
             "pool": [
-              "flight.",
-              "during",
-              "speed",
-              "wind",
-              "illustrates",
-              "graph",
               "The",
-              "often",
-              "always"
-            ]
+              "graph",
+              "wind",
+              "during",
+              "never",
+              "speed",
+              "flight.",
+              "illustrates",
+              "seldom"
+            ],
+            "targetChinese": "這張圖表說明了飛行期間的風速。",
+            "targetSentence": "The graph illustrates wind speed during flight."
           },
           {
             "type": "listen",
@@ -11864,33 +12030,34 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "AR glasses show the billiard ball trajectory in real time.",
-            "instruction": "重組成完整句子：「科技論壇：AR擴增實境撞球」",
+            "instruction": "請看中文重組成英文句子：「擴增實境眼鏡即時顯示撞球行進軌跡。」",
             "targetTokens": [
-              "time.",
-              "real",
-              "in",
-              "trajectory",
-              "ball",
-              "billiard",
-              "the",
-              "show",
+              "AR",
               "glasses",
-              "AR"
+              "show",
+              "the",
+              "billiard",
+              "ball",
+              "trajectory",
+              "in",
+              "real",
+              "time."
             ],
             "pool": [
-              "time.",
-              "real",
-              "in",
-              "trajectory",
-              "ball",
               "billiard",
+              "in",
               "the",
-              "show",
               "glasses",
+              "show",
+              "time.",
+              "trajectory",
               "AR",
-              "often",
-              "always"
-            ]
+              "real",
+              "never",
+              "ball"
+            ],
+            "targetChinese": "擴增實境眼鏡即時顯示撞球行進軌跡。",
+            "targetSentence": "AR glasses show the billiard ball trajectory in real time."
           },
           {
             "type": "listen",
@@ -12002,29 +12169,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Fossils prove that birds evolved from feathered dinosaurs.",
-            "instruction": "重組成完整句子：「演化生物學：恐龍到鳥類」",
+            "instruction": "請看中文重組成英文句子：「化石證實鳥類是由帶羽毛的恐龍演化而來的。」",
             "targetTokens": [
-              "dinosaurs.",
-              "feathered",
-              "from",
-              "evolved",
-              "birds",
-              "that",
+              "Fossils",
               "prove",
-              "Fossils"
+              "that",
+              "birds",
+              "evolved",
+              "from",
+              "feathered",
+              "dinosaurs."
             ],
             "pool": [
               "dinosaurs.",
-              "feathered",
+              "Fossils",
               "from",
+              "that",
+              "feathered",
+              "never",
               "evolved",
               "birds",
-              "that",
-              "prove",
-              "Fossils",
-              "often",
-              "always"
-            ]
+              "prove"
+            ],
+            "targetChinese": "化石證實鳥類是由帶羽毛的恐龍演化而來的。",
+            "targetSentence": "Fossils prove that birds evolved from feathered dinosaurs."
           },
           {
             "type": "listen",
@@ -12136,27 +12304,29 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The autonomous robot navigated the maze smoothly.",
-            "instruction": "重組成完整句子：「世界青少年機器人大賽」",
+            "instruction": "請看中文重組成英文句子：「自主機器人順暢地走出了迷宮。」",
             "targetTokens": [
-              "smoothly.",
-              "maze",
-              "the",
-              "navigated",
-              "robot",
+              "The",
               "autonomous",
-              "The"
+              "robot",
+              "navigated",
+              "the",
+              "maze",
+              "smoothly."
             ],
             "pool": [
-              "smoothly.",
-              "maze",
               "the",
-              "navigated",
-              "robot",
-              "autonomous",
               "The",
-              "often",
-              "always"
-            ]
+              "seldom",
+              "never",
+              "smoothly.",
+              "navigated",
+              "autonomous",
+              "maze",
+              "robot"
+            ],
+            "targetChinese": "自主機器人順暢地走出了迷宮。",
+            "targetSentence": "The autonomous robot navigated the maze smoothly."
           },
           {
             "type": "listen",
@@ -12268,31 +12438,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The game was tough; however, they never gave up.",
-            "instruction": "重組成完整句子：「篇章結構轉折連接詞」",
+            "instruction": "請看中文重組成英文句子：「比賽很艱難，然而他們從未放棄。」",
             "targetTokens": [
-              "up.",
-              "gave",
-              "never",
-              "they",
-              "however,",
-              "tough;",
-              "was",
+              "The",
               "game",
-              "The"
+              "was",
+              "tough;",
+              "however,",
+              "they",
+              "never",
+              "gave",
+              "up."
             ],
             "pool": [
-              "up.",
-              "gave",
-              "never",
               "they",
-              "however,",
-              "tough;",
-              "was",
-              "game",
               "The",
-              "often",
-              "always"
-            ]
+              "tough;",
+              "up.",
+              "game",
+              "was",
+              "seldom",
+              "gave",
+              "however,",
+              "never"
+            ],
+            "targetChinese": "比賽很艱難，然而他們從未放棄。",
+            "targetSentence": "The game was tough; however, they never gave up."
           },
           {
             "type": "listen",
@@ -12404,31 +12575,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Read the context carefully to find the correct answer.",
-            "instruction": "重組成完整句子：「會考全真克漏字模擬題」",
+            "instruction": "請看中文重組成英文句子：「仔細閱讀前後文以找出正確答案。」",
             "targetTokens": [
-              "answer.",
-              "correct",
+              "Read",
               "the",
-              "find",
-              "to",
-              "carefully",
               "context",
+              "carefully",
+              "to",
+              "find",
               "the",
-              "Read"
+              "correct",
+              "answer."
             ],
             "pool": [
-              "answer.",
               "correct",
               "the",
-              "find",
-              "to",
-              "carefully",
               "context",
-              "the",
+              "carefully",
+              "find",
+              "never",
               "Read",
-              "often",
-              "always"
-            ]
+              "the",
+              "to",
+              "answer."
+            ],
+            "targetChinese": "仔細閱讀前後文以找出正確答案。",
+            "targetSentence": "Read the context carefully to find the correct answer."
           },
           {
             "type": "listen",
@@ -12540,29 +12712,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The student who perseveres will achieve great success.",
-            "instruction": "重組成完整句子：「國中畢業會考金牌魔王」",
+            "instruction": "請看中文重組成英文句子：「堅持不懈的學生將會獲得巨大成功。」",
             "targetTokens": [
-              "success.",
-              "great",
-              "achieve",
-              "will",
-              "perseveres",
-              "who",
+              "The",
               "student",
-              "The"
+              "who",
+              "perseveres",
+              "will",
+              "achieve",
+              "great",
+              "success."
             ],
             "pool": [
-              "success.",
               "great",
-              "achieve",
-              "will",
-              "perseveres",
+              "success.",
               "who",
               "student",
+              "will",
+              "never",
+              "achieve",
               "The",
-              "often",
-              "always"
-            ]
+              "perseveres"
+            ],
+            "targetChinese": "堅持不懈的學生將會獲得巨大成功。",
+            "targetSentence": "The student who perseveres will achieve great success."
           },
           {
             "type": "listen",
@@ -12689,29 +12862,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Developing critical thinking is crucial for high school.",
-            "instruction": "重組成完整句子：「高一核心高頻詞彙」",
+            "instruction": "請看中文重組成英文句子：「培養批判性思維對高中生至關重要。」",
             "targetTokens": [
-              "school.",
-              "high",
-              "for",
-              "crucial",
-              "is",
-              "thinking",
+              "Developing",
               "critical",
-              "Developing"
+              "thinking",
+              "is",
+              "crucial",
+              "for",
+              "high",
+              "school."
             ],
             "pool": [
-              "school.",
-              "high",
-              "for",
-              "crucial",
-              "is",
-              "thinking",
               "critical",
               "Developing",
-              "often",
-              "always"
-            ]
+              "is",
+              "high",
+              "school.",
+              "for",
+              "frequently",
+              "crucial",
+              "thinking"
+            ],
+            "targetChinese": "培養批判性思維對高中生至關重要。",
+            "targetSentence": "Developing critical thinking is crucial for high school."
           },
           {
             "type": "listen",
@@ -12823,31 +12997,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The thrilling baseball game kept spectators on their toes.",
-            "instruction": "重組成完整句子：「現在分詞與過去分詞形容詞」",
+            "instruction": "請看中文重組成英文句子：「這場驚心動魄的棒球賽讓觀眾們屏息凝神。」",
             "targetTokens": [
-              "toes.",
-              "their",
-              "on",
-              "spectators",
-              "kept",
-              "game",
-              "baseball",
+              "The",
               "thrilling",
-              "The"
+              "baseball",
+              "game",
+              "kept",
+              "spectators",
+              "on",
+              "their",
+              "toes."
             ],
             "pool": [
-              "toes.",
-              "their",
-              "on",
-              "spectators",
-              "kept",
+              "The",
+              "frequently",
               "game",
+              "spectators",
               "baseball",
               "thrilling",
-              "The",
-              "often",
-              "always"
-            ]
+              "on",
+              "their",
+              "toes.",
+              "kept"
+            ],
+            "targetChinese": "這場驚心動魄的棒球賽讓觀眾們屏息凝神。",
+            "targetSentence": "The thrilling baseball game kept spectators on their toes."
           },
           {
             "type": "listen",
@@ -12959,33 +13134,34 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Seeing the fast pitch, he swung the bat with power.",
-            "instruction": "重組成完整句子：「分詞構句基本型式」",
+            "instruction": "請看中文重組成英文句子：「看見快速球飛來，他使盡全力揮棒。」",
             "targetTokens": [
-              "power.",
-              "with",
-              "bat",
+              "Seeing",
               "the",
-              "swung",
-              "he",
-              "pitch,",
               "fast",
+              "pitch,",
+              "he",
+              "swung",
               "the",
-              "Seeing"
+              "bat",
+              "with",
+              "power."
             ],
             "pool": [
-              "power.",
-              "with",
-              "bat",
-              "the",
-              "swung",
-              "he",
               "pitch,",
-              "fast",
-              "the",
+              "swung",
               "Seeing",
-              "often",
-              "always"
-            ]
+              "with",
+              "he",
+              "the",
+              "the",
+              "fast",
+              "bat",
+              "frequently",
+              "power."
+            ],
+            "targetChinese": "看見快速球飛來，他使盡全力揮棒。",
+            "targetSentence": "Seeing the fast pitch, he swung the bat with power."
           },
           {
             "type": "listen",
@@ -13097,31 +13273,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Over the outfield wall flew the historic home run.",
-            "instruction": "重組成完整句子：「地方副詞倒裝句」",
+            "instruction": "請看中文重組成英文句子：「那記歷史性的全壘打飛越了外野全壘打牆。」",
             "targetTokens": [
-              "run.",
-              "home",
-              "historic",
+              "Over",
               "the",
-              "flew",
-              "wall",
               "outfield",
+              "wall",
+              "flew",
               "the",
-              "Over"
+              "historic",
+              "home",
+              "run."
             ],
             "pool": [
-              "run.",
-              "home",
-              "historic",
               "the",
+              "frequently",
               "flew",
-              "wall",
-              "outfield",
               "the",
+              "historic",
+              "run.",
               "Over",
-              "often",
-              "always"
-            ]
+              "outfield",
+              "home",
+              "wall"
+            ],
+            "targetChinese": "那記歷史性的全壘打飛越了外野全壘打牆。",
+            "targetSentence": "Over the outfield wall flew the historic home run."
           },
           {
             "type": "listen",
@@ -13233,31 +13410,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Never have I witnessed such an extraordinary athletic feat.",
-            "instruction": "重組成完整句子：「否定副詞倒裝句型」",
+            "instruction": "請看中文重組成英文句子：「我從未見過如此非凡的體育壯舉。」",
             "targetTokens": [
-              "feat.",
-              "athletic",
-              "extraordinary",
-              "an",
-              "such",
-              "witnessed",
-              "I",
+              "Never",
               "have",
-              "Never"
+              "I",
+              "witnessed",
+              "such",
+              "an",
+              "extraordinary",
+              "athletic",
+              "feat."
             ],
             "pool": [
-              "feat.",
-              "athletic",
               "extraordinary",
-              "an",
-              "such",
-              "witnessed",
-              "I",
+              "feat.",
               "have",
+              "athletic",
               "Never",
-              "often",
-              "always"
-            ]
+              "such",
+              "an",
+              "I",
+              "witnessed",
+              "frequently"
+            ],
+            "targetChinese": "我從未見過如此非凡的體育壯舉。",
+            "targetSentence": "Never have I witnessed such an extraordinary athletic feat."
           },
           {
             "type": "listen",
@@ -13369,29 +13547,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Remember to wear your protective helmet before cycling.",
-            "instruction": "重組成完整句子：「不定詞與動名詞意義辨析」",
+            "instruction": "請看中文重組成英文句子：「騎自行車前請務必戴上安全帽。」",
             "targetTokens": [
-              "cycling.",
-              "before",
-              "helmet",
-              "protective",
-              "your",
-              "wear",
+              "Remember",
               "to",
-              "Remember"
+              "wear",
+              "your",
+              "protective",
+              "helmet",
+              "before",
+              "cycling."
             ],
             "pool": [
-              "cycling.",
+              "to",
+              "protective",
+              "frequently",
               "before",
               "helmet",
-              "protective",
+              "cycling.",
               "your",
               "wear",
-              "to",
-              "Remember",
-              "often",
-              "always"
-            ]
+              "Remember"
+            ],
+            "targetChinese": "騎自行車前請務必戴上安全帽。",
+            "targetSentence": "Remember to wear your protective helmet before cycling."
           },
           {
             "type": "listen",
@@ -13503,29 +13682,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "What matters most in sports is genuine sportsmanship.",
-            "instruction": "重組成完整句子：「複合關係代名詞 what」",
+            "instruction": "請看中文重組成英文句子：「體育運動中最重要的莫過於真正的運動家精神。」",
             "targetTokens": [
-              "sportsmanship.",
-              "genuine",
-              "is",
-              "sports",
-              "in",
-              "most",
+              "What",
               "matters",
-              "What"
+              "most",
+              "in",
+              "sports",
+              "is",
+              "genuine",
+              "sportsmanship."
             ],
             "pool": [
-              "sportsmanship.",
-              "genuine",
-              "is",
-              "sports",
-              "in",
               "most",
-              "matters",
+              "sportsmanship.",
+              "in",
+              "frequently",
+              "sports",
+              "is",
+              "genuine",
               "What",
-              "often",
-              "always"
-            ]
+              "matters"
+            ],
+            "targetChinese": "體育運動中最重要的莫過於真正的運動家精神。",
+            "targetSentence": "What matters most in sports is genuine sportsmanship."
           },
           {
             "type": "listen",
@@ -13637,29 +13817,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "I would rather play baseball than watch television.",
-            "instruction": "重組成完整句子：「偏好與選擇句型」",
+            "instruction": "請看中文重組成英文句子：「我寧願去打棒球也不想看電視。」",
             "targetTokens": [
-              "television.",
-              "watch",
-              "than",
-              "baseball",
-              "play",
-              "rather",
+              "I",
               "would",
-              "I"
+              "rather",
+              "play",
+              "baseball",
+              "than",
+              "watch",
+              "television."
             ],
             "pool": [
-              "television.",
+              "play",
               "watch",
               "than",
-              "baseball",
-              "play",
               "rather",
+              "television.",
+              "frequently",
               "would",
-              "I",
-              "often",
-              "always"
-            ]
+              "baseball",
+              "I"
+            ],
+            "targetChinese": "我寧願去打棒球也不想看電視。",
+            "targetSentence": "I would rather play baseball than watch television."
           },
           {
             "type": "listen",
@@ -13771,29 +13952,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Modern baseball teams rely on advanced data analytics.",
-            "instruction": "重組成完整句子：「棒球賽刀分析學 (Sabermetrics)」",
+            "instruction": "請看中文重組成英文句子：「現代棒球隊仰賴先進的數據分析。」",
             "targetTokens": [
-              "analytics.",
-              "data",
-              "advanced",
-              "on",
-              "rely",
-              "teams",
+              "Modern",
               "baseball",
-              "Modern"
+              "teams",
+              "rely",
+              "on",
+              "advanced",
+              "data",
+              "analytics."
             ],
             "pool": [
-              "analytics.",
               "data",
-              "advanced",
-              "on",
+              "Modern",
               "rely",
               "teams",
               "baseball",
-              "Modern",
-              "often",
-              "always"
-            ]
+              "on",
+              "analytics.",
+              "frequently",
+              "advanced"
+            ],
+            "targetChinese": "現代棒球隊仰賴先進的數據分析。",
+            "targetSentence": "Modern baseball teams rely on advanced data analytics."
           },
           {
             "type": "listen",
@@ -13905,27 +14087,29 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Stealth fighters minimize their radar reflection profile.",
-            "instruction": "重組成完整句子：「空氣動力學與隱形戰機」",
+            "instruction": "請看中文重組成英文句子：「匿蹤戰鬥機將雷達反射截面積降至最低。」",
             "targetTokens": [
-              "profile.",
-              "reflection",
-              "radar",
-              "their",
-              "minimize",
+              "Stealth",
               "fighters",
-              "Stealth"
+              "minimize",
+              "their",
+              "radar",
+              "reflection",
+              "profile."
             ],
             "pool": [
-              "profile.",
-              "reflection",
-              "radar",
+              "frequently",
               "their",
+              "profile.",
               "minimize",
-              "fighters",
               "Stealth",
-              "often",
-              "always"
-            ]
+              "fighters",
+              "consistently",
+              "radar",
+              "reflection"
+            ],
+            "targetChinese": "匿蹤戰鬥機將雷達反射截面積降至最低。",
+            "targetSentence": "Stealth fighters minimize their radar reflection profile."
           },
           {
             "type": "listen",
@@ -14037,31 +14221,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Calculating collision vectors helps execute the perfect bank shot.",
-            "instruction": "重組成完整句子：「撞球角動量與物理旋轉」",
+            "instruction": "請看中文重組成英文句子：「計算碰撞向量有助於執行完美的顆星進球。」",
             "targetTokens": [
-              "shot.",
-              "bank",
-              "perfect",
-              "the",
-              "execute",
-              "helps",
-              "vectors",
+              "Calculating",
               "collision",
-              "Calculating"
+              "vectors",
+              "helps",
+              "execute",
+              "the",
+              "perfect",
+              "bank",
+              "shot."
             ],
             "pool": [
+              "perfect",
               "shot.",
               "bank",
-              "perfect",
+              "vectors",
+              "Calculating",
+              "collision",
+              "frequently",
               "the",
               "execute",
-              "helps",
-              "vectors",
-              "collision",
-              "Calculating",
-              "often",
-              "always"
-            ]
+              "helps"
+            ],
+            "targetChinese": "計算碰撞向量有助於執行完美的顆星進球。",
+            "targetSentence": "Calculating collision vectors helps execute the perfect bank shot."
           },
           {
             "type": "listen",
@@ -14173,29 +14358,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Scientists debate whether resurrecting ancient dinosaurs is ethical.",
-            "instruction": "重組成完整句子：「基因工程與古生物復育」",
+            "instruction": "請看中文重組成英文句子：「科學家們爭辯復活古老恐龍是否合乎倫理道德。」",
             "targetTokens": [
-              "ethical.",
-              "is",
-              "dinosaurs",
-              "ancient",
-              "resurrecting",
-              "whether",
+              "Scientists",
               "debate",
-              "Scientists"
+              "whether",
+              "resurrecting",
+              "ancient",
+              "dinosaurs",
+              "is",
+              "ethical."
             ],
             "pool": [
-              "ethical.",
+              "resurrecting",
+              "Scientists",
+              "ancient",
+              "debate",
               "is",
               "dinosaurs",
-              "ancient",
-              "resurrecting",
+              "ethical.",
               "whether",
-              "debate",
-              "Scientists",
-              "often",
-              "always"
-            ]
+              "frequently"
+            ],
+            "targetChinese": "科學家們爭辯復活古老恐龍是否合乎倫理道德。",
+            "targetSentence": "Scientists debate whether resurrecting ancient dinosaurs is ethical."
           },
           {
             "type": "listen",
@@ -14307,31 +14493,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Digital wellbeing requires balancing screen time with outdoor sports.",
-            "instruction": "重組成完整句子：「演算法與青少年心理學」",
+            "instruction": "請看中文重組成英文句子：「數位健康需要平衡螢幕使用時間與戶外運動。」",
             "targetTokens": [
-              "sports.",
-              "outdoor",
-              "with",
-              "time",
-              "screen",
-              "balancing",
-              "requires",
+              "Digital",
               "wellbeing",
-              "Digital"
+              "requires",
+              "balancing",
+              "screen",
+              "time",
+              "with",
+              "outdoor",
+              "sports."
             ],
             "pool": [
-              "sports.",
+              "wellbeing",
               "outdoor",
-              "with",
+              "frequently",
               "time",
               "screen",
               "balancing",
-              "requires",
-              "wellbeing",
+              "sports.",
+              "with",
               "Digital",
-              "often",
-              "always"
-            ]
+              "requires"
+            ],
+            "targetChinese": "數位健康需要平衡螢幕使用時間與戶外運動。",
+            "targetSentence": "Digital wellbeing requires balancing screen time with outdoor sports."
           },
           {
             "type": "listen",
@@ -14443,27 +14630,29 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Cultural empathy enables fruitful international academic collaboration.",
-            "instruction": "重組成完整句子：「跨文化溝通與國際禮儀」",
+            "instruction": "請看中文重組成英文句子：「文化同理心促成豐碩的國際學術合作。」",
             "targetTokens": [
-              "collaboration.",
-              "academic",
-              "international",
-              "fruitful",
-              "enables",
+              "Cultural",
               "empathy",
-              "Cultural"
+              "enables",
+              "fruitful",
+              "international",
+              "academic",
+              "collaboration."
             ],
             "pool": [
-              "collaboration.",
-              "academic",
               "international",
-              "fruitful",
+              "Cultural",
+              "academic",
               "enables",
               "empathy",
-              "Cultural",
-              "often",
-              "always"
-            ]
+              "consistently",
+              "frequently",
+              "fruitful",
+              "collaboration."
+            ],
+            "targetChinese": "文化同理心促成豐碩的國際學術合作。",
+            "targetSentence": "Cultural empathy enables fruitful international academic collaboration."
           },
           {
             "type": "listen",
@@ -14575,27 +14764,29 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Support your answers with direct textual evidence.",
-            "instruction": "重組成完整句子：「高中學測混合題型全解析」",
+            "instruction": "請看中文重組成英文句子：「用直接的文本證據來支持你的答案。」",
             "targetTokens": [
-              "evidence.",
-              "textual",
-              "direct",
-              "with",
-              "answers",
+              "Support",
               "your",
-              "Support"
+              "answers",
+              "with",
+              "direct",
+              "textual",
+              "evidence."
             ],
             "pool": [
-              "evidence.",
+              "frequently",
               "textual",
+              "evidence.",
               "direct",
-              "with",
-              "answers",
-              "your",
               "Support",
-              "often",
-              "always"
-            ]
+              "answers",
+              "consistently",
+              "with",
+              "your"
+            ],
+            "targetChinese": "用直接的文本證據來支持你的答案。",
+            "targetSentence": "Support your answers with direct textual evidence."
           },
           {
             "type": "listen",
@@ -14707,29 +14898,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Mastering core concepts builds a solid academic foundation.",
-            "instruction": "重組成完整句子：「高一菁英突破魔王關」",
+            "instruction": "請看中文重組成英文句子：「掌握核心概念能奠定堅實的學術基礎。」",
             "targetTokens": [
-              "foundation.",
-              "academic",
-              "solid",
-              "a",
-              "builds",
-              "concepts",
+              "Mastering",
               "core",
-              "Mastering"
+              "concepts",
+              "builds",
+              "a",
+              "solid",
+              "academic",
+              "foundation."
             ],
             "pool": [
-              "foundation.",
               "academic",
-              "solid",
-              "a",
               "builds",
-              "concepts",
               "core",
+              "frequently",
+              "foundation.",
+              "concepts",
               "Mastering",
-              "often",
-              "always"
-            ]
+              "a",
+              "solid"
+            ],
+            "targetChinese": "掌握核心概念能奠定堅實的學術基礎。",
+            "targetSentence": "Mastering core concepts builds a solid academic foundation."
           },
           {
             "type": "listen",
@@ -14856,35 +15048,36 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "If I were the pilot, I would fly around the globe.",
-            "instruction": "重組成完整句子：「與現在事實相反假設語氣」",
+            "instruction": "請看中文重組成英文句子：「如果我是飛行員，我會環球飛行。」",
             "targetTokens": [
-              "globe.",
-              "the",
-              "around",
-              "fly",
-              "would",
+              "If",
               "I",
-              "pilot,",
-              "the",
               "were",
+              "the",
+              "pilot,",
               "I",
-              "If"
+              "would",
+              "fly",
+              "around",
+              "the",
+              "globe."
             ],
             "pool": [
-              "globe.",
-              "the",
-              "around",
-              "fly",
+              "frequently",
+              "were",
               "would",
+              "around",
               "I",
               "pilot,",
-              "the",
-              "were",
-              "I",
               "If",
-              "often",
-              "always"
-            ]
+              "globe.",
+              "the",
+              "the",
+              "fly",
+              "I"
+            ],
+            "targetChinese": "如果我是飛行員，我會環球飛行。",
+            "targetSentence": "If I were the pilot, I would fly around the globe."
           },
           {
             "type": "listen",
@@ -14996,37 +15189,38 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "If he had swung earlier, he would have hit a home run.",
-            "instruction": "重組成完整句子：「與過去事實相反假設語氣」",
+            "instruction": "請看中文重組成英文句子：「如果他揮棒早一點，他就能擊出全壘打。」",
             "targetTokens": [
-              "run.",
-              "home",
-              "a",
-              "hit",
-              "have",
-              "would",
+              "If",
               "he",
-              "earlier,",
-              "swung",
               "had",
+              "swung",
+              "earlier,",
               "he",
-              "If"
+              "would",
+              "have",
+              "hit",
+              "a",
+              "home",
+              "run."
             ],
             "pool": [
               "run.",
-              "home",
               "a",
-              "hit",
+              "he",
+              "frequently",
               "have",
-              "would",
-              "he",
-              "earlier,",
-              "swung",
+              "hit",
+              "home",
               "had",
-              "he",
+              "swung",
               "If",
-              "often",
-              "always"
-            ]
+              "would",
+              "earlier,",
+              "he"
+            ],
+            "targetChinese": "如果他揮棒早一點，他就能擊出全壘打。",
+            "targetSentence": "If he had swung earlier, he would have hit a home run."
           },
           {
             "type": "listen",
@@ -15138,35 +15332,36 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Had I known about the baseball tryouts, I would have joined.",
-            "instruction": "重組成完整句子：「假設語氣倒裝省 If」",
+            "instruction": "請看中文重組成英文句子：「若我早知道有棒球選拔，我就會報名參加。」",
             "targetTokens": [
-              "joined.",
-              "have",
-              "would",
+              "Had",
               "I",
-              "tryouts,",
-              "baseball",
-              "the",
-              "about",
               "known",
+              "about",
+              "the",
+              "baseball",
+              "tryouts,",
               "I",
-              "Had"
+              "would",
+              "have",
+              "joined."
             ],
             "pool": [
-              "joined.",
-              "have",
-              "would",
-              "I",
-              "tryouts,",
-              "baseball",
-              "the",
               "about",
-              "known",
               "I",
+              "frequently",
+              "known",
+              "tryouts,",
+              "I",
+              "have",
+              "baseball",
+              "would",
+              "the",
               "Had",
-              "often",
-              "always"
-            ]
+              "joined."
+            ],
+            "targetChinese": "若我早知道有棒球選拔，我就會報名參加。",
+            "targetSentence": "Had I known about the baseball tryouts, I would have joined."
           },
           {
             "type": "listen",
@@ -15278,31 +15473,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The coach insisted that every player practice every morning.",
-            "instruction": "重組成完整句子：「願望與堅持要求動詞」",
+            "instruction": "請看中文重組成英文句子：「教練堅持要求每位球員每天早上都要練習。」",
             "targetTokens": [
-              "morning.",
-              "every",
-              "practice",
-              "player",
-              "every",
-              "that",
-              "insisted",
+              "The",
               "coach",
-              "The"
+              "insisted",
+              "that",
+              "every",
+              "player",
+              "practice",
+              "every",
+              "morning."
             ],
             "pool": [
-              "morning.",
               "every",
-              "practice",
-              "player",
-              "every",
-              "that",
-              "insisted",
-              "coach",
               "The",
-              "often",
-              "always"
-            ]
+              "practice",
+              "insisted",
+              "every",
+              "player",
+              "that",
+              "frequently",
+              "morning.",
+              "coach"
+            ],
+            "targetChinese": "教練堅持要求每位球員每天早上都要練習。",
+            "targetSentence": "The coach insisted that every player practice every morning."
           },
           {
             "type": "listen",
@@ -15414,31 +15610,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "He made every effort to master the billiards technique.",
-            "instruction": "重組成完整句子：「高中高頻動詞搭配詞」",
+            "instruction": "請看中文重組成英文句子：「他竭盡全力去掌握撞球擊球技術。」",
             "targetTokens": [
-              "technique.",
-              "billiards",
-              "the",
-              "master",
-              "to",
-              "effort",
-              "every",
+              "He",
               "made",
-              "He"
+              "every",
+              "effort",
+              "to",
+              "master",
+              "the",
+              "billiards",
+              "technique."
             ],
             "pool": [
-              "technique.",
               "billiards",
-              "the",
-              "master",
-              "to",
               "effort",
-              "every",
-              "made",
+              "to",
+              "the",
               "He",
-              "often",
-              "always"
-            ]
+              "frequently",
+              "made",
+              "every",
+              "master",
+              "technique."
+            ],
+            "targetChinese": "他竭盡全力去掌握撞球擊球技術。",
+            "targetSentence": "He made every effort to master the billiards technique."
           },
           {
             "type": "listen",
@@ -15550,35 +15747,38 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "He is not only a brilliant pitcher but also an inspiring leader.",
-            "instruction": "重組成完整句子：「成對連接詞架構」",
+            "instruction": "請看中文重組成英文句子：「他不僅是一位出色的投手，更是激勵人心的領袖。」",
             "targetTokens": [
-              "leader.",
-              "inspiring",
-              "an",
-              "also",
-              "but",
-              "pitcher",
-              "brilliant",
-              "a",
-              "only",
+              "He",
+              "is",
               "not",
-              "He"
+              "only",
+              "a",
+              "brilliant",
+              "pitcher",
+              "but",
+              "also",
+              "an",
+              "inspiring",
+              "leader."
             ],
             "pool": [
-              "leader.",
+              "only",
+              "He",
+              "but",
+              "not",
               "inspiring",
               "an",
-              "also",
-              "but",
               "pitcher",
               "brilliant",
               "a",
-              "only",
-              "not",
-              "He",
-              "often",
-              "always"
-            ]
+              "is",
+              "also",
+              "frequently",
+              "leader."
+            ],
+            "targetChinese": "他不僅是一位出色的投手，更是激勵人心的領袖。",
+            "targetSentence": "He is not only a brilliant pitcher but also an inspiring leader."
           },
           {
             "type": "listen",
@@ -15690,29 +15890,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The ninth-inning home run thrilled every baseball fan.",
-            "instruction": "重組成完整句子：「情緒動詞與使役句型」",
+            "instruction": "請看中文重組成英文句子：「九局下半的全壘打讓每位棒球迷熱血沸騰。」",
             "targetTokens": [
-              "fan.",
-              "baseball",
-              "every",
-              "thrilled",
-              "run",
-              "home",
+              "The",
               "ninth-inning",
-              "The"
+              "home",
+              "run",
+              "thrilled",
+              "every",
+              "baseball",
+              "fan."
             ],
             "pool": [
-              "fan.",
-              "baseball",
-              "every",
               "thrilled",
-              "run",
+              "frequently",
+              "every",
               "home",
               "ninth-inning",
+              "run",
               "The",
-              "often",
-              "always"
-            ]
+              "fan.",
+              "baseball"
+            ],
+            "targetChinese": "九局下半的全壘打讓每位棒球迷熱血沸騰。",
+            "targetSentence": "The ninth-inning home run thrilled every baseball fan."
           },
           {
             "type": "listen",
@@ -15824,27 +16025,29 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The team utilizes state-of-the-art aerospace simulation equipment.",
-            "instruction": "重組成完整句子：「複合形容詞打造專業文風」",
+            "instruction": "請看中文重組成英文句子：「團隊運用了最先進的航太模擬設備。」",
             "targetTokens": [
-              "equipment.",
-              "simulation",
-              "aerospace",
-              "state-of-the-art",
-              "utilizes",
+              "The",
               "team",
-              "The"
+              "utilizes",
+              "state-of-the-art",
+              "aerospace",
+              "simulation",
+              "equipment."
             ],
             "pool": [
               "equipment.",
               "simulation",
+              "consistently",
               "aerospace",
-              "state-of-the-art",
+              "frequently",
               "utilizes",
               "team",
               "The",
-              "often",
-              "always"
-            ]
+              "state-of-the-art"
+            ],
+            "targetChinese": "團隊運用了最先進的航太模擬設備。",
+            "targetSentence": "The team utilizes state-of-the-art aerospace simulation equipment."
           },
           {
             "type": "listen",
@@ -15956,29 +16159,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Turbofan engines maximize thrust while maintaining high efficiency.",
-            "instruction": "重組成完整句子：「現代航太渦輪發動機推進」",
+            "instruction": "請看中文重組成英文句子：「渦輪扇發動機在維持高效率的同時實現推力最大化。」",
             "targetTokens": [
-              "efficiency.",
-              "high",
-              "maintaining",
-              "while",
-              "thrust",
-              "maximize",
+              "Turbofan",
               "engines",
-              "Turbofan"
+              "maximize",
+              "thrust",
+              "while",
+              "maintaining",
+              "high",
+              "efficiency."
             ],
             "pool": [
-              "efficiency.",
-              "high",
-              "maintaining",
-              "while",
-              "thrust",
               "maximize",
-              "engines",
               "Turbofan",
-              "often",
-              "always"
-            ]
+              "while",
+              "engines",
+              "thrust",
+              "maintaining",
+              "high",
+              "efficiency.",
+              "frequently"
+            ],
+            "targetChinese": "渦輪扇發動機在維持高效率的同時實現推力最大化。",
+            "targetSentence": "Turbofan engines maximize thrust while maintaining high efficiency."
           },
           {
             "type": "listen",
@@ -16090,31 +16294,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Elite athletes cultivate mental toughness to perform under pressure.",
-            "instruction": "重組成完整句子：「運動心理學與高壓關鍵抗壓」",
+            "instruction": "請看中文重組成英文句子：「頂尖運動員培養心理韌性以在高壓下發揮實力。」",
             "targetTokens": [
-              "pressure.",
-              "under",
-              "perform",
-              "to",
-              "toughness",
-              "mental",
-              "cultivate",
+              "Elite",
               "athletes",
-              "Elite"
+              "cultivate",
+              "mental",
+              "toughness",
+              "to",
+              "perform",
+              "under",
+              "pressure."
             ],
             "pool": [
               "pressure.",
               "under",
-              "perform",
-              "to",
-              "toughness",
-              "mental",
-              "cultivate",
-              "athletes",
+              "frequently",
               "Elite",
-              "often",
-              "always"
-            ]
+              "cultivate",
+              "to",
+              "perform",
+              "athletes",
+              "mental",
+              "toughness"
+            ],
+            "targetChinese": "頂尖運動員培養心理韌性以在高壓下發揮實力。",
+            "targetSentence": "Elite athletes cultivate mental toughness to perform under pressure."
           },
           {
             "type": "listen",
@@ -16226,31 +16431,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Spin dynamics significantly alter cue ball trajectory upon impact.",
-            "instruction": "重組成完整句子：「撞球非線性偏轉力學」",
+            "instruction": "請看中文重組成英文句子：「旋轉動力學在撞擊時顯著改變母球的行進軌跡。」",
             "targetTokens": [
-              "impact.",
-              "upon",
-              "trajectory",
-              "ball",
-              "cue",
-              "alter",
-              "significantly",
+              "Spin",
               "dynamics",
-              "Spin"
+              "significantly",
+              "alter",
+              "cue",
+              "ball",
+              "trajectory",
+              "upon",
+              "impact."
             ],
             "pool": [
-              "impact.",
               "upon",
-              "trajectory",
-              "ball",
-              "cue",
-              "alter",
-              "significantly",
+              "impact.",
               "dynamics",
+              "alter",
+              "cue",
+              "frequently",
+              "ball",
+              "trajectory",
               "Spin",
-              "often",
-              "always"
-            ]
+              "significantly"
+            ],
+            "targetChinese": "旋轉動力學在撞擊時顯著改變母球的行進軌跡。",
+            "targetSentence": "Spin dynamics significantly alter cue ball trajectory upon impact."
           },
           {
             "type": "listen",
@@ -16362,33 +16568,34 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Catastrophic climate shifts marked the end of the Mesozoic era.",
-            "instruction": "重組成完整句子：「古生物大滅絕與地質時代」",
+            "instruction": "請看中文重組成英文句子：「災難性的氣候劇變標誌著中生代的結束。」",
             "targetTokens": [
-              "era.",
-              "Mesozoic",
-              "the",
-              "of",
-              "end",
-              "the",
-              "marked",
-              "shifts",
+              "Catastrophic",
               "climate",
-              "Catastrophic"
+              "shifts",
+              "marked",
+              "the",
+              "end",
+              "of",
+              "the",
+              "Mesozoic",
+              "era."
             ],
             "pool": [
-              "era.",
-              "Mesozoic",
-              "the",
-              "of",
-              "end",
-              "the",
-              "marked",
-              "shifts",
               "climate",
               "Catastrophic",
-              "often",
-              "always"
-            ]
+              "frequently",
+              "era.",
+              "Mesozoic",
+              "end",
+              "shifts",
+              "marked",
+              "the",
+              "the",
+              "of"
+            ],
+            "targetChinese": "災難性的氣候劇變標誌著中生代的結束。",
+            "targetSentence": "Catastrophic climate shifts marked the end of the Mesozoic era."
           },
           {
             "type": "listen",
@@ -16500,29 +16707,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Autonomous vehicles combine lidar and camera sensor fusion.",
-            "instruction": "重組成完整句子：「自動駕駛與車聯網安全」",
+            "instruction": "請看中文重組成英文句子：「自動駕駛車輛融合了光達與攝影機感測技術。」",
             "targetTokens": [
-              "fusion.",
-              "sensor",
-              "camera",
-              "and",
-              "lidar",
-              "combine",
+              "Autonomous",
               "vehicles",
-              "Autonomous"
+              "combine",
+              "lidar",
+              "and",
+              "camera",
+              "sensor",
+              "fusion."
             ],
             "pool": [
+              "Autonomous",
               "fusion.",
-              "sensor",
-              "camera",
-              "and",
+              "frequently",
               "lidar",
               "combine",
-              "vehicles",
-              "Autonomous",
-              "often",
-              "always"
-            ]
+              "camera",
+              "and",
+              "sensor",
+              "vehicles"
+            ],
+            "targetChinese": "自動駕駛車輛融合了光達與攝影機感測技術。",
+            "targetSentence": "Autonomous vehicles combine lidar and camera sensor fusion."
           },
           {
             "type": "listen",
@@ -16634,29 +16842,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Reducing carbon emissions is fundamental to global sustainability.",
-            "instruction": "重組成完整句子：「聯合國永續發展目標 (SDGs)」",
+            "instruction": "請看中文重組成英文句子：「減少碳排放是全球永續發展的根本之道。」",
             "targetTokens": [
-              "sustainability.",
-              "global",
-              "to",
-              "fundamental",
-              "is",
-              "emissions",
+              "Reducing",
               "carbon",
-              "Reducing"
+              "emissions",
+              "is",
+              "fundamental",
+              "to",
+              "global",
+              "sustainability."
             ],
             "pool": [
               "sustainability.",
-              "global",
-              "to",
-              "fundamental",
-              "is",
-              "emissions",
               "carbon",
+              "emissions",
+              "fundamental",
+              "frequently",
               "Reducing",
-              "often",
-              "always"
-            ]
+              "is",
+              "global",
+              "to"
+            ],
+            "targetChinese": "減少碳排放是全球永續發展的根本之道。",
+            "targetSentence": "Reducing carbon emissions is fundamental to global sustainability."
           },
           {
             "type": "listen",
@@ -16768,31 +16977,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "A strong thesis statement anchors the entire essay argument.",
-            "instruction": "重組成完整句子：「學術論說文主題句與論據」",
+            "instruction": "請看中文重組成英文句子：「有力的主題句奠定了整篇論述論文的核心立場。」",
             "targetTokens": [
-              "argument.",
-              "essay",
-              "entire",
-              "the",
-              "anchors",
-              "statement",
-              "thesis",
+              "A",
               "strong",
-              "A"
+              "thesis",
+              "statement",
+              "anchors",
+              "the",
+              "entire",
+              "essay",
+              "argument."
             ],
             "pool": [
-              "argument.",
-              "essay",
-              "entire",
-              "the",
-              "anchors",
               "statement",
-              "thesis",
               "strong",
               "A",
-              "often",
-              "always"
-            ]
+              "anchors",
+              "essay",
+              "thesis",
+              "the",
+              "entire",
+              "frequently",
+              "argument."
+            ],
+            "targetChinese": "有力的主題句奠定了整篇論述論文的核心立場。",
+            "targetSentence": "A strong thesis statement anchors the entire essay argument."
           },
           {
             "type": "listen",
@@ -16904,31 +17114,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Had he persevered, he would have achieved magnificent greatness.",
-            "instruction": "重組成完整句子：「高二頂尖聯賽魔王試煉」",
+            "instruction": "請看中文重組成英文句子：「若他當時堅持下去，必將成就非凡的偉業。」",
             "targetTokens": [
-              "greatness.",
-              "magnificent",
-              "achieved",
-              "have",
-              "would",
+              "Had",
               "he",
               "persevered,",
               "he",
-              "Had"
+              "would",
+              "have",
+              "achieved",
+              "magnificent",
+              "greatness."
             ],
             "pool": [
+              "Had",
+              "frequently",
+              "have",
+              "would",
               "greatness.",
               "magnificent",
               "achieved",
-              "have",
-              "would",
-              "he",
               "persevered,",
               "he",
-              "Had",
-              "often",
-              "always"
-            ]
+              "he"
+            ],
+            "targetChinese": "若他當時堅持下去，必將成就非凡的偉業。",
+            "targetSentence": "Had he persevered, he would have achieved magnificent greatness."
           },
           {
             "type": "listen",
@@ -17055,29 +17266,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Artificial intelligence represents an unprecedented technological paradigm shift.",
-            "instruction": "重組成完整句子：「7000核心學術高頻字彙」",
+            "instruction": "請看中文重組成英文句子：「人工智慧代表了一場前所未有的技術典範轉移。」",
             "targetTokens": [
-              "shift.",
-              "paradigm",
-              "technological",
-              "unprecedented",
-              "an",
-              "represents",
+              "Artificial",
               "intelligence",
-              "Artificial"
+              "represents",
+              "an",
+              "unprecedented",
+              "technological",
+              "paradigm",
+              "shift."
             ],
             "pool": [
+              "an",
+              "frequently",
               "shift.",
               "paradigm",
-              "technological",
-              "unprecedented",
-              "an",
-              "represents",
-              "intelligence",
               "Artificial",
-              "often",
-              "always"
-            ]
+              "intelligence",
+              "unprecedented",
+              "technological",
+              "represents"
+            ],
+            "targetChinese": "人工智慧代表了一場前所未有的技術典範轉移。",
+            "targetSentence": "Artificial intelligence represents an unprecedented technological paradigm shift."
           },
           {
             "type": "listen",
@@ -17189,37 +17401,38 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "It is not that we lack talent, but that we need discipline.",
-            "instruction": "重組成完整句子：「雙重否定與對比強調句型」",
+            "instruction": "請看中文重組成英文句子：「並非我們缺乏才華，而是我們需要高度自律。」",
             "targetTokens": [
-              "discipline.",
-              "need",
-              "we",
-              "that",
-              "but",
-              "talent,",
-              "lack",
-              "we",
-              "that",
-              "not",
+              "It",
               "is",
-              "It"
+              "not",
+              "that",
+              "we",
+              "lack",
+              "talent,",
+              "but",
+              "that",
+              "we",
+              "need",
+              "discipline."
             ],
             "pool": [
-              "discipline.",
-              "need",
-              "we",
-              "that",
+              "is",
               "but",
+              "that",
+              "frequently",
               "talent,",
+              "need",
+              "not",
+              "It",
+              "we",
               "lack",
               "we",
               "that",
-              "not",
-              "is",
-              "It",
-              "often",
-              "always"
-            ]
+              "discipline."
+            ],
+            "targetChinese": "並非我們缺乏才華，而是我們需要高度自律。",
+            "targetSentence": "It is not that we lack talent, but that we need discipline."
           },
           {
             "type": "listen",
@@ -17331,31 +17544,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The implementation of new policies triggered rapid economic revitalization.",
-            "instruction": "重組成完整句子：「名詞化寫作風格提升」",
+            "instruction": "請看中文重組成英文句子：「新政策的推行引發了迅速的經濟振興。」",
             "targetTokens": [
-              "revitalization.",
-              "economic",
-              "rapid",
-              "triggered",
-              "policies",
-              "new",
-              "of",
+              "The",
               "implementation",
-              "The"
+              "of",
+              "new",
+              "policies",
+              "triggered",
+              "rapid",
+              "economic",
+              "revitalization."
             ],
             "pool": [
+              "new",
+              "policies",
+              "rapid",
+              "implementation",
               "revitalization.",
               "economic",
-              "rapid",
-              "triggered",
-              "policies",
-              "new",
               "of",
-              "implementation",
               "The",
-              "often",
-              "always"
-            ]
+              "frequently",
+              "triggered"
+            ],
+            "targetChinese": "新政策的推行引發了迅速的經濟振興。",
+            "targetSentence": "The implementation of new policies triggered rapid economic revitalization."
           },
           {
             "type": "listen",
@@ -17467,29 +17681,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The author tone remains skeptical regarding unproven claims.",
-            "instruction": "重組成完整句子：「作者弦外之音與隱含態度」",
+            "instruction": "請看中文重組成英文句子：「作者對於未經證實的說法保持懷疑態度。」",
             "targetTokens": [
-              "claims.",
-              "unproven",
-              "regarding",
-              "skeptical",
-              "remains",
-              "tone",
+              "The",
               "author",
-              "The"
+              "tone",
+              "remains",
+              "skeptical",
+              "regarding",
+              "unproven",
+              "claims."
             ],
             "pool": [
-              "claims.",
-              "unproven",
-              "regarding",
-              "skeptical",
-              "remains",
-              "tone",
-              "author",
+              "frequently",
               "The",
-              "often",
-              "always"
-            ]
+              "claims.",
+              "regarding",
+              "unproven",
+              "skeptical",
+              "author",
+              "remains",
+              "tone"
+            ],
+            "targetChinese": "作者對於未經證實的說法保持懷疑態度。",
+            "targetSentence": "The author tone remains skeptical regarding unproven claims."
           },
           {
             "type": "listen",
@@ -17601,27 +17816,29 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Deconstructing subordinate clauses clarifies complex philosophical assertions.",
-            "instruction": "重組成完整句子：「長難句化繁為簡解析策略」",
+            "instruction": "請看中文重組成英文句子：「解構從屬子句能釐清複雜的哲學主張。」",
             "targetTokens": [
-              "assertions.",
-              "philosophical",
-              "complex",
-              "clarifies",
-              "clauses",
+              "Deconstructing",
               "subordinate",
-              "Deconstructing"
+              "clauses",
+              "clarifies",
+              "complex",
+              "philosophical",
+              "assertions."
             ],
             "pool": [
-              "assertions.",
-              "philosophical",
-              "complex",
-              "clarifies",
-              "clauses",
               "subordinate",
               "Deconstructing",
-              "often",
-              "always"
-            ]
+              "clauses",
+              "assertions.",
+              "clarifies",
+              "consistently",
+              "philosophical",
+              "complex",
+              "frequently"
+            ],
+            "targetChinese": "解構從屬子句能釐清複雜的哲學主張。",
+            "targetSentence": "Deconstructing subordinate clauses clarifies complex philosophical assertions."
           },
           {
             "type": "listen",
@@ -17733,31 +17950,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The findings were published in a peer-reviewed academic journal.",
-            "instruction": "重組成完整句子：「頂尖科學期刊文獻導讀」",
+            "instruction": "請看中文重組成英文句子：「研究結果發表於同行評審的權威學術期刊上。」",
             "targetTokens": [
-              "journal.",
-              "academic",
-              "peer-reviewed",
-              "a",
-              "in",
-              "published",
-              "were",
+              "The",
               "findings",
-              "The"
+              "were",
+              "published",
+              "in",
+              "a",
+              "peer-reviewed",
+              "academic",
+              "journal."
             ],
             "pool": [
-              "journal.",
-              "academic",
               "peer-reviewed",
-              "a",
               "in",
-              "published",
-              "were",
               "findings",
+              "frequently",
+              "academic",
               "The",
-              "often",
-              "always"
-            ]
+              "a",
+              "journal.",
+              "were",
+              "published"
+            ],
+            "targetChinese": "研究結果發表於同行評審的權威學術期刊上。",
+            "targetSentence": "The findings were published in a peer-reviewed academic journal."
           },
           {
             "type": "listen",
@@ -17869,29 +18087,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Elite baseball batters process pitch rotation in milliseconds.",
-            "instruction": "重組成完整句子：「運動神經科學與擊球反應極限」",
+            "instruction": "請看中文重組成英文句子：「頂尖棒球打者在幾毫秒內就能判斷球的旋轉。」",
             "targetTokens": [
-              "milliseconds.",
-              "in",
-              "rotation",
-              "pitch",
-              "process",
-              "batters",
+              "Elite",
               "baseball",
-              "Elite"
+              "batters",
+              "process",
+              "pitch",
+              "rotation",
+              "in",
+              "milliseconds."
             ],
             "pool": [
-              "milliseconds.",
               "in",
-              "rotation",
-              "pitch",
-              "process",
               "batters",
               "baseball",
+              "frequently",
+              "process",
+              "rotation",
+              "pitch",
               "Elite",
-              "often",
-              "always"
-            ]
+              "milliseconds."
+            ],
+            "targetChinese": "頂尖棒球打者在幾毫秒內就能判斷球的旋轉。",
+            "targetSentence": "Elite baseball batters process pitch rotation in milliseconds."
           },
           {
             "type": "listen",
@@ -18003,31 +18222,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Hypersonic aircraft travel at speeds exceeding five times sound.",
-            "instruction": "重組成完整句子：「高超音速飛行與未來太空站」",
+            "instruction": "請看中文重組成英文句子：「極音速飛行器以超過五倍音速的速度飛行。」",
             "targetTokens": [
-              "sound.",
-              "times",
-              "five",
-              "exceeding",
-              "speeds",
-              "at",
-              "travel",
+              "Hypersonic",
               "aircraft",
-              "Hypersonic"
+              "travel",
+              "at",
+              "speeds",
+              "exceeding",
+              "five",
+              "times",
+              "sound."
             ],
             "pool": [
-              "sound.",
+              "travel",
               "times",
-              "five",
-              "exceeding",
               "speeds",
               "at",
-              "travel",
-              "aircraft",
               "Hypersonic",
-              "often",
-              "always"
-            ]
+              "five",
+              "aircraft",
+              "frequently",
+              "exceeding",
+              "sound."
+            ],
+            "targetChinese": "極音速飛行器以超過五倍音速的速度飛行。",
+            "targetSentence": "Hypersonic aircraft travel at speeds exceeding five times sound."
           },
           {
             "type": "listen",
@@ -18139,31 +18359,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Applying game theory ensures optimal table defense and offense.",
-            "instruction": "重組成完整句子：「博弈論與撞球對抗策略」",
+            "instruction": "請看中文重組成英文句子：「應用賽局理論能確保球檯上的最佳攻守平衡。」",
             "targetTokens": [
-              "offense.",
-              "and",
-              "defense",
-              "table",
-              "optimal",
-              "ensures",
-              "theory",
+              "Applying",
               "game",
-              "Applying"
+              "theory",
+              "ensures",
+              "optimal",
+              "table",
+              "defense",
+              "and",
+              "offense."
             ],
             "pool": [
-              "offense.",
-              "and",
-              "defense",
-              "table",
               "optimal",
-              "ensures",
-              "theory",
               "game",
               "Applying",
-              "often",
-              "always"
-            ]
+              "and",
+              "frequently",
+              "theory",
+              "defense",
+              "offense.",
+              "ensures",
+              "table"
+            ],
+            "targetChinese": "應用賽局理論能確保球檯上的最佳攻守平衡。",
+            "targetSentence": "Applying game theory ensures optimal table defense and offense."
           },
           {
             "type": "listen",
@@ -18275,31 +18496,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Morphological adaptations reflect millions of years of environmental selection.",
-            "instruction": "重組成完整句子：「演化發育生物學 (Evo-Devo)」",
+            "instruction": "請看中文重組成英文句子：「形態上的適應反映了數百萬年的環境天擇。」",
             "targetTokens": [
-              "selection.",
-              "environmental",
+              "Morphological",
+              "adaptations",
+              "reflect",
+              "millions",
               "of",
               "years",
               "of",
-              "millions",
-              "reflect",
-              "adaptations",
-              "Morphological"
+              "environmental",
+              "selection."
             ],
             "pool": [
+              "reflect",
+              "of",
               "selection.",
+              "frequently",
               "environmental",
               "of",
-              "years",
-              "of",
               "millions",
-              "reflect",
-              "adaptations",
               "Morphological",
-              "often",
-              "always"
-            ]
+              "adaptations",
+              "years"
+            ],
+            "targetChinese": "形態上的適應反映了數百萬年的環境天擇。",
+            "targetSentence": "Morphological adaptations reflect millions of years of environmental selection."
           },
           {
             "type": "listen",
@@ -18411,35 +18633,36 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "AI alignment research ensures that algorithms act in human best interest.",
-            "instruction": "重組成完整句子：「大語言模型架構與對齊工程」",
+            "instruction": "請看中文重組成英文句子：「AI對齊研究確保演算法符合人類的最佳利益。」",
             "targetTokens": [
-              "interest.",
-              "best",
-              "human",
-              "in",
-              "act",
-              "algorithms",
-              "that",
-              "ensures",
-              "research",
+              "AI",
               "alignment",
-              "AI"
+              "research",
+              "ensures",
+              "that",
+              "algorithms",
+              "act",
+              "in",
+              "human",
+              "best",
+              "interest."
             ],
             "pool": [
               "interest.",
-              "best",
-              "human",
-              "in",
-              "act",
               "algorithms",
+              "in",
+              "human",
+              "frequently",
+              "best",
+              "research",
+              "act",
               "that",
               "ensures",
-              "research",
               "alignment",
-              "AI",
-              "often",
-              "always"
-            ]
+              "AI"
+            ],
+            "targetChinese": "AI對齊研究確保演算法符合人類的最佳利益。",
+            "targetSentence": "AI alignment research ensures that algorithms act in human best interest."
           },
           {
             "type": "listen",
@@ -18551,31 +18774,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Semiconductor manufacturing relies on an intricate global supply chain.",
-            "instruction": "重組成完整句子：「全球半導體與地緣經濟學」",
+            "instruction": "請看中文重組成英文句子：「半導體製造仰賴錯綜複雜的全球供應鏈。」",
             "targetTokens": [
-              "chain.",
-              "supply",
-              "global",
-              "intricate",
-              "an",
-              "on",
-              "relies",
+              "Semiconductor",
               "manufacturing",
-              "Semiconductor"
+              "relies",
+              "on",
+              "an",
+              "intricate",
+              "global",
+              "supply",
+              "chain."
             ],
             "pool": [
-              "chain.",
-              "supply",
-              "global",
               "intricate",
+              "chain.",
               "an",
-              "on",
-              "relies",
-              "manufacturing",
               "Semiconductor",
-              "often",
-              "always"
-            ]
+              "global",
+              "on",
+              "supply",
+              "manufacturing",
+              "frequently",
+              "relies"
+            ],
+            "targetChinese": "半導體製造仰賴錯綜複雜的全球供應鏈。",
+            "targetSentence": "Semiconductor manufacturing relies on an intricate global supply chain."
           },
           {
             "type": "listen",
@@ -18687,31 +18911,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Rigorous journalists maintain neutrality and avoid sensational rhetorical framing.",
-            "instruction": "重組成完整句子：「國際深度社論新聞英語剖析」",
+            "instruction": "請看中文重組成英文句子：「嚴謹的記者保持中立，避免煽情報導的語意框架。」",
             "targetTokens": [
-              "framing.",
-              "rhetorical",
-              "sensational",
-              "avoid",
-              "and",
-              "neutrality",
-              "maintain",
+              "Rigorous",
               "journalists",
-              "Rigorous"
+              "maintain",
+              "neutrality",
+              "and",
+              "avoid",
+              "sensational",
+              "rhetorical",
+              "framing."
             ],
             "pool": [
-              "framing.",
-              "rhetorical",
               "sensational",
               "avoid",
-              "and",
-              "neutrality",
-              "maintain",
               "journalists",
+              "framing.",
+              "neutrality",
+              "and",
               "Rigorous",
-              "often",
-              "always"
-            ]
+              "maintain",
+              "frequently",
+              "rhetorical"
+            ],
+            "targetChinese": "嚴謹的記者保持中立，避免煽情報導的語意框架。",
+            "targetSentence": "Rigorous journalists maintain neutrality and avoid sensational rhetorical framing."
           },
           {
             "type": "listen",
@@ -18823,29 +19048,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Analyze semantic coherence before selecting transitional discourse markers.",
-            "instruction": "重組成完整句子：「學測頂標克漏字篇章大破解」",
+            "instruction": "請看中文重組成英文句子：「在選擇轉折連接詞前，先分析語義連貫性。」",
             "targetTokens": [
-              "markers.",
-              "discourse",
-              "transitional",
-              "selecting",
-              "before",
-              "coherence",
+              "Analyze",
               "semantic",
-              "Analyze"
+              "coherence",
+              "before",
+              "selecting",
+              "transitional",
+              "discourse",
+              "markers."
             ],
             "pool": [
-              "markers.",
+              "semantic",
               "discourse",
               "transitional",
-              "selecting",
               "before",
+              "selecting",
               "coherence",
-              "semantic",
               "Analyze",
-              "often",
-              "always"
-            ]
+              "frequently",
+              "markers."
+            ],
+            "targetChinese": "在選擇轉折連接詞前，先分析語義連貫性。",
+            "targetSentence": "Analyze semantic coherence before selecting transitional discourse markers."
           },
           {
             "type": "listen",
@@ -18957,31 +19183,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Critical thinkers evaluate underlying premises before accepting controversial conclusions.",
-            "instruction": "重組成完整句子：「分科測驗等級批判思辨題」",
+            "instruction": "請看中文重組成英文句子：「批判性思考者在接受具爭議的結論前會先評估潛在前提。」",
             "targetTokens": [
-              "conclusions.",
-              "controversial",
-              "accepting",
-              "before",
-              "premises",
-              "underlying",
-              "evaluate",
+              "Critical",
               "thinkers",
-              "Critical"
+              "evaluate",
+              "underlying",
+              "premises",
+              "before",
+              "accepting",
+              "controversial",
+              "conclusions."
             ],
             "pool": [
-              "conclusions.",
-              "controversial",
-              "accepting",
               "before",
-              "premises",
               "underlying",
-              "evaluate",
-              "thinkers",
+              "conclusions.",
               "Critical",
-              "often",
-              "always"
-            ]
+              "frequently",
+              "controversial",
+              "thinkers",
+              "premises",
+              "accepting",
+              "evaluate"
+            ],
+            "targetChinese": "批判性思考者在接受具爭議的結論前會先評估潛在前提。",
+            "targetSentence": "Critical thinkers evaluate underlying premises before accepting controversial conclusions."
           },
           {
             "type": "listen",
@@ -19093,29 +19320,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Unprecedented innovation requires profound discipline and visionary thinking.",
-            "instruction": "重組成完整句子：「高中畢業學測滿級分大魔王」",
+            "instruction": "請看中文重組成英文句子：「前所未有的創新需要深刻的自律與遠見思維。」",
             "targetTokens": [
-              "thinking.",
-              "visionary",
-              "and",
-              "discipline",
-              "profound",
-              "requires",
+              "Unprecedented",
               "innovation",
-              "Unprecedented"
+              "requires",
+              "profound",
+              "discipline",
+              "and",
+              "visionary",
+              "thinking."
             ],
             "pool": [
-              "thinking.",
-              "visionary",
-              "and",
-              "discipline",
               "profound",
-              "requires",
               "innovation",
+              "and",
               "Unprecedented",
-              "often",
-              "always"
-            ]
+              "thinking.",
+              "requires",
+              "visionary",
+              "frequently",
+              "discipline"
+            ],
+            "targetChinese": "前所未有的創新需要深刻的自律與遠見思維。",
+            "targetSentence": "Unprecedented innovation requires profound discipline and visionary thinking."
           },
           {
             "type": "listen",
@@ -19242,31 +19470,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Please reply at your earliest convenience regarding our proposal.",
-            "instruction": "重組成完整句子：「專業商務書信與開場禮儀」",
+            "instruction": "請看中文重組成英文句子：「關於本合作提案，請在您方便時盡早回覆。」",
             "targetTokens": [
-              "proposal.",
-              "our",
-              "regarding",
-              "convenience",
-              "earliest",
-              "your",
-              "at",
+              "Please",
               "reply",
-              "Please"
+              "at",
+              "your",
+              "earliest",
+              "convenience",
+              "regarding",
+              "our",
+              "proposal."
             ],
             "pool": [
+              "earliest",
+              "regarding",
+              "Please",
+              "reply",
+              "at",
+              "convenience",
+              "simultaneously",
               "proposal.",
               "our",
-              "regarding",
-              "convenience",
-              "earliest",
-              "your",
-              "at",
-              "reply",
-              "Please",
-              "often",
-              "always"
-            ]
+              "your"
+            ],
+            "targetChinese": "關於本合作提案，請在您方便時盡早回覆。",
+            "targetSentence": "Please reply at your earliest convenience regarding our proposal."
           },
           {
             "type": "listen",
@@ -19378,29 +19607,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Please confirm your availability for tomorrow conference call.",
-            "instruction": "重組成完整句子：「跨國會議時程安排與確認」",
+            "instruction": "請看中文重組成英文句子：「請確認您明天是否有空參加電話會議。」",
             "targetTokens": [
-              "call.",
-              "conference",
-              "tomorrow",
-              "for",
-              "availability",
-              "your",
+              "Please",
               "confirm",
-              "Please"
+              "your",
+              "availability",
+              "for",
+              "tomorrow",
+              "conference",
+              "call."
             ],
             "pool": [
-              "call.",
-              "conference",
-              "tomorrow",
-              "for",
-              "availability",
-              "your",
-              "confirm",
               "Please",
-              "often",
-              "always"
-            ]
+              "conference",
+              "simultaneously",
+              "confirm",
+              "your",
+              "availability",
+              "for",
+              "call.",
+              "tomorrow"
+            ],
+            "targetChinese": "請確認您明天是否有空參加電話會議。",
+            "targetSentence": "Please confirm your availability for tomorrow conference call."
           },
           {
             "type": "listen",
@@ -19512,31 +19742,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Our software delivers an unmatched competitive edge to clients.",
-            "instruction": "重組成完整句子：「商業產品發表與價值主張」",
+            "instruction": "請看中文重組成英文句子：「我們的軟體為客戶提供無可比擬的競爭優勢。」",
             "targetTokens": [
-              "clients.",
-              "to",
-              "edge",
-              "competitive",
-              "unmatched",
-              "an",
-              "delivers",
+              "Our",
               "software",
-              "Our"
+              "delivers",
+              "an",
+              "unmatched",
+              "competitive",
+              "edge",
+              "to",
+              "clients."
             ],
             "pool": [
-              "clients.",
-              "to",
-              "edge",
+              "simultaneously",
               "competitive",
+              "Our",
+              "delivers",
+              "edge",
+              "clients.",
               "unmatched",
               "an",
-              "delivers",
-              "software",
-              "Our",
-              "often",
-              "always"
-            ]
+              "to",
+              "software"
+            ],
+            "targetChinese": "我們的軟體為客戶提供無可比擬的競爭優勢。",
+            "targetSentence": "Our software delivers an unmatched competitive edge to clients."
           },
           {
             "type": "listen",
@@ -19648,29 +19879,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Prompt complaint resolution directly enhances customer brand loyalty.",
-            "instruction": "重組成完整句子：「客戶關係管理與危機客訴」",
+            "instruction": "請看中文重組成英文句子：「迅速處理客訴能直接提升顧客對品牌的忠誠度。」",
             "targetTokens": [
-              "loyalty.",
-              "brand",
-              "customer",
-              "enhances",
-              "directly",
-              "resolution",
+              "Prompt",
               "complaint",
-              "Prompt"
+              "resolution",
+              "directly",
+              "enhances",
+              "customer",
+              "brand",
+              "loyalty."
             ],
             "pool": [
-              "loyalty.",
+              "Prompt",
               "brand",
+              "simultaneously",
+              "complaint",
+              "resolution",
+              "directly",
               "customer",
               "enhances",
-              "directly",
-              "resolution",
-              "complaint",
-              "Prompt",
-              "often",
-              "always"
-            ]
+              "loyalty."
+            ],
+            "targetChinese": "迅速處理客訴能直接提升顧客對品牌的忠誠度。",
+            "targetSentence": "Prompt complaint resolution directly enhances customer brand loyalty."
           },
           {
             "type": "listen",
@@ -19782,29 +20014,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Keep all travel receipts for business expense reimbursement.",
-            "instruction": "重組成完整句子：「國際差旅與機場出境手續」",
+            "instruction": "請看中文重組成英文句子：「請保留所有出差單據以便申請公務費用報銷。」",
             "targetTokens": [
-              "reimbursement.",
-              "expense",
-              "business",
-              "for",
-              "receipts",
-              "travel",
+              "Keep",
               "all",
-              "Keep"
+              "travel",
+              "receipts",
+              "for",
+              "business",
+              "expense",
+              "reimbursement."
             ],
             "pool": [
-              "reimbursement.",
-              "expense",
-              "business",
-              "for",
-              "receipts",
-              "travel",
               "all",
               "Keep",
-              "often",
-              "always"
-            ]
+              "for",
+              "receipts",
+              "reimbursement.",
+              "business",
+              "expense",
+              "simultaneously",
+              "travel"
+            ],
+            "targetChinese": "請保留所有出差單據以便申請公務費用報銷。",
+            "targetSentence": "Keep all travel receipts for business expense reimbursement."
           },
           {
             "type": "listen",
@@ -19916,27 +20149,29 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Quarterly revenue exceeded our original financial projections.",
-            "instruction": "重組成完整句子：「多益核心：財務與預算報表」",
+            "instruction": "請看中文重組成英文句子：「季度營收超出了我們最初的財務預測。」",
             "targetTokens": [
-              "projections.",
-              "financial",
-              "original",
-              "our",
-              "exceeded",
+              "Quarterly",
               "revenue",
-              "Quarterly"
+              "exceeded",
+              "our",
+              "original",
+              "financial",
+              "projections."
             ],
             "pool": [
-              "projections.",
-              "financial",
-              "original",
               "our",
+              "simultaneously",
+              "consequently",
               "exceeded",
-              "revenue",
+              "original",
+              "projections.",
               "Quarterly",
-              "often",
-              "always"
-            ]
+              "revenue",
+              "financial"
+            ],
+            "targetChinese": "季度營收超出了我們最初的財務預測。",
+            "targetSentence": "Quarterly revenue exceeded our original financial projections."
           },
           {
             "type": "listen",
@@ -20048,31 +20283,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The human resources team launched an international recruitment campaign.",
-            "instruction": "重組成完整句子：「多益核心：人力資源與招募」",
+            "instruction": "請看中文重組成英文句子：「人力資源團隊展開了一項國際招募計畫。」",
             "targetTokens": [
-              "campaign.",
-              "recruitment",
-              "international",
-              "an",
-              "launched",
-              "team",
-              "resources",
+              "The",
               "human",
-              "The"
+              "resources",
+              "team",
+              "launched",
+              "an",
+              "international",
+              "recruitment",
+              "campaign."
             ],
             "pool": [
               "campaign.",
               "recruitment",
-              "international",
+              "The",
+              "team",
               "an",
               "launched",
-              "team",
-              "resources",
+              "international",
+              "simultaneously",
               "human",
-              "The",
-              "often",
-              "always"
-            ]
+              "resources"
+            ],
+            "targetChinese": "人力資源團隊展開了一項國際招募計畫。",
+            "targetSentence": "The human resources team launched an international recruitment campaign."
           },
           {
             "type": "listen",
@@ -20184,31 +20420,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Review the contractual terms before signing with the vendor.",
-            "instruction": "重組成完整句子：「多益核心：供應鏈採購與合約」",
+            "instruction": "請看中文重組成英文句子：「在與供應商簽約前，請審閱合約條款。」",
             "targetTokens": [
-              "vendor.",
+              "Review",
               "the",
-              "with",
-              "signing",
-              "before",
-              "terms",
               "contractual",
+              "terms",
+              "before",
+              "signing",
+              "with",
               "the",
-              "Review"
+              "vendor."
             ],
             "pool": [
-              "vendor.",
-              "the",
-              "with",
               "signing",
-              "before",
-              "terms",
-              "contractual",
+              "simultaneously",
               "the",
+              "contractual",
+              "vendor.",
+              "before",
+              "with",
               "Review",
-              "often",
-              "always"
-            ]
+              "terms",
+              "the"
+            ],
+            "targetChinese": "在與供應商簽約前，請審閱合約條款。",
+            "targetSentence": "Review the contractual terms before signing with the vendor."
           },
           {
             "type": "listen",
@@ -20320,31 +20557,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Broadcasting rights represent substantial revenue for Major League Baseball.",
-            "instruction": "重組成完整句子：「職業體育特許經營商業模型」",
+            "instruction": "請看中文重組成英文句子：「轉播權是美國職棒大聯盟重要的收入來源。」",
             "targetTokens": [
-              "Baseball.",
-              "League",
-              "Major",
-              "for",
-              "revenue",
-              "substantial",
-              "represent",
+              "Broadcasting",
               "rights",
-              "Broadcasting"
+              "represent",
+              "substantial",
+              "revenue",
+              "for",
+              "Major",
+              "League",
+              "Baseball."
             ],
             "pool": [
-              "Baseball.",
               "League",
+              "substantial",
               "Major",
               "for",
               "revenue",
-              "substantial",
+              "Baseball.",
               "represent",
-              "rights",
               "Broadcasting",
-              "often",
-              "always"
-            ]
+              "simultaneously",
+              "rights"
+            ],
+            "targetChinese": "轉播權是美國職棒大聯盟重要的收入來源。",
+            "targetSentence": "Broadcasting rights represent substantial revenue for Major League Baseball."
           },
           {
             "type": "listen",
@@ -20456,29 +20694,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Optimizing flight routes significantly increases airline operating margins.",
-            "instruction": "重組成完整句子：「民用航空機隊營運與航線管理」",
+            "instruction": "請看中文重組成英文句子：「優化飛行航線顯著提高了航空公司的營運利潤。」",
             "targetTokens": [
-              "margins.",
-              "operating",
-              "airline",
-              "increases",
-              "significantly",
-              "routes",
+              "Optimizing",
               "flight",
-              "Optimizing"
+              "routes",
+              "significantly",
+              "increases",
+              "airline",
+              "operating",
+              "margins."
             ],
             "pool": [
-              "margins.",
-              "operating",
-              "airline",
-              "increases",
-              "significantly",
               "routes",
+              "operating",
+              "increases",
+              "airline",
+              "simultaneously",
+              "margins.",
               "flight",
-              "Optimizing",
-              "often",
-              "always"
-            ]
+              "significantly",
+              "Optimizing"
+            ],
+            "targetChinese": "優化飛行航線顯著提高了航空公司的營運利潤。",
+            "targetSentence": "Optimizing flight routes significantly increases airline operating margins."
           },
           {
             "type": "listen",
@@ -20590,29 +20829,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Competitive cue sports tournaments attract substantial global sponsorship.",
-            "instruction": "重組成完整句子：「撞球與休閒運動娛樂產業經濟」",
+            "instruction": "請看中文重組成英文句子：「職業撞球錦標賽吸引了大量全球贊助商。」",
             "targetTokens": [
-              "sponsorship.",
-              "global",
-              "substantial",
-              "attract",
-              "tournaments",
-              "sports",
+              "Competitive",
               "cue",
-              "Competitive"
+              "sports",
+              "tournaments",
+              "attract",
+              "substantial",
+              "global",
+              "sponsorship."
             ],
             "pool": [
+              "attract",
+              "Competitive",
+              "tournaments",
+              "simultaneously",
+              "cue",
               "sponsorship.",
               "global",
-              "substantial",
-              "attract",
-              "tournaments",
               "sports",
-              "cue",
-              "Competitive",
-              "often",
-              "always"
-            ]
+              "substantial"
+            ],
+            "targetChinese": "職業撞球錦標賽吸引了大量全球贊助商。",
+            "targetSentence": "Competitive cue sports tournaments attract substantial global sponsorship."
           },
           {
             "type": "listen",
@@ -20724,31 +20964,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The startup secured seed funding from prominent venture capitalists.",
-            "instruction": "重組成完整句子：「科技新創募資路演簡報 (Pitch)」",
+            "instruction": "請看中文重組成英文句子：「這家新創公司從知名創投家手中獲得了種子輪融資。」",
             "targetTokens": [
-              "capitalists.",
-              "venture",
-              "prominent",
-              "from",
-              "funding",
-              "seed",
-              "secured",
+              "The",
               "startup",
-              "The"
+              "secured",
+              "seed",
+              "funding",
+              "from",
+              "prominent",
+              "venture",
+              "capitalists."
             ],
             "pool": [
-              "capitalists.",
-              "venture",
-              "prominent",
-              "from",
-              "funding",
-              "seed",
-              "secured",
               "startup",
+              "seed",
+              "from",
+              "simultaneously",
+              "prominent",
+              "funding",
+              "secured",
+              "capitalists.",
               "The",
-              "often",
-              "always"
-            ]
+              "venture"
+            ],
+            "targetChinese": "這家新創公司從知名創投家手中獲得了種子輪融資。",
+            "targetSentence": "The startup secured seed funding from prominent venture capitalists."
           },
           {
             "type": "listen",
@@ -20860,25 +21101,27 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Cross-functional collaboration accelerates software feature deliverables.",
-            "instruction": "重組成完整句子：「敏捷專案管理與跨部門協同」",
+            "instruction": "請看中文重組成英文句子：「跨部門協作加速了軟體新功能的交付。」",
             "targetTokens": [
-              "deliverables.",
-              "feature",
-              "software",
-              "accelerates",
+              "Cross-functional",
               "collaboration",
-              "Cross-functional"
+              "accelerates",
+              "software",
+              "feature",
+              "deliverables."
             ],
             "pool": [
-              "deliverables.",
-              "feature",
-              "software",
-              "accelerates",
-              "collaboration",
               "Cross-functional",
-              "often",
-              "always"
-            ]
+              "simultaneously",
+              "accelerates",
+              "deliverables.",
+              "collaboration",
+              "consequently",
+              "feature",
+              "software"
+            ],
+            "targetChinese": "跨部門協作加速了軟體新功能的交付。",
+            "targetSentence": "Cross-functional collaboration accelerates software feature deliverables."
           },
           {
             "type": "listen",
@@ -20990,29 +21233,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Effective networking requires genuine curiosity and professional rapport.",
-            "instruction": "重組成完整句子：「商務餐敘破冰與人脈建立」",
+            "instruction": "請看中文重組成英文句子：「有效的人脈拓展需要真誠的求知慾與專業默契。」",
             "targetTokens": [
-              "rapport.",
-              "professional",
-              "and",
-              "curiosity",
-              "genuine",
-              "requires",
+              "Effective",
               "networking",
-              "Effective"
+              "requires",
+              "genuine",
+              "curiosity",
+              "and",
+              "professional",
+              "rapport."
             ],
             "pool": [
-              "rapport.",
-              "professional",
-              "and",
-              "curiosity",
-              "genuine",
               "requires",
               "networking",
+              "rapport.",
               "Effective",
-              "often",
-              "always"
-            ]
+              "and",
+              "simultaneously",
+              "genuine",
+              "curiosity",
+              "professional"
+            ],
+            "targetChinese": "有效的人脈拓展需要真誠的求知慾與專業默契。",
+            "targetSentence": "Effective networking requires genuine curiosity and professional rapport."
           },
           {
             "type": "listen",
@@ -21124,31 +21368,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Listen for synonyms rather than verbatim words in options.",
-            "instruction": "重組成完整句子：「多益聽力關鍵題型全攻略」",
+            "instruction": "請看中文重組成英文句子：「在選項中聆聽同義詞，而非尋找一模一樣的字詞。」",
             "targetTokens": [
-              "options.",
-              "in",
-              "words",
-              "verbatim",
-              "than",
-              "rather",
-              "synonyms",
+              "Listen",
               "for",
-              "Listen"
+              "synonyms",
+              "rather",
+              "than",
+              "verbatim",
+              "words",
+              "in",
+              "options."
             ],
             "pool": [
               "options.",
-              "in",
-              "words",
-              "verbatim",
-              "than",
-              "rather",
+              "simultaneously",
               "synonyms",
-              "for",
+              "than",
               "Listen",
-              "often",
-              "always"
-            ]
+              "rather",
+              "in",
+              "verbatim",
+              "words",
+              "for"
+            ],
+            "targetChinese": "在選項中聆聽同義詞，而非尋找一模一樣的字詞。",
+            "targetSentence": "Listen for synonyms rather than verbatim words in options."
           },
           {
             "type": "listen",
@@ -21260,29 +21505,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Professional communication and strategic collaboration guarantee business triumph.",
-            "instruction": "重組成完整句子：「大學商務實務認證魔王關」",
+            "instruction": "請看中文重組成英文句子：「專業的溝通與戰略協作保證了商業上的成功。」",
             "targetTokens": [
-              "triumph.",
-              "business",
-              "guarantee",
-              "collaboration",
-              "strategic",
-              "and",
+              "Professional",
               "communication",
-              "Professional"
+              "and",
+              "strategic",
+              "collaboration",
+              "guarantee",
+              "business",
+              "triumph."
             ],
             "pool": [
-              "triumph.",
-              "business",
-              "guarantee",
               "collaboration",
-              "strategic",
               "and",
+              "guarantee",
               "communication",
               "Professional",
-              "often",
-              "always"
-            ]
+              "triumph.",
+              "strategic",
+              "business",
+              "simultaneously"
+            ],
+            "targetChinese": "專業的溝通與戰略協作保證了商業上的成功。",
+            "targetSentence": "Professional communication and strategic collaboration guarantee business triumph."
           },
           {
             "type": "listen",
@@ -21409,31 +21655,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The empirical study demonstrated a statistically significant positive correlation.",
-            "instruction": "重組成完整句子：「學術論文方法論與結果評估」",
+            "instruction": "請看中文重組成英文句子：「該實證研究展現了具有統計顯著性的正相關。」",
             "targetTokens": [
-              "correlation.",
-              "positive",
-              "significant",
-              "statistically",
-              "a",
-              "demonstrated",
-              "study",
+              "The",
               "empirical",
-              "The"
+              "study",
+              "demonstrated",
+              "a",
+              "statistically",
+              "significant",
+              "positive",
+              "correlation."
             ],
             "pool": [
-              "correlation.",
-              "positive",
-              "significant",
-              "statistically",
               "a",
-              "demonstrated",
-              "study",
+              "correlation.",
+              "simultaneously",
+              "positive",
+              "statistically",
               "empirical",
+              "study",
               "The",
-              "often",
-              "always"
-            ]
+              "demonstrated",
+              "significant"
+            ],
+            "targetChinese": "該實證研究展現了具有統計顯著性的正相關。",
+            "targetSentence": "The empirical study demonstrated a statistically significant positive correlation."
           },
           {
             "type": "listen",
@@ -21545,29 +21792,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The professor presented counterintuitive evidence regarding planetary atmospheres.",
-            "instruction": "重組成完整句子：「托福學術演講高階聽力剖析」",
+            "instruction": "請看中文重組成英文句子：「教授提出了關於行星大氣層的反直覺證據。」",
             "targetTokens": [
-              "atmospheres.",
-              "planetary",
-              "regarding",
-              "evidence",
-              "counterintuitive",
-              "presented",
+              "The",
               "professor",
-              "The"
+              "presented",
+              "counterintuitive",
+              "evidence",
+              "regarding",
+              "planetary",
+              "atmospheres."
             ],
             "pool": [
-              "atmospheres.",
+              "presented",
+              "simultaneously",
+              "counterintuitive",
+              "The",
               "planetary",
               "regarding",
-              "evidence",
-              "counterintuitive",
-              "presented",
               "professor",
-              "The",
-              "often",
-              "always"
-            ]
+              "evidence",
+              "atmospheres."
+            ],
+            "targetChinese": "教授提出了關於行星大氣層的反直覺證據。",
+            "targetSentence": "The professor presented counterintuitive evidence regarding planetary atmospheres."
           },
           {
             "type": "listen",
@@ -21679,29 +21927,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Renewable energy production displayed a remarkable upward trajectory.",
-            "instruction": "重組成完整句子：「雅思圖表數據趨勢綜合歸納」",
+            "instruction": "請看中文重組成英文句子：「再生能源發電量呈現了顯著的向上攀升趨勢。」",
             "targetTokens": [
-              "trajectory.",
-              "upward",
-              "remarkable",
-              "a",
-              "displayed",
-              "production",
+              "Renewable",
               "energy",
-              "Renewable"
+              "production",
+              "displayed",
+              "a",
+              "remarkable",
+              "upward",
+              "trajectory."
             ],
             "pool": [
-              "trajectory.",
-              "upward",
-              "remarkable",
-              "a",
               "displayed",
               "production",
-              "energy",
+              "trajectory.",
               "Renewable",
-              "often",
-              "always"
-            ]
+              "simultaneously",
+              "upward",
+              "remarkable",
+              "energy",
+              "a"
+            ],
+            "targetChinese": "再生能源發電量呈現了顯著的向上攀升趨勢。",
+            "targetSentence": "Renewable energy production displayed a remarkable upward trajectory."
           },
           {
             "type": "listen",
@@ -21813,29 +22062,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Understanding your BATNA strengthens leverage during contractual negotiations.",
-            "instruction": "重組成完整句子：「國際商務談判策略與讓步」",
+            "instruction": "請看中文重組成英文句子：「了解您的談判最佳替代方案能強化合約協商籌碼。」",
             "targetTokens": [
-              "negotiations.",
-              "contractual",
-              "during",
-              "leverage",
-              "strengthens",
-              "BATNA",
+              "Understanding",
               "your",
-              "Understanding"
+              "BATNA",
+              "strengthens",
+              "leverage",
+              "during",
+              "contractual",
+              "negotiations."
             ],
             "pool": [
-              "negotiations.",
+              "simultaneously",
               "contractual",
-              "during",
               "leverage",
-              "strengthens",
-              "BATNA",
               "your",
-              "Understanding",
-              "often",
-              "always"
-            ]
+              "during",
+              "strengthens",
+              "negotiations.",
+              "BATNA",
+              "Understanding"
+            ],
+            "targetChinese": "了解您的談判最佳替代方案能強化合約協商籌碼。",
+            "targetSentence": "Understanding your BATNA strengthens leverage during contractual negotiations."
           },
           {
             "type": "listen",
@@ -21947,31 +22197,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Due diligence ensures that expected organizational synergies are realistic.",
-            "instruction": "重組成完整句子：「跨國併購與企業綜效整合」",
+            "instruction": "請看中文重組成英文句子：「盡職調查確保預期的企業綜效切實可行。」",
             "targetTokens": [
-              "realistic.",
-              "are",
-              "synergies",
-              "organizational",
-              "expected",
-              "that",
-              "ensures",
+              "Due",
               "diligence",
-              "Due"
+              "ensures",
+              "that",
+              "expected",
+              "organizational",
+              "synergies",
+              "are",
+              "realistic."
             ],
             "pool": [
-              "realistic.",
-              "are",
-              "synergies",
               "organizational",
               "expected",
-              "that",
-              "ensures",
-              "diligence",
               "Due",
-              "often",
-              "always"
-            ]
+              "simultaneously",
+              "realistic.",
+              "are",
+              "that",
+              "diligence",
+              "ensures",
+              "synergies"
+            ],
+            "targetChinese": "盡職調查確保預期的企業綜效切實可行。",
+            "targetSentence": "Due diligence ensures that expected organizational synergies are realistic."
           },
           {
             "type": "listen",
@@ -22083,31 +22334,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Central banks adjust interest rates to curb persistent inflation.",
-            "instruction": "重組成完整句子：「總體經濟與全球貨幣政策」",
+            "instruction": "請看中文重組成英文句子：「各國央行調整利率以抑制持續存在的通貨膨脹。」",
             "targetTokens": [
-              "inflation.",
-              "persistent",
-              "curb",
-              "to",
-              "rates",
-              "interest",
-              "adjust",
+              "Central",
               "banks",
-              "Central"
+              "adjust",
+              "interest",
+              "rates",
+              "to",
+              "curb",
+              "persistent",
+              "inflation."
             ],
             "pool": [
-              "inflation.",
-              "persistent",
-              "curb",
-              "to",
-              "rates",
               "interest",
-              "adjust",
-              "banks",
+              "curb",
+              "inflation.",
+              "rates",
+              "persistent",
+              "to",
               "Central",
-              "often",
-              "always"
-            ]
+              "simultaneously",
+              "adjust",
+              "banks"
+            ],
+            "targetChinese": "各國央行調整利率以抑制持續存在的通貨膨脹。",
+            "targetSentence": "Central banks adjust interest rates to curb persistent inflation."
           },
           {
             "type": "listen",
@@ -22219,29 +22471,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Sustainable aviation fuels substantially diminish aircraft greenhouse emissions.",
-            "instruction": "重組成完整句子：「先進航空推進與零碳永續」",
+            "instruction": "請看中文重組成英文句子：「永續航空燃料大幅減少了飛機的溫室氣體排放。」",
             "targetTokens": [
-              "emissions.",
-              "greenhouse",
-              "aircraft",
-              "diminish",
-              "substantially",
-              "fuels",
+              "Sustainable",
               "aviation",
-              "Sustainable"
+              "fuels",
+              "substantially",
+              "diminish",
+              "aircraft",
+              "greenhouse",
+              "emissions."
             ],
             "pool": [
-              "emissions.",
               "greenhouse",
               "aircraft",
+              "emissions.",
               "diminish",
-              "substantially",
-              "fuels",
-              "aviation",
               "Sustainable",
-              "often",
-              "always"
-            ]
+              "substantially",
+              "simultaneously",
+              "aviation",
+              "fuels"
+            ],
+            "targetChinese": "永續航空燃料大幅減少了飛機的溫室氣體排放。",
+            "targetSentence": "Sustainable aviation fuels substantially diminish aircraft greenhouse emissions."
           },
           {
             "type": "listen",
@@ -22353,31 +22606,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Optimizing the kinetic chain reduces pitcher shoulder joint fatigue.",
-            "instruction": "重組成完整句子：「運動生物力學與高科技防護」",
+            "instruction": "請看中文重組成英文句子：「優化動力鏈能減輕投手肩關節的疲勞負荷。」",
             "targetTokens": [
-              "fatigue.",
-              "joint",
-              "shoulder",
-              "pitcher",
-              "reduces",
-              "chain",
-              "kinetic",
+              "Optimizing",
               "the",
-              "Optimizing"
+              "kinetic",
+              "chain",
+              "reduces",
+              "pitcher",
+              "shoulder",
+              "joint",
+              "fatigue."
             ],
             "pool": [
+              "chain",
+              "reduces",
+              "Optimizing",
+              "simultaneously",
+              "the",
               "fatigue.",
               "joint",
-              "shoulder",
               "pitcher",
-              "reduces",
-              "chain",
-              "kinetic",
-              "the",
-              "Optimizing",
-              "often",
-              "always"
-            ]
+              "shoulder",
+              "kinetic"
+            ],
+            "targetChinese": "優化動力鏈能減輕投手肩關節的疲勞負荷。",
+            "targetSentence": "Optimizing the kinetic chain reduces pitcher shoulder joint fatigue."
           },
           {
             "type": "listen",
@@ -22489,31 +22743,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Advanced simulations model kinetic energy dissipation in cue collisions.",
-            "instruction": "重組成完整句子：「隨機過程與多體碰撞力學」",
+            "instruction": "請看中文重組成英文句子：「先進模擬技術精確模擬撞球桿碰撞時的動能耗散。」",
             "targetTokens": [
-              "collisions.",
-              "cue",
-              "in",
-              "dissipation",
-              "energy",
-              "kinetic",
-              "model",
+              "Advanced",
               "simulations",
-              "Advanced"
+              "model",
+              "kinetic",
+              "energy",
+              "dissipation",
+              "in",
+              "cue",
+              "collisions."
             ],
             "pool": [
-              "collisions.",
-              "cue",
-              "in",
-              "dissipation",
               "energy",
+              "simultaneously",
+              "collisions.",
+              "Advanced",
+              "cue",
               "kinetic",
+              "dissipation",
               "model",
               "simulations",
-              "Advanced",
-              "often",
-              "always"
-            ]
+              "in"
+            ],
+            "targetChinese": "先進模擬技術精確模擬撞球桿碰撞時的動能耗散。",
+            "targetSentence": "Advanced simulations model kinetic energy dissipation in cue collisions."
           },
           {
             "type": "listen",
@@ -22625,27 +22880,29 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "International treaties combat catastrophic global habitat fragmentation.",
-            "instruction": "重組成完整句子：「生態系統韌性與國際保育公約」",
+            "instruction": "請看中文重組成英文句子：「國際公約致力於對抗災難性的全球棲地破碎化。」",
             "targetTokens": [
-              "fragmentation.",
-              "habitat",
-              "global",
-              "catastrophic",
-              "combat",
+              "International",
               "treaties",
-              "International"
+              "combat",
+              "catastrophic",
+              "global",
+              "habitat",
+              "fragmentation."
             ],
             "pool": [
+              "treaties",
+              "consequently",
+              "combat",
               "fragmentation.",
               "habitat",
-              "global",
               "catastrophic",
-              "combat",
-              "treaties",
               "International",
-              "often",
-              "always"
-            ]
+              "global",
+              "simultaneously"
+            ],
+            "targetChinese": "國際公約致力於對抗災難性的全球棲地破碎化。",
+            "targetSentence": "International treaties combat catastrophic global habitat fragmentation."
           },
           {
             "type": "listen",
@@ -22757,29 +23014,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Courts scrutinize whether model pretraining constitutes fair use.",
-            "instruction": "重組成完整句子：「生成式 AI 與智慧財產權爭議」",
+            "instruction": "請看中文重組成英文句子：「法院正嚴格審查模型預訓練是否構成合理使用。」",
             "targetTokens": [
-              "use.",
-              "fair",
-              "constitutes",
-              "pretraining",
-              "model",
-              "whether",
+              "Courts",
               "scrutinize",
-              "Courts"
+              "whether",
+              "model",
+              "pretraining",
+              "constitutes",
+              "fair",
+              "use."
             ],
             "pool": [
-              "use.",
-              "fair",
-              "constitutes",
               "pretraining",
               "model",
-              "whether",
+              "simultaneously",
               "scrutinize",
               "Courts",
-              "often",
-              "always"
-            ]
+              "constitutes",
+              "use.",
+              "whether",
+              "fair"
+            ],
+            "targetChinese": "法院正嚴格審查模型預訓練是否構成合理使用。",
+            "targetSentence": "Courts scrutinize whether model pretraining constitutes fair use."
           },
           {
             "type": "listen",
@@ -22891,29 +23149,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "EUV lithography enables precision fabrication at atomic scale.",
-            "instruction": "重組成完整句子：「全球半導體極紫外光微影 (EUV)」",
+            "instruction": "請看中文重組成英文句子：「極紫外光微影技術實現了原子級尺度的精密製造。」",
             "targetTokens": [
-              "scale.",
-              "atomic",
-              "at",
-              "fabrication",
-              "precision",
-              "enables",
+              "EUV",
               "lithography",
-              "EUV"
+              "enables",
+              "precision",
+              "fabrication",
+              "at",
+              "atomic",
+              "scale."
             ],
             "pool": [
-              "scale.",
-              "atomic",
-              "at",
-              "fabrication",
-              "precision",
-              "enables",
-              "lithography",
+              "simultaneously",
               "EUV",
-              "often",
-              "always"
-            ]
+              "enables",
+              "atomic",
+              "scale.",
+              "fabrication",
+              "lithography",
+              "at",
+              "precision"
+            ],
+            "targetChinese": "極紫外光微影技術實現了原子級尺度的精密製造。",
+            "targetSentence": "EUV lithography enables precision fabrication at atomic scale."
           },
           {
             "type": "listen",
@@ -23025,33 +23284,34 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The arbitration tribunal ruled unanimously in favor of maritime rights.",
-            "instruction": "重組成完整句子：「國際人權法與爭端仲裁機制」",
+            "instruction": "請看中文重組成英文句子：「仲裁法庭一致裁決支持海洋權利。」",
             "targetTokens": [
-              "rights.",
-              "maritime",
-              "of",
-              "favor",
-              "in",
-              "unanimously",
-              "ruled",
-              "tribunal",
+              "The",
               "arbitration",
-              "The"
+              "tribunal",
+              "ruled",
+              "unanimously",
+              "in",
+              "favor",
+              "of",
+              "maritime",
+              "rights."
             ],
             "pool": [
-              "rights.",
-              "maritime",
-              "of",
               "favor",
               "in",
-              "unanimously",
-              "ruled",
-              "tribunal",
-              "arbitration",
+              "of",
               "The",
-              "often",
-              "always"
-            ]
+              "tribunal",
+              "maritime",
+              "simultaneously",
+              "ruled",
+              "rights.",
+              "arbitration",
+              "unanimously"
+            ],
+            "targetChinese": "仲裁法庭一致裁決支持海洋權利。",
+            "targetSentence": "The arbitration tribunal ruled unanimously in favor of maritime rights."
           },
           {
             "type": "listen",
@@ -23163,31 +23423,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Skilled debaters deconstruct hidden premises and expose logical fallacies.",
-            "instruction": "重組成完整句子：「學術辯論反方駁斥結構技巧」",
+            "instruction": "請看中文重組成英文句子：「資深辯手能解構隱藏的前提並揭露邏輯謬誤。」",
             "targetTokens": [
-              "fallacies.",
-              "logical",
-              "expose",
-              "and",
-              "premises",
-              "hidden",
-              "deconstruct",
+              "Skilled",
               "debaters",
-              "Skilled"
+              "deconstruct",
+              "hidden",
+              "premises",
+              "and",
+              "expose",
+              "logical",
+              "fallacies."
             ],
             "pool": [
-              "fallacies.",
-              "logical",
-              "expose",
-              "and",
               "premises",
-              "hidden",
-              "deconstruct",
-              "debaters",
               "Skilled",
-              "often",
-              "always"
-            ]
+              "debaters",
+              "simultaneously",
+              "expose",
+              "hidden",
+              "logical",
+              "and",
+              "deconstruct",
+              "fallacies."
+            ],
+            "targetChinese": "資深辯手能解構隱藏的前提並揭露邏輯謬誤。",
+            "targetSentence": "Skilled debaters deconstruct hidden premises and expose logical fallacies."
           },
           {
             "type": "listen",
@@ -23299,31 +23560,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "A nuanced thesis synthesizes competing perspectives into compelling rationale.",
-            "instruction": "重組成完整句子：「托福獨立寫作高分論述建構」",
+            "instruction": "請看中文重組成英文句子：「細緻周延的主題句將對立觀點融合成極具說服力的論述。」",
             "targetTokens": [
-              "rationale.",
-              "compelling",
-              "into",
-              "perspectives",
-              "competing",
-              "synthesizes",
-              "thesis",
+              "A",
               "nuanced",
-              "A"
+              "thesis",
+              "synthesizes",
+              "competing",
+              "perspectives",
+              "into",
+              "compelling",
+              "rationale."
             ],
             "pool": [
-              "rationale.",
               "compelling",
-              "into",
-              "perspectives",
+              "simultaneously",
               "competing",
-              "synthesizes",
+              "into",
               "thesis",
               "nuanced",
-              "A",
-              "often",
-              "always"
-            ]
+              "synthesizes",
+              "perspectives",
+              "rationale.",
+              "A"
+            ],
+            "targetChinese": "細緻周延的主題句將對立觀點融合成極具說服力的論述。",
+            "targetSentence": "A nuanced thesis synthesizes competing perspectives into compelling rationale."
           },
           {
             "type": "listen",
@@ -23435,31 +23697,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Rigorous academic inquiry cultivates profound insight and societal transformation.",
-            "instruction": "重組成完整句子：「學術菁英與托福名師魔王關」",
+            "instruction": "請看中文重組成英文句子：「嚴謹的學術探究培養深刻洞察並推動社會轉型。」",
             "targetTokens": [
-              "transformation.",
-              "societal",
-              "and",
-              "insight",
-              "profound",
-              "cultivates",
-              "inquiry",
+              "Rigorous",
               "academic",
-              "Rigorous"
+              "inquiry",
+              "cultivates",
+              "profound",
+              "insight",
+              "and",
+              "societal",
+              "transformation."
             ],
             "pool": [
-              "transformation.",
-              "societal",
-              "and",
               "insight",
+              "simultaneously",
+              "societal",
+              "Rigorous",
               "profound",
               "cultivates",
-              "inquiry",
+              "and",
+              "transformation.",
               "academic",
-              "Rigorous",
-              "often",
-              "always"
-            ]
+              "inquiry"
+            ],
+            "targetChinese": "嚴謹的學術探究培養深刻洞察並推動社會轉型。",
+            "targetSentence": "Rigorous academic inquiry cultivates profound insight and societal transformation."
           },
           {
             "type": "listen",
@@ -23586,33 +23849,34 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "His address exemplified the quintessential synthesis of eloquence and wisdom.",
-            "instruction": "重組成完整句子：「GRE核心高階神級字彙」",
+            "instruction": "請看中文重組成英文句子：「他的演說體現了口才與智慧的經典融合。」",
             "targetTokens": [
-              "wisdom.",
-              "and",
-              "eloquence",
-              "of",
-              "synthesis",
-              "quintessential",
-              "the",
-              "exemplified",
+              "His",
               "address",
-              "His"
+              "exemplified",
+              "the",
+              "quintessential",
+              "synthesis",
+              "of",
+              "eloquence",
+              "and",
+              "wisdom."
             ],
             "pool": [
-              "wisdom.",
-              "and",
-              "eloquence",
-              "of",
-              "synthesis",
-              "quintessential",
-              "the",
               "exemplified",
+              "synthesis",
               "address",
+              "the",
+              "simultaneously",
+              "and",
+              "of",
+              "quintessential",
+              "wisdom.",
               "His",
-              "often",
-              "always"
-            ]
+              "eloquence"
+            ],
+            "targetChinese": "他的演說體現了口才與智慧的經典融合。",
+            "targetSentence": "His address exemplified the quintessential synthesis of eloquence and wisdom."
           },
           {
             "type": "listen",
@@ -23724,31 +23988,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Unchecked budget deficits render long-term public debts economically untenable.",
-            "instruction": "重組成完整句子：「經濟學人深度社論研讀」",
+            "instruction": "請看中文重組成英文句子：「不受約束的預算赤字使得長期公共債務在經濟上難以為繼。」",
             "targetTokens": [
-              "untenable.",
-              "economically",
-              "debts",
-              "public",
-              "long-term",
-              "render",
-              "deficits",
+              "Unchecked",
               "budget",
-              "Unchecked"
+              "deficits",
+              "render",
+              "long-term",
+              "public",
+              "debts",
+              "economically",
+              "untenable."
             ],
             "pool": [
-              "untenable.",
-              "economically",
-              "debts",
-              "public",
-              "long-term",
-              "render",
               "deficits",
+              "render",
+              "simultaneously",
+              "long-term",
               "budget",
-              "Unchecked",
-              "often",
-              "always"
-            ]
+              "economically",
+              "untenable.",
+              "public",
+              "debts",
+              "Unchecked"
+            ],
+            "targetChinese": "不受約束的預算赤字使得長期公共債務在經濟上難以為繼。",
+            "targetSentence": "Unchecked budget deficits render long-term public debts economically untenable."
           },
           {
             "type": "listen",
@@ -23860,29 +24125,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Multilateral alliances preserve regional stability through coordinated deterrence.",
-            "instruction": "重組成完整句子：「外交事務智庫地緣戰略」",
+            "instruction": "請看中文重組成英文句子：「多邊聯盟透過協調一致的威懾力量維護區域穩定。」",
             "targetTokens": [
-              "deterrence.",
-              "coordinated",
-              "through",
-              "stability",
-              "regional",
-              "preserve",
+              "Multilateral",
               "alliances",
-              "Multilateral"
+              "preserve",
+              "regional",
+              "stability",
+              "through",
+              "coordinated",
+              "deterrence."
             ],
             "pool": [
-              "deterrence.",
-              "coordinated",
-              "through",
+              "simultaneously",
               "stability",
-              "regional",
-              "preserve",
               "alliances",
+              "through",
+              "regional",
               "Multilateral",
-              "often",
-              "always"
-            ]
+              "preserve",
+              "deterrence.",
+              "coordinated"
+            ],
+            "targetChinese": "多邊聯盟透過協調一致的威懾力量維護區域穩定。",
+            "targetSentence": "Multilateral alliances preserve regional stability through coordinated deterrence."
           },
           {
             "type": "listen",
@@ -23994,31 +24260,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Deontological ethics posits that certain actions are intrinsically impermissible.",
-            "instruction": "重組成完整句子：「哲學倫理學與認識論辨證」",
+            "instruction": "請看中文重組成英文句子：「義務倫理學主張某些行為本質上就是不被允許的。」",
             "targetTokens": [
-              "impermissible.",
-              "intrinsically",
-              "are",
-              "actions",
-              "certain",
-              "that",
-              "posits",
+              "Deontological",
               "ethics",
-              "Deontological"
+              "posits",
+              "that",
+              "certain",
+              "actions",
+              "are",
+              "intrinsically",
+              "impermissible."
             ],
             "pool": [
-              "impermissible.",
-              "intrinsically",
-              "are",
-              "actions",
-              "certain",
+              "simultaneously",
               "that",
-              "posits",
-              "ethics",
               "Deontological",
-              "often",
-              "always"
-            ]
+              "impermissible.",
+              "ethics",
+              "certain",
+              "actions",
+              "are",
+              "posits",
+              "intrinsically"
+            ],
+            "targetChinese": "義務倫理學主張某些行為本質上就是不被允許的。",
+            "targetSentence": "Deontological ethics posits that certain actions are intrinsically impermissible."
           },
           {
             "type": "listen",
@@ -24130,29 +24397,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Masterful orators employ anaphora to build emotional crescendo.",
-            "instruction": "重組成完整句子：「修辭學大師：隱喻與排比」",
+            "instruction": "請看中文重組成英文句子：「高超的演說家善用首語重複法來營造情感高潮。」",
             "targetTokens": [
-              "crescendo.",
-              "emotional",
-              "build",
-              "to",
-              "anaphora",
-              "employ",
+              "Masterful",
               "orators",
-              "Masterful"
+              "employ",
+              "anaphora",
+              "to",
+              "build",
+              "emotional",
+              "crescendo."
             ],
             "pool": [
-              "crescendo.",
-              "emotional",
-              "build",
-              "to",
-              "anaphora",
-              "employ",
-              "orators",
               "Masterful",
-              "often",
-              "always"
-            ]
+              "employ",
+              "emotional",
+              "anaphora",
+              "crescendo.",
+              "simultaneously",
+              "orators",
+              "to",
+              "build"
+            ],
+            "targetChinese": "高超的演說家善用首語重複法來營造情感高潮。",
+            "targetSentence": "Masterful orators employ anaphora to build emotional crescendo."
           },
           {
             "type": "listen",
@@ -24264,29 +24532,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Regulators scrutinized platform gatekeepers to prevent monopolistic foreclosure.",
-            "instruction": "重組成完整句子：「數位反托拉斯法與全球壟斷」",
+            "instruction": "請看中文重組成英文句子：「監管機構嚴密審查平台守門人以防止壟斷性市場封鎖。」",
             "targetTokens": [
-              "foreclosure.",
-              "monopolistic",
-              "prevent",
-              "to",
-              "gatekeepers",
-              "platform",
+              "Regulators",
               "scrutinized",
-              "Regulators"
+              "platform",
+              "gatekeepers",
+              "to",
+              "prevent",
+              "monopolistic",
+              "foreclosure."
             ],
             "pool": [
-              "foreclosure.",
-              "monopolistic",
-              "prevent",
-              "to",
               "gatekeepers",
-              "platform",
-              "scrutinized",
+              "prevent",
               "Regulators",
-              "often",
-              "always"
-            ]
+              "foreclosure.",
+              "scrutinized",
+              "simultaneously",
+              "platform",
+              "monopolistic",
+              "to"
+            ],
+            "targetChinese": "監管機構嚴密審查平台守門人以防止壟斷性市場封鎖。",
+            "targetSentence": "Regulators scrutinized platform gatekeepers to prevent monopolistic foreclosure."
           },
           {
             "type": "listen",
@@ -24398,31 +24667,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Gravitational wave astronomy reveals cataclysmic mergers in deep space.",
-            "instruction": "重組成完整句子：「天體物理與深空探測力學」",
+            "instruction": "請看中文重組成英文句子：「重力波天文學揭示了深太空中的災難性天體合併。」",
             "targetTokens": [
-              "space.",
-              "deep",
-              "in",
-              "mergers",
-              "cataclysmic",
-              "reveals",
-              "astronomy",
+              "Gravitational",
               "wave",
-              "Gravitational"
+              "astronomy",
+              "reveals",
+              "cataclysmic",
+              "mergers",
+              "in",
+              "deep",
+              "space."
             ],
             "pool": [
-              "space.",
-              "deep",
-              "in",
               "mergers",
-              "cataclysmic",
-              "reveals",
               "astronomy",
-              "wave",
+              "in",
               "Gravitational",
-              "often",
-              "always"
-            ]
+              "reveals",
+              "space.",
+              "wave",
+              "cataclysmic",
+              "deep",
+              "simultaneously"
+            ],
+            "targetChinese": "重力波天文學揭示了深太空中的災難性天體合併。",
+            "targetSentence": "Gravitational wave astronomy reveals cataclysmic mergers in deep space."
           },
           {
             "type": "listen",
@@ -24534,31 +24804,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Baseball integration catalyzed broader civil rights progress across society.",
-            "instruction": "重組成完整句子：「體育史學與社會政治變遷」",
+            "instruction": "請看中文重組成英文句子：「棒球運動打破種族隔離促進了整個社會更廣泛的民權進步。」",
             "targetTokens": [
-              "society.",
-              "across",
-              "progress",
-              "rights",
-              "civil",
-              "broader",
-              "catalyzed",
+              "Baseball",
               "integration",
-              "Baseball"
+              "catalyzed",
+              "broader",
+              "civil",
+              "rights",
+              "progress",
+              "across",
+              "society."
             ],
             "pool": [
-              "society.",
               "across",
-              "progress",
+              "integration",
               "rights",
               "civil",
               "broader",
+              "progress",
               "catalyzed",
-              "integration",
               "Baseball",
-              "often",
-              "always"
-            ]
+              "society.",
+              "simultaneously"
+            ],
+            "targetChinese": "棒球運動打破種族隔離促進了整個社會更廣泛的民權進步。",
+            "targetSentence": "Baseball integration catalyzed broader civil rights progress across society."
           },
           {
             "type": "listen",
@@ -24670,31 +24941,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Nonlinear systems exhibit sensitive dependence on initial boundary conditions.",
-            "instruction": "重組成完整句子：「混沌理論與非線性動力學」",
+            "instruction": "請看中文重組成英文句子：「非線性系統對初始邊界條件表現出極度敏感的依賴性。」",
             "targetTokens": [
-              "conditions.",
-              "boundary",
-              "initial",
-              "on",
-              "dependence",
-              "sensitive",
-              "exhibit",
+              "Nonlinear",
               "systems",
-              "Nonlinear"
+              "exhibit",
+              "sensitive",
+              "dependence",
+              "on",
+              "initial",
+              "boundary",
+              "conditions."
             ],
             "pool": [
               "conditions.",
+              "simultaneously",
               "boundary",
+              "systems",
               "initial",
               "on",
               "dependence",
               "sensitive",
               "exhibit",
-              "systems",
-              "Nonlinear",
-              "often",
-              "always"
-            ]
+              "Nonlinear"
+            ],
+            "targetChinese": "非線性系統對初始邊界條件表現出極度敏感的依賴性。",
+            "targetSentence": "Nonlinear systems exhibit sensitive dependence on initial boundary conditions."
           },
           {
             "type": "listen",
@@ -24806,29 +25078,30 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Philosophers scrutinize existential risks associated with artificial superintelligence.",
-            "instruction": "重組成完整句子：「科技奇點與通用人工智慧 (AGI)」",
+            "instruction": "請看中文重組成英文句子：「哲學家們嚴格審視與人工超智慧相關的生存風險。」",
             "targetTokens": [
-              "superintelligence.",
-              "artificial",
-              "with",
-              "associated",
-              "risks",
-              "existential",
+              "Philosophers",
               "scrutinize",
-              "Philosophers"
+              "existential",
+              "risks",
+              "associated",
+              "with",
+              "artificial",
+              "superintelligence."
             ],
             "pool": [
-              "superintelligence.",
-              "artificial",
-              "with",
-              "associated",
-              "risks",
-              "existential",
               "scrutinize",
-              "Philosophers",
-              "often",
-              "always"
-            ]
+              "with",
+              "simultaneously",
+              "artificial",
+              "risks",
+              "superintelligence.",
+              "associated",
+              "existential",
+              "Philosophers"
+            ],
+            "targetChinese": "哲學家們嚴格審視與人工超智慧相關的生存風險。",
+            "targetSentence": "Philosophers scrutinize existential risks associated with artificial superintelligence."
           },
           {
             "type": "listen",
@@ -24940,31 +25213,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Carbon border adjustments level competitive fields for decarbonizing industries.",
-            "instruction": "重組成完整句子：「全球碳定價與邊境調整稅」",
+            "instruction": "請看中文重組成英文句子：「碳邊境調整機制為推動脫碳的產業提供了公平競爭的環境。」",
             "targetTokens": [
-              "industries.",
-              "decarbonizing",
-              "for",
-              "fields",
-              "competitive",
-              "level",
-              "adjustments",
+              "Carbon",
               "border",
-              "Carbon"
+              "adjustments",
+              "level",
+              "competitive",
+              "fields",
+              "for",
+              "decarbonizing",
+              "industries."
             ],
             "pool": [
-              "industries.",
-              "decarbonizing",
+              "level",
               "for",
               "fields",
-              "competitive",
-              "level",
-              "adjustments",
-              "border",
+              "simultaneously",
               "Carbon",
-              "often",
-              "always"
-            ]
+              "industries.",
+              "decarbonizing",
+              "border",
+              "adjustments",
+              "competitive"
+            ],
+            "targetChinese": "碳邊境調整機制為推動脫碳的產業提供了公平競爭的環境。",
+            "targetSentence": "Carbon border adjustments level competitive fields for decarbonizing industries."
           },
           {
             "type": "listen",
@@ -25076,31 +25350,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Macroprudential regulation shields economies from systemic domino bank insolvencies.",
-            "instruction": "重組成完整句子：「系統性金融風險與流動性陷阱」",
+            "instruction": "請看中文重組成英文句子：「總體審慎監管保護經濟體免受骨牌式銀行破產的系統性衝擊。」",
             "targetTokens": [
-              "insolvencies.",
-              "bank",
-              "domino",
-              "systemic",
-              "from",
+              "Macroprudential",
+              "regulation",
+              "shields",
               "economies",
+              "from",
+              "systemic",
+              "domino",
+              "bank",
+              "insolvencies."
+            ],
+            "pool": [
+              "insolvencies.",
+              "domino",
+              "simultaneously",
+              "economies",
+              "from",
+              "bank",
+              "systemic",
               "shields",
               "regulation",
               "Macroprudential"
             ],
-            "pool": [
-              "insolvencies.",
-              "bank",
-              "domino",
-              "systemic",
-              "from",
-              "economies",
-              "shields",
-              "regulation",
-              "Macroprudential",
-              "often",
-              "always"
-            ]
+            "targetChinese": "總體審慎監管保護經濟體免受骨牌式銀行破產的系統性衝擊。",
+            "targetSentence": "Macroprudential regulation shields economies from systemic domino bank insolvencies."
           },
           {
             "type": "listen",
@@ -25212,31 +25487,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The poignant peroration galvanized the assembly with moral urgency.",
-            "instruction": "重組成完整句子：「名家演講修辭深度剖析」",
+            "instruction": "請看中文重組成英文句子：「感人肺腑的演講結尾以強烈道德使命感鼓舞了全體聽眾。」",
             "targetTokens": [
-              "urgency.",
-              "moral",
-              "with",
-              "assembly",
-              "the",
-              "galvanized",
-              "peroration",
+              "The",
               "poignant",
-              "The"
+              "peroration",
+              "galvanized",
+              "the",
+              "assembly",
+              "with",
+              "moral",
+              "urgency."
             ],
             "pool": [
               "urgency.",
-              "moral",
-              "with",
-              "assembly",
               "the",
-              "galvanized",
+              "with",
               "peroration",
-              "poignant",
+              "galvanized",
               "The",
-              "often",
-              "always"
-            ]
+              "assembly",
+              "poignant",
+              "moral",
+              "simultaneously"
+            ],
+            "targetChinese": "感人肺腑的演講結尾以強烈道德使命感鼓舞了全體聽眾。",
+            "targetSentence": "The poignant peroration galvanized the assembly with moral urgency."
           },
           {
             "type": "listen",
@@ -25348,31 +25624,32 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Simultaneous interpreters preserve profound semantic nuances under intense pressure.",
-            "instruction": "重組成完整句子：「同步口譯思維與雙向高階轉換」",
+            "instruction": "請看中文重組成英文句子：「同步口譯員在高壓環境下仍能精準保留深層的語意細微差異。」",
             "targetTokens": [
-              "pressure.",
-              "intense",
-              "under",
-              "nuances",
-              "semantic",
-              "profound",
-              "preserve",
+              "Simultaneous",
               "interpreters",
-              "Simultaneous"
+              "preserve",
+              "profound",
+              "semantic",
+              "nuances",
+              "under",
+              "intense",
+              "pressure."
             ],
             "pool": [
-              "pressure.",
-              "intense",
+              "Simultaneous",
+              "profound",
+              "simultaneously",
               "under",
+              "interpreters",
+              "pressure.",
               "nuances",
               "semantic",
-              "profound",
               "preserve",
-              "interpreters",
-              "Simultaneous",
-              "often",
-              "always"
-            ]
+              "intense"
+            ],
+            "targetChinese": "同步口譯員在高壓環境下仍能精準保留深層的語意細微差異。",
+            "targetSentence": "Simultaneous interpreters preserve profound semantic nuances under intense pressure."
           },
           {
             "type": "listen",
@@ -25484,33 +25761,34 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "The white paper provides strategic foresight for international diplomatic engagement.",
-            "instruction": "重組成完整句子：「國際頂尖智庫政策白皮書評鑑」",
+            "instruction": "請看中文重組成英文句子：「該白皮書為國際外交參與提供了前瞻戰略遠見。」",
             "targetTokens": [
-              "engagement.",
-              "diplomatic",
-              "international",
-              "for",
-              "foresight",
-              "strategic",
-              "provides",
-              "paper",
+              "The",
               "white",
-              "The"
+              "paper",
+              "provides",
+              "strategic",
+              "foresight",
+              "for",
+              "international",
+              "diplomatic",
+              "engagement."
             ],
             "pool": [
-              "engagement.",
-              "diplomatic",
-              "international",
-              "for",
-              "foresight",
-              "strategic",
-              "provides",
-              "paper",
-              "white",
               "The",
-              "often",
-              "always"
-            ]
+              "simultaneously",
+              "paper",
+              "international",
+              "provides",
+              "for",
+              "diplomatic",
+              "engagement.",
+              "white",
+              "strategic",
+              "foresight"
+            ],
+            "targetChinese": "該白皮書為國際外交參與提供了前瞻戰略遠見。",
+            "targetSentence": "The white paper provides strategic foresight for international diplomatic engagement."
           },
           {
             "type": "listen",
@@ -25622,33 +25900,34 @@ window.CURRICULUM_DATA = [
             "type": "scramble",
             "prompt": "點選字卡重組出正確的英文句子",
             "audioText": "Profound knowledge, moral integrity, and relentless perseverance empower visionary leadership.",
-            "instruction": "重組成完整句子：「全球大師終極加冕殿堂魔王關」",
+            "instruction": "請看中文重組成英文句子：「淵博的學識、高尚的道德品格與不懈的毅力造就遠見卓識的領導力。」",
             "targetTokens": [
-              "leadership.",
-              "visionary",
-              "empower",
-              "perseverance",
-              "relentless",
-              "and",
-              "integrity,",
-              "moral",
+              "Profound",
               "knowledge,",
-              "Profound"
+              "moral",
+              "integrity,",
+              "and",
+              "relentless",
+              "perseverance",
+              "empower",
+              "visionary",
+              "leadership."
             ],
             "pool": [
-              "leadership.",
-              "visionary",
+              "Profound",
+              "simultaneously",
+              "integrity,",
+              "relentless",
+              "knowledge,",
               "empower",
               "perseverance",
-              "relentless",
-              "and",
-              "integrity,",
+              "visionary",
               "moral",
-              "knowledge,",
-              "Profound",
-              "often",
-              "always"
-            ]
+              "leadership.",
+              "and"
+            ],
+            "targetChinese": "淵博的學識、高尚的道德品格與不懈的毅力造就遠見卓識的領導力。",
+            "targetSentence": "Profound knowledge, moral integrity, and relentless perseverance empower visionary leadership."
           },
           {
             "type": "listen",

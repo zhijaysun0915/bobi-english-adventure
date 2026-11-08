@@ -649,6 +649,38 @@
       gap: 20px;
     }
 
+    .scramble-target-chinese-box {
+      background: linear-gradient(135deg, #f0fdf4 0%, #eff6ff 100%);
+      border: 2px solid #86efac;
+      border-radius: 18px;
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.08);
+    }
+
+    .scramble-target-chinese-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: #047857;
+      background: #d1fae5;
+      padding: 4px 12px;
+      border-radius: 20px;
+      width: fit-content;
+    }
+
+    .scramble-target-chinese-text {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: 0.5px;
+      line-height: 1.45;
+    }
+
     .scramble-dropzone {
       min-height: 84px;
       border-bottom: 3px solid #cbd5e1;
@@ -2003,7 +2035,9 @@
               type: "scramble",
               prompt: "全能複習題：造句挑戰",
               audioText: "Practice makes perfect every day.",
-              instruction: "重組成完整句子：「熟能生巧。」",
+              instruction: "請看中文重組成英文句子：「每天練習才能熟能生巧。」",
+              targetChinese: "每天練習才能熟能生巧。",
+              targetSentence: "Practice makes perfect every day.",
               targetTokens: ["Practice", "makes", "perfect", "every", "day."],
               pool: ["day.", "every", "perfect", "makes", "Practice", "often", "run"]
             },
@@ -2073,8 +2107,13 @@
           });
           innerHtml += `</div>`;
         } else if (currentQ.type === 'scramble') {
+          const zhTranslation = currentQ.targetChinese || (currentQ.instruction ? currentQ.instruction.replace(/^[「『重組成完整句子：請看中文重組成英文句子：]+/, '').replace(/[」』]+$/, '') : '');
           innerHtml += `
             <div class="scramble-section">
+              <div class="scramble-target-chinese-box">
+                <span class="scramble-target-chinese-badge">🎯 請依中文意思重組英文句子</span>
+                <div class="scramble-target-chinese-text">「${zhTranslation}」</div>
+              </div>
               <div class="scramble-dropzone" id="scramble-dropzone">
                 <span style="color:#94a3b8; font-size:0.95rem; font-weight:700;">(點擊下方字卡放進這裡)</span>
               </div>
@@ -2187,10 +2226,18 @@
 
         const curQ = this.currentLesson.questions[this.questionIndex];
         const userBuilt = this.currentScrambleTokens.map(t => t.word).join(' ');
-        const targetStr = curQ.targetTokens.join(' ');
+        const targetTokensStr = curQ.targetTokens ? curQ.targetTokens.join(' ') : (curQ.targetSentence || curQ.audioText);
+        const targetClean = (curQ.targetSentence || targetTokensStr).trim();
 
-        this.selectedAnswer = (userBuilt === targetStr);
-        this.expectedAnswer = targetStr;
+        // Robust comparison: exact match or case/punctuation tolerant match
+        const cleanStr = s => s.toLowerCase().replace(/[.,!?;:'"「」]/g, '').replace(/\s+/g, ' ').trim();
+        const isCorrect = (userBuilt.trim() === targetClean) || 
+                          (userBuilt.trim() === targetTokensStr.trim()) ||
+                          (cleanStr(userBuilt) === cleanStr(targetClean));
+
+        this.selectedAnswer = isCorrect;
+        const zh = curQ.targetChinese ? ` （${curQ.targetChinese}）` : '';
+        this.expectedAnswer = `${targetClean}${zh}`;
         this.showCheckButton();
       }
 
