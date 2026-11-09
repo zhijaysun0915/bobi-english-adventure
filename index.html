@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>波波熱血英語大冒險 - 全階段分級學習樂園 (小學・國中・高中・大學)</title>
+  <meta name="version" content="2.1.0">
+  <title>波波熱血英語大冒險 v2.1.0 - 全階段分級學習樂園 (小學・國中・高中・大學)</title>
   <style>
     :root {
       --primary: #58cc02;
@@ -70,7 +71,8 @@
     .brand-wrap {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
     .brand {
@@ -93,6 +95,33 @@
       justify-content: center;
       font-size: 1.5rem;
       border: 2px solid #58cc02;
+    }
+
+    /* 版本號藥丸標籤 (Version Pill) */
+    .version-pill {
+      background: linear-gradient(135deg, #ede9fe, #e0e7ff);
+      border: 1.5px solid #c4b5fd;
+      color: #6d28d9;
+      font-size: 0.75rem;
+      font-weight: 900;
+      padding: 3px 9px;
+      border-radius: 999px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+      box-shadow: 0 2px 0 #c4b5fd;
+    }
+
+    .version-pill:hover {
+      background: #ddd6fe;
+      transform: translateY(-1px);
+    }
+
+    .version-pill:active {
+      transform: translateY(1px);
+      box-shadow: none;
     }
 
     /* 等級切換按鈕 (Tier Pill) */
@@ -596,6 +625,7 @@
     }
 
     .option-card {
+      position: relative;
       background: #fff;
       border: 2.5px solid #e2e8f0;
       border-radius: 18px;
@@ -608,6 +638,31 @@
       gap: 8px;
       box-shadow: 0 5px 0 #cbd5e1;
       transition: all 0.12s ease;
+    }
+
+    .option-card .key-hint {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 24px;
+      height: 24px;
+      border-radius: 7px;
+      border: 1.5px solid #cbd5e1;
+      background: #f8fafc;
+      color: #64748b;
+      font-size: 0.75rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 0 #cbd5e1;
+    }
+
+    .option-card.selected .key-hint {
+      border-color: var(--secondary);
+      background: var(--secondary);
+      color: #fff;
+      box-shadow: 0 2px 0 var(--secondary-dark);
     }
 
     .option-card:hover {
@@ -1263,6 +1318,194 @@
       pointer-events: none;
       z-index: 150;
     }
+
+    /* 冒險地圖底部質感頁尾 (.site-footer) */
+    .site-footer {
+      margin-top: 28px;
+      padding: 20px 18px;
+      background: #ffffff;
+      border: 2.5px solid #e2e8f0;
+      border-radius: 22px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--text-sub);
+      font-size: 0.88rem;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .site-footer-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .site-footer-links {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .site-footer a,
+    .site-footer .footer-link-btn {
+      color: var(--secondary-dark);
+      text-decoration: none;
+      font-weight: 800;
+      background: #f0f9ff;
+      border: 1.5px solid #bae6fd;
+      padding: 5px 12px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      font-size: 0.84rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .site-footer a:hover,
+    .site-footer .footer-link-btn:hover {
+      background: #e0f2fe;
+      transform: translateY(-1px);
+    }
+
+    /* 跨裝置進度備份區塊 */
+    .backup-card {
+      background: #f8fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+      text-align: left;
+    }
+
+    .backup-card h4 {
+      font-size: 0.98rem;
+      font-weight: 900;
+      color: #1e293b;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .backup-card p {
+      font-size: 0.84rem;
+      color: #64748b;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .backup-btn-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    /* 更新日誌彈窗 (#changelog-modal) */
+    .changelog-list {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin: 16px 0 22px;
+      max-height: 52vh;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+
+    .changelog-item {
+      background: #f8fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 14px 16px;
+    }
+
+    .changelog-item.latest {
+      background: #f0fdf4;
+      border-color: #86efac;
+    }
+
+    .changelog-version-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .changelog-version-tag {
+      font-size: 1.05rem;
+      font-weight: 900;
+      color: #1e293b;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .changelog-badge {
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.72rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-weight: 800;
+    }
+
+    .changelog-date {
+      font-size: 0.8rem;
+      color: #64748b;
+      font-weight: 700;
+    }
+
+    .changelog-item ul {
+      padding-left: 18px;
+      color: #334155;
+      font-size: 0.88rem;
+      line-height: 1.55;
+      font-weight: 600;
+    }
+
+    .changelog-item li {
+      margin-bottom: 4px;
+    }
+
+    /* 榮譽結業證書專屬列印樣式 */
+    @media print {
+      body * {
+        visibility: hidden !important;
+      }
+      #certificate-modal,
+      #certificate-modal .certificate-sheet,
+      #certificate-modal .certificate-sheet * {
+        visibility: visible !important;
+      }
+      #certificate-modal {
+        position: fixed !important;
+        inset: 0 !important;
+        background: #ffffff !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 !important;
+      }
+      #certificate-modal .certificate-sheet {
+        box-shadow: none !important;
+        max-width: 100% !important;
+        width: 92% !important;
+        border: 8px double #c59b27 !important;
+        padding: 40px 32px !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1280,6 +1523,11 @@
         <div class="logo-icon">🦉</div>
         <span>波波熱血英語</span>
       </div>
+      <!-- 版本號藥丸標籤 (點擊查看更新記錄) -->
+      <button class="version-pill" id="header-version-pill" onclick="game.openChangelogModal()" title="點擊查看版本更新記錄">
+        <span>✨</span>
+        <span id="header-version-text">v2.1.0</span>
+      </button>
       <!-- 等級切換膠囊按鈕 -->
       <button class="tier-pill-btn" onclick="game.openTierModal()" id="current-tier-pill" title="點擊切換學習等級">
         <span id="tier-pill-icon">🎒</span>
@@ -1350,6 +1598,23 @@
 
       <!-- 當前等級的 16~20 道關卡動態渲染區 -->
       <div id="units-container"></div>
+
+      <!-- 冒險地圖質感頁尾 (.site-footer) -->
+      <footer class="site-footer">
+        <div class="site-footer-left">
+          <span>🦉 <b>波波熱血英語大冒險</b></span>
+          <span style="color:#94a3b8;">|</span>
+          <span>當前版本：<strong id="footer-version-text" style="color:var(--primary-dark);">v2.1.0</strong> (12 等級・192 關題庫)</span>
+        </div>
+        <div class="site-footer-links">
+          <button class="footer-link-btn" onclick="game.openChangelogModal()">
+            📋 版本更新記錄
+          </button>
+          <a href="https://github.com/zhijaysun0915/bobi-english-adventure" target="_blank" rel="noopener noreferrer">
+            ⭐ GitHub 專案倉庫
+          </a>
+        </div>
+      </footer>
     </div>
 
     <!-- ==================== SCREEN 2: 關卡闖關 ==================== -->
@@ -1488,18 +1753,123 @@
   <!-- 設定與成就彈窗 -->
   <div class="generic-modal-overlay" id="settings-modal">
     <div class="modal-box">
-      <div style="font-size: 3rem;">⚙️</div>
-      <h3>學習成就與進度</h3>
-      <p>目前累積 XP: <b id="settings-xp-val" style="color:var(--gold-dark);">0</b> 點<br>全站通關總數: <b id="settings-unlocked-val" style="color:var(--secondary-dark);">0</b> / 192 關</p>
+      <div style="font-size: 2.8rem;">⚙️</div>
+      <h3>學習成就與系統設定</h3>
+      <p style="margin-bottom: 14px;">
+        系統版本：<b id="settings-version-val" style="color:#6d28d9;">v2.1.0</b><br>
+        目前累積 XP: <b id="settings-xp-val" style="color:var(--gold-dark);">0</b> 點 ｜ 全站通關總數: <b id="settings-unlocked-val" style="color:var(--secondary-dark);">0</b> / 192 關
+      </p>
+
+      <!-- 學習進度跨裝置遷移區 -->
+      <div class="backup-card">
+        <h4>💾 學習進度跨裝置遷移</h4>
+        <p>可將目前的通關紀錄、XP 與寶石匯出為 JSON 備份檔，或於其他手機/電腦匯入還原進度。</p>
+        <div class="backup-btn-row">
+          <button class="duo-btn btn-secondary" style="padding: 10px 12px; font-size: 0.88rem;" onclick="game.exportProgress()">
+            📥 匯出備份檔
+          </button>
+          <button class="duo-btn btn-primary" style="padding: 10px 12px; font-size: 0.88rem;" onclick="game.triggerImportProgress()">
+            📤 匯入恢復進度
+          </button>
+        </div>
+        <input type="file" id="import-progress-file" accept=".json,application/json" style="display: none;" onchange="game.importProgressFile(event)">
+      </div>
+
       <div class="modal-actions">
         <button class="duo-btn btn-secondary" onclick="game.showCertificateModal()">
           榮譽結業證書 📜
+        </button>
+        <button class="duo-btn" style="background:#8b5cf6; color:#fff; box-shadow:0 5px 0 #6d28d9;" onclick="game.openChangelogModal()">
+          查看版本更新記錄 📋
         </button>
         <button class="duo-btn btn-danger" onclick="game.resetProgressPrompt()">
           重設所有學習進度 🔄
         </button>
         <button class="duo-btn btn-primary" onclick="game.closeSettingsModal()">
           關閉返回
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 遊戲內版本更新記錄彈窗 (#changelog-modal) -->
+  <div class="generic-modal-overlay" id="changelog-modal">
+    <div class="modal-box" style="max-width: 580px;">
+      <div style="font-size: 2.8rem;">📋</div>
+      <h3>波波熱血英語大冒險 - 更新日誌</h3>
+      <p style="margin-bottom: 8px;">當前正式版本：<b id="changelog-current-ver" style="color:var(--primary-dark);">v2.1.0</b>（遵循全站版本對應規範）</p>
+
+      <div class="changelog-list">
+        <div class="changelog-item latest">
+          <div class="changelog-version-header">
+            <div class="changelog-version-tag">
+              <span>v2.1.0</span>
+              <span class="changelog-badge">最新版本</span>
+            </div>
+            <span class="changelog-date">2026-11-09</span>
+          </div>
+          <ul>
+            <li>🔄 <b>全站版本對應系統</b>：同步 `package.json`、`curriculum.js`、`index.html`、`README.md` 與 `CHANGELOG.md` 版本號。</li>
+            <li>💾 <b>學習進度跨裝置遷移</b>：設定視窗支援一鍵匯出 JSON 備份檔與匯入還原學習進度。</li>
+            <li>⌨️ <b>電腦端鍵盤快捷鍵</b>：選擇題與聽力題支援數字鍵 <code>1~4</code> 快速選答，<code>Enter</code> 鍵檢查或繼續。</li>
+            <li>🖨️ <b>榮譽證書列印 / 另存 PDF</b>：新增證書專屬列印按鈕與 <code>@media print</code> 排版樣式。</li>
+            <li>📋 <b>遊戲內更新記錄與質感頁尾</b>：頂部導覽列新增版本號藥丸標籤與地圖底部資訊欄。</li>
+          </ul>
+        </div>
+
+        <div class="changelog-item">
+          <div class="changelog-version-header">
+            <div class="changelog-version-tag">
+              <span>v2.0.1</span>
+            </div>
+            <span class="changelog-date">2026-04-20</span>
+          </div>
+          <ul>
+            <li>🎯 <b>句子重組題型優化</b>：新增醒目中文句子翻譯提示框，並強化標點與大小寫容錯比對邏輯。</li>
+          </ul>
+        </div>
+
+        <div class="changelog-item">
+          <div class="changelog-version-header">
+            <div class="changelog-version-tag">
+              <span>v2.0.0</span>
+            </div>
+            <span class="changelog-date">2026-04-20</span>
+          </div>
+          <ul>
+            <li>🌟 <b>12 大等級・192 道關卡全階段系統</b>：涵蓋小學、國中、高中、大學成人（CEFR Pre-A1 ~ C2）。</li>
+            <li>📖 <b>重點單字庫與榮譽大師證書</b>：各等級獨立保存進度，通關第 16 關可獲頒專屬榮譽證書。</li>
+          </ul>
+        </div>
+
+        <div class="changelog-item">
+          <div class="changelog-version-header">
+            <div class="changelog-version-tag">
+              <span>v1.1.0</span>
+            </div>
+            <span class="changelog-date">2026-04-19</span>
+          </div>
+          <ul>
+            <li>⚾ <b>熱血主題大擴充</b>：加入棒球、噴射機、撞球、暴龍、超跑等主題，以及純 Web Audio 合成音效與連擊 COMBO 系統。</li>
+          </ul>
+        </div>
+
+        <div class="changelog-item">
+          <div class="changelog-version-header">
+            <div class="changelog-version-tag">
+              <span>v1.0.0</span>
+            </div>
+            <span class="changelog-date">2026-04-19</span>
+          </div>
+          <ul>
+            <li>🎉 <b>初版正式上線</b>：多鄰國風格英語闖關地圖、四大互動題型、美式真人發音與愛心補血機制。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button class="duo-btn btn-primary" onclick="game.closeChangelogModal()">
+          太棒了！繼續熱血冒險 🚀
         </button>
       </div>
     </div>
@@ -1519,7 +1889,10 @@
       <div style="font-weight: 800; color: #946c00; font-size: 0.95rem;">
         波波英語探險榮譽委員會 敬頒
       </div>
-      <div style="margin-top: 20px;">
+      <div class="no-print" style="margin-top: 20px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+        <button class="duo-btn btn-secondary" onclick="game.printCertificate()">
+          🖨️ 列印 / 另存為 PDF
+        </button>
         <button class="duo-btn btn-primary" onclick="game.closeCertificateModal()">
           太棒了！收下榮譽證書
         </button>
@@ -1676,6 +2049,7 @@
     ========================================================================== */
     class GameEngine {
       constructor() {
+        this.version = window.BOBI_VERSION || '2.1.0';
         this.curriculum = window.CURRICULUM_DATA || [];
         this.currentCategory = 'elementary';
         this.currentTierId = 'elem_mid'; // 預設小學・中級
@@ -1684,6 +2058,7 @@
         this.correctCount = 0;
         this.comboStreak = 0;
         this.selectedAnswer = null;
+        this.questionChecked = false;
         this.matchedPairsCount = 0;
         this.totalPairs = 0;
         this.currentScrambleTokens = [];
@@ -1724,6 +2099,7 @@
 
       saveState() {
         const data = {
+          version: this.version,
           streak: this.streak,
           gems: this.gems,
           hearts: this.hearts,
@@ -1749,6 +2125,13 @@
         document.getElementById('heart-count').textContent = this.hearts;
         const lessonHeart = document.getElementById('lesson-heart-count');
         if (lessonHeart) lessonHeart.textContent = this.hearts;
+
+        // 同步全站版本號顯示
+        const verStr = `v${this.version}`;
+        ['header-version-text', 'footer-version-text', 'settings-version-val', 'changelog-current-ver'].forEach(id => {
+          const el = document.getElementById(id);
+          if (el) el.textContent = verStr;
+        });
 
         // 更新頂部等級膠囊標籤
         const curTier = this.getCurrentTier();
@@ -2075,6 +2458,7 @@
         document.getElementById('lesson-progress-bar').style.width = `${pct}%`;
 
         this.selectedAnswer = null;
+        this.questionChecked = false;
         this.currentScrambleTokens = [];
         this.matchedPairsCount = 0;
 
@@ -2099,6 +2483,7 @@
           currentQ.options.forEach((opt, idx) => {
             innerHtml += `
               <div class="option-card" onclick="game.selectChoice(${idx})">
+                <span class="key-hint" title="鍵盤快捷鍵 ${idx + 1}">${idx + 1}</span>
                 <span class="card-emoji">${opt.emoji}</span>
                 <span class="card-en">${opt.en}</span>
                 <span class="card-zh">${opt.zh}</span>
@@ -2140,6 +2525,7 @@
           currentQ.options.forEach((opt, idx) => {
             innerHtml += `
               <div class="option-card" onclick="game.selectListenOption(${idx})">
+                <span class="key-hint" title="鍵盤快捷鍵 ${idx + 1}">${idx + 1}</span>
                 <span style="font-size: 1.18rem; font-weight: 800;">${opt.text}</span>
               </div>
             `;
@@ -2167,8 +2553,10 @@
       }
 
       selectChoice(idx) {
+        if (this.questionChecked) return;
         audioPlayer.play('click');
         const cards = document.querySelectorAll('.option-card');
+        if (!cards[idx]) return;
         cards.forEach(c => c.classList.remove('selected'));
         cards[idx].classList.add('selected');
 
@@ -2179,8 +2567,10 @@
       }
 
       selectListenOption(idx) {
+        if (this.questionChecked) return;
         audioPlayer.play('click');
         const cards = document.querySelectorAll('.option-card');
+        if (!cards[idx]) return;
         cards.forEach(c => c.classList.remove('selected'));
         cards[idx].classList.add('selected');
 
@@ -2191,6 +2581,7 @@
       }
 
       pickWordTile(word, poolIdx) {
+        if (this.questionChecked) return;
         audioPlayer.play('click');
         const poolTile = document.getElementById(`tile-${poolIdx}`);
         poolTile.classList.add('used');
@@ -2200,6 +2591,7 @@
       }
 
       returnWordTile(indexInTokens) {
+        if (this.questionChecked) return;
         audioPlayer.play('click');
         const removed = this.currentScrambleTokens.splice(indexInTokens, 1)[0];
         const poolTile = document.getElementById(`tile-${removed.poolIdx}`);
@@ -2242,7 +2634,7 @@
       }
 
       clickMatchTile(el) {
-        if (el.classList.contains('matched') || el.classList.contains('selected')) return;
+        if (this.questionChecked || el.classList.contains('matched') || el.classList.contains('selected')) return;
 
         audioPlayer.play('click');
         const currentSelected = document.querySelector('.match-tile.selected');
@@ -2284,10 +2676,10 @@
         document.getElementById('feedback-icon').textContent = '🤔';
         document.getElementById('feedback-title').textContent = '確認答案';
         document.getElementById('feedback-title').style.color = '#334155';
-        document.getElementById('feedback-detail').textContent = '檢查無誤後請點擊右邊按鈕';
+        document.getElementById('feedback-detail').textContent = '檢查無誤後請點擊右邊按鈕（或按 Enter 鍵）';
         
         const actionBtn = document.getElementById('feedback-action-btn');
-        actionBtn.textContent = '檢查答案';
+        actionBtn.textContent = '檢查答案 (Enter)';
         actionBtn.className = 'duo-btn btn-primary';
         actionBtn.onclick = () => this.checkAnswer();
       }
@@ -2317,6 +2709,8 @@
       }
 
       checkAnswer() {
+        if (this.questionChecked) return;
+        this.questionChecked = true;
         const isCorrect = !!this.selectedAnswer;
         const sheet = document.getElementById('feedback-sheet');
         sheet.style.display = 'flex';
@@ -2347,7 +2741,7 @@
           document.getElementById('feedback-detail').textContent = this.expectedAnswer || '請參考上方提示';
         }
 
-        actionBtn.textContent = '繼續';
+        actionBtn.textContent = '繼續 (Enter)';
         actionBtn.className = isCorrect ? 'duo-btn btn-primary' : 'duo-btn btn-danger';
         actionBtn.onclick = () => this.nextQuestion();
       }
@@ -2431,6 +2825,7 @@
       }
 
       openSettingsModal() {
+        audioPlayer.play('click');
         document.getElementById('settings-xp-val').textContent = this.xp;
         let totalCompleted = 0;
         Object.values(this.completedByTier).forEach(arr => {
@@ -2444,6 +2839,82 @@
         document.getElementById('settings-modal').classList.remove('active');
       }
 
+      openChangelogModal() {
+        audioPlayer.play('click');
+        document.getElementById('settings-modal').classList.remove('active');
+        document.getElementById('changelog-modal').classList.add('active');
+      }
+
+      closeChangelogModal() {
+        document.getElementById('changelog-modal').classList.remove('active');
+      }
+
+      /* 學習進度跨裝置遷移：匯出與匯入備份檔 */
+      exportProgress() {
+        audioPlayer.play('click');
+        const backupData = {
+          app: 'bobi-english-adventure',
+          version: this.version,
+          exportedAt: new Date().toISOString(),
+          streak: this.streak,
+          gems: this.gems,
+          hearts: this.hearts,
+          xp: this.xp,
+          currentTierId: this.currentTierId,
+          completedByTier: this.completedByTier
+        };
+        const blob = new Blob([JSON.stringify(backupData, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        const dateStr = new Date().toISOString().slice(0, 10);
+        a.href = url;
+        a.download = `bobi-english-backup-v${this.version}-${dateStr}.json`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }
+
+      triggerImportProgress() {
+        audioPlayer.play('click');
+        const fileInput = document.getElementById('import-progress-file');
+        if (fileInput) {
+          fileInput.value = '';
+          fileInput.click();
+        }
+      }
+
+      importProgressFile(event) {
+        const file = event.target.files && event.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          try {
+            const data = JSON.parse(e.target.result);
+            if (!data || typeof data !== 'object' || typeof data.completedByTier !== 'object') {
+              throw new Error('Invalid backup format');
+            }
+            this.streak = Number(data.streak) || 1;
+            this.gems = Number(data.gems) || 150;
+            this.hearts = data.hearts !== undefined ? Number(data.hearts) : 5;
+            this.xp = Number(data.xp) || 0;
+            this.completedByTier = data.completedByTier || {};
+            if (data.currentTierId && this.getTier(data.currentTierId)) {
+              this.currentTierId = data.currentTierId;
+            }
+            this.saveState();
+            this.closeSettingsModal();
+            this.renderMap();
+            audioPlayer.play('win');
+            alert('✅ 學習進度還原成功！已為你載入備份的通關紀錄與寶石！');
+          } catch (err) {
+            alert('❌ 備份檔案格式不正確，請選擇有效的波波英語 JSON 備份檔！');
+          }
+        };
+        reader.readAsText(file);
+      }
+
       showCertificateModal() {
         document.getElementById('settings-modal').classList.remove('active');
         const curTier = this.getCurrentTier();
@@ -2451,6 +2922,11 @@
           恭喜在波波熱血英語大冒險中，成功攻克【${curTier.subLevelName}（${curTier.cefr}）】！展現了非凡的詞彙素養、聽力理解與語言組織能力！
         `;
         document.getElementById('certificate-modal').classList.add('active');
+      }
+
+      printCertificate() {
+        audioPlayer.play('click');
+        window.print();
       }
 
       closeCertificateModal() {
@@ -2473,6 +2949,52 @@
 
     window.addEventListener('DOMContentLoaded', () => {
       game.renderMap();
+    });
+
+    /* ==========================================================================
+       4. 電腦端鍵盤快捷鍵支援 (1~4 數字鍵選答、Enter 鍵檢查或繼續)
+    ========================================================================== */
+    window.addEventListener('keydown', (e) => {
+      // 忽略輸入框與文字區域的按鍵
+      if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;
+
+      // 若有任何彈窗開啟中則不觸發答題快捷鍵
+      const anyModalOpen = document.querySelector('.tier-modal-overlay.active, .generic-modal-overlay.active, .certificate-modal-overlay.active');
+      if (anyModalOpen) return;
+
+      const lessonScreen = document.getElementById('screen-lesson');
+      const summaryScreen = document.getElementById('screen-summary');
+
+      // 結算畫面按 Enter 可直接繼續下一關
+      if (summaryScreen && summaryScreen.classList.contains('active') && e.key === 'Enter') {
+        e.preventDefault();
+        game.finishLesson();
+        return;
+      }
+
+      if (!lessonScreen || !lessonScreen.classList.contains('active') || !game.currentLesson) return;
+
+      const currentQ = game.currentLesson.questions[game.questionIndex];
+      if (!currentQ) return;
+
+      // 數字鍵 1~4 快速選答 (選擇題與聽力題)
+      if (!game.questionChecked && ['1', '2', '3', '4'].includes(e.key)) {
+        const idx = parseInt(e.key, 10) - 1;
+        if (currentQ.type === 'choice' && currentQ.options && idx < currentQ.options.length) {
+          e.preventDefault();
+          game.selectChoice(idx);
+        } else if (currentQ.type === 'listen' && currentQ.options && idx < currentQ.options.length) {
+          e.preventDefault();
+          game.selectListenOption(idx);
+        }
+      } else if (e.key === 'Enter') {
+        const sheet = document.getElementById('feedback-sheet');
+        const actionBtn = document.getElementById('feedback-action-btn');
+        if (sheet && sheet.style.display !== 'none' && actionBtn) {
+          e.preventDefault();
+          actionBtn.click();
+        }
+      }
     });
 
     /* ==========================================================================

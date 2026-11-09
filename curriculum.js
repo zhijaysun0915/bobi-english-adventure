@@ -1,3 +1,6 @@
+window.BOBI_VERSION = '2.1.0';
+window.CURRICULUM_VERSION = '2.1.0';
+
 window.CURRICULUM_DATA = [
   {
     "id": "elem_beg",
