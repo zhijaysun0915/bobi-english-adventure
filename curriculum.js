@@ -1,5 +1,5 @@
-window.BOBI_VERSION = '2.1.0';
-window.CURRICULUM_VERSION = '2.1.0';
+window.BOBI_VERSION = '2.1.1';
+window.CURRICULUM_VERSION = '2.1.1';
 
 window.CURRICULUM_DATA = [
   {
@@ -47,27 +47,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「hello」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "goodbye",
+                "zh": "再見",
+                "emoji": "🌟",
+                "correct": false
+              },
+              {
                 "en": "hello",
                 "zh": "你好",
-                "emoji": "👋",
+                "emoji": "🌱",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "ruler",
+                "zh": "尺",
+                "emoji": "🐣",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "friend",
+                "zh": "朋友",
+                "emoji": "🎈",
                 "correct": false
               }
             ]
@@ -84,12 +84,12 @@ window.CURRICULUM_DATA = [
               "friend."
             ],
             "pool": [
+              "friend.",
               "good",
-              "always",
-              "Hello,",
+              "four",
+              "shirt",
               "my",
-              "often",
-              "friend."
+              "Hello,"
             ],
             "targetChinese": "你好，我的好朋友。",
             "targetSentence": "Hello, my good friend."
@@ -102,18 +102,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "friend (朋友)",
+                "en": "friend",
+                "zh": "朋友",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "hello (你好)",
+                "en": "hello",
+                "zh": "你好",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "circle (圓形)",
+                "en": "circle",
+                "zh": "圓形",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "yellow (黃色)",
+                "en": "yellow",
+                "zh": "黃色",
                 "correct": false
               }
             ]
@@ -179,27 +187,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「one」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "two",
+                "zh": "二",
+                "emoji": "🧸",
+                "correct": false
+              },
+              {
+                "en": "three",
+                "zh": "三",
+                "emoji": "🍀",
+                "correct": false
+              },
+              {
                 "en": "one",
                 "zh": "一",
-                "emoji": "🔢",
+                "emoji": "🎨",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "sad",
+                "zh": "難過的",
+                "emoji": "🐶",
                 "correct": false
               }
             ]
@@ -216,11 +224,11 @@ window.CURRICULUM_DATA = [
               "dogs."
             ],
             "pool": [
-              "two",
-              "have",
               "dogs.",
-              "always",
-              "often",
+              "good",
+              "two",
+              "goodbye",
+              "have",
               "I"
             ],
             "targetChinese": "我有兩隻狗。",
@@ -233,19 +241,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "dog (小狗)",
+                "en": "dog",
+                "zh": "小狗",
+                "correct": false
+              },
+              {
+                "text": "one (一)",
+                "en": "one",
+                "zh": "一",
+                "correct": false
+              },
+              {
                 "text": "two (二)",
+                "en": "two",
+                "zh": "二",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "hat (帽子)",
+                "en": "hat",
+                "zh": "帽子",
                 "correct": false
               }
             ]
@@ -311,27 +327,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「six」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "seven",
+                "zh": "七",
+                "emoji": "🎈",
+                "correct": false
+              },
+              {
+                "en": "big",
+                "zh": "大的",
+                "emoji": "🐣",
+                "correct": false
+              },
+              {
                 "en": "six",
                 "zh": "六",
-                "emoji": "🔟",
+                "emoji": "🌱",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "eight",
+                "zh": "八",
+                "emoji": "🌟",
                 "correct": false
               }
             ]
@@ -350,12 +366,12 @@ window.CURRICULUM_DATA = [
             ],
             "pool": [
               "to",
-              "ten.",
+              "Count",
               "from",
               "six",
-              "often",
-              "always",
-              "Count"
+              "orange",
+              "ten.",
+              "eight"
             ],
             "targetChinese": "從六數到十。",
             "targetSentence": "Count from six to ten."
@@ -367,19 +383,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "three (三)",
+                "en": "three",
+                "zh": "三",
+                "correct": false
+              },
+              {
                 "text": "seven (七)",
+                "en": "seven",
+                "zh": "七",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "robot (機器人)",
+                "en": "robot",
+                "zh": "機器人",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "six (六)",
+                "en": "six",
+                "zh": "六",
                 "correct": false
               }
             ]
@@ -441,27 +465,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「red」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "blue",
+                "zh": "藍色",
+                "emoji": "🧸",
+                "correct": false
+              },
+              {
                 "en": "red",
                 "zh": "紅色",
                 "emoji": "🎨",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "yellow",
+                "zh": "黃色",
+                "emoji": "🍀",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "car",
+                "zh": "玩具車",
+                "emoji": "🐶",
                 "correct": false
               }
             ]
@@ -478,12 +502,12 @@ window.CURRICULUM_DATA = [
               "red."
             ],
             "pool": [
-              "The",
+              "circle",
+              "tired",
+              "red.",
               "is",
-              "always",
               "apple",
-              "often",
-              "red."
+              "The"
             ],
             "targetChinese": "這顆蘋果是紅色的。",
             "targetSentence": "The apple is red."
@@ -496,18 +520,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "blue (藍色)",
+                "en": "blue",
+                "zh": "藍色",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "ball (球)",
+                "en": "ball",
+                "zh": "球",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "red (紅色)",
+                "en": "red",
+                "zh": "紅色",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "book (課本)",
+                "en": "book",
+                "zh": "課本",
                 "correct": false
               }
             ]
@@ -569,28 +601,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「dog」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "cat",
+                "zh": "小貓",
+                "emoji": "🎈",
+                "correct": false
+              },
+              {
+                "en": "rabbit",
+                "zh": "小兔子",
+                "emoji": "🌟",
+                "correct": false
+              },
+              {
+                "en": "two",
+                "zh": "二",
+                "emoji": "🐣",
+                "correct": false
+              },
+              {
                 "en": "dog",
                 "zh": "小狗",
-                "emoji": "🐶",
+                "emoji": "🌱",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -607,13 +639,13 @@ window.CURRICULUM_DATA = [
               "cute."
             ],
             "pool": [
-              "cat",
               "The",
+              "cat",
+              "eight",
               "so",
               "is",
               "cute.",
-              "often",
-              "always"
+              "father"
             ],
             "targetChinese": "這隻貓咪真可愛。",
             "targetSentence": "The cat is so cute."
@@ -625,19 +657,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "hat (帽子)",
+                "en": "hat",
+                "zh": "帽子",
+                "correct": false
+              },
+              {
                 "text": "cat (小貓)",
+                "en": "cat",
+                "zh": "小貓",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "dog (小狗)",
+                "en": "dog",
+                "zh": "小狗",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "two (二)",
+                "en": "two",
+                "zh": "二",
                 "correct": false
               }
             ]
@@ -699,27 +739,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「ball」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "car",
+                "zh": "玩具車",
+                "emoji": "🧸",
+                "correct": false
+              },
+              {
+                "en": "five",
+                "zh": "五",
+                "emoji": "🐶",
+                "correct": false
+              },
+              {
                 "en": "ball",
                 "zh": "球",
-                "emoji": "🧸",
+                "emoji": "🎨",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "robot",
+                "zh": "機器人",
+                "emoji": "🍀",
                 "correct": false
               }
             ]
@@ -737,13 +777,13 @@ window.CURRICULUM_DATA = [
               "ball."
             ],
             "pool": [
-              "often",
               "I",
+              "five",
               "ball.",
-              "the",
-              "play",
+              "blue",
               "with",
-              "always"
+              "play",
+              "the"
             ],
             "targetChinese": "我玩這顆球。",
             "targetSentence": "I play with the ball."
@@ -755,19 +795,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "ball (球)",
+                "en": "ball",
+                "zh": "球",
+                "correct": false
+              },
+              {
                 "text": "car (玩具車)",
+                "en": "car",
+                "zh": "玩具車",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "red (紅色)",
+                "en": "red",
+                "zh": "紅色",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "hat (帽子)",
+                "en": "hat",
+                "zh": "帽子",
                 "correct": false
               }
             ]
@@ -829,27 +877,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「pencil」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "ruler",
+                "zh": "尺",
+                "emoji": "🌟",
+                "correct": false
+              },
+              {
+                "en": "rabbit",
+                "zh": "小兔子",
+                "emoji": "🐣",
+                "correct": false
+              },
+              {
                 "en": "pencil",
                 "zh": "鉛筆",
-                "emoji": "✏️",
+                "emoji": "🌱",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "baseball",
-                "zh": "棒球",
-                "emoji": "⚾",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "book",
+                "zh": "課本",
+                "emoji": "🎈",
                 "correct": false
               }
             ]
@@ -866,12 +914,12 @@ window.CURRICULUM_DATA = [
               "pencil."
             ],
             "pool": [
-              "my",
+              "big",
               "pencil.",
+              "my",
+              "This",
               "is",
-              "often",
-              "always",
-              "This"
+              "run"
             ],
             "targetChinese": "這是我的鉛筆。",
             "targetSentence": "This is my pencil."
@@ -883,20 +931,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "star (星星)",
+                "en": "star",
+                "zh": "星星",
+                "correct": false
+              },
+              {
+                "text": "pencil (鉛筆)",
+                "en": "pencil",
+                "zh": "鉛筆",
+                "correct": false
+              },
+              {
+                "text": "doll (洋娃娃)",
+                "en": "doll",
+                "zh": "洋娃娃",
+                "correct": false
+              },
+              {
                 "text": "book (課本)",
+                "en": "book",
+                "zh": "課本",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -957,27 +1013,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「morning」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "sun",
+                "zh": "太陽",
+                "emoji": "🧸",
+                "correct": false
+              },
+              {
                 "en": "morning",
                 "zh": "早晨",
-                "emoji": "☀️",
+                "emoji": "🎨",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "wake up",
+                "zh": "醒來",
+                "emoji": "🍀",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "goodbye",
+                "zh": "再見",
+                "emoji": "🐶",
                 "correct": false
               }
             ]
@@ -993,11 +1049,11 @@ window.CURRICULUM_DATA = [
               "sunshine!"
             ],
             "pool": [
-              "always",
+              "hat",
               "sunshine!",
+              "Good",
               "morning,",
-              "often",
-              "Good"
+              "five"
             ],
             "targetChinese": "早安，陽光！",
             "targetSentence": "Good morning, sunshine!"
@@ -1009,19 +1065,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "ten (十)",
+                "en": "ten",
+                "zh": "十",
+                "correct": false
+              },
+              {
                 "text": "sun (太陽)",
+                "en": "sun",
+                "zh": "太陽",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "big (大的)",
+                "en": "big",
+                "zh": "大的",
                 "correct": false
               },
               {
                 "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "en": "morning",
+                "zh": "早晨",
                 "correct": false
               }
             ]
@@ -1083,28 +1147,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「eyes」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "mouth",
+                "zh": "嘴巴",
+                "emoji": "🌟",
+                "correct": false
+              },
+              {
+                "en": "five",
+                "zh": "五",
+                "emoji": "🐣",
+                "correct": false
+              },
+              {
+                "en": "ears",
+                "zh": "耳朵",
+                "emoji": "🎈",
+                "correct": false
+              },
+              {
                 "en": "eyes",
                 "zh": "眼睛",
-                "emoji": "👀",
+                "emoji": "🌱",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -1122,12 +1186,12 @@ window.CURRICULUM_DATA = [
             ],
             "pool": [
               "your",
-              "often",
-              "nose",
-              "always",
               "eyes.",
+              "shirt",
+              "Touch",
               "and",
-              "Touch"
+              "fine",
+              "nose"
             ],
             "targetChinese": "摸摸你的鼻子和眼睛。",
             "targetSentence": "Touch your nose and eyes."
@@ -1139,19 +1203,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "eyes (眼睛)",
+                "en": "eyes",
+                "zh": "眼睛",
+                "correct": false
+              },
+              {
                 "text": "ears (耳朵)",
+                "en": "ears",
+                "zh": "耳朵",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "blue (藍色)",
+                "en": "blue",
+                "zh": "藍色",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "doll (洋娃娃)",
+                "en": "doll",
+                "zh": "洋娃娃",
                 "correct": false
               }
             ]
@@ -1213,27 +1285,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「apple」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "banana",
+                "zh": "香蕉",
+                "emoji": "🧸",
+                "correct": false
+              },
+              {
                 "en": "apple",
                 "zh": "蘋果",
-                "emoji": "🍎",
+                "emoji": "🎨",
                 "correct": true
               },
               {
-                "en": "airplane",
-                "zh": "飛機",
-                "emoji": "✈️",
+                "en": "eight",
+                "zh": "八",
+                "emoji": "🐶",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "orange",
+                "zh": "柳橙",
+                "emoji": "🍀",
                 "correct": false
               }
             ]
@@ -1250,12 +1322,12 @@ window.CURRICULUM_DATA = [
               "apples."
             ],
             "pool": [
+              "I",
               "sweet",
+              "green",
               "apples.",
-              "often",
-              "always",
-              "like",
-              "I"
+              "one",
+              "like"
             ],
             "targetChinese": "我喜歡甜甜的蘋果。",
             "targetSentence": "I like sweet apples."
@@ -1267,20 +1339,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "yellow (黃色)",
+                "en": "yellow",
+                "zh": "黃色",
+                "correct": false
+              },
+              {
+                "text": "apple (蘋果)",
+                "en": "apple",
+                "zh": "蘋果",
+                "correct": false
+              },
+              {
+                "text": "circle (圓形)",
+                "en": "circle",
+                "zh": "圓形",
+                "correct": false
+              },
+              {
                 "text": "banana (香蕉)",
+                "en": "banana",
+                "zh": "香蕉",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -1341,27 +1421,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「father」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "brother",
+                "zh": "兄弟",
+                "emoji": "🌟",
+                "correct": false
+              },
+              {
+                "en": "yellow",
+                "zh": "黃色",
+                "emoji": "🐣",
+                "correct": false
+              },
+              {
                 "en": "father",
                 "zh": "爸爸",
-                "emoji": "👨‍👩‍👧",
+                "emoji": "🌱",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "mother",
+                "zh": "媽媽",
+                "emoji": "🎈",
                 "correct": false
               }
             ]
@@ -1378,12 +1458,12 @@ window.CURRICULUM_DATA = [
               "mother."
             ],
             "pool": [
+              "nine",
               "I",
               "mother.",
-              "always",
               "love",
-              "my",
-              "often"
+              "robot",
+              "my"
             ],
             "targetChinese": "我愛我的媽媽。",
             "targetSentence": "I love my mother."
@@ -1395,20 +1475,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "eraser (橡皮擦)",
+                "en": "eraser",
+                "zh": "橡皮擦",
+                "correct": false
+              },
+              {
+                "text": "father (爸爸)",
+                "en": "father",
+                "zh": "爸爸",
+                "correct": false
+              },
+              {
+                "text": "friend (朋友)",
+                "en": "friend",
+                "zh": "朋友",
+                "correct": false
+              },
+              {
                 "text": "mother (媽媽)",
+                "en": "mother",
+                "zh": "媽媽",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -1469,27 +1557,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「hat」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "shirt",
+                "zh": "襯衫",
+                "emoji": "🧸",
+                "correct": false
+              },
+              {
+                "en": "shoes",
+                "zh": "鞋子",
+                "emoji": "🍀",
+                "correct": false
+              },
+              {
                 "en": "hat",
                 "zh": "帽子",
-                "emoji": "🧢",
+                "emoji": "🎨",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "sun",
+                "zh": "太陽",
+                "emoji": "🐶",
                 "correct": false
               }
             ]
@@ -1507,13 +1595,13 @@ window.CURRICULUM_DATA = [
               "cap."
             ],
             "pool": [
+              "sleep",
+              "cool",
+              "car",
               "cap.",
-              "on",
               "Put",
               "your",
-              "often",
-              "always",
-              "cool"
+              "on"
             ],
             "targetChinese": "戴上你帥氣的帽子。",
             "targetSentence": "Put on your cool cap."
@@ -1526,18 +1614,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "shirt (襯衫)",
+                "en": "shirt",
+                "zh": "襯衫",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "smile (微笑)",
+                "en": "smile",
+                "zh": "微笑",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "hat (帽子)",
+                "en": "hat",
+                "zh": "帽子",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "eight (八)",
+                "en": "eight",
+                "zh": "八",
                 "correct": false
               }
             ]
@@ -1599,27 +1695,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「big」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "small",
+                "zh": "小的",
+                "emoji": "🎈",
+                "correct": false
+              },
+              {
+                "en": "ten",
+                "zh": "十",
+                "emoji": "🐣",
+                "correct": false
+              },
+              {
                 "en": "big",
                 "zh": "大的",
-                "emoji": "⭐",
+                "emoji": "🌱",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "star",
+                "zh": "星星",
+                "emoji": "🌟",
                 "correct": false
               }
             ]
@@ -1637,13 +1733,13 @@ window.CURRICULUM_DATA = [
               "star."
             ],
             "pool": [
-              "always",
-              "at",
+              "cap",
+              "Look",
               "star.",
-              "often",
-              "the",
               "big",
-              "Look"
+              "the",
+              "ruler",
+              "at"
             ],
             "targetChinese": "看那顆大星星。",
             "targetSentence": "Look at the big star."
@@ -1655,19 +1751,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "smile (微笑)",
+                "en": "smile",
+                "zh": "微笑",
+                "correct": false
+              },
+              {
+                "text": "apple (蘋果)",
+                "en": "apple",
+                "zh": "蘋果",
+                "correct": false
+              },
+              {
                 "text": "small (小的)",
+                "en": "small",
+                "zh": "小的",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "big (大的)",
+                "en": "big",
+                "zh": "大的",
                 "correct": false
               }
             ]
@@ -1729,28 +1833,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「jump」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "walk",
+                "zh": "散步",
+                "emoji": "🍀",
+                "correct": false
+              },
+              {
+                "en": "run",
+                "zh": "跑步",
+                "emoji": "🧸",
+                "correct": false
+              },
+              {
+                "en": "four",
+                "zh": "四",
+                "emoji": "🐶",
+                "correct": false
+              },
+              {
                 "en": "jump",
                 "zh": "跳躍",
-                "emoji": "🏃",
+                "emoji": "🎨",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -1767,13 +1871,13 @@ window.CURRICULUM_DATA = [
               "jump."
             ],
             "pool": [
-              "often",
-              "jump.",
-              "always",
-              "run",
-              "boys",
               "and",
-              "The"
+              "run",
+              "jump.",
+              "The",
+              "smile",
+              "boys",
+              "fine"
             ],
             "targetChinese": "男孩們又跑又跳。",
             "targetSentence": "The boys run and jump."
@@ -1785,19 +1889,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "jump (跳躍)",
+                "en": "jump",
+                "zh": "跳躍",
+                "correct": false
+              },
+              {
                 "text": "run (跑步)",
+                "en": "run",
+                "zh": "跑步",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "hat (帽子)",
+                "en": "hat",
+                "zh": "帽子",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "cap (鴨舌帽)",
+                "en": "cap",
+                "zh": "鴨舌帽",
                 "correct": false
               }
             ]
@@ -1859,28 +1971,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「happy」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "sad",
+                "zh": "難過的",
+                "emoji": "🎈",
+                "correct": false
+              },
+              {
+                "en": "fine",
+                "zh": "安好的",
+                "emoji": "🌟",
+                "correct": false
+              },
+              {
+                "en": "smile",
+                "zh": "微笑",
+                "emoji": "🐣",
+                "correct": false
+              },
+              {
                 "en": "happy",
                 "zh": "快樂的",
-                "emoji": "😄",
+                "emoji": "🌱",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -1897,13 +2009,13 @@ window.CURRICULUM_DATA = [
               "today."
             ],
             "pool": [
-              "always",
-              "today.",
               "I",
-              "often",
+              "today.",
+              "four",
               "am",
-              "very",
-              "happy"
+              "happy",
+              "sun",
+              "very"
             ],
             "targetChinese": "我今天非常開心。",
             "targetSentence": "I am very happy today."
@@ -1915,20 +2027,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "happy (快樂的)",
+                "en": "happy",
+                "zh": "快樂的",
+                "correct": false
+              },
+              {
+                "text": "cap (鴨舌帽)",
+                "en": "cap",
+                "zh": "鴨舌帽",
+                "correct": false
+              },
+              {
+                "text": "two (二)",
+                "en": "two",
+                "zh": "二",
+                "correct": false
+              },
+              {
                 "text": "sad (難過的)",
+                "en": "sad",
+                "zh": "難過的",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -1989,28 +2109,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「good morning」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "two dogs",
+                "zh": "兩隻狗",
+                "emoji": "🍀",
+                "correct": false
+              },
+              {
+                "en": "sweet apple",
+                "zh": "甜蘋果",
+                "emoji": "🧸",
+                "correct": false
+              },
+              {
+                "en": "wake up",
+                "zh": "醒來",
+                "emoji": "🐶",
+                "correct": false
+              },
+              {
                 "en": "good morning",
                 "zh": "早安",
-                "emoji": "👑",
+                "emoji": "🎨",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -2027,13 +2147,13 @@ window.CURRICULUM_DATA = [
               "today."
             ],
             "pool": [
-              "always",
-              "happy",
-              "am",
-              "often",
-              "Hello,",
+              "apple",
               "today.",
-              "I"
+              "am",
+              "happy",
+              "Hello,",
+              "I",
+              "fine"
             ],
             "targetChinese": "哈囉，我今天很開心。",
             "targetSentence": "Hello, I am happy today."
@@ -2045,20 +2165,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "wake up (醒來)",
+                "en": "wake up",
+                "zh": "醒來",
+                "correct": false
+              },
+              {
+                "text": "good morning (早安)",
+                "en": "good morning",
+                "zh": "早安",
+                "correct": false
+              },
+              {
+                "text": "breakfast (早餐)",
+                "en": "breakfast",
+                "zh": "早餐",
+                "correct": false
+              },
+              {
                 "text": "sweet apple (甜蘋果)",
+                "en": "sweet apple",
+                "zh": "甜蘋果",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -2134,27 +2262,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「backpack」在繁體中文中是什麼意思？",
             "options": [
               {
-                "en": "backpack",
-                "zh": "背包",
-                "emoji": "🎒",
-                "correct": true
+                "en": "eraser",
+                "zh": "橡皮擦",
+                "emoji": "🎱",
+                "correct": false
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
+                "en": "backpack",
+                "zh": "背包",
+                "emoji": "⚾",
+                "correct": true
               },
               {
                 "en": "pencil",
                 "zh": "鉛筆",
-                "emoji": "✏️",
+                "emoji": "✈️",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "dinosaur",
+                "zh": "恐龍",
+                "emoji": "🦖",
                 "correct": false
               }
             ]
@@ -2172,13 +2300,13 @@ window.CURRICULUM_DATA = [
               "backpack."
             ],
             "pool": [
-              "my",
-              "This",
-              "often",
-              "always",
+              "hungry",
+              "backpack.",
               "is",
+              "This",
               "new",
-              "backpack."
+              "my",
+              "breakfast"
             ],
             "targetChinese": "這是我的新背包。",
             "targetSentence": "This is my new backpack."
@@ -2190,20 +2318,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "strike (擊球)",
+                "en": "strike",
+                "zh": "擊球",
+                "correct": false
+              },
+              {
+                "text": "fossil (化石)",
+                "en": "fossil",
+                "zh": "化石",
+                "correct": false
+              },
+              {
+                "text": "backpack (背包)",
+                "en": "backpack",
+                "zh": "背包",
+                "correct": false
+              },
+              {
                 "text": "pencil (鉛筆)",
+                "en": "pencil",
+                "zh": "鉛筆",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -2266,25 +2402,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "o'clock",
                 "zh": "...點鐘",
-                "emoji": "⏰",
+                "emoji": "🏎️",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
+                "en": "clock",
+                "zh": "時鐘",
                 "emoji": "🚀",
+                "correct": false
+              },
+              {
+                "en": "behind",
+                "zh": "在...後面",
+                "emoji": "🤖",
+                "correct": false
+              },
+              {
+                "en": "breakfast",
+                "zh": "早餐",
+                "emoji": "🎒",
                 "correct": false
               }
             ]
@@ -2302,13 +2438,13 @@ window.CURRICULUM_DATA = [
               "now?"
             ],
             "pool": [
+              "space",
               "is",
-              "time",
-              "always",
+              "it",
               "What",
               "now?",
-              "it",
-              "often"
+              "ruler",
+              "time"
             ],
             "targetChinese": "現在幾點了？",
             "targetSentence": "What time is it now?"
@@ -2320,19 +2456,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "ruler (直尺)",
+                "en": "ruler",
+                "zh": "直尺",
+                "correct": false
+              },
+              {
+                "text": "o'clock (...點鐘)",
+                "en": "o'clock",
+                "zh": "...點鐘",
+                "correct": false
+              },
+              {
                 "text": "clock (時鐘)",
+                "en": "clock",
+                "zh": "時鐘",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "sharp (鋒利的)",
+                "en": "sharp",
+                "zh": "鋒利的",
                 "correct": false
               }
             ]
@@ -2394,27 +2538,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「airplane」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "backpack",
+                "zh": "背包",
+                "emoji": "🦖",
+                "correct": false
+              },
+              {
                 "en": "airplane",
                 "zh": "飛機",
-                "emoji": "✈️",
+                "emoji": "⚾",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "pilot",
+                "zh": "飛行員",
+                "emoji": "🎱",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "jet",
+                "zh": "噴射機",
+                "emoji": "✈️",
                 "correct": false
               }
             ]
@@ -2433,14 +2577,14 @@ window.CURRICULUM_DATA = [
               "airplane."
             ],
             "pool": [
+              "ruler",
               "pilot",
+              "can",
+              "run",
+              "fly",
               "the",
               "airplane.",
-              "always",
-              "The",
-              "can",
-              "fly",
-              "often"
+              "The"
             ],
             "targetChinese": "飛行員會開飛機。",
             "targetSentence": "The pilot can fly the airplane."
@@ -2453,18 +2597,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "jet (噴射機)",
+                "en": "jet",
+                "zh": "噴射機",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "in (在...裡面)",
+                "en": "in",
+                "zh": "在...裡面",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "fast (快速的)",
+                "en": "fast",
+                "zh": "快速的",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "airplane (飛機)",
+                "en": "airplane",
+                "zh": "飛機",
                 "correct": false
               }
             ]
@@ -2526,27 +2678,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「rocket」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "space",
+                "zh": "太空",
+                "emoji": "🚀",
+                "correct": false
+              },
+              {
+                "en": "eraser",
+                "zh": "橡皮擦",
+                "emoji": "🤖",
+                "correct": false
+              },
+              {
                 "en": "rocket",
                 "zh": "火箭",
-                "emoji": "🚀",
+                "emoji": "🏎️",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "cue stick",
-                "zh": "撞球桿",
-                "emoji": "🎱",
+                "en": "sky",
+                "zh": "天空",
+                "emoji": "🎒",
                 "correct": false
               }
             ]
@@ -2565,14 +2717,14 @@ window.CURRICULUM_DATA = [
               "space."
             ],
             "pool": [
-              "often",
               "flying",
-              "The",
-              "is",
+              "angle",
               "rocket",
               "to",
-              "always",
-              "space."
+              "cue",
+              "is",
+              "space.",
+              "The"
             ],
             "targetChinese": "火箭正飛向太空。",
             "targetSentence": "The rocket is flying to space."
@@ -2584,20 +2736,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "rocket (火箭)",
+                "en": "rocket",
+                "zh": "火箭",
+                "correct": false
+              },
+              {
+                "text": "angle (角度)",
+                "en": "angle",
+                "zh": "角度",
+                "correct": false
+              },
+              {
+                "text": "ruler (直尺)",
+                "en": "ruler",
+                "zh": "直尺",
+                "correct": false
+              },
+              {
                 "text": "space (太空)",
+                "en": "space",
+                "zh": "太空",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -2664,21 +2824,21 @@ window.CURRICULUM_DATA = [
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "glove",
+                "zh": "手套",
+                "emoji": "🎱",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "dinosaur",
+                "zh": "恐龍",
+                "emoji": "🦖",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "bat",
+                "zh": "球棒",
+                "emoji": "✈️",
                 "correct": false
               }
             ]
@@ -2696,13 +2856,13 @@ window.CURRICULUM_DATA = [
               "run!"
             ],
             "pool": [
+              "glove",
+              "run!",
               "a",
-              "often",
-              "He",
-              "hit",
-              "always",
               "home",
-              "run!"
+              "He",
+              "corner",
+              "hit"
             ],
             "targetChinese": "他擊出了一支全壘打！",
             "targetSentence": "He hit a home run!"
@@ -2714,19 +2874,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "baseball (棒球)",
+                "en": "baseball",
+                "zh": "棒球",
+                "correct": false
+              },
+              {
+                "text": "swim (游泳)",
+                "en": "swim",
+                "zh": "游泳",
+                "correct": false
+              },
+              {
                 "text": "bat (球棒)",
+                "en": "bat",
+                "zh": "球棒",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "jet (噴射機)",
+                "en": "jet",
+                "zh": "噴射機",
                 "correct": false
               }
             ]
@@ -2788,26 +2956,26 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「pitcher」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "corner",
+                "zh": "角落",
+                "emoji": "🤖",
+                "correct": false
+              },
+              {
+                "en": "stadium",
+                "zh": "球場",
+                "emoji": "🎒",
+                "correct": false
+              },
+              {
                 "en": "pitcher",
                 "zh": "投手",
-                "emoji": "🧢",
+                "emoji": "🏎️",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
+                "en": "catch",
+                "zh": "接球",
                 "emoji": "🚀",
                 "correct": false
               }
@@ -2826,13 +2994,13 @@ window.CURRICULUM_DATA = [
               "baseball."
             ],
             "pool": [
-              "catch",
+              "I",
+              "fast",
               "baseball.",
               "can",
-              "often",
+              "breakfast",
               "the",
-              "always",
-              "I"
+              "catch"
             ],
             "targetChinese": "我接得到這顆棒球。",
             "targetSentence": "I can catch the baseball."
@@ -2845,18 +3013,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "catch (接球)",
+                "en": "catch",
+                "zh": "接球",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "pitcher (投手)",
+                "en": "pitcher",
+                "zh": "投手",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "teeth (牙齒)",
+                "en": "teeth",
+                "zh": "牙齒",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "wheel (車輪)",
+                "en": "wheel",
+                "zh": "車輪",
                 "correct": false
               }
             ]
@@ -2920,25 +3096,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "cue stick",
                 "zh": "撞球桿",
-                "emoji": "🎱",
+                "emoji": "⚾",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "billiard ball",
+                "zh": "撞球",
+                "emoji": "✈️",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "sports car",
+                "zh": "跑車",
+                "emoji": "🦖",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "table",
+                "zh": "球桌",
+                "emoji": "🎱",
                 "correct": false
               }
             ]
@@ -2956,13 +3132,13 @@ window.CURRICULUM_DATA = [
               "firmly."
             ],
             "pool": [
-              "often",
               "Hold",
+              "strike",
+              "the",
               "stick",
-              "cue",
-              "always",
               "firmly.",
-              "the"
+              "cue",
+              "french"
             ],
             "targetChinese": "握緊這支撞球桿。",
             "targetSentence": "Hold the cue stick firmly."
@@ -2975,18 +3151,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "billiard ball (撞球)",
+                "en": "billiard ball",
+                "zh": "撞球",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "cue stick (撞球桿)",
+                "en": "cue stick",
+                "zh": "撞球桿",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "french fries (薯條)",
+                "en": "french fries",
+                "zh": "薯條",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "supersonic jet (超音速噴射機)",
+                "en": "supersonic jet",
+                "zh": "超音速噴射機",
                 "correct": false
               }
             ]
@@ -3048,27 +3232,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「pocket」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "pencil",
+                "zh": "鉛筆",
+                "emoji": "🤖",
+                "correct": false
+              },
+              {
+                "en": "corner",
+                "zh": "角落",
+                "emoji": "🚀",
+                "correct": false
+              },
+              {
                 "en": "pocket",
                 "zh": "球袋",
-                "emoji": "📐",
+                "emoji": "🏎️",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "angle",
+                "zh": "角度",
+                "emoji": "🎒",
                 "correct": false
               }
             ]
@@ -3087,14 +3271,14 @@ window.CURRICULUM_DATA = [
               "pocket."
             ],
             "pool": [
-              "the",
-              "the",
+              "pencil",
               "into",
-              "always",
               "pocket.",
+              "under",
+              "the",
               "Hit",
               "ball",
-              "often"
+              "the"
             ],
             "targetChinese": "把球打進球袋裡。",
             "targetSentence": "Hit the ball into the pocket."
@@ -3106,19 +3290,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "giant (巨大的)",
+                "en": "giant",
+                "zh": "巨大的",
+                "correct": false
+              },
+              {
                 "text": "corner (角落)",
+                "en": "corner",
+                "zh": "角落",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "pocket (球袋)",
+                "en": "pocket",
+                "zh": "球袋",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "behind (在...後面)",
+                "en": "behind",
+                "zh": "在...後面",
                 "correct": false
               }
             ]
@@ -3180,27 +3372,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「T-Rex」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "dinosaur",
+                "zh": "恐龍",
+                "emoji": "✈️",
+                "correct": false
+              },
+              {
+                "en": "teeth",
+                "zh": "牙齒",
+                "emoji": "🎱",
+                "correct": false
+              },
+              {
                 "en": "T-Rex",
                 "zh": "霸王龍",
-                "emoji": "🦖",
+                "emoji": "⚾",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "catch",
+                "zh": "接球",
+                "emoji": "🦖",
                 "correct": false
               }
             ]
@@ -3218,13 +3410,13 @@ window.CURRICULUM_DATA = [
               "teeth."
             ],
             "pool": [
-              "often",
-              "always",
+              "jet",
               "teeth.",
               "T-Rex",
-              "sharp",
               "The",
-              "has"
+              "sharp",
+              "has",
+              "french"
             ],
             "targetChinese": "霸王龍有鋒利的牙齒。",
             "targetSentence": "The T-Rex has sharp teeth."
@@ -3236,19 +3428,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "T-Rex (霸王龍)",
+                "en": "T-Rex",
+                "zh": "霸王龍",
+                "correct": false
+              },
+              {
+                "text": "hamburger (漢堡)",
+                "en": "hamburger",
+                "zh": "漢堡",
+                "correct": false
+              },
+              {
                 "text": "dinosaur (恐龍)",
+                "en": "dinosaur",
+                "zh": "恐龍",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "airplane (飛機)",
+                "en": "airplane",
+                "zh": "飛機",
                 "correct": false
               }
             ]
@@ -3312,24 +3512,24 @@ window.CURRICULUM_DATA = [
               {
                 "en": "giant",
                 "zh": "巨大的",
-                "emoji": "🦕",
+                "emoji": "🏎️",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "tail",
+                "zh": "尾巴",
+                "emoji": "🎒",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "catch",
+                "zh": "接球",
+                "emoji": "🤖",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
+                "en": "roar",
+                "zh": "咆哮怒吼",
                 "emoji": "🚀",
                 "correct": false
               }
@@ -3349,14 +3549,14 @@ window.CURRICULUM_DATA = [
               "tail."
             ],
             "pool": [
-              "dinosaur",
-              "always",
               "a",
-              "often",
-              "has",
-              "tail.",
+              "dinosaur",
               "long",
-              "The"
+              "The",
+              "has",
+              "bat",
+              "tail.",
+              "table"
             ],
             "targetChinese": "恐龍有一條長尾巴。",
             "targetSentence": "The dinosaur has a long tail."
@@ -3368,20 +3568,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "giant (巨大的)",
+                "en": "giant",
+                "zh": "巨大的",
+                "correct": false
+              },
+              {
+                "text": "shot (出桿進球)",
+                "en": "shot",
+                "zh": "出桿進球",
+                "correct": false
+              },
+              {
+                "text": "ball (球)",
+                "en": "ball",
+                "zh": "球",
+                "correct": false
+              },
+              {
                 "text": "roar (咆哮怒吼)",
+                "en": "roar",
+                "zh": "咆哮怒吼",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -3442,27 +3650,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「sports car」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "engine",
+                "zh": "引擎",
+                "emoji": "✈️",
+                "correct": false
+              },
+              {
+                "en": "cue stick",
+                "zh": "撞球桿",
+                "emoji": "🦖",
+                "correct": false
+              },
+              {
                 "en": "sports car",
                 "zh": "跑車",
-                "emoji": "🏎️",
+                "emoji": "⚾",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "wheel",
+                "zh": "車輪",
+                "emoji": "🎱",
                 "correct": false
               }
             ]
@@ -3482,15 +3690,15 @@ window.CURRICULUM_DATA = [
               "fast."
             ],
             "pool": [
-              "sports",
-              "super",
               "is",
-              "The",
-              "always",
-              "often",
-              "car",
+              "glove",
+              "cue",
+              "super",
               "red",
-              "fast."
+              "The",
+              "sports",
+              "fast.",
+              "car"
             ],
             "targetChinese": "這輛紅色跑車超級快。",
             "targetSentence": "The red sports car is super fast."
@@ -3502,20 +3710,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "corner (角落)",
+                "en": "corner",
+                "zh": "角落",
+                "correct": false
+              },
+              {
+                "text": "sports car (跑車)",
+                "en": "sports car",
+                "zh": "跑車",
+                "correct": false
+              },
+              {
+                "text": "pencil (鉛筆)",
+                "en": "pencil",
+                "zh": "鉛筆",
+                "correct": false
+              },
+              {
                 "text": "engine (引擎)",
+                "en": "engine",
+                "zh": "引擎",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -3576,27 +3792,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「robot」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "transform",
+                "zh": "變形",
+                "emoji": "🚀",
+                "correct": false
+              },
+              {
                 "en": "robot",
                 "zh": "機器人",
-                "emoji": "🤖",
+                "emoji": "🏎️",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "catch",
+                "zh": "接球",
+                "emoji": "🤖",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "helmet",
+                "zh": "安全帽",
+                "emoji": "🎒",
                 "correct": false
               }
             ]
@@ -3614,13 +3830,13 @@ window.CURRICULUM_DATA = [
               "transform."
             ],
             "pool": [
-              "can",
-              "often",
-              "always",
               "robot",
+              "french",
+              "pizza",
+              "can",
               "cool",
-              "The",
-              "transform."
+              "transform.",
+              "The"
             ],
             "targetChinese": "這個酷炫機器人可以變形。",
             "targetSentence": "The cool robot can transform."
@@ -3633,18 +3849,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "transform (變形)",
+                "en": "transform",
+                "zh": "變形",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "robot (機器人)",
+                "en": "robot",
+                "zh": "機器人",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "hamburger (漢堡)",
+                "en": "hamburger",
+                "zh": "漢堡",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "backpack (背包)",
+                "en": "backpack",
+                "zh": "背包",
                 "correct": false
               }
             ]
@@ -3706,27 +3930,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「hamburger」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "french fries",
+                "zh": "薯條",
+                "emoji": "✈️",
+                "correct": false
+              },
+              {
+                "en": "pizza",
+                "zh": "披薩",
+                "emoji": "🎱",
+                "correct": false
+              },
+              {
                 "en": "hamburger",
                 "zh": "漢堡",
-                "emoji": "🍔",
+                "emoji": "⚾",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "transform",
+                "zh": "變形",
+                "emoji": "🦖",
                 "correct": false
               }
             ]
@@ -3745,12 +3969,12 @@ window.CURRICULUM_DATA = [
             ],
             "pool": [
               "hamburger.",
-              "a",
               "I",
               "big",
-              "always",
               "want",
-              "often"
+              "a",
+              "stadium",
+              "hungry"
             ],
             "targetChinese": "我想要一個大漢堡。",
             "targetSentence": "I want a big hamburger."
@@ -3762,19 +3986,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "billiard ball (撞球)",
+                "en": "billiard ball",
+                "zh": "撞球",
+                "correct": false
+              },
+              {
                 "text": "french fries (薯條)",
+                "en": "french fries",
+                "zh": "薯條",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "hamburger (漢堡)",
+                "en": "hamburger",
+                "zh": "漢堡",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "cue stick (撞球桿)",
+                "en": "cue stick",
+                "zh": "撞球桿",
                 "correct": false
               }
             ]
@@ -3838,24 +4070,24 @@ window.CURRICULUM_DATA = [
               {
                 "en": "under",
                 "zh": "在...下面",
-                "emoji": "🧭",
+                "emoji": "🏎️",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "robot",
+                "zh": "機器人",
+                "emoji": "🤖",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "in",
+                "zh": "在...裡面",
+                "emoji": "🎒",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
+                "en": "on",
+                "zh": "在...上面",
                 "emoji": "🚀",
                 "correct": false
               }
@@ -3875,14 +4107,14 @@ window.CURRICULUM_DATA = [
               "chair."
             ],
             "pool": [
-              "chair.",
-              "cat",
-              "The",
-              "is",
-              "the",
-              "often",
               "under",
-              "always"
+              "The",
+              "the",
+              "can",
+              "is",
+              "cat",
+              "chair.",
+              "eraser"
             ],
             "targetChinese": "貓咪在椅子下面。",
             "targetSentence": "The cat is under the chair."
@@ -3894,19 +4126,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "sky (天空)",
+                "en": "sky",
+                "zh": "天空",
+                "correct": false
+              },
+              {
                 "text": "on (在...上面)",
+                "en": "on",
+                "zh": "在...上面",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "under (在...下面)",
+                "en": "under",
+                "zh": "在...下面",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "can (能夠)",
+                "en": "can",
+                "zh": "能夠",
                 "correct": false
               }
             ]
@@ -3968,27 +4208,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「ride a skateboard」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "supersonic jet",
+                "zh": "超音速噴射機",
+                "emoji": "✈️",
+                "correct": false
+              },
+              {
+                "en": "billiard ball",
+                "zh": "撞球",
+                "emoji": "🎱",
+                "correct": false
+              },
+              {
                 "en": "ride a skateboard",
                 "zh": "溜滑板",
-                "emoji": "🛹",
+                "emoji": "⚾",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "french fries",
+                "zh": "薯條",
+                "emoji": "🦖",
                 "correct": false
               }
             ]
@@ -4007,12 +4247,12 @@ window.CURRICULUM_DATA = [
             ],
             "pool": [
               "Can",
-              "always",
-              "you",
-              "a",
               "ride",
-              "often",
-              "skateboard?"
+              "skateboard?",
+              "catch",
+              "a",
+              "engine",
+              "you"
             ],
             "targetChinese": "你會溜滑板嗎？",
             "targetSentence": "Can you ride a skateboard?"
@@ -4025,18 +4265,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "swim (游泳)",
+                "en": "swim",
+                "zh": "游泳",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "time (時間)",
+                "en": "time",
+                "zh": "時間",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "ball (球)",
+                "en": "ball",
+                "zh": "球",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "ride a skateboard (溜滑板)",
+                "en": "ride a skateboard",
+                "zh": "溜滑板",
                 "correct": false
               }
             ]
@@ -4100,25 +4348,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "home run",
                 "zh": "全壘打",
-                "emoji": "👑",
+                "emoji": "🏎️",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "sports car",
+                "zh": "跑車",
+                "emoji": "🤖",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
+                "en": "supersonic jet",
+                "zh": "超音速噴射機",
                 "emoji": "🚀",
+                "correct": false
+              },
+              {
+                "en": "cue stick",
+                "zh": "撞球桿",
+                "emoji": "🎒",
                 "correct": false
               }
             ]
@@ -4137,14 +4385,14 @@ window.CURRICULUM_DATA = [
               "baseball."
             ],
             "pool": [
-              "often",
               "loves",
-              "The",
-              "pilot",
+              "rocket",
+              "to",
               "play",
-              "always",
               "baseball.",
-              "to"
+              "roar",
+              "pilot",
+              "The"
             ],
             "targetChinese": "這位飛行員很喜歡打棒球。",
             "targetSentence": "The pilot loves to play baseball."
@@ -4156,20 +4404,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "billiard ball (撞球)",
+                "en": "billiard ball",
+                "zh": "撞球",
+                "correct": false
+              },
+              {
+                "text": "french fries (薯條)",
+                "en": "french fries",
+                "zh": "薯條",
+                "correct": false
+              },
+              {
+                "text": "home run (全壘打)",
+                "en": "home run",
+                "zh": "全壘打",
+                "correct": false
+              },
+              {
                 "text": "supersonic jet (超音速噴射機)",
+                "en": "supersonic jet",
+                "zh": "超音速噴射機",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -4247,25 +4503,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "playing soccer",
                 "zh": "正在踢足球",
-                "emoji": "⚽",
+                "emoji": "🔥",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "turn right",
+                "zh": "右轉",
+                "emoji": "🛸",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "doing",
+                "zh": "正在做",
+                "emoji": "🏆",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "watching",
+                "zh": "正在觀看",
+                "emoji": "🌍",
                 "correct": false
               }
             ]
@@ -4284,14 +4540,14 @@ window.CURRICULUM_DATA = [
               "now?"
             ],
             "pool": [
-              "right",
-              "now?",
-              "are",
               "you",
               "What",
-              "often",
-              "always",
-              "doing"
+              "right",
+              "are",
+              "camera",
+              "doing",
+              "straight",
+              "now?"
             ],
             "targetChinese": "你現在正在做什麼？",
             "targetSentence": "What are you doing right now?"
@@ -4303,19 +4559,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "clean (乾淨的)",
+                "en": "clean",
+                "zh": "乾淨的",
+                "correct": false
+              },
+              {
                 "text": "doing (正在做)",
+                "en": "doing",
+                "zh": "正在做",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "playing soccer (正在踢足球)",
+                "en": "playing soccer",
+                "zh": "正在踢足球",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "cheer (歡呼喝采)",
+                "en": "cheer",
+                "zh": "歡呼喝采",
                 "correct": false
               }
             ]
@@ -4377,28 +4641,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「went」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "saw",
+                "zh": "看見(過去式)",
+                "emoji": "⚡",
+                "correct": false
+              },
+              {
+                "en": "played",
+                "zh": "玩耍(過去式)",
+                "emoji": "🎯",
+                "correct": false
+              },
+              {
+                "en": "spin",
+                "zh": "球旋轉",
+                "emoji": "🧭",
+                "correct": false
+              },
+              {
                 "en": "went",
                 "zh": "去(過去式)",
-                "emoji": "🏞️",
+                "emoji": "🏅",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -4416,14 +4680,14 @@ window.CURRICULUM_DATA = [
               "yesterday."
             ],
             "pool": [
-              "We",
-              "always",
-              "went",
               "park",
-              "the",
-              "yesterday.",
               "to",
-              "often"
+              "went",
+              "yesterday.",
+              "flight",
+              "We",
+              "the",
+              "order"
             ],
             "targetChinese": "我們昨天去了公園。",
             "targetSentence": "We went to the park yesterday."
@@ -4435,19 +4699,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "went (去(過去式))",
+                "en": "went",
+                "zh": "去(過去式)",
+                "correct": false
+              },
+              {
                 "text": "saw (看見(過去式))",
+                "en": "saw",
+                "zh": "看見(過去式)",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "team (隊伍)",
+                "en": "team",
+                "zh": "隊伍",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "menu (菜單)",
+                "en": "menu",
+                "zh": "菜單",
                 "correct": false
               }
             ]
@@ -4509,27 +4781,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「faster」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "stronger",
+                "zh": "更強壯的",
+                "emoji": "🌍",
+                "correct": false
+              },
+              {
                 "en": "faster",
                 "zh": "更快的",
-                "emoji": "⚡",
+                "emoji": "🔥",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "taller",
+                "zh": "更高的",
+                "emoji": "🏆",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "Monday",
+                "zh": "星期一",
+                "emoji": "🛸",
                 "correct": false
               }
             ]
@@ -4549,15 +4821,15 @@ window.CURRICULUM_DATA = [
               "car."
             ],
             "pool": [
+              "a",
+              "faster",
+              "went",
               "car.",
-              "always",
+              "than",
+              "The",
               "is",
               "jet",
-              "often",
-              "than",
-              "a",
-              "The",
-              "faster"
+              "sunny"
             ],
             "targetChinese": "噴射機比汽車更快。",
             "targetSentence": "The jet is faster than a car."
@@ -4569,20 +4841,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "faster (更快的)",
+                "en": "faster",
+                "zh": "更快的",
+                "correct": false
+              },
+              {
+                "text": "doctor (醫生)",
+                "en": "doctor",
+                "zh": "醫生",
+                "correct": false
+              },
+              {
+                "text": "museum (博物館)",
+                "en": "museum",
+                "zh": "博物館",
+                "correct": false
+              },
+              {
                 "text": "taller (更高的)",
+                "en": "taller",
+                "zh": "更高的",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -4643,27 +4923,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「sunny」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "winter",
+                "zh": "冬天",
+                "emoji": "🎯",
+                "correct": false
+              },
+              {
                 "en": "sunny",
                 "zh": "晴朗的",
-                "emoji": "🌦️",
+                "emoji": "🏅",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "rainy",
+                "zh": "下雨的",
+                "emoji": "⚡",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "earth",
+                "zh": "地球",
+                "emoji": "🧭",
                 "correct": false
               }
             ]
@@ -4682,14 +4962,14 @@ window.CURRICULUM_DATA = [
               "today."
             ],
             "pool": [
-              "today.",
-              "often",
-              "It",
-              "always",
-              "warm",
               "is",
-              "and",
-              "sunny"
+              "today.",
+              "sunny",
+              "It",
+              "warm",
+              "dessert",
+              "drone",
+              "and"
             ],
             "targetChinese": "今天天氣晴朗又溫暖。",
             "targetSentence": "It is sunny and warm today."
@@ -4701,20 +4981,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "sunny (晴朗的)",
+                "en": "sunny",
+                "zh": "晴朗的",
+                "correct": false
+              },
+              {
+                "text": "score (得分)",
+                "en": "score",
+                "zh": "得分",
+                "correct": false
+              },
+              {
+                "text": "order (點餐)",
+                "en": "order",
+                "zh": "點餐",
+                "correct": false
+              },
+              {
                 "text": "rainy (下雨的)",
+                "en": "rainy",
+                "zh": "下雨的",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -4775,27 +5063,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「Monday」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "Friday",
+                "zh": "星期五",
+                "emoji": "🏆",
+                "correct": false
+              },
+              {
+                "en": "winter",
+                "zh": "冬天",
+                "emoji": "🛸",
+                "correct": false
+              },
+              {
                 "en": "Monday",
                 "zh": "星期一",
-                "emoji": "📅",
+                "emoji": "🔥",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "weekend",
+                "zh": "週末",
+                "emoji": "🌍",
                 "correct": false
               }
             ]
@@ -4814,14 +5102,14 @@ window.CURRICULUM_DATA = [
               "weekend."
             ],
             "pool": [
-              "always",
-              "baseball",
-              "on",
               "weekend.",
-              "play",
-              "We",
               "the",
-              "often"
+              "We",
+              "play",
+              "spin",
+              "on",
+              "astronaut",
+              "baseball"
             ],
             "targetChinese": "我們週末會打棒球。",
             "targetSentence": "We play baseball on the weekend."
@@ -4834,18 +5122,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "Friday (星期五)",
+                "en": "Friday",
+                "zh": "星期五",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "Monday (星期一)",
+                "en": "Monday",
+                "zh": "星期一",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "played (玩耍(過去式))",
+                "en": "played",
+                "zh": "玩耍(過去式)",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "target (目標)",
+                "en": "target",
+                "zh": "目標",
                 "correct": false
               }
             ]
@@ -4907,28 +5203,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「Taiwan」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "doctor",
+                "zh": "醫生",
+                "emoji": "🧭",
+                "correct": false
+              },
+              {
+                "en": "Japan",
+                "zh": "日本",
+                "emoji": "⚡",
+                "correct": false
+              },
+              {
+                "en": "America",
+                "zh": "美國",
+                "emoji": "🎯",
+                "correct": false
+              },
+              {
                 "en": "Taiwan",
                 "zh": "臺灣",
-                "emoji": "🗺️",
+                "emoji": "🏅",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -4947,15 +5243,15 @@ window.CURRICULUM_DATA = [
               "world."
             ],
             "pool": [
-              "I",
-              "always",
-              "the",
-              "want",
-              "to",
-              "often",
-              "travel",
               "around",
-              "world."
+              "flight",
+              "world.",
+              "I",
+              "the",
+              "to",
+              "travel",
+              "want",
+              "scientist"
             ],
             "targetChinese": "我想要環遊世界。",
             "targetSentence": "I want to travel around the world."
@@ -4967,19 +5263,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "Taiwan (臺灣)",
+                "en": "Taiwan",
+                "zh": "臺灣",
+                "correct": false
+              },
+              {
+                "text": "sunny (晴朗的)",
+                "en": "sunny",
+                "zh": "晴朗的",
+                "correct": false
+              },
+              {
                 "text": "Japan (日本)",
+                "en": "Japan",
+                "zh": "日本",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "doing (正在做)",
+                "en": "doing",
+                "zh": "正在做",
                 "correct": false
               }
             ]
@@ -5041,27 +5345,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「championship」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "team",
+                "zh": "隊伍",
+                "emoji": "🌍",
+                "correct": false
+              },
+              {
                 "en": "championship",
                 "zh": "錦標賽",
-                "emoji": "🏆",
+                "emoji": "🔥",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "controller",
+                "zh": "遙控器",
+                "emoji": "🛸",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "trophy",
+                "zh": "獎盃",
+                "emoji": "🏆",
                 "correct": false
               }
             ]
@@ -5080,14 +5384,14 @@ window.CURRICULUM_DATA = [
               "trophy."
             ],
             "pool": [
-              "the",
-              "often",
-              "always",
-              "championship",
               "trophy.",
-              "won",
               "Our",
-              "team"
+              "championship",
+              "yesterday",
+              "summer",
+              "won",
+              "team",
+              "the"
             ],
             "targetChinese": "我們球隊贏得了冠軍獎盃。",
             "targetSentence": "Our team won the championship trophy."
@@ -5100,18 +5404,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "trophy (獎盃)",
+                "en": "trophy",
+                "zh": "獎盃",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "faster (更快的)",
+                "en": "faster",
+                "zh": "更快的",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "championship (錦標賽)",
+                "en": "championship",
+                "zh": "錦標賽",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "corner (轉角處)",
+                "en": "corner",
+                "zh": "轉角處",
                 "correct": false
               }
             ]
@@ -5175,25 +5487,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "flight",
                 "zh": "班機",
-                "emoji": "🛫",
+                "emoji": "🏅",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "corner",
+                "zh": "轉角處",
+                "emoji": "🧭",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "passenger",
+                "zh": "乘客",
+                "emoji": "⚡",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "overseas",
+                "zh": "海外的",
+                "emoji": "🎯",
                 "correct": false
               }
             ]
@@ -5212,14 +5524,14 @@ window.CURRICULUM_DATA = [
               "smooth."
             ],
             "pool": [
-              "was",
-              "always",
-              "The",
-              "smooth.",
-              "often",
-              "flight",
+              "championship",
               "international",
-              "very"
+              "was",
+              "flight",
+              "museum",
+              "very",
+              "smooth.",
+              "The"
             ],
             "targetChinese": "這趟國際航班飛行非常平穩。",
             "targetSentence": "The international flight was very smooth."
@@ -5232,18 +5544,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "passenger (乘客)",
+                "en": "passenger",
+                "zh": "乘客",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "yesterday (昨天)",
+                "en": "yesterday",
+                "zh": "昨天",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "astronaut (太空人)",
+                "en": "astronaut",
+                "zh": "太空人",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "flight (班機)",
+                "en": "flight",
+                "zh": "班機",
                 "correct": false
               }
             ]
@@ -5307,25 +5627,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "cushion",
                 "zh": "顆星邊欄",
-                "emoji": "🎱",
+                "emoji": "🔥",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "spin",
+                "zh": "球旋轉",
+                "emoji": "🏆",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "target",
+                "zh": "目標",
+                "emoji": "🌍",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "weekend",
+                "zh": "週末",
+                "emoji": "🛸",
                 "correct": false
               }
             ]
@@ -5345,15 +5665,15 @@ window.CURRICULUM_DATA = [
               "ball."
             ],
             "pool": [
-              "often",
-              "cushion",
-              "to",
-              "ball.",
               "the",
+              "to",
+              "cushion",
               "hit",
+              "left",
+              "yesterday",
+              "the",
               "Use",
-              "always",
-              "the"
+              "ball."
             ],
             "targetChinese": "利用球檯邊框顆星來擊球。",
             "targetSentence": "Use the cushion to hit the ball."
@@ -5365,20 +5685,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "team (隊伍)",
+                "en": "team",
+                "zh": "隊伍",
+                "correct": false
+              },
+              {
+                "text": "cushion (顆星邊欄)",
+                "en": "cushion",
+                "zh": "顆星邊欄",
+                "correct": false
+              },
+              {
+                "text": "clean (乾淨的)",
+                "en": "clean",
+                "zh": "乾淨的",
+                "correct": false
+              },
+              {
                 "text": "spin (球旋轉)",
+                "en": "spin",
+                "zh": "球旋轉",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -5439,27 +5767,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「museum」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "bones",
+                "zh": "骨骼骨頭",
+                "emoji": "🎯",
+                "correct": false
+              },
+              {
                 "en": "museum",
                 "zh": "博物館",
-                "emoji": "🏛️",
+                "emoji": "🏅",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "ancient",
+                "zh": "古老的",
+                "emoji": "⚡",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "Monday",
+                "zh": "星期一",
+                "emoji": "🧭",
                 "correct": false
               }
             ]
@@ -5480,12 +5808,12 @@ window.CURRICULUM_DATA = [
             "pool": [
               "museum.",
               "natural",
-              "visited",
+              "went",
               "the",
+              "altitude",
               "history",
               "We",
-              "often",
-              "always"
+              "visited"
             ],
             "targetChinese": "我們參觀了自然史博物館。",
             "targetSentence": "We visited the natural history museum."
@@ -5497,20 +5825,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "airline (航空公司)",
+                "en": "airline",
+                "zh": "航空公司",
+                "correct": false
+              },
+              {
+                "text": "played (玩耍(過去式))",
+                "en": "played",
+                "zh": "玩耍(過去式)",
+                "correct": false
+              },
+              {
+                "text": "museum (博物館)",
+                "en": "museum",
+                "zh": "博物館",
+                "correct": false
+              },
+              {
                 "text": "ancient (古老的)",
+                "en": "ancient",
+                "zh": "古老的",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -5571,28 +5907,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「drone」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "camera",
+                "zh": "相機",
+                "emoji": "🏆",
+                "correct": false
+              },
+              {
+                "en": "score",
+                "zh": "得分",
+                "emoji": "🛸",
+                "correct": false
+              },
+              {
+                "en": "controller",
+                "zh": "遙控器",
+                "emoji": "🌍",
+                "correct": false
+              },
+              {
                 "en": "drone",
                 "zh": "無人機",
-                "emoji": "🛸",
+                "emoji": "🔥",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -5610,14 +5946,14 @@ window.CURRICULUM_DATA = [
               "camera."
             ],
             "pool": [
-              "drone",
               "4K",
               "has",
-              "camera.",
-              "a",
               "The",
-              "always",
-              "often"
+              "a",
+              "drone",
+              "travel",
+              "left",
+              "camera."
             ],
             "targetChinese": "這架無人機配備了4K相機。",
             "targetSentence": "The drone has a 4K camera."
@@ -5629,19 +5965,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "drone (無人機)",
+                "en": "drone",
+                "zh": "無人機",
+                "correct": false
+              },
+              {
+                "text": "corner (轉角處)",
+                "en": "corner",
+                "zh": "轉角處",
+                "correct": false
+              },
+              {
                 "text": "camera (相機)",
+                "en": "camera",
+                "zh": "相機",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "faster (更快的)",
+                "en": "faster",
+                "zh": "更快的",
                 "correct": false
               }
             ]
@@ -5705,25 +6049,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "menu",
                 "zh": "菜單",
-                "emoji": "🍽️",
+                "emoji": "🏅",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "order",
+                "zh": "點餐",
+                "emoji": "⚡",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "went",
+                "zh": "去(過去式)",
+                "emoji": "🧭",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "delicious",
+                "zh": "美味的",
+                "emoji": "🎯",
                 "correct": false
               }
             ]
@@ -5741,13 +6085,13 @@ window.CURRICULUM_DATA = [
               "dessert?"
             ],
             "pool": [
-              "you",
-              "like",
-              "often",
-              "Would",
-              "always",
               "some",
-              "dessert?"
+              "score",
+              "Would",
+              "like",
+              "dessert?",
+              "clean",
+              "you"
             ],
             "targetChinese": "你想要來點甜點嗎？",
             "targetSentence": "Would you like some dessert?"
@@ -5759,19 +6103,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "cheer (歡呼喝采)",
+                "en": "cheer",
+                "zh": "歡呼喝采",
+                "correct": false
+              },
+              {
                 "text": "order (點餐)",
+                "en": "order",
+                "zh": "點餐",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "menu (菜單)",
+                "en": "menu",
+                "zh": "菜單",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "sunny (晴朗的)",
+                "en": "sunny",
+                "zh": "晴朗的",
                 "correct": false
               }
             ]
@@ -5833,28 +6185,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「recycle」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "earth",
+                "zh": "地球",
+                "emoji": "🌍",
+                "correct": false
+              },
+              {
+                "en": "cushion",
+                "zh": "顆星邊欄",
+                "emoji": "🛸",
+                "correct": false
+              },
+              {
+                "en": "protect",
+                "zh": "保護",
+                "emoji": "🏆",
+                "correct": false
+              },
+              {
                 "en": "recycle",
                 "zh": "回收",
-                "emoji": "🌍",
+                "emoji": "🔥",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -5871,13 +6223,13 @@ window.CURRICULUM_DATA = [
               "earth."
             ],
             "pool": [
-              "We",
+              "taller",
               "protect",
-              "our",
               "earth.",
-              "often",
-              "always",
-              "must"
+              "weekend",
+              "our",
+              "must",
+              "We"
             ],
             "targetChinese": "我們必須保護我們的地球。",
             "targetSentence": "We must protect our earth."
@@ -5889,20 +6241,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "America (美國)",
+                "en": "America",
+                "zh": "美國",
+                "correct": false
+              },
+              {
+                "text": "ancient (古老的)",
+                "en": "ancient",
+                "zh": "古老的",
+                "correct": false
+              },
+              {
+                "text": "recycle (回收)",
+                "en": "recycle",
+                "zh": "回收",
+                "correct": false
+              },
+              {
                 "text": "protect (保護)",
+                "en": "protect",
+                "zh": "保護",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -5963,27 +6323,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「turn left」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "playing soccer",
+                "zh": "正在踢足球",
+                "emoji": "🧭",
+                "correct": false
+              },
+              {
                 "en": "turn left",
                 "zh": "左轉",
-                "emoji": "🚦",
+                "emoji": "🏅",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "straight",
+                "zh": "筆直地",
+                "emoji": "🎯",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "turn right",
+                "zh": "右轉",
+                "emoji": "⚡",
                 "correct": false
               }
             ]
@@ -6001,13 +6361,13 @@ window.CURRICULUM_DATA = [
               "left."
             ],
             "pool": [
-              "and",
-              "left.",
-              "straight",
-              "often",
-              "always",
+              "controller",
               "Go",
-              "turn"
+              "left.",
+              "and",
+              "turn",
+              "straight",
+              "earth"
             ],
             "targetChinese": "直直走然後左轉。",
             "targetSentence": "Go straight and turn left."
@@ -6019,19 +6379,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "turn left (左轉)",
+                "en": "turn left",
+                "zh": "左轉",
+                "correct": false
+              },
+              {
                 "text": "turn right (右轉)",
+                "en": "turn right",
+                "zh": "右轉",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "playing soccer (正在踢足球)",
+                "en": "playing soccer",
+                "zh": "正在踢足球",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "controller (遙控器)",
+                "en": "controller",
+                "zh": "遙控器",
                 "correct": false
               }
             ]
@@ -6093,28 +6461,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「scientist」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "engineer",
+                "zh": "工程師",
+                "emoji": "🌍",
+                "correct": false
+              },
+              {
+                "en": "astronaut",
+                "zh": "太空人",
+                "emoji": "🏆",
+                "correct": false
+              },
+              {
+                "en": "passenger",
+                "zh": "乘客",
+                "emoji": "🛸",
+                "correct": false
+              },
+              {
                 "en": "scientist",
                 "zh": "科學家",
-                "emoji": "👨‍🚀",
+                "emoji": "🔥",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -6132,14 +6500,14 @@ window.CURRICULUM_DATA = [
               "astronaut."
             ],
             "pool": [
-              "often",
-              "an",
-              "astronaut.",
-              "to",
-              "He",
               "wants",
-              "always",
-              "become"
+              "an",
+              "doctor",
+              "become",
+              "astronaut.",
+              "rainy",
+              "He",
+              "to"
             ],
             "targetChinese": "他想要成為一名太空人。",
             "targetSentence": "He wants to become an astronaut."
@@ -6151,19 +6519,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "passenger (乘客)",
+                "en": "passenger",
+                "zh": "乘客",
+                "correct": false
+              },
+              {
+                "text": "yesterday (昨天)",
+                "en": "yesterday",
+                "zh": "昨天",
+                "correct": false
+              },
+              {
                 "text": "astronaut (太空人)",
+                "en": "astronaut",
+                "zh": "太空人",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "scientist (科學家)",
+                "en": "scientist",
+                "zh": "科學家",
                 "correct": false
               }
             ]
@@ -6225,28 +6601,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「championship」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "delicious",
+                "zh": "美味的",
+                "emoji": "🧭",
+                "correct": false
+              },
+              {
+                "en": "drone",
+                "zh": "無人機",
+                "emoji": "🎯",
+                "correct": false
+              },
+              {
+                "en": "astronaut",
+                "zh": "太空人",
+                "emoji": "⚡",
+                "correct": false
+              },
+              {
                 "en": "championship",
                 "zh": "冠軍錦標",
-                "emoji": "🎓",
+                "emoji": "🏅",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -6264,13 +6640,13 @@ window.CURRICULUM_DATA = [
               "game."
             ],
             "pool": [
-              "game.",
-              "always",
-              "won",
-              "Yesterday,",
-              "team",
-              "often",
               "our",
+              "Friday",
+              "game.",
+              "team",
+              "Yesterday,",
+              "won",
+              "right",
               "the"
             ],
             "targetChinese": "昨天，我們球隊贏得了比賽。",
@@ -6283,19 +6659,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "scientist (科學家)",
+                "en": "scientist",
+                "zh": "科學家",
+                "correct": false
+              },
+              {
                 "text": "astronaut (太空人)",
+                "en": "astronaut",
+                "zh": "太空人",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "championship (冠軍錦標)",
+                "en": "championship",
+                "zh": "冠軍錦標",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "passenger (乘客)",
+                "en": "passenger",
+                "zh": "乘客",
                 "correct": false
               }
             ]
@@ -6372,27 +6756,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「practice」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "improve",
+                "zh": "進步改善",
+                "emoji": "⚡",
+                "correct": false
+              },
+              {
+                "en": "remember",
+                "zh": "記得",
+                "emoji": "🏫",
+                "correct": false
+              },
+              {
                 "en": "practice",
                 "zh": "練習",
-                "emoji": "📖",
+                "emoji": "📘",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "cheering",
+                "zh": "歡呼中",
+                "emoji": "⚾",
                 "correct": false
               }
             ]
@@ -6410,13 +6794,13 @@ window.CURRICULUM_DATA = [
               "day."
             ],
             "pool": [
-              "every",
-              "makes",
-              "Practice",
-              "never",
-              "perfect",
               "day.",
-              "seldom"
+              "victory",
+              "Practice",
+              "perfect",
+              "usually",
+              "every",
+              "makes"
             ],
             "targetChinese": "每天練習才能熟能生巧。",
             "targetSentence": "Practice makes perfect every day."
@@ -6428,19 +6812,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "climate (氣候)",
+                "en": "climate",
+                "zh": "氣候",
+                "correct": false
+              },
+              {
+                "text": "practice (練習)",
+                "en": "practice",
+                "zh": "練習",
+                "correct": false
+              },
+              {
                 "text": "improve (進步改善)",
+                "en": "improve",
+                "zh": "進步改善",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "library (圖書館)",
+                "en": "library",
+                "zh": "圖書館",
                 "correct": false
               }
             ]
@@ -6504,25 +6896,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "always",
                 "zh": "總是",
-                "emoji": "📊",
+                "emoji": "✈️",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "often",
+                "zh": "經常",
+                "emoji": "🎯",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "invite",
+                "zh": "邀請",
+                "emoji": "💡",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "usually",
+                "zh": "通常",
+                "emoji": "🔬",
                 "correct": false
               }
             ]
@@ -6541,14 +6933,14 @@ window.CURRICULUM_DATA = [
               "school."
             ],
             "pool": [
-              "school.",
-              "baseball",
-              "never",
-              "seldom",
               "practices",
-              "after",
+              "twice",
+              "He",
+              "school.",
               "always",
-              "He"
+              "baseball",
+              "decline",
+              "after"
             ],
             "targetChinese": "他放學後總是練習棒球。",
             "targetSentence": "He always practices baseball after school."
@@ -6561,18 +6953,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "usually (通常)",
+                "en": "usually",
+                "zh": "通常",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "climate (氣候)",
+                "en": "climate",
+                "zh": "氣候",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "always (總是)",
+                "en": "always",
+                "zh": "總是",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "library (圖書館)",
+                "en": "library",
+                "zh": "圖書館",
                 "correct": false
               }
             ]
@@ -6636,25 +7036,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "mathematics",
                 "zh": "數學",
-                "emoji": "📐",
+                "emoji": "📘",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "history",
+                "zh": "歷史",
+                "emoji": "🏫",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "science",
+                "zh": "自然科學",
+                "emoji": "⚡",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "application",
+                "zh": "應用程式",
+                "emoji": "⚾",
                 "correct": false
               }
             ]
@@ -6672,13 +7072,13 @@ window.CURRICULUM_DATA = [
               "subject."
             ],
             "pool": [
-              "never",
-              "my",
-              "seldom",
+              "subject.",
               "Science",
-              "favorite",
               "is",
-              "subject."
+              "favorite",
+              "my",
+              "friction",
+              "unforgettable"
             ],
             "targetChinese": "自然科學是我最喜歡的科目。",
             "targetSentence": "Science is my favorite subject."
@@ -6690,19 +7090,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "victory (勝利)",
+                "en": "victory",
+                "zh": "勝利",
+                "correct": false
+              },
+              {
+                "text": "mathematics (數學)",
+                "en": "mathematics",
+                "zh": "數學",
+                "correct": false
+              },
+              {
                 "text": "science (自然科學)",
+                "en": "science",
+                "zh": "自然科學",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "library (圖書館)",
+                "en": "library",
+                "zh": "圖書館",
                 "correct": false
               }
             ]
@@ -6764,27 +7172,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「how often」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "twice",
+                "zh": "兩次",
+                "emoji": "🎯",
+                "correct": false
+              },
+              {
                 "en": "how often",
                 "zh": "多久一次",
-                "emoji": "🔄",
+                "emoji": "✈️",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "relay race",
+                "zh": "接力賽",
+                "emoji": "💡",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "once",
+                "zh": "一次",
+                "emoji": "🔬",
                 "correct": false
               }
             ]
@@ -6803,14 +7211,14 @@ window.CURRICULUM_DATA = [
               "swimming?"
             ],
             "pool": [
-              "seldom",
-              "never",
-              "go",
-              "How",
-              "do",
               "swimming?",
+              "do",
               "you",
-              "often"
+              "friction",
+              "go",
+              "often",
+              "How",
+              "decline"
             ],
             "targetChinese": "你多常去游泳？",
             "targetSentence": "How often do you go swimming?"
@@ -6822,19 +7230,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "diary (日記)",
+                "en": "diary",
+                "zh": "日記",
+                "correct": false
+              },
+              {
                 "text": "once (一次)",
+                "en": "once",
+                "zh": "一次",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "how often (多久一次)",
+                "en": "how often",
+                "zh": "多久一次",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "lift (升力)",
+                "en": "lift",
+                "zh": "升力",
                 "correct": false
               }
             ]
@@ -6896,27 +7312,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「who」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "where",
+                "zh": "在哪",
+                "emoji": "🏫",
+                "correct": false
+              },
+              {
                 "en": "who",
                 "zh": "誰",
-                "emoji": "❓",
+                "emoji": "📘",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "what",
+                "zh": "什麼",
+                "emoji": "⚡",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "at",
+                "zh": "在...時間點",
+                "emoji": "⚾",
                 "correct": false
               }
             ]
@@ -6935,14 +7351,14 @@ window.CURRICULUM_DATA = [
               "airplane?"
             ],
             "pool": [
-              "seldom",
-              "Why",
-              "this",
-              "never",
-              "choose",
-              "airplane?",
               "you",
-              "did"
+              "Why",
+              "library",
+              "strategy",
+              "this",
+              "choose",
+              "did",
+              "airplane?"
             ],
             "targetChinese": "你為什麼選擇這架飛機？",
             "targetSentence": "Why did you choose this airplane?"
@@ -6954,19 +7370,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "once (一次)",
+                "en": "once",
+                "zh": "一次",
+                "correct": false
+              },
+              {
+                "text": "lift (升力)",
+                "en": "lift",
+                "zh": "升力",
+                "correct": false
+              },
+              {
                 "text": "what (什麼)",
+                "en": "what",
+                "zh": "什麼",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "who (誰)",
+                "en": "who",
+                "zh": "誰",
                 "correct": false
               }
             ]
@@ -7028,28 +7452,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「at」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "on",
+                "zh": "在...日子",
+                "emoji": "🔬",
+                "correct": false
+              },
+              {
+                "en": "who",
+                "zh": "誰",
+                "emoji": "💡",
+                "correct": false
+              },
+              {
+                "en": "in",
+                "zh": "在...月份年份",
+                "emoji": "🎯",
+                "correct": false
+              },
+              {
                 "en": "at",
                 "zh": "在...時間點",
-                "emoji": "📍",
+                "emoji": "✈️",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -7067,14 +7491,14 @@ window.CURRICULUM_DATA = [
               "Sunday."
             ],
             "pool": [
+              "on",
+              "unforgettable",
+              "forget",
+              "at",
+              "meet",
               "seven",
               "Sunday.",
-              "We",
-              "at",
-              "never",
-              "seldom",
-              "on",
-              "meet"
+              "We"
             ],
             "targetChinese": "我們星期天七點見面。",
             "targetSentence": "We meet at seven on Sunday."
@@ -7086,19 +7510,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "why (為什麼)",
+                "en": "why",
+                "zh": "為什麼",
+                "correct": false
+              },
+              {
+                "text": "who (誰)",
+                "en": "who",
+                "zh": "誰",
+                "correct": false
+              },
+              {
                 "text": "on (在...日子)",
+                "en": "on",
+                "zh": "在...日子",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "at (在...時間點)",
+                "en": "at",
+                "zh": "在...時間點",
                 "correct": false
               }
             ]
@@ -7160,27 +7592,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「teamwork」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "friction",
+                "zh": "摩擦力",
+                "emoji": "⚾",
+                "correct": false
+              },
+              {
                 "en": "teamwork",
                 "zh": "團隊合作",
-                "emoji": "🤝",
+                "emoji": "📘",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "coach",
+                "zh": "教練",
+                "emoji": "⚡",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "strategy",
+                "zh": "策略",
+                "emoji": "🏫",
                 "correct": false
               }
             ]
@@ -7198,13 +7630,13 @@ window.CURRICULUM_DATA = [
               "victory."
             ],
             "pool": [
-              "to",
-              "us",
-              "seldom",
               "Teamwork",
+              "to",
+              "athlete",
+              "forget",
+              "leads",
               "victory.",
-              "never",
-              "leads"
+              "us"
             ],
             "targetChinese": "團隊合作引領我們走向勝利。",
             "targetSentence": "Teamwork leads us to victory."
@@ -7216,19 +7648,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "teamwork (團隊合作)",
+                "en": "teamwork",
+                "zh": "團隊合作",
+                "correct": false
+              },
+              {
+                "text": "twice (兩次)",
+                "en": "twice",
+                "zh": "兩次",
+                "correct": false
+              },
+              {
                 "text": "coach (教練)",
+                "en": "coach",
+                "zh": "教練",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "often (經常)",
+                "en": "often",
+                "zh": "經常",
                 "correct": false
               }
             ]
@@ -7292,25 +7732,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "lift",
                 "zh": "升力",
-                "emoji": "🛩️",
+                "emoji": "✈️",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "twice",
+                "zh": "兩次",
+                "emoji": "💡",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "wings",
+                "zh": "機翼",
+                "emoji": "🎯",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "thrust",
+                "zh": "推力",
+                "emoji": "🔬",
                 "correct": false
               }
             ]
@@ -7329,14 +7769,14 @@ window.CURRICULUM_DATA = [
               "airplane."
             ],
             "pool": [
-              "seldom",
-              "never",
-              "create",
+              "airplane.",
               "Wings",
               "for",
-              "the",
+              "athlete",
+              "create",
               "lift",
-              "airplane."
+              "the",
+              "race"
             ],
             "targetChinese": "機翼為飛機產生升力。",
             "targetSentence": "Wings create lift for the airplane."
@@ -7349,18 +7789,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "thrust (推力)",
+                "en": "thrust",
+                "zh": "推力",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "lift (升力)",
+                "en": "lift",
+                "zh": "升力",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "forget (忘記)",
+                "en": "forget",
+                "zh": "忘記",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "diary (日記)",
+                "en": "diary",
+                "zh": "日記",
                 "correct": false
               }
             ]
@@ -7424,25 +7872,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "velocity",
                 "zh": "速度",
-                "emoji": "🎱",
+                "emoji": "📘",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "collision",
+                "zh": "碰撞",
+                "emoji": "⚡",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "teamwork",
+                "zh": "團隊合作",
+                "emoji": "⚾",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "rebound",
+                "zh": "反彈",
+                "emoji": "🏫",
                 "correct": false
               }
             ]
@@ -7462,15 +7910,15 @@ window.CURRICULUM_DATA = [
               "collision."
             ],
             "pool": [
-              "seldom",
               "had",
-              "an",
-              "never",
-              "The",
               "elastic",
               "billiard",
+              "The",
+              "an",
+              "collision.",
+              "novel",
               "balls",
-              "collision."
+              "invite"
             ],
             "targetChinese": "撞球之間發生了彈性碰撞。",
             "targetSentence": "The billiard balls had an elastic collision."
@@ -7482,19 +7930,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "geography (地理)",
+                "en": "geography",
+                "zh": "地理",
+                "correct": false
+              },
+              {
+                "text": "velocity (速度)",
+                "en": "velocity",
+                "zh": "速度",
+                "correct": false
+              },
+              {
                 "text": "collision (碰撞)",
+                "en": "collision",
+                "zh": "碰撞",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "extinction (滅絕)",
+                "en": "extinction",
+                "zh": "滅絕",
                 "correct": false
               }
             ]
@@ -7556,27 +8012,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「extinction」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "asteroid",
+                "zh": "小行星",
+                "emoji": "🔬",
+                "correct": false
+              },
+              {
+                "en": "climate",
+                "zh": "氣候",
+                "emoji": "🎯",
+                "correct": false
+              },
+              {
                 "en": "extinction",
                 "zh": "滅絕",
-                "emoji": "☄️",
+                "emoji": "✈️",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "smartphone",
+                "zh": "智慧型手機",
+                "emoji": "💡",
                 "correct": false
               }
             ]
@@ -7595,14 +8051,14 @@ window.CURRICULUM_DATA = [
               "extinction."
             ],
             "pool": [
+              "science",
+              "twice",
+              "dinosaur",
               "theory",
               "asteroid",
-              "extinction.",
-              "never",
-              "explains",
               "The",
-              "seldom",
-              "dinosaur"
+              "extinction.",
+              "explains"
             ],
             "targetChinese": "小行星撞擊理論解釋了恐龍滅絕。",
             "targetSentence": "The asteroid theory explains dinosaur extinction."
@@ -7614,19 +8070,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "practice (練習)",
+                "en": "practice",
+                "zh": "練習",
+                "correct": false
+              },
+              {
                 "text": "asteroid (小行星)",
+                "en": "asteroid",
+                "zh": "小行星",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "library (圖書館)",
+                "en": "library",
+                "zh": "圖書館",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "extinction (滅絕)",
+                "en": "extinction",
+                "zh": "滅絕",
                 "correct": false
               }
             ]
@@ -7688,27 +8152,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「smartphone」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "application",
+                "zh": "應用程式",
+                "emoji": "⚡",
+                "correct": false
+              },
+              {
+                "en": "experience",
+                "zh": "經驗",
+                "emoji": "⚾",
+                "correct": false
+              },
+              {
                 "en": "smartphone",
                 "zh": "智慧型手機",
-                "emoji": "📱",
+                "emoji": "📘",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "message",
+                "zh": "訊息",
+                "emoji": "🏫",
                 "correct": false
               }
             ]
@@ -7726,13 +8190,13 @@ window.CURRICULUM_DATA = [
               "application."
             ],
             "pool": [
-              "seldom",
+              "practice",
               "new",
-              "learning",
-              "the",
               "application.",
-              "never",
-              "Download"
+              "decline",
+              "the",
+              "Download",
+              "learning"
             ],
             "targetChinese": "下載這個全新學習應用程式。",
             "targetSentence": "Download the new learning application."
@@ -7744,19 +8208,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "smartphone (智慧型手機)",
+                "en": "smartphone",
+                "zh": "智慧型手機",
+                "correct": false
+              },
+              {
                 "text": "application (應用程式)",
+                "en": "application",
+                "zh": "應用程式",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "mathematics (數學)",
+                "en": "mathematics",
+                "zh": "數學",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "experience (經驗)",
+                "en": "experience",
+                "zh": "經驗",
                 "correct": false
               }
             ]
@@ -7820,25 +8292,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "relay race",
                 "zh": "接力賽",
-                "emoji": "🏃‍♂️",
+                "emoji": "✈️",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "baton",
+                "zh": "接力棒",
+                "emoji": "🔬",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "athlete",
+                "zh": "運動員",
+                "emoji": "🎯",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "how often",
+                "zh": "多久一次",
+                "emoji": "💡",
                 "correct": false
               }
             ]
@@ -7857,13 +8329,13 @@ window.CURRICULUM_DATA = [
               "carefully."
             ],
             "pool": [
-              "Pass",
-              "seldom",
               "the",
-              "and",
-              "never",
+              "often",
               "quickly",
+              "and",
               "carefully.",
+              "Pass",
+              "remember",
               "baton"
             ],
             "targetChinese": "迅速且小心地交接接力棒。",
@@ -7877,18 +8349,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "baton (接力棒)",
+                "en": "baton",
+                "zh": "接力棒",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "never (從不)",
+                "en": "never",
+                "zh": "從不",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "relay race (接力賽)",
+                "en": "relay race",
+                "zh": "接力賽",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "novel (小說)",
+                "en": "novel",
+                "zh": "小說",
                 "correct": false
               }
             ]
@@ -7950,27 +8430,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「library」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "knowledge",
+                "zh": "知識",
+                "emoji": "🏫",
+                "correct": false
+              },
+              {
+                "en": "history",
+                "zh": "歷史",
+                "emoji": "⚾",
+                "correct": false
+              },
+              {
                 "en": "library",
                 "zh": "圖書館",
-                "emoji": "📚",
+                "emoji": "📘",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "borrow",
+                "zh": "借閱",
+                "emoji": "⚡",
                 "correct": false
               }
             ]
@@ -7988,12 +8468,12 @@ window.CURRICULUM_DATA = [
               "knowledge."
             ],
             "pool": [
-              "useful",
-              "never",
-              "provide",
-              "seldom",
+              "how",
+              "collision",
               "Books",
+              "useful",
               "knowledge.",
+              "provide",
               "endless"
             ],
             "targetChinese": "書籍提供無窮無盡的實用知識。",
@@ -8006,19 +8486,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "library (圖書館)",
+                "en": "library",
+                "zh": "圖書館",
+                "correct": false
+              },
+              {
+                "text": "online (在線上的)",
+                "en": "online",
+                "zh": "在線上的",
+                "correct": false
+              },
+              {
                 "text": "borrow (借閱)",
+                "en": "borrow",
+                "zh": "借閱",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "always (總是)",
+                "en": "always",
+                "zh": "總是",
                 "correct": false
               }
             ]
@@ -8082,25 +8570,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "invite",
                 "zh": "邀請",
-                "emoji": "💌",
+                "emoji": "✈️",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "decline",
+                "zh": "婉拒",
+                "emoji": "🎯",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "accept",
+                "zh": "接受",
+                "emoji": "🔬",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "online",
+                "zh": "在線上的",
+                "emoji": "💡",
                 "correct": false
               }
             ]
@@ -8121,15 +8609,16 @@ window.CURRICULUM_DATA = [
               "match?"
             ],
             "pool": [
-              "join",
-              "never",
               "Would",
               "match?",
               "baseball",
-              "our",
-              "like",
+              "to",
+              "coach",
               "you",
-              "to"
+              "our",
+              "invite",
+              "join",
+              "like"
             ],
             "targetChinese": "你想要參加我們的棒球比賽嗎？",
             "targetSentence": "Would you like to join our baseball match?"
@@ -8141,19 +8630,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "invite (邀請)",
+                "en": "invite",
+                "zh": "邀請",
+                "correct": false
+              },
+              {
                 "text": "accept (接受)",
+                "en": "accept",
+                "zh": "接受",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "borrow (借閱)",
+                "en": "borrow",
+                "zh": "借閱",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "online (在線上的)",
+                "en": "online",
+                "zh": "在線上的",
                 "correct": false
               }
             ]
@@ -8215,27 +8712,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「diary」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "often",
+                "zh": "經常",
+                "emoji": "⚾",
+                "correct": false
+              },
+              {
                 "en": "diary",
                 "zh": "日記",
-                "emoji": "✍️",
+                "emoji": "📘",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "unforgettable",
+                "zh": "難忘的",
+                "emoji": "🏫",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "experience",
+                "zh": "經驗",
+                "emoji": "⚡",
                 "correct": false
               }
             ]
@@ -8254,14 +8751,14 @@ window.CURRICULUM_DATA = [
               "day."
             ],
             "pool": [
-              "unforgettable,",
-              "an",
-              "seldom",
-              "day.",
-              "wonderful",
               "was",
-              "never",
-              "Today"
+              "Today",
+              "wonderful",
+              "unforgettable,",
+              "invite",
+              "an",
+              "during",
+              "day."
             ],
             "targetChinese": "今天是一個難忘又美好的日子。",
             "targetSentence": "Today was an unforgettable, wonderful day."
@@ -8274,18 +8771,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "experience (經驗)",
+                "en": "experience",
+                "zh": "經驗",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "diary (日記)",
+                "en": "diary",
+                "zh": "日記",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "mathematics (數學)",
+                "en": "mathematics",
+                "zh": "數學",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "extinction (滅絕)",
+                "en": "extinction",
+                "zh": "滅絕",
                 "correct": false
               }
             ]
@@ -8347,27 +8852,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「teamwork」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "extinction",
+                "zh": "滅絕",
+                "emoji": "🎯",
+                "correct": false
+              },
+              {
+                "en": "friction",
+                "zh": "摩擦力",
+                "emoji": "💡",
+                "correct": false
+              },
+              {
                 "en": "teamwork",
                 "zh": "團隊合作",
-                "emoji": "👑",
+                "emoji": "✈️",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "collision",
+                "zh": "碰撞",
+                "emoji": "🔬",
                 "correct": false
               }
             ]
@@ -8385,13 +8890,13 @@ window.CURRICULUM_DATA = [
               "improvement."
             ],
             "pool": [
-              "seldom",
-              "brings",
-              "Regular",
-              "never",
               "practice",
-              "amazing",
-              "improvement."
+              "Regular",
+              "brings",
+              "why",
+              "improvement.",
+              "thrust",
+              "amazing"
             ],
             "targetChinese": "規律的練習帶來驚人的進步。",
             "targetSentence": "Regular practice brings amazing improvement."
@@ -8403,19 +8908,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "asteroid (小行星)",
+                "en": "asteroid",
+                "zh": "小行星",
+                "correct": false
+              },
+              {
+                "text": "geography (地理)",
+                "en": "geography",
+                "zh": "地理",
+                "correct": false
+              },
+              {
                 "text": "collision (碰撞)",
+                "en": "collision",
+                "zh": "碰撞",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "teamwork (團隊合作)",
+                "en": "teamwork",
+                "zh": "團隊合作",
                 "correct": false
               }
             ]
@@ -8492,27 +9005,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「have lived」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "since",
+                "zh": "自從...",
+                "emoji": "🛰️",
+                "correct": false
+              },
+              {
                 "en": "have lived",
                 "zh": "已經住過",
-                "emoji": "⏳",
+                "emoji": "🏆",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "has been",
+                "zh": "曾經去過",
+                "emoji": "⏳",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "was caught",
+                "zh": "被接住",
+                "emoji": "⚾",
                 "correct": false
               }
             ]
@@ -8533,15 +9046,16 @@ window.CURRICULUM_DATA = [
               "years."
             ],
             "pool": [
+              "for",
+              "lived",
+              "presentation",
+              "ten",
               "Taiwan",
+              "in",
+              "years.",
               "have",
               "never",
-              "in",
-              "I",
-              "for",
-              "years.",
-              "ten",
-              "lived"
+              "I"
             ],
             "targetChinese": "我已經在台灣住了十年。",
             "targetSentence": "I have lived in Taiwan for ten years."
@@ -8554,18 +9068,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "has been (曾經去過)",
+                "en": "has been",
+                "zh": "曾經去過",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "is made (被製造)",
+                "en": "is made",
+                "zh": "被製造",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "ought to (應當)",
+                "en": "ought to",
+                "zh": "應當",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "have lived (已經住過)",
+                "en": "have lived",
+                "zh": "已經住過",
                 "correct": false
               }
             ]
@@ -8629,25 +9151,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "already",
                 "zh": "已經",
-                "emoji": "🌟",
+                "emoji": "🔬",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "charity",
+                "zh": "慈善",
+                "emoji": "📘",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "yet",
+                "zh": "尚未",
+                "emoji": "🌟",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "ever",
+                "zh": "曾經",
+                "emoji": "🧭",
                 "correct": false
               }
             ]
@@ -8668,15 +9190,16 @@ window.CURRICULUM_DATA = [
               "jet?"
             ],
             "pool": [
-              "a",
-              "supersonic",
-              "seen",
+              "fighter",
               "ever",
-              "Have",
-              "you",
-              "never",
               "jet?",
-              "fighter"
+              "Have",
+              "supersonic",
+              "feel",
+              "smell",
+              "a",
+              "seen",
+              "you"
             ],
             "targetChinese": "你曾見過超音速戰鬥機嗎？",
             "targetSentence": "Have you ever seen a supersonic fighter jet?"
@@ -8688,20 +9211,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "already (已經)",
+                "en": "already",
+                "zh": "已經",
+                "correct": false
+              },
+              {
+                "text": "MVP (最有價值球員)",
+                "en": "MVP",
+                "zh": "最有價值球員",
+                "correct": false
+              },
+              {
+                "text": "for (長達...)",
+                "en": "for",
+                "zh": "長達...",
+                "correct": false
+              },
+              {
                 "text": "yet (尚未)",
+                "en": "yet",
+                "zh": "尚未",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -8764,25 +9295,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "was caught",
                 "zh": "被接住",
-                "emoji": "🛡️",
+                "emoji": "🏆",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "by",
+                "zh": "被...",
+                "emoji": "🛰️",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "have lived",
+                "zh": "已經住過",
+                "emoji": "⚾",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "is made",
+                "zh": "被製造",
+                "emoji": "⏳",
                 "correct": false
               }
             ]
@@ -8803,14 +9334,15 @@ window.CURRICULUM_DATA = [
               "fielder."
             ],
             "pool": [
-              "fielder.",
+              "conclusion",
+              "the",
               "center",
               "by",
-              "the",
-              "was",
-              "baseball",
-              "never",
+              "cheer",
               "The",
+              "baseball",
+              "fielder.",
+              "was",
               "caught"
             ],
             "targetChinese": "這顆棒球被中外野手接住了。",
@@ -8824,18 +9356,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "is made (被製造)",
+                "en": "is made",
+                "zh": "被製造",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "has been (曾經去過)",
+                "en": "has been",
+                "zh": "曾經去過",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "have to (不得不)",
+                "en": "have to",
+                "zh": "不得不",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "was caught (被接住)",
+                "en": "was caught",
+                "zh": "被接住",
                 "correct": false
               }
             ]
@@ -8897,27 +9437,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「guided」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "controlled",
+                "zh": "被控制",
+                "emoji": "🧭",
+                "correct": false
+              },
+              {
+                "en": "sensor",
+                "zh": "感應器",
+                "emoji": "📘",
+                "correct": false
+              },
+              {
                 "en": "guided",
                 "zh": "被導航引導",
-                "emoji": "📡",
+                "emoji": "🔬",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "invented",
+                "zh": "被發明",
+                "emoji": "🌟",
                 "correct": false
               }
             ]
@@ -8937,15 +9477,15 @@ window.CURRICULUM_DATA = [
               "radar."
             ],
             "pool": [
-              "aircraft",
-              "are",
-              "seldom",
               "Modern",
+              "radar.",
               "by",
+              "aircraft",
               "satellite",
-              "never",
+              "are",
+              "for",
               "guided",
-              "radar."
+              "notice"
             ],
             "targetChinese": "現代飛機由衛星雷達導航。",
             "targetSentence": "Modern aircraft are guided by satellite radar."
@@ -8957,19 +9497,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "donation (捐贈)",
+                "en": "donation",
+                "zh": "捐贈",
+                "correct": false
+              },
+              {
                 "text": "invented (被發明)",
+                "en": "invented",
+                "zh": "被發明",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "guided (被導航引導)",
+                "en": "guided",
+                "zh": "被導航引導",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "playoffs (季後賽)",
+                "en": "playoffs",
+                "zh": "季後賽",
                 "correct": false
               }
             ]
@@ -9031,27 +9579,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「must」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "have to",
+                "zh": "不得不",
+                "emoji": "🛰️",
+                "correct": false
+              },
+              {
+                "en": "ever",
+                "zh": "曾經",
+                "emoji": "⚾",
+                "correct": false
+              },
+              {
                 "en": "must",
                 "zh": "必須",
-                "emoji": "💡",
+                "emoji": "🏆",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "should",
+                "zh": "應該",
+                "emoji": "⏳",
                 "correct": false
               }
             ]
@@ -9070,14 +9618,14 @@ window.CURRICULUM_DATA = [
               "rules."
             ],
             "pool": [
-              "must",
+              "respect",
+              "algorithm",
               "Every",
-              "player",
               "the",
-              "never",
               "rules.",
-              "seldom",
-              "respect"
+              "must",
+              "player",
+              "MVP"
             ],
             "targetChinese": "每位球員都必須遵守規則。",
             "targetSentence": "Every player must respect the rules."
@@ -9089,19 +9637,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "must (必須)",
+                "en": "must",
+                "zh": "必須",
+                "correct": false
+              },
+              {
                 "text": "should (應該)",
+                "en": "should",
+                "zh": "應該",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "since (自從...)",
+                "en": "since",
+                "zh": "自從...",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "notice (注意到)",
+                "en": "notice",
+                "zh": "注意到",
                 "correct": false
               }
             ]
@@ -9165,25 +9721,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "taste",
                 "zh": "嚐起來",
-                "emoji": "🌸",
+                "emoji": "🔬",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "look",
+                "zh": "看起來",
+                "emoji": "🧭",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "curve",
+                "zh": "曲球",
+                "emoji": "📘",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "smell",
+                "zh": "聞起來",
+                "emoji": "🌟",
                 "correct": false
               }
             ]
@@ -9203,15 +9759,15 @@ window.CURRICULUM_DATA = [
               "juicy."
             ],
             "pool": [
-              "tastes",
-              "burger",
-              "juicy.",
-              "never",
-              "delicious",
-              "seldom",
               "fresh",
+              "juicy.",
+              "taste",
+              "and",
+              "delicious",
               "The",
-              "and"
+              "burger",
+              "charity",
+              "tastes"
             ],
             "targetChinese": "這份新鮮漢堡嚐起來多汁又美味。",
             "targetSentence": "The fresh burger tastes delicious and juicy."
@@ -9224,18 +9780,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "smell (聞起來)",
+                "en": "smell",
+                "zh": "聞起來",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "orbit (軌道運行)",
+                "en": "orbit",
+                "zh": "軌道運行",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "curve (曲球)",
+                "en": "curve",
+                "zh": "曲球",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "taste (嚐起來)",
+                "en": "taste",
+                "zh": "嚐起來",
                 "correct": false
               }
             ]
@@ -9297,27 +9861,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「watch him swing」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "feel the ball hit",
+                "zh": "感覺球被擊中",
+                "emoji": "🛰️",
+                "correct": false
+              },
+              {
+                "en": "hear them cheer",
+                "zh": "聽他們歡呼",
+                "emoji": "⏳",
+                "correct": false
+              },
+              {
                 "en": "watch him swing",
                 "zh": "看他揮棒",
-                "emoji": "👂",
+                "emoji": "🏆",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "neither do I",
+                "zh": "我也不",
+                "emoji": "⚾",
                 "correct": false
               }
             ]
@@ -9340,12 +9904,13 @@ window.CURRICULUM_DATA = [
             "pool": [
               "slam.",
               "the",
+              "algorithm",
               "We",
               "batter",
               "grand",
-              "watched",
-              "never",
               "a",
+              "lived",
+              "watched",
               "hit"
             ],
             "targetChinese": "我們看著打者擊出滿貫全壘打。",
@@ -9358,20 +9923,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "feel the ball hit (感覺球被擊中)",
+                "en": "feel the ball hit",
+                "zh": "感覺球被擊中",
+                "correct": false
+              },
+              {
+                "text": "neither do I (我也不)",
+                "en": "neither do I",
+                "zh": "我也不",
+                "correct": false
+              },
+              {
+                "text": "watch him swing (看他揮棒)",
+                "en": "watch him swing",
+                "zh": "看他揮棒",
+                "correct": false
+              },
+              {
                 "text": "hear them cheer (聽他們歡呼)",
+                "en": "hear them cheer",
+                "zh": "聽他們歡呼",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -9434,25 +10007,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "so do I",
                 "zh": "我也是",
-                "emoji": "💬",
+                "emoji": "🔬",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "watch him swing",
+                "zh": "看他揮棒",
+                "emoji": "📘",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "neither do I",
+                "zh": "我也不",
+                "emoji": "🌟",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "hear them cheer",
+                "zh": "聽他們歡呼",
+                "emoji": "🧭",
                 "correct": false
               }
             ]
@@ -9474,13 +10047,13 @@ window.CURRICULUM_DATA = [
             "pool": [
               "do",
               "I.",
-              "seldom",
-              "loves",
-              "never",
-              "and",
               "so",
-              "He",
-              "baseball,"
+              "and",
+              "ball",
+              "baseball,",
+              "loves",
+              "guided",
+              "He"
             ],
             "targetChinese": "他熱愛棒球，我也一樣。",
             "targetSentence": "He loves baseball, and so do I."
@@ -9492,20 +10065,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "hear them cheer (聽他們歡呼)",
+                "en": "hear them cheer",
+                "zh": "聽他們歡呼",
+                "correct": false
+              },
+              {
+                "text": "so do I (我也是)",
+                "en": "so do I",
+                "zh": "我也是",
+                "correct": false
+              },
+              {
+                "text": "watch him swing (看他揮棒)",
+                "en": "watch him swing",
+                "zh": "看他揮棒",
+                "correct": false
+              },
+              {
                 "text": "neither do I (我也不)",
+                "en": "neither do I",
+                "zh": "我也不",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -9566,28 +10147,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「Major League」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "World Series",
+                "zh": "世界大賽",
+                "emoji": "🛰️",
+                "correct": false
+              },
+              {
+                "en": "playoffs",
+                "zh": "季後賽",
+                "emoji": "⏳",
+                "correct": false
+              },
+              {
+                "en": "visual aids",
+                "zh": "視覺輔助圖表",
+                "emoji": "⚾",
+                "correct": false
+              },
+              {
                 "en": "Major League",
                 "zh": "大聯盟",
-                "emoji": "🏟️",
+                "emoji": "🏆",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -9606,15 +10187,15 @@ window.CURRICULUM_DATA = [
               "award."
             ],
             "pool": [
-              "Most",
+              "algorithm",
+              "watch",
               "award.",
-              "Valuable",
-              "He",
-              "Player",
+              "Most",
               "won",
+              "He",
+              "Valuable",
               "the",
-              "seldom",
-              "never"
+              "Player"
             ],
             "targetChinese": "他贏得了最有價值球員獎。",
             "targetSentence": "He won the Most Valuable Player award."
@@ -9626,20 +10207,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "backspin (後旋拉桿)",
+                "en": "backspin",
+                "zh": "後旋拉桿",
+                "correct": false
+              },
+              {
+                "text": "Major League (大聯盟)",
+                "en": "Major League",
+                "zh": "大聯盟",
+                "correct": false
+              },
+              {
+                "text": "algorithm (演算法)",
+                "en": "algorithm",
+                "zh": "演算法",
+                "correct": false
+              },
+              {
                 "text": "playoffs (季後賽)",
+                "en": "playoffs",
+                "zh": "季後賽",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -9700,28 +10289,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「astronaut」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "microgravity",
+                "zh": "微重力",
+                "emoji": "🧭",
+                "correct": false
+              },
+              {
+                "en": "volunteer",
+                "zh": "志工",
+                "emoji": "📘",
+                "correct": false
+              },
+              {
+                "en": "orbit",
+                "zh": "軌道運行",
+                "emoji": "🌟",
+                "correct": false
+              },
+              {
                 "en": "astronaut",
                 "zh": "太空人",
-                "emoji": "🛰️",
+                "emoji": "🔬",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -9739,14 +10328,14 @@ window.CURRICULUM_DATA = [
               "station."
             ],
             "pool": [
-              "Astronauts",
-              "seldom",
-              "space",
+              "lived",
               "experiments",
-              "in",
-              "never",
+              "invented",
+              "Astronauts",
               "station.",
-              "conduct"
+              "in",
+              "conduct",
+              "space"
             ],
             "targetChinese": "太空人在太空站進行實驗。",
             "targetSentence": "Astronauts conduct experiments in space station."
@@ -9758,19 +10347,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "curve (曲球)",
+                "en": "curve",
+                "zh": "曲球",
+                "correct": false
+              },
+              {
+                "text": "astronaut (太空人)",
+                "en": "astronaut",
+                "zh": "太空人",
+                "correct": false
+              },
+              {
                 "text": "orbit (軌道運行)",
+                "en": "orbit",
+                "zh": "軌道運行",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "since (自從...)",
+                "en": "since",
+                "zh": "自從...",
                 "correct": false
               }
             ]
@@ -9832,27 +10429,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「backspin」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "curve",
+                "zh": "曲球",
+                "emoji": "⏳",
+                "correct": false
+              },
+              {
+                "en": "precision",
+                "zh": "精密度",
+                "emoji": "🛰️",
+                "correct": false
+              },
+              {
                 "en": "backspin",
                 "zh": "後旋拉桿",
-                "emoji": "🎱",
+                "emoji": "🏆",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "invented",
+                "zh": "被發明",
+                "emoji": "⚾",
                 "correct": false
               }
             ]
@@ -9872,15 +10469,15 @@ window.CURRICULUM_DATA = [
               "control."
             ],
             "pool": [
-              "ball",
-              "Backspin",
+              "amazing",
               "control.",
-              "seldom",
-              "the",
-              "gives",
+              "since",
+              "World",
+              "ball",
               "cue",
-              "never",
-              "amazing"
+              "Backspin",
+              "the",
+              "gives"
             ],
             "targetChinese": "下桿後旋給予母球驚人的控制力。",
             "targetSentence": "Backspin gives the cue ball amazing control."
@@ -9892,19 +10489,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "taste (嚐起來)",
+                "en": "taste",
+                "zh": "嚐起來",
+                "correct": false
+              },
+              {
+                "text": "orbit (軌道運行)",
+                "en": "orbit",
+                "zh": "軌道運行",
+                "correct": false
+              },
+              {
                 "text": "curve (曲球)",
+                "en": "curve",
+                "zh": "曲球",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "backspin (後旋拉桿)",
+                "en": "backspin",
+                "zh": "後旋拉桿",
                 "correct": false
               }
             ]
@@ -9966,27 +10571,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「programming」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "algorithm",
+                "zh": "演算法",
+                "emoji": "🌟",
+                "correct": false
+              },
+              {
+                "en": "combination",
+                "zh": "組合進球",
+                "emoji": "📘",
+                "correct": false
+              },
+              {
                 "en": "programming",
                 "zh": "寫程式",
-                "emoji": "🤖",
+                "emoji": "🔬",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "sensor",
+                "zh": "感應器",
+                "emoji": "🧭",
                 "correct": false
               }
             ]
@@ -10006,13 +10611,13 @@ window.CURRICULUM_DATA = [
             ],
             "pool": [
               "coding",
-              "and",
+              "robotics",
+              "curve",
+              "League",
               "Students",
-              "learned",
+              "and",
               "algorithms.",
-              "never",
-              "seldom",
-              "robotics"
+              "learned"
             ],
             "targetChinese": "學生們學習了程式設計與機器人演算法。",
             "targetSentence": "Students learned coding and robotics algorithms."
@@ -10025,18 +10630,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "algorithm (演算法)",
+                "en": "algorithm",
+                "zh": "演算法",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "backspin (後旋拉桿)",
+                "en": "backspin",
+                "zh": "後旋拉桿",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "programming (寫程式)",
+                "en": "programming",
+                "zh": "寫程式",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "astronaut (太空人)",
+                "en": "astronaut",
+                "zh": "太空人",
                 "correct": false
               }
             ]
@@ -10098,28 +10711,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「global warming」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "space station",
+                "zh": "太空站",
+                "emoji": "⚾",
+                "correct": false
+              },
+              {
+                "en": "solar panel",
+                "zh": "太陽能板",
+                "emoji": "🛰️",
+                "correct": false
+              },
+              {
+                "en": "renewable",
+                "zh": "可再生的",
+                "emoji": "⏳",
+                "correct": false
+              },
+              {
                 "en": "global warming",
                 "zh": "全球暖化",
-                "emoji": "☀️",
+                "emoji": "🏆",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -10138,15 +10751,15 @@ window.CURRICULUM_DATA = [
               "nature."
             ],
             "pool": [
-              "We",
-              "energy",
               "nature.",
-              "never",
               "use",
-              "seldom",
-              "solar",
+              "orbit",
               "protect",
-              "to"
+              "World",
+              "to",
+              "energy",
+              "solar",
+              "We"
             ],
             "targetChinese": "我們使用太陽能來保護大自然。",
             "targetSentence": "We use solar energy to protect nature."
@@ -10159,18 +10772,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "renewable (可再生的)",
+                "en": "renewable",
+                "zh": "可再生的",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "backspin (後旋拉桿)",
+                "en": "backspin",
+                "zh": "後旋拉桿",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "global warming (全球暖化)",
+                "en": "global warming",
+                "zh": "全球暖化",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "precision (精密度)",
+                "en": "precision",
+                "zh": "精密度",
                 "correct": false
               }
             ]
@@ -10232,27 +10853,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「volunteer」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "astronaut",
+                "zh": "太空人",
+                "emoji": "📘",
+                "correct": false
+              },
+              {
+                "en": "charity",
+                "zh": "慈善",
+                "emoji": "🌟",
+                "correct": false
+              },
+              {
                 "en": "volunteer",
                 "zh": "志工",
-                "emoji": "🤝",
+                "emoji": "🔬",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "community",
+                "zh": "社區",
+                "emoji": "🧭",
                 "correct": false
               }
             ]
@@ -10272,15 +10893,15 @@ window.CURRICULUM_DATA = [
               "people."
             ],
             "pool": [
-              "spent",
-              "their",
-              "never",
               "weekend",
+              "their",
+              "spent",
+              "people.",
+              "programming",
+              "reduce",
               "helping",
-              "Volunteers",
               "elderly",
-              "seldom",
-              "people."
+              "Volunteers"
             ],
             "targetChinese": "志工們週末花時間幫助長輩。",
             "targetSentence": "Volunteers spent their weekend helping elderly people."
@@ -10293,18 +10914,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "charity (慈善)",
+                "en": "charity",
+                "zh": "慈善",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "written (被書寫)",
+                "en": "written",
+                "zh": "被書寫",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "notice (注意到)",
+                "en": "notice",
+                "zh": "注意到",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "volunteer (志工)",
+                "en": "volunteer",
+                "zh": "志工",
                 "correct": false
               }
             ]
@@ -10366,27 +10995,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「presentation」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "microgravity",
+                "zh": "微重力",
+                "emoji": "⚾",
+                "correct": false
+              },
+              {
+                "en": "introduction",
+                "zh": "引言",
+                "emoji": "⏳",
+                "correct": false
+              },
+              {
                 "en": "presentation",
                 "zh": "簡報演講",
-                "emoji": "🎤",
+                "emoji": "🏆",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "conclusion",
+                "zh": "結論",
+                "emoji": "🛰️",
                 "correct": false
               }
             ]
@@ -10406,15 +11035,15 @@ window.CURRICULUM_DATA = [
               "attention."
             ],
             "pool": [
-              "never",
+              "the",
               "grabs",
               "introduction",
               "audience",
-              "clear",
-              "the",
               "attention.",
-              "A",
-              "seldom"
+              "taste",
+              "has",
+              "clear",
+              "A"
             ],
             "targetChinese": "清晰的引言吸引聽眾的注意。",
             "targetSentence": "A clear introduction grabs the audience attention."
@@ -10426,19 +11055,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "combination (組合進球)",
+                "en": "combination",
+                "zh": "組合進球",
+                "correct": false
+              },
+              {
                 "text": "introduction (引言)",
+                "en": "introduction",
+                "zh": "引言",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "programming (寫程式)",
+                "en": "programming",
+                "zh": "寫程式",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "presentation (簡報演講)",
+                "en": "presentation",
+                "zh": "簡報演講",
                 "correct": false
               }
             ]
@@ -10500,28 +11137,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「have lived」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "visual aids",
+                "zh": "視覺輔助圖表",
+                "emoji": "📘",
+                "correct": false
+              },
+              {
+                "en": "was caught",
+                "zh": "被接住",
+                "emoji": "🌟",
+                "correct": false
+              },
+              {
+                "en": "Major League",
+                "zh": "大聯盟",
+                "emoji": "🧭",
+                "correct": false
+              },
+              {
                 "en": "have lived",
                 "zh": "住過",
-                "emoji": "👑",
+                "emoji": "🔬",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -10540,15 +11177,15 @@ window.CURRICULUM_DATA = [
               "Pacific."
             ],
             "pool": [
-              "pilot",
-              "across",
-              "Pacific.",
-              "The",
               "has",
-              "seldom",
-              "the",
               "flown",
-              "never"
+              "The",
+              "pilot",
+              "ball",
+              "for",
+              "Pacific.",
+              "across",
+              "the"
             ],
             "targetChinese": "這位飛行員已經飛越了太平洋。",
             "targetSentence": "The pilot has flown across the Pacific."
@@ -10561,18 +11198,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "was caught (被接住)",
+                "en": "was caught",
+                "zh": "被接住",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "have lived (住過)",
+                "en": "have lived",
+                "zh": "住過",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "solar panel (太陽能板)",
+                "en": "solar panel",
+                "zh": "太陽能板",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "visual aids (視覺輔助圖表)",
+                "en": "visual aids",
+                "zh": "視覺輔助圖表",
                 "correct": false
               }
             ]
@@ -10651,25 +11296,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "who hit the ball",
                 "zh": "擊球的那個人",
-                "emoji": "⚾",
+                "emoji": "👑",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "whose bat was signed",
+                "zh": "球棒被簽名的那位",
+                "emoji": "🦖",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "Do you know where",
+                "zh": "你知道在哪裡嗎",
+                "emoji": "📊",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "which broke the record",
+                "zh": "破紀錄的那架",
+                "emoji": "🏅",
                 "correct": false
               }
             ]
@@ -10692,17 +11337,18 @@ window.CURRICULUM_DATA = [
               "teammate."
             ],
             "pool": [
-              "hit",
-              "The",
               "who",
-              "never",
-              "my",
-              "the",
               "run",
-              "boy",
-              "teammate.",
               "home",
-              "is"
+              "my",
+              "chart",
+              "is",
+              "The",
+              "hit",
+              "determine",
+              "teammate.",
+              "the",
+              "boy"
             ],
             "targetChinese": "擊出全壘打的男孩是我的隊友。",
             "targetSentence": "The boy who hit the home run is my teammate."
@@ -10714,19 +11360,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "pay (人付款買物品)",
+                "en": "pay",
+                "zh": "人付款買物品",
+                "correct": false
+              },
+              {
                 "text": "whom (關係代名詞受格)",
+                "en": "whom",
+                "zh": "關係代名詞受格",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "who hit the ball (擊球的那個人)",
+                "en": "who hit the ball",
+                "zh": "擊球的那個人",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "clue (線索提示)",
+                "en": "clue",
+                "zh": "線索提示",
                 "correct": false
               }
             ]
@@ -10788,28 +11442,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「which broke the record」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "speed of sound",
+                "zh": "音速",
+                "emoji": "📚",
+                "correct": false
+              },
+              {
+                "en": "whose bat was signed",
+                "zh": "球棒被簽名的那位",
+                "emoji": "🎯",
+                "correct": false
+              },
+              {
+                "en": "who hit the ball",
+                "zh": "擊球的那個人",
+                "emoji": "💡",
+                "correct": false
+              },
+              {
                 "en": "which broke the record",
                 "zh": "破紀錄的那架",
-                "emoji": "✈️",
+                "emoji": "🔬",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -10830,16 +11484,17 @@ window.CURRICULUM_DATA = [
               "legendary."
             ],
             "pool": [
-              "which",
               "the",
-              "The",
               "broke",
-              "jet",
-              "legendary.",
-              "never",
-              "barrier",
+              "is",
+              "logical",
               "sound",
-              "is"
+              "barrier",
+              "jet",
+              "which",
+              "The",
+              "aviation",
+              "legendary."
             ],
             "targetChinese": "突破音障的噴射機具有傳奇色彩。",
             "targetSentence": "The jet which broke the sound barrier is legendary."
@@ -10851,19 +11506,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "hardship (逆境艱難)",
+                "en": "hardship",
+                "zh": "逆境艱難",
+                "correct": false
+              },
+              {
+                "text": "overcome (克服克服)",
+                "en": "overcome",
+                "zh": "克服克服",
+                "correct": false
+              },
+              {
                 "text": "aircraft (飛行器)",
+                "en": "aircraft",
+                "zh": "飛行器",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "which broke the record (破紀錄的那架)",
+                "en": "which broke the record",
+                "zh": "破紀錄的那架",
                 "correct": false
               }
             ]
@@ -10925,27 +11588,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「whose bat was signed」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "Do you know where",
+                "zh": "你知道在哪裡嗎",
+                "emoji": "🏅",
+                "correct": false
+              },
+              {
                 "en": "whose bat was signed",
                 "zh": "球棒被簽名的那位",
-                "emoji": "🏷️",
+                "emoji": "👑",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "who hit the ball",
+                "zh": "擊球的那個人",
+                "emoji": "🦖",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "which broke the record",
+                "zh": "破紀錄的那架",
+                "emoji": "📊",
                 "correct": false
               }
             ]
@@ -10966,15 +11629,16 @@ window.CURRICULUM_DATA = [
               "smiled."
             ],
             "pool": [
-              "first",
-              "smiled.",
-              "whose",
-              "never",
-              "The",
+              "girl",
               "prize",
               "won",
-              "drone",
-              "girl"
+              "whose",
+              "The",
+              "innovative",
+              "first",
+              "smiled.",
+              "record",
+              "drone"
             ],
             "targetChinese": "那架無人機榮獲首獎的女孩露出了微笑。",
             "targetSentence": "The girl whose drone won first prize smiled."
@@ -10986,19 +11650,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "determine (決定)",
+                "en": "determine",
+                "zh": "決定",
+                "correct": false
+              },
+              {
                 "text": "autograph (親筆簽名)",
+                "en": "autograph",
+                "zh": "親筆簽名",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "evolution (演化)",
+                "en": "evolution",
+                "zh": "演化",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "whose bat was signed (球棒被簽名的那位)",
+                "en": "whose bat was signed",
+                "zh": "球棒被簽名的那位",
                 "correct": false
               }
             ]
@@ -11060,27 +11732,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「believe that」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "in addition",
+                "zh": "除此之外",
+                "emoji": "💡",
+                "correct": false
+              },
+              {
+                "en": "fact that",
+                "zh": "事實是...",
+                "emoji": "📚",
+                "correct": false
+              },
+              {
                 "en": "believe that",
                 "zh": "深信...",
-                "emoji": "💡",
+                "emoji": "🔬",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "perseverance",
+                "zh": "毅力",
+                "emoji": "🎯",
                 "correct": false
               }
             ]
@@ -11101,15 +11773,16 @@ window.CURRICULUM_DATA = [
               "achievement."
             ],
             "pool": [
-              "leads",
-              "great",
+              "give",
               "perseverance",
-              "never",
+              "great",
+              "believe",
+              "achievement.",
               "that",
               "I",
-              "achievement.",
-              "believe",
-              "to"
+              "to",
+              "take",
+              "leads"
             ],
             "targetChinese": "我相信堅持不懈會帶來偉大的成就。",
             "targetSentence": "I believe that perseverance leads to great achievement."
@@ -11121,19 +11794,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "believe that (深信...)",
+                "en": "believe that",
+                "zh": "深信...",
+                "correct": false
+              },
+              {
                 "text": "fact that (事實是...)",
+                "en": "fact that",
+                "zh": "事實是...",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "in addition (除此之外)",
+                "en": "in addition",
+                "zh": "除此之外",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "bar chart (長條圖)",
+                "en": "bar chart",
+                "zh": "長條圖",
                 "correct": false
               }
             ]
@@ -11195,28 +11876,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「Do you know where」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "tell me what",
+                "zh": "告訴我什麼",
+                "emoji": "📊",
+                "correct": false
+              },
+              {
+                "en": "who hit the ball",
+                "zh": "擊球的那個人",
+                "emoji": "🦖",
+                "correct": false
+              },
+              {
+                "en": "whose bat was signed",
+                "zh": "球棒被簽名的那位",
+                "emoji": "🏅",
+                "correct": false
+              },
+              {
                 "en": "Do you know where",
                 "zh": "你知道在哪裡嗎",
-                "emoji": "❓",
+                "emoji": "👑",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -11236,14 +11917,15 @@ window.CURRICULUM_DATA = [
               "located?"
             ],
             "pool": [
-              "never",
               "know",
-              "where",
               "you",
-              "Do",
-              "the",
-              "airport",
+              "where",
+              "cost",
               "is",
+              "doubt",
+              "Do",
+              "airport",
+              "the",
               "located?"
             ],
             "targetChinese": "你知道機場位於何處嗎？",
@@ -11256,20 +11938,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "Do you know where (你知道在哪裡嗎)",
+                "en": "Do you know where",
+                "zh": "你知道在哪裡嗎",
+                "correct": false
+              },
+              {
+                "text": "speed of sound (音速)",
+                "en": "speed of sound",
+                "zh": "音速",
+                "correct": false
+              },
+              {
+                "text": "whether or not (是否)",
+                "en": "whether or not",
+                "zh": "是否",
+                "correct": false
+              },
+              {
                 "text": "tell me what (告訴我什麼)",
+                "en": "tell me what",
+                "zh": "告訴我什麼",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -11332,25 +12022,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "whether or not",
                 "zh": "是否",
-                "emoji": "⚖️",
+                "emoji": "🔬",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "speed of sound",
+                "zh": "音速",
+                "emoji": "📚",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "give someone something",
+                "zh": "給某人某物",
+                "emoji": "💡",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "tell me what",
+                "zh": "告訴我什麼",
+                "emoji": "🎯",
                 "correct": false
               }
             ]
@@ -11371,15 +12061,16 @@ window.CURRICULUM_DATA = [
               "continue."
             ],
             "pool": [
+              "whether",
               "continue.",
-              "wonder",
-              "will",
-              "baseball",
-              "the",
               "match",
-              "never",
+              "the",
+              "baseball",
+              "will",
               "I",
-              "whether"
+              "feathers",
+              "whose",
+              "wonder"
             ],
             "targetChinese": "我想知道棒球賽是否會繼續進行。",
             "targetSentence": "I wonder whether the baseball match will continue."
@@ -11391,19 +12082,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "whether or not (是否)",
+                "en": "whether or not",
+                "zh": "是否",
+                "correct": false
+              },
+              {
                 "text": "doubt (懷疑)",
+                "en": "doubt",
+                "zh": "懷疑",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "spend (人花時間金錢)",
+                "en": "spend",
+                "zh": "人花時間金錢",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "however (然而)",
+                "en": "however",
+                "zh": "然而",
                 "correct": false
               }
             ]
@@ -11465,27 +12164,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「cost」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "spend",
+                "zh": "人花時間金錢",
+                "emoji": "📊",
+                "correct": false
+              },
+              {
+                "en": "clue",
+                "zh": "線索提示",
+                "emoji": "🏅",
+                "correct": false
+              },
+              {
                 "en": "cost",
                 "zh": "物品花費金錢",
-                "emoji": "💰",
+                "emoji": "👑",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "take",
+                "zh": "事情花費時間",
+                "emoji": "🦖",
                 "correct": false
               }
             ]
@@ -11506,15 +12205,16 @@ window.CURRICULUM_DATA = [
               "project."
             ],
             "pool": [
-              "project.",
               "finish",
               "two",
-              "to",
+              "bar",
               "It",
+              "project.",
+              "the",
+              "fact",
               "took",
-              "never",
-              "hours",
-              "the"
+              "to",
+              "hours"
             ],
             "targetChinese": "花了兩個小時才完成這個專案。",
             "targetSentence": "It took two hours to finish the project."
@@ -11526,19 +12226,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "whom (關係代名詞受格)",
+                "en": "whom",
+                "zh": "關係代名詞受格",
+                "correct": false
+              },
+              {
+                "text": "cost (物品花費金錢)",
+                "en": "cost",
+                "zh": "物品花費金錢",
+                "correct": false
+              },
+              {
                 "text": "spend (人花時間金錢)",
+                "en": "spend",
+                "zh": "人花時間金錢",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "doubt (懷疑)",
+                "en": "doubt",
+                "zh": "懷疑",
                 "correct": false
               }
             ]
@@ -11600,28 +12308,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「give someone something」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "send to",
+                "zh": "寄給",
+                "emoji": "📚",
+                "correct": false
+              },
+              {
+                "en": "buy for",
+                "zh": "為...購買",
+                "emoji": "🎯",
+                "correct": false
+              },
+              {
+                "en": "pass to",
+                "zh": "傳球給",
+                "emoji": "💡",
+                "correct": false
+              },
+              {
                 "en": "give someone something",
                 "zh": "給某人某物",
-                "emoji": "🎁",
+                "emoji": "🔬",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -11641,15 +12349,16 @@ window.CURRICULUM_DATA = [
               "coach."
             ],
             "pool": [
-              "the",
-              "never",
-              "coach.",
+              "bar",
               "The",
-              "baseball",
+              "location",
+              "pitcher",
               "the",
-              "gave",
+              "baseball",
               "to",
-              "pitcher"
+              "gave",
+              "the",
+              "coach."
             ],
             "targetChinese": "投手把棒球遞給了教練。",
             "targetSentence": "The pitcher gave the baseball to the coach."
@@ -11661,20 +12370,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "bar chart (長條圖)",
+                "en": "bar chart",
+                "zh": "長條圖",
+                "correct": false
+              },
+              {
+                "text": "fact that (事實是...)",
+                "en": "fact that",
+                "zh": "事實是...",
+                "correct": false
+              },
+              {
+                "text": "give someone something (給某人某物)",
+                "en": "give someone something",
+                "zh": "給某人某物",
+                "correct": false
+              },
+              {
                 "text": "send to (寄給)",
+                "en": "send to",
+                "zh": "寄給",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -11735,27 +12452,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「biography」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "determine",
+                "zh": "決定",
+                "emoji": "🏅",
+                "correct": false
+              },
+              {
                 "en": "biography",
                 "zh": "傳記",
-                "emoji": "📖",
+                "emoji": "👑",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "hardship",
+                "zh": "逆境艱難",
+                "emoji": "📊",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "overcome",
+                "zh": "克服克服",
+                "emoji": "🦖",
                 "correct": false
               }
             ]
@@ -11776,15 +12493,16 @@ window.CURRICULUM_DATA = [
               "athletes."
             ],
             "pool": [
-              "millions",
               "His",
               "remarkable",
-              "never",
               "story",
-              "athletes.",
               "young",
+              "whose",
+              "athletes.",
+              "hit",
               "inspired",
-              "of"
+              "of",
+              "millions"
             ],
             "targetChinese": "他的精彩故事激勵了數百萬名年輕運動員。",
             "targetSentence": "His remarkable story inspired millions of young athletes."
@@ -11796,20 +12514,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "biography (傳記)",
+                "en": "biography",
+                "zh": "傳記",
+                "correct": false
+              },
+              {
+                "text": "teammate (隊友)",
+                "en": "teammate",
+                "zh": "隊友",
+                "correct": false
+              },
+              {
+                "text": "accurate (精準的)",
+                "en": "accurate",
+                "zh": "精準的",
+                "correct": false
+              },
+              {
                 "text": "hardship (逆境艱難)",
+                "en": "hardship",
+                "zh": "逆境艱難",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -11870,28 +12596,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「aviation weather」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "bar chart",
+                "zh": "長條圖",
+                "emoji": "🎯",
+                "correct": false
+              },
+              {
+                "en": "augmented reality",
+                "zh": "擴增實境",
+                "emoji": "💡",
+                "correct": false
+              },
+              {
+                "en": "telemetry",
+                "zh": "遙測數據",
+                "emoji": "📚",
+                "correct": false
+              },
+              {
                 "en": "aviation weather",
                 "zh": "航空氣象",
-                "emoji": "📊",
+                "emoji": "🔬",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -11911,14 +12637,14 @@ window.CURRICULUM_DATA = [
             ],
             "pool": [
               "The",
-              "graph",
-              "wind",
-              "during",
-              "never",
-              "speed",
               "flight.",
+              "clue",
+              "wind",
+              "speed",
+              "graph",
+              "during",
               "illustrates",
-              "seldom"
+              "give"
             ],
             "targetChinese": "這張圖表說明了飛行期間的風速。",
             "targetSentence": "The graph illustrates wind speed during flight."
@@ -11931,18 +12657,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "telemetry (遙測數據)",
+                "en": "telemetry",
+                "zh": "遙測數據",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "aviation weather (航空氣象)",
+                "en": "aviation weather",
+                "zh": "航空氣象",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "evolution (演化)",
+                "en": "evolution",
+                "zh": "演化",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "autograph (親筆簽名)",
+                "en": "autograph",
+                "zh": "親筆簽名",
                 "correct": false
               }
             ]
@@ -12004,27 +12738,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「augmented reality」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "logical transition",
+                "zh": "邏輯承轉",
+                "emoji": "🏅",
+                "correct": false
+              },
+              {
+                "en": "simulation",
+                "zh": "模擬",
+                "emoji": "📊",
+                "correct": false
+              },
+              {
                 "en": "augmented reality",
                 "zh": "擴增實境",
-                "emoji": "👓",
+                "emoji": "👑",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "trajectory",
+                "zh": "運動軌跡",
+                "emoji": "🦖",
                 "correct": false
               }
             ]
@@ -12048,16 +12782,17 @@ window.CURRICULUM_DATA = [
             ],
             "pool": [
               "billiard",
-              "in",
-              "the",
-              "glasses",
-              "show",
               "time.",
+              "hardship",
+              "in",
+              "show",
               "trajectory",
-              "AR",
+              "ball",
               "real",
-              "never",
-              "ball"
+              "the",
+              "AR",
+              "therefore",
+              "glasses"
             ],
             "targetChinese": "擴增實境眼鏡即時顯示撞球行進軌跡。",
             "targetSentence": "AR glasses show the billiard ball trajectory in real time."
@@ -12069,20 +12804,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "innovation (創新技術)",
+                "en": "innovation",
+                "zh": "創新技術",
+                "correct": false
+              },
+              {
+                "text": "augmented reality (擴增實境)",
+                "en": "augmented reality",
+                "zh": "擴增實境",
+                "correct": false
+              },
+              {
+                "text": "therefore (因此)",
+                "en": "therefore",
+                "zh": "因此",
+                "correct": false
+              },
+              {
                 "text": "simulation (模擬)",
+                "en": "simulation",
+                "zh": "模擬",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -12143,28 +12886,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「paleontology」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "feathers",
+                "zh": "羽毛",
+                "emoji": "🎯",
+                "correct": false
+              },
+              {
+                "en": "evolution",
+                "zh": "演化",
+                "emoji": "📚",
+                "correct": false
+              },
+              {
+                "en": "furthermore",
+                "zh": "此外進一步",
+                "emoji": "💡",
+                "correct": false
+              },
+              {
                 "en": "paleontology",
                 "zh": "古生物學",
-                "emoji": "🦖",
+                "emoji": "🔬",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -12184,15 +12927,16 @@ window.CURRICULUM_DATA = [
               "dinosaurs."
             ],
             "pool": [
-              "dinosaurs.",
-              "Fossils",
+              "pay",
               "from",
-              "that",
-              "feathered",
-              "never",
               "evolved",
+              "feathered",
+              "Fossils",
               "birds",
-              "prove"
+              "prove",
+              "dinosaurs.",
+              "competition",
+              "that"
             ],
             "targetChinese": "化石證實鳥類是由帶羽毛的恐龍演化而來的。",
             "targetSentence": "Fossils prove that birds evolved from feathered dinosaurs."
@@ -12205,18 +12949,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "evolution (演化)",
+                "en": "evolution",
+                "zh": "演化",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "legendary (傳奇的)",
+                "en": "legendary",
+                "zh": "傳奇的",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "determine (決定)",
+                "en": "determine",
+                "zh": "決定",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "paleontology (古生物學)",
+                "en": "paleontology",
+                "zh": "古生物學",
                 "correct": false
               }
             ]
@@ -12278,28 +13030,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「competition」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "paleontology",
+                "zh": "古生物學",
+                "emoji": "🏅",
+                "correct": false
+              },
+              {
+                "en": "autonomous",
+                "zh": "自主全自動",
+                "emoji": "📊",
+                "correct": false
+              },
+              {
+                "en": "innovation",
+                "zh": "創新技術",
+                "emoji": "🦖",
+                "correct": false
+              },
+              {
                 "en": "competition",
                 "zh": "競賽",
-                "emoji": "🤖",
+                "emoji": "👑",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -12318,14 +13070,14 @@ window.CURRICULUM_DATA = [
               "smoothly."
             ],
             "pool": [
-              "the",
-              "The",
-              "seldom",
-              "never",
-              "smoothly.",
-              "navigated",
               "autonomous",
+              "context",
+              "navigated",
+              "The",
+              "telemetry",
+              "the",
               "maze",
+              "smoothly.",
               "robot"
             ],
             "targetChinese": "自主機器人順暢地走出了迷宮。",
@@ -12339,18 +13091,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "autonomous (自主全自動)",
+                "en": "autonomous",
+                "zh": "自主全自動",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "determine (決定)",
+                "en": "determine",
+                "zh": "決定",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "percentage (百分比)",
+                "en": "percentage",
+                "zh": "百分比",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "competition (競賽)",
+                "en": "competition",
+                "zh": "競賽",
                 "correct": false
               }
             ]
@@ -12412,27 +13172,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「however」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "furthermore",
+                "zh": "此外進一步",
+                "emoji": "📚",
+                "correct": false
+              },
+              {
                 "en": "however",
                 "zh": "然而",
-                "emoji": "🔗",
+                "emoji": "🔬",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "therefore",
+                "zh": "因此",
+                "emoji": "🎯",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "success",
+                "zh": "成功",
+                "emoji": "💡",
                 "correct": false
               }
             ]
@@ -12454,16 +13214,17 @@ window.CURRICULUM_DATA = [
               "up."
             ],
             "pool": [
-              "they",
-              "The",
+              "who",
               "tough;",
-              "up.",
               "game",
+              "they",
+              "never",
               "was",
-              "seldom",
+              "not",
+              "The",
               "gave",
-              "however,",
-              "never"
+              "up.",
+              "however,"
             ],
             "targetChinese": "比賽很艱難，然而他們從未放棄。",
             "targetSentence": "The game was tough; however, they never gave up."
@@ -12475,19 +13236,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "however (然而)",
+                "en": "however",
+                "zh": "然而",
+                "correct": false
+              },
+              {
                 "text": "furthermore (此外進一步)",
+                "en": "furthermore",
+                "zh": "此外進一步",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "competition (競賽)",
+                "en": "competition",
+                "zh": "競賽",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "autonomous (自主全自動)",
+                "en": "autonomous",
+                "zh": "自主全自動",
                 "correct": false
               }
             ]
@@ -12549,28 +13318,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「context」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "hardship",
+                "zh": "逆境艱難",
+                "emoji": "🏅",
+                "correct": false
+              },
+              {
+                "en": "logical transition",
+                "zh": "邏輯承轉",
+                "emoji": "📊",
+                "correct": false
+              },
+              {
+                "en": "clue",
+                "zh": "線索提示",
+                "emoji": "🦖",
+                "correct": false
+              },
+              {
                 "en": "context",
                 "zh": "上下文語境",
-                "emoji": "📝",
+                "emoji": "👑",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -12591,16 +13360,17 @@ window.CURRICULUM_DATA = [
               "answer."
             ],
             "pool": [
-              "correct",
+              "find",
               "the",
               "context",
-              "carefully",
-              "find",
-              "never",
-              "Read",
-              "the",
+              "aviation",
               "to",
-              "answer."
+              "answer.",
+              "the",
+              "what",
+              "Read",
+              "carefully",
+              "correct"
             ],
             "targetChinese": "仔細閱讀前後文以找出正確答案。",
             "targetSentence": "Read the context carefully to find the correct answer."
@@ -12613,18 +13383,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "logical transition (邏輯承轉)",
+                "en": "logical transition",
+                "zh": "邏輯承轉",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "context (上下文語境)",
+                "en": "context",
+                "zh": "上下文語境",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "aviation weather (航空氣象)",
+                "en": "aviation weather",
+                "zh": "航空氣象",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "augmented reality (擴增實境)",
+                "en": "augmented reality",
+                "zh": "擴增實境",
                 "correct": false
               }
             ]
@@ -12686,27 +13464,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「who hit the ball」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "which broke the record",
+                "zh": "破紀錄者",
+                "emoji": "📚",
+                "correct": false
+              },
+              {
+                "en": "whose bat was signed",
+                "zh": "球棒被簽名的那位",
+                "emoji": "💡",
+                "correct": false
+              },
+              {
                 "en": "who hit the ball",
                 "zh": "擊球者",
-                "emoji": "👑",
+                "emoji": "🔬",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "Do you know where",
+                "zh": "你知道在哪裡嗎",
+                "emoji": "🎯",
                 "correct": false
               }
             ]
@@ -12727,15 +13505,16 @@ window.CURRICULUM_DATA = [
               "success."
             ],
             "pool": [
-              "great",
-              "success.",
-              "who",
               "student",
-              "will",
-              "never",
+              "who",
+              "innovative",
+              "great",
               "achieve",
               "The",
-              "perseveres"
+              "success.",
+              "perseveres",
+              "chart",
+              "will"
             ],
             "targetChinese": "堅持不懈的學生將會獲得巨大成功。",
             "targetSentence": "The student who perseveres will achieve great success."
@@ -12747,19 +13526,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "who hit the ball (擊球者)",
+                "en": "who hit the ball",
+                "zh": "擊球者",
+                "correct": false
+              },
+              {
                 "text": "which broke the record (破紀錄者)",
+                "en": "which broke the record",
+                "zh": "破紀錄者",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "Do you know where (你知道在哪裡嗎)",
+                "en": "Do you know where",
+                "zh": "你知道在哪裡嗎",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "whose bat was signed (球棒被簽名的那位)",
+                "en": "whose bat was signed",
+                "zh": "球棒被簽名的那位",
                 "correct": false
               }
             ]
@@ -12836,27 +13623,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「crucial」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "perspective",
+                "zh": "觀點角度",
+                "emoji": "✈️",
+                "correct": false
+              },
+              {
+                "en": "emphasize",
+                "zh": "強調",
+                "emoji": "📈",
+                "correct": false
+              },
+              {
                 "en": "crucial",
                 "zh": "關鍵極重要的",
-                "emoji": "📚",
+                "emoji": "🚀",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "empathy",
+                "zh": "同理心",
+                "emoji": "⚾",
                 "correct": false
               }
             ]
@@ -12878,14 +13665,15 @@ window.CURRICULUM_DATA = [
             ],
             "pool": [
               "critical",
-              "Developing",
-              "is",
+              "need",
+              "wellbeing",
               "high",
               "school.",
-              "for",
-              "frequently",
+              "is",
+              "thinking",
               "crucial",
-              "thinking"
+              "Developing",
+              "for"
             ],
             "targetChinese": "培養批判性思維對高中生至關重要。",
             "targetSentence": "Developing critical thinking is crucial for high school."
@@ -12897,20 +13685,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "crucial (關鍵極重要的)",
+                "en": "crucial",
+                "zh": "關鍵極重要的",
+                "correct": false
+              },
+              {
+                "text": "diplomacy (外交禮儀)",
+                "en": "diplomacy",
+                "zh": "外交禮儀",
+                "correct": false
+              },
+              {
+                "text": "exhausted (筋疲力竭的)",
+                "en": "exhausted",
+                "zh": "筋疲力竭的",
+                "correct": false
+              },
+              {
                 "text": "emphasize (強調)",
+                "en": "emphasize",
+                "zh": "強調",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -12973,25 +13769,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "fascinating",
                 "zh": "迷人的",
-                "emoji": "🎭",
+                "emoji": "🔬",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "exhausted",
+                "zh": "筋疲力竭的",
+                "emoji": "🧠",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "approaching",
+                "zh": "接近中",
+                "emoji": "💡",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "thrilled",
+                "zh": "興奮無比的",
+                "emoji": "🏛️",
                 "correct": false
               }
             ]
@@ -13013,16 +13809,17 @@ window.CURRICULUM_DATA = [
               "toes."
             ],
             "pool": [
-              "The",
-              "frequently",
-              "game",
-              "spectators",
               "baseball",
+              "game",
+              "Over",
+              "kept",
+              "most",
               "thrilling",
-              "on",
               "their",
+              "on",
+              "The",
               "toes.",
-              "kept"
+              "spectators"
             ],
             "targetChinese": "這場驚心動魄的棒球賽讓觀眾們屏息凝神。",
             "targetSentence": "The thrilling baseball game kept spectators on their toes."
@@ -13034,20 +13831,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "fascinating (迷人的)",
+                "en": "fascinating",
+                "zh": "迷人的",
+                "correct": false
+              },
+              {
+                "text": "inference (推論判斷)",
+                "en": "inference",
+                "zh": "推論判斷",
+                "correct": false
+              },
+              {
+                "text": "diplomacy (外交禮儀)",
+                "en": "diplomacy",
+                "zh": "外交禮儀",
+                "correct": false
+              },
+              {
                 "text": "exhausted (筋疲力竭的)",
+                "en": "exhausted",
+                "zh": "筋疲力竭的",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -13110,25 +13915,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "Seeing the pitch",
                 "zh": "看見來球之際",
-                "emoji": "⚡",
+                "emoji": "🚀",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "hearing the roar",
+                "zh": "聽見吼聲",
+                "emoji": "📈",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "would rather than",
+                "zh": "寧願...也不願...",
+                "emoji": "⚾",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "what he achieved",
+                "zh": "他所達成的成就",
+                "emoji": "✈️",
                 "correct": false
               }
             ]
@@ -13151,17 +13956,18 @@ window.CURRICULUM_DATA = [
               "power."
             ],
             "pool": [
-              "pitch,",
-              "swung",
+              "the",
               "Seeing",
-              "with",
-              "he",
-              "the",
-              "the",
+              "surprising",
               "fast",
+              "with",
+              "they",
+              "power.",
               "bat",
-              "frequently",
-              "power."
+              "the",
+              "swung",
+              "pitch,",
+              "he"
             ],
             "targetChinese": "看見快速球飛來，他使盡全力揮棒。",
             "targetSentence": "Seeing the fast pitch, he swung the bat with power."
@@ -13174,18 +13980,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "hearing the roar (聽見吼聲)",
+                "en": "hearing the roar",
+                "zh": "聽見吼聲",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "What matters most (最重要的事情)",
+                "en": "What matters most",
+                "zh": "最重要的事情",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "Seeing the pitch (看見來球之際)",
+                "en": "Seeing the pitch",
+                "zh": "看見來球之際",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "what he achieved (他所達成的成就)",
+                "en": "what he achieved",
+                "zh": "他所達成的成就",
                 "correct": false
               }
             ]
@@ -13247,27 +14061,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「Down flew the jet」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "Away ran",
+                "zh": "跑遠了",
+                "emoji": "💡",
+                "correct": false
+              },
+              {
                 "en": "Down flew the jet",
                 "zh": "噴射機俯衝而下",
-                "emoji": "✈️",
+                "emoji": "🔬",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "Here comes",
+                "zh": "來了...",
+                "emoji": "🧠",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "Over the wall went",
+                "zh": "飛越圍牆而去",
+                "emoji": "🏛️",
                 "correct": false
               }
             ]
@@ -13289,16 +14103,17 @@ window.CURRICULUM_DATA = [
               "run."
             ],
             "pool": [
-              "the",
-              "frequently",
+              "de-extinction",
               "flew",
               "the",
-              "historic",
               "run.",
-              "Over",
               "outfield",
+              "Over",
+              "comes",
+              "wall",
               "home",
-              "wall"
+              "historic",
+              "the"
             ],
             "targetChinese": "那記歷史性的全壘打飛越了外野全壘打牆。",
             "targetSentence": "Over the outfield wall flew the historic home run."
@@ -13310,20 +14125,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "stop talking (停止講話)",
+                "en": "stop talking",
+                "zh": "停止講話",
+                "correct": false
+              },
+              {
+                "text": "remember doing (記得做過)",
+                "en": "remember doing",
+                "zh": "記得做過",
+                "correct": false
+              },
+              {
+                "text": "Down flew the jet (噴射機俯衝而下)",
+                "en": "Down flew the jet",
+                "zh": "噴射機俯衝而下",
+                "correct": false
+              },
+              {
                 "text": "Here comes (來了...)",
+                "en": "Here comes",
+                "zh": "來了...",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -13384,27 +14207,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「Never have I seen」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "Seldom do they",
+                "zh": "他們極少...",
+                "emoji": "📈",
+                "correct": false
+              },
+              {
+                "en": "Hardly had I",
+                "zh": "我剛...",
+                "emoji": "⚾",
+                "correct": false
+              },
+              {
                 "en": "Never have I seen",
                 "zh": "我從未見過",
-                "emoji": "⛔",
+                "emoji": "🚀",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "Rarely does he",
+                "zh": "他很少...",
+                "emoji": "✈️",
                 "correct": false
               }
             ]
@@ -13426,16 +14249,17 @@ window.CURRICULUM_DATA = [
               "feat."
             ],
             "pool": [
-              "extraordinary",
-              "feat.",
               "have",
-              "athletic",
-              "Never",
-              "such",
-              "an",
-              "I",
+              "on-base",
               "witnessed",
-              "frequently"
+              "Never",
+              "an",
+              "athletic",
+              "what",
+              "extraordinary",
+              "I",
+              "such",
+              "feat."
             ],
             "targetChinese": "我從未見過如此非凡的體育壯舉。",
             "targetSentence": "Never have I witnessed such an extraordinary athletic feat."
@@ -13447,19 +14271,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "Rarely does he (他很少...)",
+                "en": "Rarely does he",
+                "zh": "他很少...",
+                "correct": false
+              },
+              {
+                "text": "Never have I seen (我從未見過)",
+                "en": "Never have I seen",
+                "zh": "我從未見過",
+                "correct": false
+              },
+              {
                 "text": "Seldom do they (他們極少...)",
+                "en": "Seldom do they",
+                "zh": "他們極少...",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "Hardly had I (我剛...)",
+                "en": "Hardly had I",
+                "zh": "我剛...",
                 "correct": false
               }
             ]
@@ -13523,25 +14355,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "remember to do",
                 "zh": "記得去做",
-                "emoji": "⚖️",
+                "emoji": "🔬",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "remember doing",
+                "zh": "記得做過",
+                "emoji": "🧠",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "stop talking",
+                "zh": "停止講話",
+                "emoji": "💡",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "stop to talk",
+                "zh": "停下來去講話",
+                "emoji": "🏛️",
                 "correct": false
               }
             ]
@@ -13562,15 +14394,16 @@ window.CURRICULUM_DATA = [
               "cycling."
             ],
             "pool": [
-              "to",
-              "protective",
-              "frequently",
-              "before",
-              "helmet",
               "cycling.",
-              "your",
+              "to",
               "wear",
-              "Remember"
+              "helmet",
+              "vector",
+              "Remember",
+              "before",
+              "percentage",
+              "protective",
+              "your"
             ],
             "targetChinese": "騎自行車前請務必戴上安全帽。",
             "targetSentence": "Remember to wear your protective helmet before cycling."
@@ -13582,19 +14415,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "angular momentum (角動量)",
+                "en": "angular momentum",
+                "zh": "角動量",
+                "correct": false
+              },
+              {
                 "text": "remember doing (記得做過)",
+                "en": "remember doing",
+                "zh": "記得做過",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "remember to do (記得去做)",
+                "en": "remember to do",
+                "zh": "記得去做",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "attention span (注意力持續時間)",
+                "en": "attention span",
+                "zh": "注意力持續時間",
                 "correct": false
               }
             ]
@@ -13656,28 +14497,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「What matters most」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "what they need",
+                "zh": "他們所需要的",
+                "emoji": "✈️",
+                "correct": false
+              },
+              {
+                "en": "would rather than",
+                "zh": "寧願...也不願...",
+                "emoji": "⚾",
+                "correct": false
+              },
+              {
+                "en": "what he achieved",
+                "zh": "他所達成的成就",
+                "emoji": "📈",
+                "correct": false
+              },
+              {
                 "en": "What matters most",
                 "zh": "最重要的事情",
-                "emoji": "💡",
-                "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
                 "emoji": "🚀",
-                "correct": false
+                "correct": true
               }
             ]
           },
@@ -13697,15 +14538,16 @@ window.CURRICULUM_DATA = [
               "sportsmanship."
             ],
             "pool": [
+              "What",
+              "genuine",
+              "is",
+              "on-base",
               "most",
+              "prefer",
+              "matters",
               "sportsmanship.",
               "in",
-              "frequently",
-              "sports",
-              "is",
-              "genuine",
-              "What",
-              "matters"
+              "sports"
             ],
             "targetChinese": "體育運動中最重要的莫過於真正的運動家精神。",
             "targetSentence": "What matters most in sports is genuine sportsmanship."
@@ -13717,19 +14559,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "what they need (他們所需要的)",
+                "en": "what they need",
+                "zh": "他們所需要的",
+                "correct": false
+              },
+              {
                 "text": "what he achieved (他所達成的成就)",
+                "en": "what he achieved",
+                "zh": "他所達成的成就",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "What matters most (最重要的事情)",
+                "en": "What matters most",
+                "zh": "最重要的事情",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "Seeing the pitch (看見來球之際)",
+                "en": "Seeing the pitch",
+                "zh": "看見來球之際",
                 "correct": false
               }
             ]
@@ -13791,27 +14641,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「prefer playing to watching」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "would rather than",
+                "zh": "寧願...也不願...",
+                "emoji": "🧠",
+                "correct": false
+              },
+              {
                 "en": "prefer playing to watching",
                 "zh": "喜歡玩勝過看",
-                "emoji": "🎯",
+                "emoji": "🔬",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "Down flew the jet",
+                "zh": "噴射機俯衝而下",
+                "emoji": "💡",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "Over the wall went",
+                "zh": "飛越圍牆而去",
+                "emoji": "🏛️",
                 "correct": false
               }
             ]
@@ -13832,15 +14682,16 @@ window.CURRICULUM_DATA = [
               "television."
             ],
             "pool": [
-              "play",
-              "watch",
-              "than",
               "rather",
+              "than",
               "television.",
-              "frequently",
-              "would",
+              "I",
               "baseball",
-              "I"
+              "watch",
+              "approaching",
+              "de-extinction",
+              "play",
+              "would"
             ],
             "targetChinese": "我寧願去打棒球也不想看電視。",
             "targetSentence": "I would rather play baseball than watch television."
@@ -13853,18 +14704,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "would rather than (寧願...也不願...)",
+                "en": "would rather than",
+                "zh": "寧願...也不願...",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "Seeing the pitch (看見來球之際)",
+                "en": "Seeing the pitch",
+                "zh": "看見來球之際",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "prefer playing to watching (喜歡玩勝過看)",
+                "en": "prefer playing to watching",
+                "zh": "喜歡玩勝過看",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "What matters most (最重要的事情)",
+                "en": "What matters most",
+                "zh": "最重要的事情",
                 "correct": false
               }
             ]
@@ -13928,25 +14787,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "sabermetrics",
                 "zh": "棒球賽事統計分析",
-                "emoji": "⚾",
+                "emoji": "🚀",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "slugging",
+                "zh": "長打率",
+                "emoji": "✈️",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "fascinating",
+                "zh": "迷人的",
+                "emoji": "⚾",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "on-base percentage",
+                "zh": "上壘率",
+                "emoji": "📈",
                 "correct": false
               }
             ]
@@ -13967,15 +14826,16 @@ window.CURRICULUM_DATA = [
               "analytics."
             ],
             "pool": [
-              "data",
-              "Modern",
-              "rely",
-              "teams",
-              "baseball",
               "on",
+              "teams",
+              "data",
+              "advanced",
+              "angular",
+              "baseball",
               "analytics.",
-              "frequently",
-              "advanced"
+              "synthesis",
+              "Modern",
+              "rely"
             ],
             "targetChinese": "現代棒球隊仰賴先進的數據分析。",
             "targetSentence": "Modern baseball teams rely on advanced data analytics."
@@ -13988,18 +14848,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "on-base percentage (上壘率)",
+                "en": "on-base percentage",
+                "zh": "上壘率",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "sabermetrics (棒球賽事統計分析)",
+                "en": "sabermetrics",
+                "zh": "棒球賽事統計分析",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "stealth technology (隱形匿蹤技術)",
+                "en": "stealth technology",
+                "zh": "隱形匿蹤技術",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "digital wellbeing (數位身心健康)",
+                "en": "digital wellbeing",
+                "zh": "數位身心健康",
                 "correct": false
               }
             ]
@@ -14061,27 +14929,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「aerodynamics」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "de-extinction",
+                "zh": "滅絕生物復育",
+                "emoji": "💡",
+                "correct": false
+              },
+              {
                 "en": "aerodynamics",
                 "zh": "空氣動力學",
-                "emoji": "🛩️",
+                "emoji": "🔬",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "stealth technology",
+                "zh": "隱形匿蹤技術",
+                "emoji": "🧠",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "radar cross-section",
+                "zh": "雷達截面積",
+                "emoji": "🏛️",
                 "correct": false
               }
             ]
@@ -14101,15 +14969,15 @@ window.CURRICULUM_DATA = [
               "profile."
             ],
             "pool": [
-              "frequently",
-              "their",
+              "aerodynamics",
               "profile.",
-              "minimize",
+              "their",
               "Stealth",
-              "fighters",
-              "consistently",
+              "reflection",
               "radar",
-              "reflection"
+              "Never",
+              "fighters",
+              "minimize"
             ],
             "targetChinese": "匿蹤戰鬥機將雷達反射截面積降至最低。",
             "targetSentence": "Stealth fighters minimize their radar reflection profile."
@@ -14122,18 +14990,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "stealth technology (隱形匿蹤技術)",
+                "en": "stealth technology",
+                "zh": "隱形匿蹤技術",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "genetic engineering (基因工程)",
+                "en": "genetic engineering",
+                "zh": "基因工程",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "aerodynamics (空氣動力學)",
+                "en": "aerodynamics",
+                "zh": "空氣動力學",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "on-base percentage (上壘率)",
+                "en": "on-base percentage",
+                "zh": "上壘率",
                 "correct": false
               }
             ]
@@ -14195,28 +15071,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「angular momentum」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "textual evidence",
+                "zh": "文本客觀證據",
+                "emoji": "⚾",
+                "correct": false
+              },
+              {
+                "en": "deflection",
+                "zh": "偏折",
+                "emoji": "✈️",
+                "correct": false
+              },
+              {
+                "en": "elasticity",
+                "zh": "彈性",
+                "emoji": "📈",
+                "correct": false
+              },
+              {
                 "en": "angular momentum",
                 "zh": "角動量",
-                "emoji": "🎱",
-                "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
                 "emoji": "🚀",
-                "correct": false
+                "correct": true
               }
             ]
           },
@@ -14237,16 +15113,17 @@ window.CURRICULUM_DATA = [
               "shot."
             ],
             "pool": [
-              "perfect",
-              "shot.",
-              "bank",
-              "vectors",
-              "Calculating",
+              "essential",
               "collision",
-              "frequently",
-              "the",
+              "perfect",
+              "Calculating",
+              "helps",
+              "vectors",
+              "matters",
               "execute",
-              "helps"
+              "bank",
+              "shot.",
+              "the"
             ],
             "targetChinese": "計算碰撞向量有助於執行完美的顆星進球。",
             "targetSentence": "Calculating collision vectors helps execute the perfect bank shot."
@@ -14259,18 +15136,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "elasticity (彈性)",
+                "en": "elasticity",
+                "zh": "彈性",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "angular momentum (角動量)",
+                "en": "angular momentum",
+                "zh": "角動量",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "synthesis (綜合歸納)",
+                "en": "synthesis",
+                "zh": "綜合歸納",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "surprising (令人驚訝的)",
+                "en": "surprising",
+                "zh": "令人驚訝的",
                 "correct": false
               }
             ]
@@ -14332,27 +15217,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「genetic engineering」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "radar cross-section",
+                "zh": "雷達截面積",
+                "emoji": "💡",
+                "correct": false
+              },
+              {
+                "en": "de-extinction",
+                "zh": "滅絕生物復育",
+                "emoji": "🧠",
+                "correct": false
+              },
+              {
                 "en": "genetic engineering",
                 "zh": "基因工程",
-                "emoji": "🧬",
+                "emoji": "🔬",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "DNA extraction",
+                "zh": "DNA提取",
+                "emoji": "🏛️",
                 "correct": false
               }
             ]
@@ -14373,15 +15258,16 @@ window.CURRICULUM_DATA = [
               "ethical."
             ],
             "pool": [
-              "resurrecting",
               "Scientists",
-              "ancient",
-              "debate",
               "is",
-              "dinosaurs",
               "ethical.",
+              "resurrecting",
               "whether",
-              "frequently"
+              "dinosaurs",
+              "need",
+              "crucial",
+              "debate",
+              "ancient"
             ],
             "targetChinese": "科學家們爭辯復活古老恐龍是否合乎倫理道德。",
             "targetSentence": "Scientists debate whether resurrecting ancient dinosaurs is ethical."
@@ -14394,18 +15280,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "de-extinction (滅絕生物復育)",
+                "en": "de-extinction",
+                "zh": "滅絕生物復育",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "genetic engineering (基因工程)",
+                "en": "genetic engineering",
+                "zh": "基因工程",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "perspective (觀點角度)",
+                "en": "perspective",
+                "zh": "觀點角度",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "fascinating (迷人的)",
+                "en": "fascinating",
+                "zh": "迷人的",
                 "correct": false
               }
             ]
@@ -14467,28 +15361,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「algorithm」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "exhausted",
+                "zh": "筋疲力竭的",
+                "emoji": "⚾",
+                "correct": false
+              },
+              {
+                "en": "digital wellbeing",
+                "zh": "數位身心健康",
+                "emoji": "✈️",
+                "correct": false
+              },
+              {
+                "en": "attention span",
+                "zh": "注意力持續時間",
+                "emoji": "📈",
+                "correct": false
+              },
+              {
                 "en": "algorithm",
                 "zh": "社群演算法",
-                "emoji": "🧠",
-                "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
                 "emoji": "🚀",
-                "correct": false
+                "correct": true
               }
             ]
           },
@@ -14509,16 +15403,17 @@ window.CURRICULUM_DATA = [
               "sports."
             ],
             "pool": [
-              "wellbeing",
-              "outdoor",
-              "frequently",
               "time",
-              "screen",
-              "balancing",
-              "sports.",
               "with",
+              "requires",
+              "vector",
               "Digital",
-              "requires"
+              "screen",
+              "outdoor",
+              "synthesis",
+              "sports.",
+              "balancing",
+              "wellbeing"
             ],
             "targetChinese": "數位健康需要平衡螢幕使用時間與戶外運動。",
             "targetSentence": "Digital wellbeing requires balancing screen time with outdoor sports."
@@ -14530,19 +15425,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "remember doing (記得做過)",
+                "en": "remember doing",
+                "zh": "記得做過",
+                "correct": false
+              },
+              {
+                "text": "DNA extraction (DNA提取)",
+                "en": "DNA extraction",
+                "zh": "DNA提取",
+                "correct": false
+              },
+              {
                 "text": "attention span (注意力持續時間)",
+                "en": "attention span",
+                "zh": "注意力持續時間",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "algorithm (社群演算法)",
+                "en": "algorithm",
+                "zh": "社群演算法",
                 "correct": false
               }
             ]
@@ -14606,25 +15509,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "cross-cultural",
                 "zh": "跨文化的",
-                "emoji": "🌐",
+                "emoji": "🔬",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "sabermetrics",
+                "zh": "棒球賽事統計分析",
+                "emoji": "💡",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "etiquette",
+                "zh": "社交規範",
+                "emoji": "🏛️",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "diplomacy",
+                "zh": "外交禮儀",
+                "emoji": "🧠",
                 "correct": false
               }
             ]
@@ -14644,15 +15547,15 @@ window.CURRICULUM_DATA = [
               "collaboration."
             ],
             "pool": [
+              "on-base",
               "international",
-              "Cultural",
-              "academic",
-              "enables",
               "empathy",
-              "consistently",
-              "frequently",
               "fruitful",
-              "collaboration."
+              "collaboration.",
+              "Cultural",
+              "enables",
+              "academic",
+              "than"
             ],
             "targetChinese": "文化同理心促成豐碩的國際學術合作。",
             "targetSentence": "Cultural empathy enables fruitful international academic collaboration."
@@ -14664,19 +15567,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "algorithm (社群演算法)",
+                "en": "algorithm",
+                "zh": "社群演算法",
+                "correct": false
+              },
+              {
+                "text": "essential (必不可少的)",
+                "en": "essential",
+                "zh": "必不可少的",
+                "correct": false
+              },
+              {
                 "text": "diplomacy (外交禮儀)",
+                "en": "diplomacy",
+                "zh": "外交禮儀",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "cross-cultural (跨文化的)",
+                "en": "cross-cultural",
+                "zh": "跨文化的",
                 "correct": false
               }
             ]
@@ -14738,27 +15649,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「integrated comprehension」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "synthesis",
+                "zh": "綜合歸納",
+                "emoji": "✈️",
+                "correct": false
+              },
+              {
                 "en": "integrated comprehension",
                 "zh": "整合理解題",
-                "emoji": "📝",
+                "emoji": "🚀",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "textual evidence",
+                "zh": "文本客觀證據",
+                "emoji": "📈",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "radar cross-section",
+                "zh": "雷達截面積",
+                "emoji": "⚾",
                 "correct": false
               }
             ]
@@ -14778,14 +15689,14 @@ window.CURRICULUM_DATA = [
               "evidence."
             ],
             "pool": [
-              "frequently",
               "textual",
               "evidence.",
-              "direct",
-              "Support",
-              "answers",
-              "consistently",
               "with",
+              "Down",
+              "Support",
+              "direct",
+              "extraction",
+              "answers",
               "your"
             ],
             "targetChinese": "用直接的文本證據來支持你的答案。",
@@ -14798,19 +15709,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "integrated comprehension (整合理解題)",
+                "en": "integrated comprehension",
+                "zh": "整合理解題",
+                "correct": false
+              },
+              {
+                "text": "remember doing (記得做過)",
+                "en": "remember doing",
+                "zh": "記得做過",
+                "correct": false
+              },
+              {
                 "text": "textual evidence (文本客觀證據)",
+                "en": "textual evidence",
+                "zh": "文本客觀證據",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "digital wellbeing (數位身心健康)",
+                "en": "digital wellbeing",
+                "zh": "數位身心健康",
                 "correct": false
               }
             ]
@@ -14872,27 +15791,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「crucial」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "aerodynamics",
+                "zh": "空氣動力學",
+                "emoji": "🧠",
+                "correct": false
+              },
+              {
                 "en": "crucial",
                 "zh": "關鍵的",
-                "emoji": "👑",
+                "emoji": "🔬",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "sabermetrics",
+                "zh": "棒球數據學",
+                "emoji": "🏛️",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "cloning",
+                "zh": "複製克隆",
+                "emoji": "💡",
                 "correct": false
               }
             ]
@@ -14913,15 +15832,16 @@ window.CURRICULUM_DATA = [
               "foundation."
             ],
             "pool": [
-              "academic",
-              "builds",
-              "core",
-              "frequently",
-              "foundation.",
-              "concepts",
-              "Mastering",
               "a",
-              "solid"
+              "ran",
+              "academic",
+              "foundation.",
+              "Mastering",
+              "builds",
+              "concepts",
+              "solid",
+              "cross-cultural",
+              "core"
             ],
             "targetChinese": "掌握核心概念能奠定堅實的學術基礎。",
             "targetSentence": "Mastering core concepts builds a solid academic foundation."
@@ -14933,20 +15853,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "fascinating (迷人的)",
+                "en": "fascinating",
+                "zh": "迷人的",
+                "correct": false
+              },
+              {
+                "text": "crucial (關鍵的)",
+                "en": "crucial",
+                "zh": "關鍵的",
+                "correct": false
+              },
+              {
+                "text": "perspective (觀點角度)",
+                "en": "perspective",
+                "zh": "觀點角度",
+                "correct": false
+              },
+              {
                 "text": "aerodynamics (空氣動力學)",
+                "en": "aerodynamics",
+                "zh": "空氣動力學",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -15022,27 +15950,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「If I were a pilot」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "not only but also",
+                "zh": "不僅...而且...",
+                "emoji": "🧠",
+                "correct": false
+              },
+              {
                 "en": "If I were a pilot",
                 "zh": "若我是飛行員",
-                "emoji": "🌌",
+                "emoji": "💎",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "insist that S (should) V",
+                "zh": "堅持要求",
+                "emoji": "🌱",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "would fly",
+                "zh": "便會飛向",
+                "emoji": "⚙️",
                 "correct": false
               }
             ]
@@ -15066,17 +15994,18 @@ window.CURRICULUM_DATA = [
               "globe."
             ],
             "pool": [
-              "frequently",
-              "were",
-              "would",
-              "around",
               "I",
-              "pilot,",
-              "If",
-              "globe.",
-              "the",
-              "the",
+              "around",
+              "would",
+              "into",
               "fly",
+              "were",
+              "the",
+              "pilot,",
+              "avoidance",
+              "If",
+              "the",
+              "globe.",
               "I"
             ],
             "targetChinese": "如果我是飛行員，我會環球飛行。",
@@ -15089,20 +16018,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "If I were a pilot (若我是飛行員)",
+                "en": "If I were a pilot",
+                "zh": "若我是飛行員",
+                "correct": false
+              },
+              {
+                "text": "had known (早知道)",
+                "en": "had known",
+                "zh": "早知道",
+                "correct": false
+              },
+              {
+                "text": "either or (或者...或者...)",
+                "en": "either or",
+                "zh": "或者...或者...",
+                "correct": false
+              },
+              {
                 "text": "would fly (便會飛向)",
+                "en": "would fly",
+                "zh": "便會飛向",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -15163,28 +16100,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「If he had swung」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "not only but also",
+                "zh": "不僅...而且...",
+                "emoji": "🔬",
+                "correct": false
+              },
+              {
+                "en": "would have hit",
+                "zh": "本就會擊出",
+                "emoji": "🌍",
+                "correct": false
+              },
+              {
+                "en": "had known",
+                "zh": "早知道",
+                "emoji": "📊",
+                "correct": false
+              },
+              {
                 "en": "If he had swung",
                 "zh": "若他當時揮棒了",
-                "emoji": "⏳",
+                "emoji": "✈️",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -15208,19 +16145,20 @@ window.CURRICULUM_DATA = [
               "run."
             ],
             "pool": [
-              "run.",
-              "a",
-              "he",
-              "frequently",
               "have",
+              "run.",
+              "he",
+              "wish",
+              "match",
+              "a",
               "hit",
-              "home",
-              "had",
-              "swung",
-              "If",
-              "would",
               "earlier,",
-              "he"
+              "swung",
+              "he",
+              "had",
+              "would",
+              "home",
+              "If"
             ],
             "targetChinese": "如果他揮棒早一點，他就能擊出全壘打。",
             "targetSentence": "If he had swung earlier, he would have hit a home run."
@@ -15232,19 +16170,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "make an effort (付出努力)",
+                "en": "make an effort",
+                "zh": "付出努力",
+                "correct": false
+              },
+              {
                 "text": "would have hit (本就會擊出)",
+                "en": "would have hit",
+                "zh": "本就會擊出",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "had known (早知道)",
+                "en": "had known",
+                "zh": "早知道",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "If he had swung (若他當時揮棒了)",
+                "en": "If he had swung",
+                "zh": "若他當時揮棒了",
                 "correct": false
               }
             ]
@@ -15306,28 +16252,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「Had I known」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "would have hit",
+                "zh": "本就會擊出",
+                "emoji": "🧠",
+                "correct": false
+              },
+              {
+                "en": "Should it rain",
+                "zh": "萬一下雨",
+                "emoji": "🌱",
+                "correct": false
+              },
+              {
+                "en": "Were I you",
+                "zh": "若我是你",
+                "emoji": "⚙️",
+                "correct": false
+              },
+              {
                 "en": "Had I known",
                 "zh": "若早知曉",
-                "emoji": "🔄",
+                "emoji": "💎",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -15350,18 +16296,19 @@ window.CURRICULUM_DATA = [
               "joined."
             ],
             "pool": [
+              "joined.",
+              "turbofan",
               "about",
-              "I",
-              "frequently",
-              "known",
-              "tryouts,",
-              "I",
               "have",
+              "statement",
+              "the",
               "baseball",
               "would",
-              "the",
-              "Had",
-              "joined."
+              "I",
+              "tryouts,",
+              "I",
+              "known",
+              "Had"
             ],
             "targetChinese": "若我早知道有棒球選拔，我就會報名參加。",
             "targetSentence": "Had I known about the baseball tryouts, I would have joined."
@@ -15374,18 +16321,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "Were I you (若我是你)",
+                "en": "Were I you",
+                "zh": "若我是你",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "wish I had (多希望擁有)",
+                "en": "wish I had",
+                "zh": "多希望擁有",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "Had I known (若早知曉)",
+                "en": "Had I known",
+                "zh": "若早知曉",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "Should it rain (萬一下雨)",
+                "en": "Should it rain",
+                "zh": "萬一下雨",
                 "correct": false
               }
             ]
@@ -15447,27 +16402,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「wish I had」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "insist that S (should) V",
+                "zh": "堅持要求",
+                "emoji": "📊",
+                "correct": false
+              },
+              {
+                "en": "Were I you",
+                "zh": "若我是你",
+                "emoji": "🔬",
+                "correct": false
+              },
+              {
                 "en": "wish I had",
                 "zh": "多希望擁有",
-                "emoji": "💫",
+                "emoji": "✈️",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "as though",
+                "zh": "彷彿像是",
+                "emoji": "🌍",
                 "correct": false
               }
             ]
@@ -15490,15 +16445,16 @@ window.CURRICULUM_DATA = [
             ],
             "pool": [
               "every",
-              "The",
-              "practice",
               "insisted",
-              "every",
-              "player",
               "that",
-              "frequently",
+              "practice",
+              "known",
+              "every",
               "morning.",
-              "coach"
+              "would",
+              "coach",
+              "The",
+              "player"
             ],
             "targetChinese": "教練堅持要求每位球員每天早上都要練習。",
             "targetSentence": "The coach insisted that every player practice every morning."
@@ -15510,19 +16466,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "would fly (便會飛向)",
+                "en": "would fly",
+                "zh": "便會飛向",
+                "correct": false
+              },
+              {
                 "text": "as though (彷彿像是)",
+                "en": "as though",
+                "zh": "彷彿像是",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "had known (早知道)",
+                "en": "had known",
+                "zh": "早知道",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "wish I had (多希望擁有)",
+                "en": "wish I had",
+                "zh": "多希望擁有",
                 "correct": false
               }
             ]
@@ -15584,27 +16548,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「make an effort」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "pay attention to",
+                "zh": "全神貫注於",
+                "emoji": "🌱",
+                "correct": false
+              },
+              {
                 "en": "make an effort",
                 "zh": "付出努力",
-                "emoji": "🧩",
+                "emoji": "💎",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "put into practice",
+                "zh": "付諸實行",
+                "emoji": "🧠",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "take advantage of",
+                "zh": "善用利用",
+                "emoji": "⚙️",
                 "correct": false
               }
             ]
@@ -15626,16 +16590,17 @@ window.CURRICULUM_DATA = [
               "technique."
             ],
             "pool": [
-              "billiards",
+              "exhausted",
               "effort",
-              "to",
+              "technique.",
               "the",
-              "He",
-              "frequently",
+              "to",
               "made",
               "every",
-              "master",
-              "technique."
+              "He",
+              "Were",
+              "billiards",
+              "master"
             ],
             "targetChinese": "他竭盡全力去掌握撞球擊球技術。",
             "targetSentence": "He made every effort to master the billiards technique."
@@ -15647,20 +16612,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "pay attention to (全神貫注於)",
+                "en": "pay attention to",
+                "zh": "全神貫注於",
+                "correct": false
+              },
+              {
+                "text": "put into practice (付諸實行)",
+                "en": "put into practice",
+                "zh": "付諸實行",
+                "correct": false
+              },
+              {
+                "text": "make an effort (付出努力)",
+                "en": "make an effort",
+                "zh": "付出努力",
+                "correct": false
+              },
+              {
                 "text": "take advantage of (善用利用)",
+                "en": "take advantage of",
+                "zh": "善用利用",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -15721,27 +16694,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「not only but also」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "both and",
+                "zh": "兩者皆是",
+                "emoji": "🔬",
+                "correct": false
+              },
+              {
                 "en": "not only but also",
                 "zh": "不僅...而且...",
-                "emoji": "⚖️",
+                "emoji": "✈️",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "neither nor",
+                "zh": "既不...也不...",
+                "emoji": "🌍",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "either or",
+                "zh": "或者...或者...",
+                "emoji": "📊",
                 "correct": false
               }
             ]
@@ -15766,19 +16739,20 @@ window.CURRICULUM_DATA = [
               "leader."
             ],
             "pool": [
-              "only",
               "He",
+              "is",
               "but",
               "not",
-              "inspiring",
-              "an",
               "pitcher",
-              "brilliant",
-              "a",
-              "is",
+              "leader.",
+              "insist",
+              "effort",
               "also",
-              "frequently",
-              "leader."
+              "an",
+              "a",
+              "only",
+              "inspiring",
+              "brilliant"
             ],
             "targetChinese": "他不僅是一位出色的投手，更是激勵人心的領袖。",
             "targetSentence": "He is not only a brilliant pitcher but also an inspiring leader."
@@ -15791,18 +16765,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "neither nor (既不...也不...)",
+                "en": "neither nor",
+                "zh": "既不...也不...",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "not only but also (不僅...而且...)",
+                "en": "not only but also",
+                "zh": "不僅...而且...",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "had known (早知道)",
+                "en": "had known",
+                "zh": "早知道",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "Mesozoic era (中生代)",
+                "en": "Mesozoic era",
+                "zh": "中生代",
                 "correct": false
               }
             ]
@@ -15864,27 +16846,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「thrilled the crowd」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "exhausted after match",
+                "zh": "賽後筋疲力竭",
+                "emoji": "⚙️",
+                "correct": false
+              },
+              {
+                "en": "put into practice",
+                "zh": "付諸實行",
+                "emoji": "🧠",
+                "correct": false
+              },
+              {
                 "en": "thrilled the crowd",
                 "zh": "令全場振奮",
-                "emoji": "🔥",
+                "emoji": "💎",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "take advantage of",
+                "zh": "善用利用",
+                "emoji": "🌱",
                 "correct": false
               }
             ]
@@ -15905,15 +16887,16 @@ window.CURRICULUM_DATA = [
               "fan."
             ],
             "pool": [
-              "thrilled",
-              "frequently",
+              "fan.",
               "every",
               "home",
-              "ninth-inning",
               "run",
               "The",
-              "fan.",
-              "baseball"
+              "baseball",
+              "ninth-inning",
+              "thrilled",
+              "engine",
+              "efficiency"
             ],
             "targetChinese": "九局下半的全壘打讓每位棒球迷熱血沸騰。",
             "targetSentence": "The ninth-inning home run thrilled every baseball fan."
@@ -15925,19 +16908,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "combustion (燃燒室)",
+                "en": "combustion",
+                "zh": "燃燒室",
+                "correct": false
+              },
+              {
                 "text": "fascinate (深深吸引)",
+                "en": "fascinate",
+                "zh": "深深吸引",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "thrilled the crowd (令全場振奮)",
+                "en": "thrilled the crowd",
+                "zh": "令全場振奮",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "composure (沉著冷靜)",
+                "en": "composure",
+                "zh": "沉著冷靜",
                 "correct": false
               }
             ]
@@ -15999,28 +16990,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「state-of-the-art」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "counterargument",
+                "zh": "反方論點",
+                "emoji": "🔬",
+                "correct": false
+              },
+              {
+                "en": "high-performance",
+                "zh": "高效能的",
+                "emoji": "📊",
+                "correct": false
+              },
+              {
+                "en": "world-renowned",
+                "zh": "享譽全球的",
+                "emoji": "🌍",
+                "correct": false
+              },
+              {
                 "en": "state-of-the-art",
                 "zh": "頂尖最先進的",
-                "emoji": "🖋️",
+                "emoji": "✈️",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -16039,15 +17030,15 @@ window.CURRICULUM_DATA = [
               "equipment."
             ],
             "pool": [
-              "equipment.",
-              "simulation",
-              "consistently",
               "aerospace",
-              "frequently",
               "utilizes",
               "team",
-              "The",
-              "state-of-the-art"
+              "simulation",
+              "state-of-the-art",
+              "equipment.",
+              "exhausted",
+              "coefficient",
+              "The"
             ],
             "targetChinese": "團隊運用了最先進的航太模擬設備。",
             "targetSentence": "The team utilizes state-of-the-art aerospace simulation equipment."
@@ -16059,20 +17050,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "state-of-the-art (頂尖最先進的)",
+                "en": "state-of-the-art",
+                "zh": "頂尖最先進的",
+                "correct": false
+              },
+              {
+                "text": "counterargument (反方論點)",
+                "en": "counterargument",
+                "zh": "反方論點",
+                "correct": false
+              },
+              {
+                "text": "sustainability (永續性)",
+                "en": "sustainability",
+                "zh": "永續性",
+                "correct": false
+              },
+              {
                 "text": "world-renowned (享譽全球的)",
+                "en": "world-renowned",
+                "zh": "享譽全球的",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -16133,27 +17132,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「turbofan engine」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "fuel efficiency",
+                "zh": "燃油效率",
+                "emoji": "🌱",
+                "correct": false
+              },
+              {
                 "en": "turbofan engine",
                 "zh": "渦輪風扇發動機",
-                "emoji": "✈️",
+                "emoji": "💎",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "mental toughness",
+                "zh": "心理韌性",
+                "emoji": "🧠",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "thrust-to-weight ratio",
+                "zh": "推重比",
+                "emoji": "⚙️",
                 "correct": false
               }
             ]
@@ -16174,15 +17173,16 @@ window.CURRICULUM_DATA = [
               "efficiency."
             ],
             "pool": [
-              "maximize",
+              "high",
               "Turbofan",
               "while",
+              "sustainability",
               "engines",
+              "maximize",
               "thrust",
               "maintaining",
-              "high",
-              "efficiency.",
-              "frequently"
+              "statement",
+              "efficiency."
             ],
             "targetChinese": "渦輪扇發動機在維持高效率的同時實現推力最大化。",
             "targetSentence": "Turbofan engines maximize thrust while maintaining high efficiency."
@@ -16194,19 +17194,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "friction coefficient (摩擦係數)",
+                "en": "friction coefficient",
+                "zh": "摩擦係數",
+                "correct": false
+              },
+              {
                 "text": "thrust-to-weight ratio (推重比)",
+                "en": "thrust-to-weight ratio",
+                "zh": "推重比",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "turbofan engine (渦輪風扇發動機)",
+                "en": "turbofan engine",
+                "zh": "渦輪風扇發動機",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "trajectory deviation (彈道軌跡偏折)",
+                "en": "trajectory deviation",
+                "zh": "彈道軌跡偏折",
                 "correct": false
               }
             ]
@@ -16268,28 +17276,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「mental toughness」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "composure",
+                "zh": "沉著冷靜",
+                "emoji": "📊",
+                "correct": false
+              },
+              {
+                "en": "clutch performance",
+                "zh": "高壓關鍵表現",
+                "emoji": "🌍",
+                "correct": false
+              },
+              {
+                "en": "carbon footprint",
+                "zh": "碳足跡",
+                "emoji": "🔬",
+                "correct": false
+              },
+              {
                 "en": "mental toughness",
                 "zh": "心理韌性",
-                "emoji": "🧠",
+                "emoji": "✈️",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -16310,16 +17318,17 @@ window.CURRICULUM_DATA = [
               "pressure."
             ],
             "pool": [
-              "pressure.",
-              "under",
-              "frequently",
-              "Elite",
+              "Should",
               "cultivate",
-              "to",
-              "perform",
+              "attention",
+              "pressure.",
               "athletes",
+              "toughness",
+              "Elite",
+              "under",
+              "perform",
               "mental",
-              "toughness"
+              "to"
             ],
             "targetChinese": "頂尖運動員培養心理韌性以在高壓下發揮實力。",
             "targetSentence": "Elite athletes cultivate mental toughness to perform under pressure."
@@ -16332,18 +17341,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "clutch performance (高壓關鍵表現)",
+                "en": "clutch performance",
+                "zh": "高壓關鍵表現",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "fossilized sediment (沉積岩化石)",
+                "en": "fossilized sediment",
+                "zh": "沉積岩化石",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "mental toughness (心理韌性)",
+                "en": "mental toughness",
+                "zh": "心理韌性",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "autonomous vehicle (自動駕駛車輛)",
+                "en": "autonomous vehicle",
+                "zh": "自動駕駛車輛",
                 "correct": false
               }
             ]
@@ -16405,27 +17422,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「trajectory deviation」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "friction coefficient",
+                "zh": "摩擦係數",
+                "emoji": "⚙️",
+                "correct": false
+              },
+              {
+                "en": "spin dynamics",
+                "zh": "旋轉動力學",
+                "emoji": "🌱",
+                "correct": false
+              },
+              {
                 "en": "trajectory deviation",
                 "zh": "彈道軌跡偏折",
-                "emoji": "🎱",
+                "emoji": "💎",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "clutch performance",
+                "zh": "高壓關鍵表現",
+                "emoji": "🧠",
                 "correct": false
               }
             ]
@@ -16447,16 +17464,17 @@ window.CURRICULUM_DATA = [
               "impact."
             ],
             "pool": [
-              "upon",
-              "impact.",
               "dynamics",
-              "alter",
-              "cue",
-              "frequently",
-              "ball",
-              "trajectory",
               "Spin",
-              "significantly"
+              "effort",
+              "cue",
+              "alter",
+              "trajectory",
+              "alternative",
+              "ball",
+              "impact.",
+              "significantly",
+              "upon"
             ],
             "targetChinese": "旋轉動力學在撞擊時顯著改變母球的行進軌跡。",
             "targetSentence": "Spin dynamics significantly alter cue ball trajectory upon impact."
@@ -16468,20 +17486,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "collision avoidance (防撞避障機制)",
+                "en": "collision avoidance",
+                "zh": "防撞避障機制",
+                "correct": false
+              },
+              {
+                "text": "empirical evidence (實證證據)",
+                "en": "empirical evidence",
+                "zh": "實證證據",
+                "correct": false
+              },
+              {
+                "text": "trajectory deviation (彈道軌跡偏折)",
+                "en": "trajectory deviation",
+                "zh": "彈道軌跡偏折",
+                "correct": false
+              },
+              {
                 "text": "friction coefficient (摩擦係數)",
+                "en": "friction coefficient",
+                "zh": "摩擦係數",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -16544,25 +17570,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "Mesozoic era",
                 "zh": "中生代",
-                "emoji": "🌍",
+                "emoji": "✈️",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "mass extinction",
+                "zh": "物種大滅絕",
+                "emoji": "🌍",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "spin dynamics",
+                "zh": "旋轉動力學",
+                "emoji": "🔬",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "geological epoch",
+                "zh": "地質年代",
+                "emoji": "📊",
                 "correct": false
               }
             ]
@@ -16585,17 +17611,18 @@ window.CURRICULUM_DATA = [
               "era."
             ],
             "pool": [
-              "climate",
-              "Catastrophic",
-              "frequently",
-              "era.",
-              "Mesozoic",
-              "end",
-              "shifts",
+              "of",
+              "lidar",
               "marked",
+              "era.",
+              "climate",
+              "shifts",
               "the",
+              "Catastrophic",
+              "Mesozoic",
               "the",
-              "of"
+              "hit",
+              "end"
             ],
             "targetChinese": "災難性的氣候劇變標誌著中生代的結束。",
             "targetSentence": "Catastrophic climate shifts marked the end of the Mesozoic era."
@@ -16607,19 +17634,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "Mesozoic era (中生代)",
+                "en": "Mesozoic era",
+                "zh": "中生代",
+                "correct": false
+              },
+              {
+                "text": "fuel efficiency (燃油效率)",
+                "en": "fuel efficiency",
+                "zh": "燃油效率",
+                "correct": false
+              },
+              {
                 "text": "mass extinction (物種大滅絕)",
+                "en": "mass extinction",
+                "zh": "物種大滅絕",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "cushion rebound (顆星彈跳)",
+                "en": "cushion rebound",
+                "zh": "顆星彈跳",
                 "correct": false
               }
             ]
@@ -16681,27 +17716,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「autonomous vehicle」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "collision avoidance",
+                "zh": "防撞避障機制",
+                "emoji": "🌱",
+                "correct": false
+              },
+              {
+                "en": "clutch performance",
+                "zh": "高壓關鍵表現",
+                "emoji": "🧠",
+                "correct": false
+              },
+              {
                 "en": "autonomous vehicle",
                 "zh": "自動駕駛車輛",
-                "emoji": "🚗",
+                "emoji": "💎",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "sensor fusion",
+                "zh": "多重感測器融合",
+                "emoji": "⚙️",
                 "correct": false
               }
             ]
@@ -16722,14 +17757,15 @@ window.CURRICULUM_DATA = [
               "fusion."
             ],
             "pool": [
-              "Autonomous",
-              "fusion.",
-              "frequently",
               "lidar",
-              "combine",
-              "camera",
-              "and",
               "sensor",
+              "Autonomous",
+              "and",
+              "fusion.",
+              "avoidance",
+              "camera",
+              "well-coordinated",
+              "combine",
               "vehicles"
             ],
             "targetChinese": "自動駕駛車輛融合了光達與攝影機感測技術。",
@@ -16742,19 +17778,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "Mesozoic era (中生代)",
+                "en": "Mesozoic era",
+                "zh": "中生代",
+                "correct": false
+              },
+              {
                 "text": "sensor fusion (多重感測器融合)",
+                "en": "sensor fusion",
+                "zh": "多重感測器融合",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "autonomous vehicle (自動駕駛車輛)",
+                "en": "autonomous vehicle",
+                "zh": "自動駕駛車輛",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "spin dynamics (旋轉動力學)",
+                "en": "spin dynamics",
+                "zh": "旋轉動力學",
                 "correct": false
               }
             ]
@@ -16816,27 +17860,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「sustainability」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "world-renowned",
+                "zh": "享譽全球的",
+                "emoji": "🔬",
+                "correct": false
+              },
+              {
+                "en": "carbon footprint",
+                "zh": "碳足跡",
+                "emoji": "🌍",
+                "correct": false
+              },
+              {
                 "en": "sustainability",
                 "zh": "永續性",
-                "emoji": "🌱",
+                "emoji": "✈️",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "biodiversity",
+                "zh": "生物多樣性",
+                "emoji": "📊",
                 "correct": false
               }
             ]
@@ -16857,15 +17901,16 @@ window.CURRICULUM_DATA = [
               "sustainability."
             ],
             "pool": [
-              "sustainability.",
-              "carbon",
-              "emissions",
-              "fundamental",
-              "frequently",
-              "Reducing",
+              "either",
               "is",
+              "to",
+              "fundamental",
+              "you",
+              "Reducing",
+              "sustainability.",
+              "emissions",
               "global",
-              "to"
+              "carbon"
             ],
             "targetChinese": "減少碳排放是全球永續發展的根本之道。",
             "targetSentence": "Reducing carbon emissions is fundamental to global sustainability."
@@ -16877,19 +17922,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "sustainability (永續性)",
+                "en": "sustainability",
+                "zh": "永續性",
+                "correct": false
+              },
+              {
                 "text": "carbon footprint (碳足跡)",
+                "en": "carbon footprint",
+                "zh": "碳足跡",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "turbofan engine (渦輪風扇發動機)",
+                "en": "turbofan engine",
+                "zh": "渦輪風扇發動機",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "mental toughness (心理韌性)",
+                "en": "mental toughness",
+                "zh": "心理韌性",
                 "correct": false
               }
             ]
@@ -16953,25 +18006,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "thesis statement",
                 "zh": "主旨核心論點",
-                "emoji": "📄",
+                "emoji": "💎",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "counterargument",
+                "zh": "反方論點",
+                "emoji": "🌱",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "empirical evidence",
+                "zh": "實證證據",
+                "emoji": "⚙️",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "mass extinction",
+                "zh": "物種大滅絕",
+                "emoji": "🧠",
                 "correct": false
               }
             ]
@@ -16993,16 +18046,17 @@ window.CURRICULUM_DATA = [
               "argument."
             ],
             "pool": [
-              "statement",
-              "strong",
+              "entire",
+              "argument.",
               "A",
-              "anchors",
+              "conservation",
+              "exhilarating",
+              "strong",
+              "the",
               "essay",
               "thesis",
-              "the",
-              "entire",
-              "frequently",
-              "argument."
+              "statement",
+              "anchors"
             ],
             "targetChinese": "有力的主題句奠定了整篇論述論文的核心立場。",
             "targetSentence": "A strong thesis statement anchors the entire essay argument."
@@ -17014,19 +18068,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "collision avoidance (防撞避障機制)",
+                "en": "collision avoidance",
+                "zh": "防撞避障機制",
+                "correct": false
+              },
+              {
+                "text": "clutch performance (高壓關鍵表現)",
+                "en": "clutch performance",
+                "zh": "高壓關鍵表現",
+                "correct": false
+              },
+              {
                 "text": "empirical evidence (實證證據)",
+                "en": "empirical evidence",
+                "zh": "實證證據",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "thesis statement (主旨核心論點)",
+                "en": "thesis statement",
+                "zh": "主旨核心論點",
                 "correct": false
               }
             ]
@@ -17090,25 +18152,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "If I were a pilot",
                 "zh": "若我是飛行員",
-                "emoji": "👑",
+                "emoji": "✈️",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "insist that S (should) V",
+                "zh": "堅持要求",
+                "emoji": "📊",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "not only but also",
+                "zh": "不僅...而且...",
+                "emoji": "🔬",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "mental toughness",
+                "zh": "心理韌性",
+                "emoji": "🌍",
                 "correct": false
               }
             ]
@@ -17130,15 +18192,16 @@ window.CURRICULUM_DATA = [
               "greatness."
             ],
             "pool": [
-              "Had",
-              "frequently",
-              "have",
-              "would",
               "greatness.",
               "magnificent",
-              "achieved",
-              "persevered,",
               "he",
+              "persevered,",
+              "would",
+              "Had",
+              "have",
+              "only",
+              "achieved",
+              "conservation",
               "he"
             ],
             "targetChinese": "若他當時堅持下去，必將成就非凡的偉業。",
@@ -17151,20 +18214,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "If I were a pilot (若我是飛行員)",
+                "en": "If I were a pilot",
+                "zh": "若我是飛行員",
+                "correct": false
+              },
+              {
+                "text": "high-performance (高效能的)",
+                "en": "high-performance",
+                "zh": "高效能的",
+                "correct": false
+              },
+              {
+                "text": "world-renowned (享譽全球的)",
+                "en": "world-renowned",
+                "zh": "享譽全球的",
+                "correct": false
+              },
+              {
                 "text": "state-of-the-art (頂尖的)",
+                "en": "state-of-the-art",
+                "zh": "頂尖的",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -17240,27 +18311,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「unprecedented」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "proliferation",
+                "zh": "迅速激增",
+                "emoji": "🚀",
+                "correct": false
+              },
+              {
                 "en": "unprecedented",
                 "zh": "史無前例的",
-                "emoji": "💎",
+                "emoji": "👑",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "ubiquitous",
+                "zh": "無所不在普及的",
+                "emoji": "🧬",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "paradigm",
+                "zh": "範式典範",
+                "emoji": "🤖",
                 "correct": false
               }
             ]
@@ -17281,15 +18352,16 @@ window.CURRICULUM_DATA = [
               "shift."
             ],
             "pool": [
-              "an",
-              "frequently",
+              "unprecedented",
               "shift.",
-              "paradigm",
+              "technological",
+              "an",
+              "represents",
               "Artificial",
               "intelligence",
-              "unprecedented",
-              "technological",
-              "represents"
+              "hallucination",
+              "paradigm",
+              "technique"
             ],
             "targetChinese": "人工智慧代表了一場前所未有的技術典範轉移。",
             "targetSentence": "Artificial intelligence represents an unprecedented technological paradigm shift."
@@ -17301,20 +18373,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "hypersonic (高超音速(5馬赫以上))",
+                "en": "hypersonic",
+                "zh": "高超音速(5馬赫以上)",
+                "correct": false
+              },
+              {
+                "text": "appositive (同位語)",
+                "en": "appositive",
+                "zh": "同位語",
+                "correct": false
+              },
+              {
+                "text": "unprecedented (史無前例的)",
+                "en": "unprecedented",
+                "zh": "史無前例的",
+                "correct": false
+              },
+              {
                 "text": "ubiquitous (無所不在普及的)",
+                "en": "ubiquitous",
+                "zh": "無所不在普及的",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -17375,27 +18455,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「It is not that... but that」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "not uncommon",
+                "zh": "並不罕見",
+                "emoji": "🌐",
+                "correct": false
+              },
+              {
+                "en": "nowhere near",
+                "zh": "遠遠不及",
+                "emoji": "🧠",
+                "correct": false
+              },
+              {
                 "en": "It is not that... but that",
                 "zh": "並非...而是...",
-                "emoji": "🎯",
+                "emoji": "📚",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "far from being",
+                "zh": "遠非...",
+                "emoji": "🔬",
                 "correct": false
               }
             ]
@@ -17420,19 +18500,20 @@ window.CURRICULUM_DATA = [
               "discipline."
             ],
             "pool": [
-              "is",
-              "but",
-              "that",
-              "frequently",
-              "talent,",
               "need",
               "not",
-              "It",
+              "talent,",
               "we",
               "lack",
-              "we",
               "that",
-              "discipline."
+              "It",
+              "subordination",
+              "we",
+              "is",
+              "discipline.",
+              "that",
+              "decomposition",
+              "but"
             ],
             "targetChinese": "並非我們缺乏才華，而是我們需要高度自律。",
             "targetSentence": "It is not that we lack talent, but that we need discipline."
@@ -17445,18 +18526,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "far from being (遠非...)",
+                "en": "far from being",
+                "zh": "遠非...",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "It is not that... but that (並非...而是...)",
+                "en": "It is not that... but that",
+                "zh": "並非...而是...",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "not uncommon (並不罕見)",
+                "en": "not uncommon",
+                "zh": "並不罕見",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "nowhere near (遠遠不及)",
+                "en": "nowhere near",
+                "zh": "遠遠不及",
                 "correct": false
               }
             ]
@@ -17518,27 +18607,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「nominalization」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "acceleration",
+                "zh": "加速提升",
+                "emoji": "🤖",
+                "correct": false
+              },
+              {
+                "en": "semiconductor",
+                "zh": "半導體晶片",
+                "emoji": "🚀",
+                "correct": false
+              },
+              {
                 "en": "nominalization",
                 "zh": "動詞名詞化",
-                "emoji": "🖋️",
+                "emoji": "👑",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "implementation",
+                "zh": "實施推行",
+                "emoji": "🧬",
                 "correct": false
               }
             ]
@@ -17560,16 +18649,17 @@ window.CURRICULUM_DATA = [
               "revitalization."
             ],
             "pool": [
-              "new",
-              "policies",
               "rapid",
-              "implementation",
               "revitalization.",
+              "triggered",
+              "skeptical",
               "economic",
-              "of",
+              "implementation",
+              "unbiased",
               "The",
-              "frequently",
-              "triggered"
+              "new",
+              "of",
+              "policies"
             ],
             "targetChinese": "新政策的推行引發了迅速的經濟振興。",
             "targetSentence": "The implementation of new policies triggered rapid economic revitalization."
@@ -17582,18 +18672,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "implementation (實施推行)",
+                "en": "implementation",
+                "zh": "實施推行",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "nominalization (動詞名詞化)",
+                "en": "nominalization",
+                "zh": "動詞名詞化",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "hallucination (模型幻覺)",
+                "en": "hallucination",
+                "zh": "模型幻覺",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "unprecedented (史無前例的)",
+                "en": "unprecedented",
+                "zh": "史無前例的",
                 "correct": false
               }
             ]
@@ -17655,27 +18753,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「author tone」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "skeptical",
+                "zh": "抱持懷疑的",
+                "emoji": "🔬",
+                "correct": false
+              },
+              {
                 "en": "author tone",
                 "zh": "作者筆調",
-                "emoji": "🧐",
+                "emoji": "📚",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "ironic",
+                "zh": "帶有諷刺意味的",
+                "emoji": "🧠",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "game theory",
+                "zh": "賽局博弈理論",
+                "emoji": "🌐",
                 "correct": false
               }
             ]
@@ -17696,14 +18794,15 @@ window.CURRICULUM_DATA = [
               "claims."
             ],
             "pool": [
-              "frequently",
-              "The",
+              "remains",
+              "unproven",
               "claims.",
               "regarding",
-              "unproven",
-              "skeptical",
+              "The",
+              "decomposition",
               "author",
-              "remains",
+              "skeptical",
+              "semiconductor",
               "tone"
             ],
             "targetChinese": "作者對於未經證實的說法保持懷疑態度。",
@@ -17716,19 +18815,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "hypersonic (高超音速(5馬赫以上))",
+                "en": "hypersonic",
+                "zh": "高超音速(5馬赫以上)",
+                "correct": false
+              },
+              {
+                "text": "author tone (作者筆調)",
+                "en": "author tone",
+                "zh": "作者筆調",
+                "correct": false
+              },
+              {
                 "text": "skeptical (抱持懷疑的)",
+                "en": "skeptical",
+                "zh": "抱持懷疑的",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "alignment (價值對齊工程)",
+                "en": "alignment",
+                "zh": "價值對齊工程",
                 "correct": false
               }
             ]
@@ -17790,28 +18897,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「clause decomposition」在繁體中文中是什麼意思？",
             "options": [
               {
-                "en": "clause decomposition",
-                "zh": "子句拆解",
-                "emoji": "🧩",
-                "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "appositive",
+                "zh": "同位語",
+                "emoji": "🤖",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "subordination",
+                "zh": "從屬子句",
+                "emoji": "🧬",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
+                "en": "syntactic precision",
+                "zh": "句構精準度",
                 "emoji": "🚀",
                 "correct": false
+              },
+              {
+                "en": "clause decomposition",
+                "zh": "子句拆解",
+                "emoji": "👑",
+                "correct": true
               }
             ]
           },
@@ -17830,15 +18937,15 @@ window.CURRICULUM_DATA = [
               "assertions."
             ],
             "pool": [
-              "subordinate",
-              "Deconstructing",
-              "clauses",
-              "assertions.",
-              "clarifies",
-              "consistently",
-              "philosophical",
+              "resiliency",
               "complex",
-              "frequently"
+              "clauses",
+              "subordinate",
+              "precision",
+              "assertions.",
+              "philosophical",
+              "Deconstructing",
+              "clarifies"
             ],
             "targetChinese": "解構從屬子句能釐清複雜的哲學主張。",
             "targetSentence": "Deconstructing subordinate clauses clarifies complex philosophical assertions."
@@ -17851,18 +18958,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "subordination (從屬子句)",
+                "en": "subordination",
+                "zh": "從屬子句",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "clause decomposition (子句拆解)",
+                "en": "clause decomposition",
+                "zh": "子句拆解",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "peer-reviewed (同行同儕審查的)",
+                "en": "peer-reviewed",
+                "zh": "同行同儕審查的",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "proliferation (迅速激增)",
+                "en": "proliferation",
+                "zh": "迅速激增",
                 "correct": false
               }
             ]
@@ -17926,25 +19041,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "peer-reviewed",
                 "zh": "同行同儕審查的",
-                "emoji": "🔬",
+                "emoji": "📚",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "methodology",
+                "zh": "研究方法論",
+                "emoji": "🔬",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "unprecedented",
+                "zh": "史無前例的",
+                "emoji": "🌐",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "empirical finding",
+                "zh": "實證發現",
+                "emoji": "🧠",
                 "correct": false
               }
             ]
@@ -17966,15 +19081,16 @@ window.CURRICULUM_DATA = [
               "journal."
             ],
             "pool": [
-              "peer-reviewed",
-              "in",
-              "findings",
-              "frequently",
-              "academic",
+              "were",
               "The",
+              "academic",
+              "findings",
               "a",
               "journal.",
-              "were",
+              "peer-reviewed",
+              "semiconductor",
+              "regulatory",
+              "in",
               "published"
             ],
             "targetChinese": "研究結果發表於同行評審的權威學術期刊上。",
@@ -17988,18 +19104,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "methodology (研究方法論)",
+                "en": "methodology",
+                "zh": "研究方法論",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "neuroscience (神經科學)",
+                "en": "neuroscience",
+                "zh": "神經科學",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "geopolitics (地緣政治)",
+                "en": "geopolitics",
+                "zh": "地緣政治",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "peer-reviewed (同行同儕審查的)",
+                "en": "peer-reviewed",
+                "zh": "同行同儕審查的",
                 "correct": false
               }
             ]
@@ -18063,24 +19187,24 @@ window.CURRICULUM_DATA = [
               {
                 "en": "neuroscience",
                 "zh": "神經科學",
-                "emoji": "⚾",
+                "emoji": "👑",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "visual cognition",
+                "zh": "視覺認知",
+                "emoji": "🤖",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "reaction threshold",
+                "zh": "反應臨界閥值",
+                "emoji": "🧬",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
+                "en": "substantiate",
+                "zh": "舉證證實",
                 "emoji": "🚀",
                 "correct": false
               }
@@ -18102,15 +19226,16 @@ window.CURRICULUM_DATA = [
               "milliseconds."
             ],
             "pool": [
-              "in",
               "batters",
-              "baseball",
-              "frequently",
-              "process",
-              "rotation",
-              "pitch",
+              "alignment",
+              "in",
               "Elite",
-              "milliseconds."
+              "hallucination",
+              "rotation",
+              "process",
+              "milliseconds.",
+              "baseball",
+              "pitch"
             ],
             "targetChinese": "頂尖棒球打者在幾毫秒內就能判斷球的旋轉。",
             "targetSentence": "Elite baseball batters process pitch rotation in milliseconds."
@@ -18122,19 +19247,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "neuroscience (神經科學)",
+                "en": "neuroscience",
+                "zh": "神經科學",
+                "correct": false
+              },
+              {
                 "text": "reaction threshold (反應臨界閥值)",
+                "en": "reaction threshold",
+                "zh": "反應臨界閥值",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "rhetorical framing (論述框架)",
+                "en": "rhetorical framing",
+                "zh": "論述框架",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "critical discourse (批判性思維論述)",
+                "en": "critical discourse",
+                "zh": "批判性思維論述",
                 "correct": false
               }
             ]
@@ -18196,27 +19329,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「hypersonic」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "scramjet",
+                "zh": "超音速燃燒衝壓引擎",
+                "emoji": "🔬",
+                "correct": false
+              },
+              {
                 "en": "hypersonic",
                 "zh": "高超音速(5馬赫以上)",
-                "emoji": "🚀",
+                "emoji": "📚",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "adaptation",
+                "zh": "適應性",
+                "emoji": "🌐",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "orbital insertion",
+                "zh": "進入預定軌道",
+                "emoji": "🧠",
                 "correct": false
               }
             ]
@@ -18239,15 +19372,16 @@ window.CURRICULUM_DATA = [
             ],
             "pool": [
               "travel",
+              "at",
+              "five",
+              "sound.",
+              "exceeding",
+              "uncommon",
+              "Hypersonic",
+              "geopolitics",
               "times",
               "speeds",
-              "at",
-              "Hypersonic",
-              "five",
-              "aircraft",
-              "frequently",
-              "exceeding",
-              "sound."
+              "aircraft"
             ],
             "targetChinese": "極音速飛行器以超過五倍音速的速度飛行。",
             "targetSentence": "Hypersonic aircraft travel at speeds exceeding five times sound."
@@ -18259,19 +19393,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "ubiquitous (無所不在普及的)",
+                "en": "ubiquitous",
+                "zh": "無所不在普及的",
+                "correct": false
+              },
+              {
+                "text": "unbiased (客觀公正無偏見的)",
+                "en": "unbiased",
+                "zh": "客觀公正無偏見的",
+                "correct": false
+              },
+              {
                 "text": "scramjet (超音速燃燒衝壓引擎)",
+                "en": "scramjet",
+                "zh": "超音速燃燒衝壓引擎",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "hypersonic (高超音速(5馬赫以上))",
+                "en": "hypersonic",
+                "zh": "高超音速(5馬赫以上)",
                 "correct": false
               }
             ]
@@ -18333,27 +19475,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「game theory」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "author tone",
+                "zh": "作者筆調",
+                "emoji": "🚀",
+                "correct": false
+              },
+              {
                 "en": "game theory",
                 "zh": "賽局博弈理論",
-                "emoji": "♟️",
+                "emoji": "👑",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "minimax strategy",
+                "zh": "極小化極大策略",
+                "emoji": "🧬",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "adversarial play",
+                "zh": "對抗賽局",
+                "emoji": "🤖",
                 "correct": false
               }
             ]
@@ -18375,16 +19517,17 @@ window.CURRICULUM_DATA = [
               "offense."
             ],
             "pool": [
-              "optimal",
-              "game",
-              "Applying",
-              "and",
-              "frequently",
-              "theory",
-              "defense",
               "offense.",
-              "ensures",
-              "table"
+              "optimal",
+              "theory",
+              "game",
+              "geopolitics",
+              "defense",
+              "context",
+              "and",
+              "Applying",
+              "table",
+              "ensures"
             ],
             "targetChinese": "應用賽局理論能確保球檯上的最佳攻守平衡。",
             "targetSentence": "Applying game theory ensures optimal table defense and offense."
@@ -18396,20 +19539,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "orbital insertion (進入預定軌道)",
+                "en": "orbital insertion",
+                "zh": "進入預定軌道",
+                "correct": false
+              },
+              {
+                "text": "game theory (賽局博弈理論)",
+                "en": "game theory",
+                "zh": "賽局博弈理論",
+                "correct": false
+              },
+              {
+                "text": "foundation model (基底模型)",
+                "en": "foundation model",
+                "zh": "基底模型",
+                "correct": false
+              },
+              {
                 "text": "minimax strategy (極小化極大策略)",
+                "en": "minimax strategy",
+                "zh": "極小化極大策略",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -18472,25 +19623,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "morphology",
                 "zh": "生物形態學",
-                "emoji": "🦖",
+                "emoji": "📚",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "genetic regulatory network",
+                "zh": "基因調控網路",
+                "emoji": "🔬",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "hypersonic",
+                "zh": "高超音速(5馬赫以上)",
+                "emoji": "🌐",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "adaptation",
+                "zh": "適應性",
+                "emoji": "🧠",
                 "correct": false
               }
             ]
@@ -18512,16 +19663,17 @@ window.CURRICULUM_DATA = [
               "selection."
             ],
             "pool": [
-              "reflect",
-              "of",
-              "selection.",
-              "frequently",
-              "environmental",
-              "of",
               "millions",
-              "Morphological",
+              "environmental",
+              "paradigm",
               "adaptations",
-              "years"
+              "of",
+              "reflect",
+              "ubiquitous",
+              "selection.",
+              "years",
+              "of",
+              "Morphological"
             ],
             "targetChinese": "形態上的適應反映了數百萬年的環境天擇。",
             "targetSentence": "Morphological adaptations reflect millions of years of environmental selection."
@@ -18533,19 +19685,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "far from being (遠非...)",
+                "en": "far from being",
+                "zh": "遠非...",
+                "correct": false
+              },
+              {
                 "text": "genetic regulatory network (基因調控網路)",
+                "en": "genetic regulatory network",
+                "zh": "基因調控網路",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "supply chain resiliency (供應鏈韌性)",
+                "en": "supply chain resiliency",
+                "zh": "供應鏈韌性",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "fossilized lineage (化石演化支)",
+                "en": "fossilized lineage",
+                "zh": "化石演化支",
                 "correct": false
               }
             ]
@@ -18607,28 +19767,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「foundation model」在繁體中文中是什麼意思？",
             "options": [
               {
-                "en": "foundation model",
-                "zh": "基底模型",
+                "en": "hallucination",
+                "zh": "模型幻覺",
                 "emoji": "🤖",
-                "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "alignment",
+                "zh": "價值對齊工程",
+                "emoji": "🧬",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
+                "en": "visual cognition",
+                "zh": "視覺認知",
                 "emoji": "🚀",
                 "correct": false
+              },
+              {
+                "en": "foundation model",
+                "zh": "基底模型",
+                "emoji": "👑",
+                "correct": true
               }
             ]
           },
@@ -18651,18 +19811,19 @@ window.CURRICULUM_DATA = [
               "interest."
             ],
             "pool": [
-              "interest.",
-              "algorithms",
-              "in",
+              "AI",
               "human",
-              "frequently",
-              "best",
-              "research",
-              "act",
-              "that",
               "ensures",
               "alignment",
-              "AI"
+              "act",
+              "algorithms",
+              "best",
+              "semiconductor",
+              "that",
+              "proliferation",
+              "research",
+              "interest.",
+              "in"
             ],
             "targetChinese": "AI對齊研究確保演算法符合人類的最佳利益。",
             "targetSentence": "AI alignment research ensures that algorithms act in human best interest."
@@ -18675,18 +19836,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "alignment (價值對齊工程)",
+                "en": "alignment",
+                "zh": "價值對齊工程",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "ubiquitous (無所不在普及的)",
+                "en": "ubiquitous",
+                "zh": "無所不在普及的",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "foundation model (基底模型)",
+                "en": "foundation model",
+                "zh": "基底模型",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "skeptical (抱持懷疑的)",
+                "en": "skeptical",
+                "zh": "抱持懷疑的",
                 "correct": false
               }
             ]
@@ -18750,25 +19919,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "semiconductor",
                 "zh": "半導體晶片",
-                "emoji": "💾",
+                "emoji": "📚",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "geopolitics",
+                "zh": "地緣政治",
+                "emoji": "🔬",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "parenthetical",
+                "zh": "插入語",
+                "emoji": "🌐",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "foundry ecosystem",
+                "zh": "晶圓代工生態系",
+                "emoji": "🧠",
                 "correct": false
               }
             ]
@@ -18790,16 +19959,17 @@ window.CURRICULUM_DATA = [
               "chain."
             ],
             "pool": [
-              "intricate",
-              "chain.",
-              "an",
-              "Semiconductor",
+              "aerothermodynamic",
               "global",
+              "Semiconductor",
+              "relies",
+              "intricate",
               "on",
-              "supply",
+              "an",
               "manufacturing",
-              "frequently",
-              "relies"
+              "chain.",
+              "supply",
+              "alignment"
             ],
             "targetChinese": "半導體製造仰賴錯綜複雜的全球供應鏈。",
             "targetSentence": "Semiconductor manufacturing relies on an intricate global supply chain."
@@ -18811,19 +19981,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "semiconductor (半導體晶片)",
+                "en": "semiconductor",
+                "zh": "半導體晶片",
+                "correct": false
+              },
+              {
+                "text": "substantiate (舉證證實)",
+                "en": "substantiate",
+                "zh": "舉證證實",
+                "correct": false
+              },
+              {
                 "text": "geopolitics (地緣政治)",
+                "en": "geopolitics",
+                "zh": "地緣政治",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "hypersonic (高超音速(5馬赫以上))",
+                "en": "hypersonic",
+                "zh": "高超音速(5馬赫以上)",
                 "correct": false
               }
             ]
@@ -18885,28 +20063,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「editorial」在繁體中文中是什麼意思？",
             "options": [
               {
-                "en": "editorial",
-                "zh": "社論特稿",
-                "emoji": "📰",
-                "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
+                "en": "skeptical",
+                "zh": "抱持懷疑的",
                 "emoji": "🚀",
                 "correct": false
+              },
+              {
+                "en": "rhetorical framing",
+                "zh": "論述框架",
+                "emoji": "🤖",
+                "correct": false
+              },
+              {
+                "en": "journalistic discourse",
+                "zh": "新聞論述風格",
+                "emoji": "🧬",
+                "correct": false
+              },
+              {
+                "en": "editorial",
+                "zh": "社論特稿",
+                "emoji": "👑",
+                "correct": true
               }
             ]
           },
@@ -18928,14 +20106,15 @@ window.CURRICULUM_DATA = [
             ],
             "pool": [
               "sensational",
-              "avoid",
               "journalists",
+              "avoid",
+              "Rigorous",
+              "critical",
               "framing.",
               "neutrality",
               "and",
-              "Rigorous",
               "maintain",
-              "frequently",
+              "discursive",
               "rhetorical"
             ],
             "targetChinese": "嚴謹的記者保持中立，避免煽情報導的語意框架。",
@@ -18948,19 +20127,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "statistically significant (統計顯著的)",
+                "en": "statistically significant",
+                "zh": "統計顯著的",
+                "correct": false
+              },
+              {
                 "text": "journalistic discourse (新聞論述風格)",
+                "en": "journalistic discourse",
+                "zh": "新聞論述風格",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "underlying presupposition (底層預設立場)",
+                "en": "underlying presupposition",
+                "zh": "底層預設立場",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "editorial (社論特稿)",
+                "en": "editorial",
+                "zh": "社論特稿",
                 "correct": false
               }
             ]
@@ -19022,27 +20209,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「discursive context」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "critical discourse",
+                "zh": "批判性思維論述",
+                "emoji": "🌐",
+                "correct": false
+              },
+              {
                 "en": "discursive context",
                 "zh": "篇章論辯語境",
-                "emoji": "🏆",
+                "emoji": "📚",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "semantic coherence",
+                "zh": "語意連貫性",
+                "emoji": "🔬",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "syntactic precision",
+                "zh": "句構精準度",
+                "emoji": "🧠",
                 "correct": false
               }
             ]
@@ -19063,15 +20250,16 @@ window.CURRICULUM_DATA = [
               "markers."
             ],
             "pool": [
-              "semantic",
-              "discourse",
-              "transitional",
+              "Analyze",
               "before",
+              "minimax",
+              "markers.",
+              "semantic",
+              "game",
               "selecting",
               "coherence",
-              "Analyze",
-              "frequently",
-              "markers."
+              "discourse",
+              "transitional"
             ],
             "targetChinese": "在選擇轉折連接詞前，先分析語義連貫性。",
             "targetSentence": "Analyze semantic coherence before selecting transitional discourse markers."
@@ -19083,20 +20271,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "critical discourse (批判性思維論述)",
+                "en": "critical discourse",
+                "zh": "批判性思維論述",
+                "correct": false
+              },
+              {
+                "text": "empirical finding (實證發現)",
+                "en": "empirical finding",
+                "zh": "實證發現",
+                "correct": false
+              },
+              {
+                "text": "discursive context (篇章論辯語境)",
+                "en": "discursive context",
+                "zh": "篇章論辯語境",
+                "correct": false
+              },
+              {
                 "text": "semantic coherence (語意連貫性)",
+                "en": "semantic coherence",
+                "zh": "語意連貫性",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -19159,25 +20355,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "critical discourse",
                 "zh": "批判性思維論述",
-                "emoji": "⚖️",
+                "emoji": "👑",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
+                "en": "fossilized lineage",
+                "zh": "化石演化支",
                 "emoji": "🚀",
+                "correct": false
+              },
+              {
+                "en": "fallacy",
+                "zh": "邏輯謬誤",
+                "emoji": "🤖",
+                "correct": false
+              },
+              {
+                "en": "underlying presupposition",
+                "zh": "底層預設立場",
+                "emoji": "🧬",
                 "correct": false
               }
             ]
@@ -19199,16 +20395,17 @@ window.CURRICULUM_DATA = [
               "conclusions."
             ],
             "pool": [
-              "before",
-              "underlying",
-              "conclusions.",
-              "Critical",
-              "frequently",
-              "controversial",
-              "thinkers",
               "premises",
+              "evaluate",
+              "orbital",
+              "Critical",
+              "before",
               "accepting",
-              "evaluate"
+              "controversial",
+              "conclusions.",
+              "ubiquitous",
+              "thinkers",
+              "underlying"
             ],
             "targetChinese": "批判性思考者在接受具爭議的結論前會先評估潛在前提。",
             "targetSentence": "Critical thinkers evaluate underlying premises before accepting controversial conclusions."
@@ -19220,19 +20417,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "statistically significant (統計顯著的)",
+                "en": "statistically significant",
+                "zh": "統計顯著的",
+                "correct": false
+              },
+              {
                 "text": "underlying presupposition (底層預設立場)",
+                "en": "underlying presupposition",
+                "zh": "底層預設立場",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "critical discourse (批判性思維論述)",
+                "en": "critical discourse",
+                "zh": "批判性思維論述",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "elimination technique (選項排除法)",
+                "en": "elimination technique",
+                "zh": "選項排除法",
                 "correct": false
               }
             ]
@@ -19296,25 +20501,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "unprecedented",
                 "zh": "空前的",
-                "emoji": "🎓",
+                "emoji": "📚",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "subordination",
+                "zh": "從屬子句",
+                "emoji": "🌐",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "semiconductor",
+                "zh": "半導體",
+                "emoji": "🧠",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "neuroscience",
+                "zh": "神經科學",
+                "emoji": "🔬",
                 "correct": false
               }
             ]
@@ -19335,15 +20540,16 @@ window.CURRICULUM_DATA = [
               "thinking."
             ],
             "pool": [
-              "profound",
-              "innovation",
-              "and",
-              "Unprecedented",
-              "thinking.",
+              "context",
+              "discipline",
               "requires",
+              "morphology",
+              "Unprecedented",
               "visionary",
-              "frequently",
-              "discipline"
+              "thinking.",
+              "innovation",
+              "profound",
+              "and"
             ],
             "targetChinese": "前所未有的創新需要深刻的自律與遠見思維。",
             "targetSentence": "Unprecedented innovation requires profound discipline and visionary thinking."
@@ -19355,19 +20561,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "substantiate (舉證證實)",
+                "en": "substantiate",
+                "zh": "舉證證實",
+                "correct": false
+              },
+              {
                 "text": "neuroscience (神經科學)",
+                "en": "neuroscience",
+                "zh": "神經科學",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "acceleration (加速提升)",
+                "en": "acceleration",
+                "zh": "加速提升",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "unprecedented (空前的)",
+                "en": "unprecedented",
+                "zh": "空前的",
                 "correct": false
               }
             ]
@@ -19446,25 +20660,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "regarding your inquiry",
                 "zh": "關於您的洽詢",
-                "emoji": "✉️",
+                "emoji": "💼",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "at your earliest convenience",
+                "zh": "在您方便時盡快",
+                "emoji": "✉️",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "confirm availability",
+                "zh": "確認是否有空檔",
+                "emoji": "🤝",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "apologize for inconvenience",
+                "zh": "為不便致歉",
+                "emoji": "📊",
                 "correct": false
               }
             ]
@@ -19486,16 +20700,17 @@ window.CURRICULUM_DATA = [
               "proposal."
             ],
             "pool": [
+              "your",
+              "our",
+              "proposal.",
+              "inconvenience",
+              "convenience",
+              "reply",
               "earliest",
               "regarding",
+              "agenda",
               "Please",
-              "reply",
-              "at",
-              "convenience",
-              "simultaneously",
-              "proposal.",
-              "our",
-              "your"
+              "at"
             ],
             "targetChinese": "關於本合作提案，請在您方便時盡早回覆。",
             "targetSentence": "Please reply at your earliest convenience regarding our proposal."
@@ -19507,20 +20722,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "complaint resolution (客訴處理解決)",
+                "en": "complaint resolution",
+                "zh": "客訴處理解決",
+                "correct": false
+              },
+              {
+                "text": "apologize for inconvenience (為不便致歉)",
+                "en": "apologize for inconvenience",
+                "zh": "為不便致歉",
+                "correct": false
+              },
+              {
+                "text": "regarding your inquiry (關於您的洽詢)",
+                "en": "regarding your inquiry",
+                "zh": "關於您的洽詢",
+                "correct": false
+              },
+              {
                 "text": "at your earliest convenience (在您方便時盡快)",
+                "en": "at your earliest convenience",
+                "zh": "在您方便時盡快",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -19581,28 +20804,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「reschedule」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "time zone",
+                "zh": "時區",
+                "emoji": "🏢",
+                "correct": false
+              },
+              {
+                "en": "agenda",
+                "zh": "會議議程",
+                "emoji": "🌐",
+                "correct": false
+              },
+              {
+                "en": "paraphrase",
+                "zh": "換句話說",
+                "emoji": "💡",
+                "correct": false
+              },
+              {
                 "en": "reschedule",
                 "zh": "重新排程",
-                "emoji": "🗓️",
+                "emoji": "📈",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -19622,15 +20845,16 @@ window.CURRICULUM_DATA = [
               "call."
             ],
             "pool": [
-              "Please",
-              "conference",
-              "simultaneously",
-              "confirm",
               "your",
               "availability",
+              "penetration",
+              "tomorrow",
+              "benefits",
+              "conference",
+              "Please",
+              "confirm",
               "for",
-              "call.",
-              "tomorrow"
+              "call."
             ],
             "targetChinese": "請確認您明天是否有空參加電話會議。",
             "targetSentence": "Please confirm your availability for tomorrow conference call."
@@ -19642,20 +20866,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "pitch deck (募資簡報)",
+                "en": "pitch deck",
+                "zh": "募資簡報",
+                "correct": false
+              },
+              {
+                "text": "fuel hedging (航空燃油避險)",
+                "en": "fuel hedging",
+                "zh": "航空燃油避險",
+                "correct": false
+              },
+              {
+                "text": "reschedule (重新排程)",
+                "en": "reschedule",
+                "zh": "重新排程",
+                "correct": false
+              },
+              {
                 "text": "time zone (時區)",
+                "en": "time zone",
+                "zh": "時區",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -19716,27 +20948,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「value proposition」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "market penetration",
+                "zh": "市場滲透率",
+                "emoji": "📊",
+                "correct": false
+              },
+              {
                 "en": "value proposition",
                 "zh": "價值主張",
-                "emoji": "🚀",
+                "emoji": "💼",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "contractual terms",
+                "zh": "合約條款",
+                "emoji": "🤝",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "competitive edge",
+                "zh": "競爭優勢",
+                "emoji": "✉️",
                 "correct": false
               }
             ]
@@ -19758,16 +20990,17 @@ window.CURRICULUM_DATA = [
               "clients."
             ],
             "pool": [
-              "simultaneously",
-              "competitive",
-              "Our",
-              "delivers",
               "edge",
-              "clients.",
-              "unmatched",
-              "an",
+              "quarterly",
               "to",
-              "software"
+              "unmatched",
+              "software",
+              "recreational",
+              "delivers",
+              "an",
+              "clients.",
+              "Our",
+              "competitive"
             ],
             "targetChinese": "我們的軟體為客戶提供無可比擬的競爭優勢。",
             "targetSentence": "Our software delivers an unmatched competitive edge to clients."
@@ -19779,20 +21012,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "value proposition (價值主張)",
+                "en": "value proposition",
+                "zh": "價值主張",
+                "correct": false
+              },
+              {
+                "text": "sprint milestone (衝刺週期里程碑)",
+                "en": "sprint milestone",
+                "zh": "衝刺週期里程碑",
+                "correct": false
+              },
+              {
+                "text": "fleet management (機隊營運管理)",
+                "en": "fleet management",
+                "zh": "機隊營運管理",
+                "correct": false
+              },
+              {
                 "text": "competitive edge (競爭優勢)",
+                "en": "competitive edge",
+                "zh": "競爭優勢",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -19853,27 +21094,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「complaint resolution」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "broadcasting rights",
+                "zh": "轉播權益",
+                "emoji": "💡",
+                "correct": false
+              },
+              {
                 "en": "complaint resolution",
                 "zh": "客訴處理解決",
-                "emoji": "🤝",
+                "emoji": "📈",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "apologize for inconvenience",
+                "zh": "為不便致歉",
+                "emoji": "🌐",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "customer satisfaction",
+                "zh": "顧客滿意度",
+                "emoji": "🏢",
                 "correct": false
               }
             ]
@@ -19894,15 +21135,16 @@ window.CURRICULUM_DATA = [
               "loyalty."
             ],
             "pool": [
-              "Prompt",
               "brand",
-              "simultaneously",
+              "loyalty.",
+              "customer",
               "complaint",
+              "agile",
+              "period",
               "resolution",
               "directly",
-              "customer",
               "enhances",
-              "loyalty."
+              "Prompt"
             ],
             "targetChinese": "迅速處理客訴能直接提升顧客對品牌的忠誠度。",
             "targetSentence": "Prompt complaint resolution directly enhances customer brand loyalty."
@@ -19914,19 +21156,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "franchise valuation (球隊特許估值)",
+                "en": "franchise valuation",
+                "zh": "球隊特許估值",
+                "correct": false
+              },
+              {
+                "text": "inference question (推論判斷題)",
+                "en": "inference question",
+                "zh": "推論判斷題",
+                "correct": false
+              },
+              {
                 "text": "customer satisfaction (顧客滿意度)",
+                "en": "customer satisfaction",
+                "zh": "顧客滿意度",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "complaint resolution (客訴處理解決)",
+                "en": "complaint resolution",
+                "zh": "客訴處理解決",
                 "correct": false
               }
             ]
@@ -19988,27 +21238,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「itinerary」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "customs clearance",
+                "zh": "通關手續",
+                "emoji": "📊",
+                "correct": false
+              },
+              {
                 "en": "itinerary",
                 "zh": "行程表",
-                "emoji": "🛫",
+                "emoji": "💼",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "etiquette",
+                "zh": "國際社交禮儀",
+                "emoji": "🤝",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "boarding pass",
+                "zh": "登機證",
+                "emoji": "✉️",
                 "correct": false
               }
             ]
@@ -20029,15 +21279,16 @@ window.CURRICULUM_DATA = [
               "reimbursement."
             ],
             "pool": [
-              "all",
-              "Keep",
               "for",
-              "receipts",
               "reimbursement.",
+              "receipts",
               "business",
               "expense",
-              "simultaneously",
-              "travel"
+              "travel",
+              "all",
+              "Keep",
+              "prize",
+              "confirm"
             ],
             "targetChinese": "請保留所有出差單據以便申請公務費用報銷。",
             "targetSentence": "Keep all travel receipts for business expense reimbursement."
@@ -20050,18 +21301,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "boarding pass (登機證)",
+                "en": "boarding pass",
+                "zh": "登機證",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "itinerary (行程表)",
+                "en": "itinerary",
+                "zh": "行程表",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "fuel hedging (航空燃油避險)",
+                "en": "fuel hedging",
+                "zh": "航空燃油避險",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "speaker intent (說話者弦外意圖)",
+                "en": "speaker intent",
+                "zh": "說話者弦外意圖",
                 "correct": false
               }
             ]
@@ -20123,27 +21382,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「revenue」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "expenditure",
+                "zh": "支出花費",
+                "emoji": "🏢",
+                "correct": false
+              },
+              {
                 "en": "revenue",
                 "zh": "營業額收入",
                 "emoji": "📈",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "fiscal year",
+                "zh": "財政年度",
+                "emoji": "🌐",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "feature",
+                "zh": "功能特色",
+                "emoji": "💡",
                 "correct": false
               }
             ]
@@ -20163,15 +21422,15 @@ window.CURRICULUM_DATA = [
               "projections."
             ],
             "pool": [
-              "our",
-              "simultaneously",
-              "consequently",
+              "financial",
               "exceeded",
-              "original",
               "projections.",
-              "Quarterly",
               "revenue",
-              "financial"
+              "our",
+              "complaint",
+              "deliverable",
+              "original",
+              "Quarterly"
             ],
             "targetChinese": "季度營收超出了我們最初的財務預測。",
             "targetSentence": "Quarterly revenue exceeded our original financial projections."
@@ -20183,19 +21442,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "maintenance (航機維修保養)",
+                "en": "maintenance",
+                "zh": "航機維修保養",
+                "correct": false
+              },
+              {
                 "text": "expenditure (支出花費)",
+                "en": "expenditure",
+                "zh": "支出花費",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "hospitality (餐旅招待服務)",
+                "en": "hospitality",
+                "zh": "餐旅招待服務",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "revenue (營業額收入)",
+                "en": "revenue",
+                "zh": "營業額收入",
                 "correct": false
               }
             ]
@@ -20257,27 +21524,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「recruitment」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "benefits package",
+                "zh": "福利配套",
+                "emoji": "📊",
+                "correct": false
+              },
+              {
+                "en": "resume",
+                "zh": "履歷表",
+                "emoji": "✉️",
+                "correct": false
+              },
+              {
                 "en": "recruitment",
                 "zh": "人才招募",
-                "emoji": "👔",
+                "emoji": "💼",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "maintenance",
+                "zh": "航機維修保養",
+                "emoji": "🤝",
                 "correct": false
               }
             ]
@@ -20299,16 +21566,17 @@ window.CURRICULUM_DATA = [
               "campaign."
             ],
             "pool": [
-              "campaign.",
-              "recruitment",
-              "The",
-              "team",
-              "an",
               "launched",
+              "campaign.",
               "international",
-              "simultaneously",
+              "team",
               "human",
-              "resources"
+              "an",
+              "reimbursement",
+              "resources",
+              "customs",
+              "recruitment",
+              "The"
             ],
             "targetChinese": "人力資源團隊展開了一項國際招募計畫。",
             "targetSentence": "The human resources team launched an international recruitment campaign."
@@ -20320,20 +21588,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "agenda (會議議程)",
+                "en": "agenda",
+                "zh": "會議議程",
+                "correct": false
+              },
+              {
+                "text": "recruitment (人才招募)",
+                "en": "recruitment",
+                "zh": "人才招募",
+                "correct": false
+              },
+              {
+                "text": "vendor (供應商)",
+                "en": "vendor",
+                "zh": "供應商",
+                "correct": false
+              },
+              {
                 "text": "resume (履歷表)",
+                "en": "resume",
+                "zh": "履歷表",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -20396,25 +21672,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "procurement",
                 "zh": "採購",
-                "emoji": "📦",
+                "emoji": "📈",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "vendor",
+                "zh": "供應商",
+                "emoji": "🌐",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "contractual terms",
+                "zh": "合約條款",
+                "emoji": "🏢",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "deliverable",
+                "zh": "專案產出交付成果",
+                "emoji": "💡",
                 "correct": false
               }
             ]
@@ -20436,16 +21712,17 @@ window.CURRICULUM_DATA = [
               "vendor."
             ],
             "pool": [
-              "signing",
-              "simultaneously",
-              "the",
               "contractual",
-              "vendor.",
-              "before",
+              "rapport",
+              "the",
+              "signing",
+              "customs",
               "with",
-              "Review",
+              "before",
+              "the",
               "terms",
-              "the"
+              "Review",
+              "vendor."
             ],
             "targetChinese": "在與供應商簽約前，請審閱合約條款。",
             "targetSentence": "Review the contractual terms before signing with the vendor."
@@ -20457,20 +21734,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "quarterly forecast (季度預測)",
+                "en": "quarterly forecast",
+                "zh": "季度預測",
+                "correct": false
+              },
+              {
+                "text": "value proposition (價值主張)",
+                "en": "value proposition",
+                "zh": "價值主張",
+                "correct": false
+              },
+              {
+                "text": "procurement (採購)",
+                "en": "procurement",
+                "zh": "採購",
+                "correct": false
+              },
+              {
                 "text": "contractual terms (合約條款)",
+                "en": "contractual terms",
+                "zh": "合約條款",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -20531,27 +21816,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「franchise valuation」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "merchandising",
+                "zh": "周邊商品銷售",
+                "emoji": "📊",
+                "correct": false
+              },
+              {
+                "en": "broadcasting rights",
+                "zh": "轉播權益",
+                "emoji": "✉️",
+                "correct": false
+              },
+              {
                 "en": "franchise valuation",
                 "zh": "球隊特許估值",
-                "emoji": "⚾",
+                "emoji": "💼",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "complaint resolution",
+                "zh": "客訴處理解決",
+                "emoji": "🤝",
                 "correct": false
               }
             ]
@@ -20573,16 +21858,17 @@ window.CURRICULUM_DATA = [
               "Baseball."
             ],
             "pool": [
-              "League",
-              "substantial",
-              "Major",
-              "for",
-              "revenue",
               "Baseball.",
               "represent",
+              "rights",
+              "factor",
+              "agile",
+              "substantial",
+              "Major",
               "Broadcasting",
-              "simultaneously",
-              "rights"
+              "League",
+              "revenue",
+              "for"
             ],
             "targetChinese": "轉播權是美國職棒大聯盟重要的收入來源。",
             "targetSentence": "Broadcasting rights represent substantial revenue for Major League Baseball."
@@ -20595,18 +21881,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "broadcasting rights (轉播權益)",
+                "en": "broadcasting rights",
+                "zh": "轉播權益",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "quarterly forecast (季度預測)",
+                "en": "quarterly forecast",
+                "zh": "季度預測",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "franchise valuation (球隊特許估值)",
+                "en": "franchise valuation",
+                "zh": "球隊特許估值",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "market penetration (市場滲透率)",
+                "en": "market penetration",
+                "zh": "市場滲透率",
                 "correct": false
               }
             ]
@@ -20668,28 +21962,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「fleet management」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "fuel hedging",
+                "zh": "航空燃油避險",
+                "emoji": "🌐",
+                "correct": false
+              },
+              {
+                "en": "load factor",
+                "zh": "載客率",
+                "emoji": "🏢",
+                "correct": false
+              },
+              {
+                "en": "agile methodology",
+                "zh": "敏捷開發方法論",
+                "emoji": "💡",
+                "correct": false
+              },
+              {
                 "en": "fleet management",
                 "zh": "機隊營運管理",
-                "emoji": "✈️",
+                "emoji": "📈",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -20709,15 +22003,16 @@ window.CURRICULUM_DATA = [
               "margins."
             ],
             "pool": [
-              "routes",
-              "operating",
-              "increases",
-              "airline",
-              "simultaneously",
-              "margins.",
+              "Optimizing",
               "flight",
+              "increases",
               "significantly",
-              "Optimizing"
+              "earliest",
+              "complaint",
+              "margins.",
+              "airline",
+              "routes",
+              "operating"
             ],
             "targetChinese": "優化飛行航線顯著提高了航空公司的營運利潤。",
             "targetSentence": "Optimizing flight routes significantly increases airline operating margins."
@@ -20729,19 +22024,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "pitch deck (募資簡報)",
+                "en": "pitch deck",
+                "zh": "募資簡報",
+                "correct": false
+              },
+              {
                 "text": "load factor (載客率)",
+                "en": "load factor",
+                "zh": "載客率",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "fleet management (機隊營運管理)",
+                "en": "fleet management",
+                "zh": "機隊營運管理",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "fiscal year (財政年度)",
+                "en": "fiscal year",
+                "zh": "財政年度",
                 "correct": false
               }
             ]
@@ -20803,28 +22106,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「recreational arena」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "tournament prize",
+                "zh": "錦標賽總獎金",
+                "emoji": "✉️",
+                "correct": false
+              },
+              {
+                "en": "quarterly forecast",
+                "zh": "季度預測",
+                "emoji": "🤝",
+                "correct": false
+              },
+              {
+                "en": "hospitality",
+                "zh": "餐旅招待服務",
+                "emoji": "📊",
+                "correct": false
+              },
+              {
                 "en": "recreational arena",
                 "zh": "休閒運動場館",
-                "emoji": "🎱",
+                "emoji": "💼",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -20844,15 +22147,16 @@ window.CURRICULUM_DATA = [
               "sponsorship."
             ],
             "pool": [
-              "attract",
-              "Competitive",
-              "tournaments",
-              "simultaneously",
-              "cue",
               "sponsorship.",
-              "global",
+              "merchandising",
+              "substantial",
+              "Competitive",
               "sports",
-              "substantial"
+              "attract",
+              "itinerary",
+              "global",
+              "cue",
+              "tournaments"
             ],
             "targetChinese": "職業撞球錦標賽吸引了大量全球贊助商。",
             "targetSentence": "Competitive cue sports tournaments attract substantial global sponsorship."
@@ -20864,19 +22168,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "fleet management (機隊營運管理)",
+                "en": "fleet management",
+                "zh": "機隊營運管理",
+                "correct": false
+              },
+              {
+                "text": "recreational arena (休閒運動場館)",
+                "en": "recreational arena",
+                "zh": "休閒運動場館",
+                "correct": false
+              },
+              {
                 "text": "tournament prize (錦標賽總獎金)",
+                "en": "tournament prize",
+                "zh": "錦標賽總獎金",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "sprint milestone (衝刺週期里程碑)",
+                "en": "sprint milestone",
+                "zh": "衝刺週期里程碑",
                 "correct": false
               }
             ]
@@ -20938,27 +22250,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「pitch deck」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "time zone",
+                "zh": "時區",
+                "emoji": "💡",
+                "correct": false
+              },
+              {
                 "en": "pitch deck",
                 "zh": "募資簡報",
-                "emoji": "💡",
+                "emoji": "📈",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "venture capital",
+                "zh": "創投風險資本",
+                "emoji": "🌐",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "seed funding",
+                "zh": "種子輪融資",
+                "emoji": "🏢",
                 "correct": false
               }
             ]
@@ -20980,16 +22292,17 @@ window.CURRICULUM_DATA = [
               "capitalists."
             ],
             "pool": [
-              "startup",
-              "seed",
-              "from",
-              "simultaneously",
-              "prominent",
               "funding",
-              "secured",
+              "startup",
+              "venture",
+              "prominent",
+              "seed",
+              "resume",
               "capitalists.",
+              "pass",
               "The",
-              "venture"
+              "secured",
+              "from"
             ],
             "targetChinese": "這家新創公司從知名創投家手中獲得了種子輪融資。",
             "targetSentence": "The startup secured seed funding from prominent venture capitalists."
@@ -21001,20 +22314,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "boarding pass (登機證)",
+                "en": "boarding pass",
+                "zh": "登機證",
+                "correct": false
+              },
+              {
+                "text": "pitch deck (募資簡報)",
+                "en": "pitch deck",
+                "zh": "募資簡報",
+                "correct": false
+              },
+              {
+                "text": "fuel hedging (航空燃油避險)",
+                "en": "fuel hedging",
+                "zh": "航空燃油避險",
+                "correct": false
+              },
+              {
                 "text": "seed funding (種子輪融資)",
+                "en": "seed funding",
+                "zh": "種子輪融資",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -21077,25 +22398,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "agile methodology",
                 "zh": "敏捷開發方法論",
-                "emoji": "🏃‍♀️",
+                "emoji": "💼",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "sprint milestone",
+                "zh": "衝刺週期里程碑",
+                "emoji": "✉️",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "cross-functional",
+                "zh": "跨部門的",
+                "emoji": "📊",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "contractual terms",
+                "zh": "合約條款",
+                "emoji": "🤝",
                 "correct": false
               }
             ]
@@ -21114,14 +22435,14 @@ window.CURRICULUM_DATA = [
               "deliverables."
             ],
             "pool": [
-              "Cross-functional",
-              "simultaneously",
-              "accelerates",
-              "deliverables.",
-              "collaboration",
-              "consequently",
               "feature",
-              "software"
+              "accelerates",
+              "hedging",
+              "broadcasting",
+              "software",
+              "collaboration",
+              "Cross-functional",
+              "deliverables."
             ],
             "targetChinese": "跨部門協作加速了軟體新功能的交付。",
             "targetSentence": "Cross-functional collaboration accelerates software feature deliverables."
@@ -21134,18 +22455,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "sprint milestone (衝刺週期里程碑)",
+                "en": "sprint milestone",
+                "zh": "衝刺週期里程碑",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "tournament prize (錦標賽總獎金)",
+                "en": "tournament prize",
+                "zh": "錦標賽總獎金",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "benefits package (福利配套)",
+                "en": "benefits package",
+                "zh": "福利配套",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "agile methodology (敏捷開發方法論)",
+                "en": "agile methodology",
+                "zh": "敏捷開發方法論",
                 "correct": false
               }
             ]
@@ -21207,28 +22536,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「networking」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "etiquette",
+                "zh": "國際社交禮儀",
+                "emoji": "🌐",
+                "correct": false
+              },
+              {
+                "en": "paraphrase",
+                "zh": "換句話說",
+                "emoji": "💡",
+                "correct": false
+              },
+              {
+                "en": "icebreaker",
+                "zh": "破冰話題",
+                "emoji": "🏢",
+                "correct": false
+              },
+              {
                 "en": "networking",
                 "zh": "人脈拓展",
-                "emoji": "🍷",
+                "emoji": "📈",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -21248,14 +22577,15 @@ window.CURRICULUM_DATA = [
               "rapport."
             ],
             "pool": [
-              "requires",
+              "curiosity",
+              "Effective",
+              "genuine",
               "networking",
               "rapport.",
-              "Effective",
               "and",
-              "simultaneously",
-              "genuine",
-              "curiosity",
+              "requires",
+              "market",
+              "agenda",
               "professional"
             ],
             "targetChinese": "有效的人脈拓展需要真誠的求知慾與專業默契。",
@@ -21268,20 +22598,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "paraphrase (換句話說)",
+                "en": "paraphrase",
+                "zh": "換句話說",
+                "correct": false
+              },
+              {
+                "text": "networking (人脈拓展)",
+                "en": "networking",
+                "zh": "人脈拓展",
+                "correct": false
+              },
+              {
+                "text": "reschedule (重新排程)",
+                "en": "reschedule",
+                "zh": "重新排程",
+                "correct": false
+              },
+              {
                 "text": "icebreaker (破冰話題)",
+                "en": "icebreaker",
+                "zh": "破冰話題",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -21344,25 +22682,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "speaker intent",
                 "zh": "說話者弦外意圖",
-                "emoji": "🎧",
+                "emoji": "💼",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "paraphrase",
+                "zh": "換句話說",
+                "emoji": "📊",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "venture capital",
+                "zh": "創投風險資本",
+                "emoji": "🤝",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "inference question",
+                "zh": "推論判斷題",
+                "emoji": "✉️",
                 "correct": false
               }
             ]
@@ -21384,16 +22722,17 @@ window.CURRICULUM_DATA = [
               "options."
             ],
             "pool": [
-              "options.",
-              "simultaneously",
-              "synonyms",
-              "than",
-              "Listen",
-              "rather",
+              "agile",
               "in",
               "verbatim",
-              "words",
-              "for"
+              "synonyms",
+              "options.",
+              "than",
+              "for",
+              "rather",
+              "inquiry",
+              "Listen",
+              "words"
             ],
             "targetChinese": "在選項中聆聽同義詞，而非尋找一模一樣的字詞。",
             "targetSentence": "Listen for synonyms rather than verbatim words in options."
@@ -21405,19 +22744,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "agile methodology (敏捷開發方法論)",
+                "en": "agile methodology",
+                "zh": "敏捷開發方法論",
+                "correct": false
+              },
+              {
+                "text": "quarterly forecast (季度預測)",
+                "en": "quarterly forecast",
+                "zh": "季度預測",
+                "correct": false
+              },
+              {
                 "text": "inference question (推論判斷題)",
+                "en": "inference question",
+                "zh": "推論判斷題",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "speaker intent (說話者弦外意圖)",
+                "en": "speaker intent",
+                "zh": "說話者弦外意圖",
                 "correct": false
               }
             ]
@@ -21479,27 +22826,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「regarding your inquiry」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "apologize for inconvenience",
+                "zh": "為不便致歉",
+                "emoji": "🌐",
+                "correct": false
+              },
+              {
                 "en": "regarding your inquiry",
                 "zh": "關於洽詢",
-                "emoji": "👑",
+                "emoji": "📈",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "complaint resolution",
+                "zh": "客訴處理解決",
+                "emoji": "💡",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "seed funding",
+                "zh": "種子融資",
+                "emoji": "🏢",
                 "correct": false
               }
             ]
@@ -21520,15 +22867,16 @@ window.CURRICULUM_DATA = [
               "triumph."
             ],
             "pool": [
+              "Professional",
+              "strategic",
+              "question",
+              "business",
               "collaboration",
               "and",
               "guarantee",
-              "communication",
-              "Professional",
               "triumph.",
-              "strategic",
-              "business",
-              "simultaneously"
+              "communication",
+              "package"
             ],
             "targetChinese": "專業的溝通與戰略協作保證了商業上的成功。",
             "targetSentence": "Professional communication and strategic collaboration guarantee business triumph."
@@ -21540,19 +22888,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "sponsorship (企業贊助)",
+                "en": "sponsorship",
+                "zh": "企業贊助",
+                "correct": false
+              },
+              {
                 "text": "procurement (採購)",
+                "en": "procurement",
+                "zh": "採購",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "regarding your inquiry (關於洽詢)",
+                "en": "regarding your inquiry",
+                "zh": "關於洽詢",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "maintenance (航機維修保養)",
+                "en": "maintenance",
+                "zh": "航機維修保養",
                 "correct": false
               }
             ]
@@ -21629,27 +22985,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「empirical methodology」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "sample size",
+                "zh": "樣本規模",
+                "emoji": "📑",
+                "correct": false
+              },
+              {
                 "en": "empirical methodology",
                 "zh": "實證研究方法論",
-                "emoji": "📑",
+                "emoji": "🎯",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "correlation coefficient",
+                "zh": "相關係數",
+                "emoji": "📊",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "illustrative example",
+                "zh": "佐證範例",
+                "emoji": "⚖️",
                 "correct": false
               }
             ]
@@ -21671,16 +23027,17 @@ window.CURRICULUM_DATA = [
               "correlation."
             ],
             "pool": [
-              "a",
               "correlation.",
-              "simultaneously",
-              "positive",
+              "nuanced",
               "statistically",
-              "empirical",
               "study",
+              "significant",
+              "empirical",
+              "biodiversity",
               "The",
-              "demonstrated",
-              "significant"
+              "a",
+              "positive",
+              "demonstrated"
             ],
             "targetChinese": "該實證研究展現了具有統計顯著性的正相關。",
             "targetSentence": "The empirical study demonstrated a statistically significant positive correlation."
@@ -21692,20 +23049,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "yield rate (良率)",
+                "en": "yield rate",
+                "zh": "良率",
+                "correct": false
+              },
+              {
+                "text": "empirical methodology (實證研究方法論)",
+                "en": "empirical methodology",
+                "zh": "實證研究方法論",
+                "correct": false
+              },
+              {
+                "text": "generative AI (生成式AI)",
+                "en": "generative AI",
+                "zh": "生成式AI",
+                "correct": false
+              },
+              {
                 "text": "sample size (樣本規模)",
+                "en": "sample size",
+                "zh": "樣本規模",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -21766,27 +23131,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「academic lecture」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "digression",
+                "zh": "離題補充說明",
+                "emoji": "🏛️",
+                "correct": false
+              },
+              {
                 "en": "academic lecture",
                 "zh": "大學學術講堂",
-                "emoji": "🎙️",
+                "emoji": "🔬",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "professor stance",
+                "zh": "教授核心立場",
+                "emoji": "🌐",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "bilateral treaty",
+                "zh": "雙邊條約",
+                "emoji": "📈",
                 "correct": false
               }
             ]
@@ -21807,15 +23172,16 @@ window.CURRICULUM_DATA = [
               "atmospheres."
             ],
             "pool": [
-              "presented",
-              "simultaneously",
-              "counterintuitive",
-              "The",
-              "planetary",
               "regarding",
+              "presented",
               "professor",
+              "counterintuitive",
               "evidence",
-              "atmospheres."
+              "example",
+              "planetary",
+              "endangered",
+              "atmospheres.",
+              "The"
             ],
             "targetChinese": "教授提出了關於行星大氣層的反直覺證據。",
             "targetSentence": "The professor presented counterintuitive evidence regarding planetary atmospheres."
@@ -21827,20 +23193,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "academic lecture (大學學術講堂)",
+                "en": "academic lecture",
+                "zh": "大學學術講堂",
+                "correct": false
+              },
+              {
+                "text": "restitution (恢復係數)",
+                "en": "restitution",
+                "zh": "恢復係數",
+                "correct": false
+              },
+              {
+                "text": "concession (退讓妥協)",
+                "en": "concession",
+                "zh": "退讓妥協",
+                "correct": false
+              },
+              {
                 "text": "digression (離題補充說明)",
+                "en": "digression",
+                "zh": "離題補充說明",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -21901,27 +23275,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「upward trajectory」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "plateau",
+                "zh": "趨於平緩穩定",
+                "emoji": "📑",
+                "correct": false
+              },
+              {
+                "en": "drastic fluctuation",
+                "zh": "劇烈震盪波動",
+                "emoji": "📊",
+                "correct": false
+              },
+              {
                 "en": "upward trajectory",
                 "zh": "向上爬升走勢",
-                "emoji": "📊",
+                "emoji": "🎯",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "rebuttal strategy",
+                "zh": "駁斥策略",
+                "emoji": "⚖️",
                 "correct": false
               }
             ]
@@ -21942,15 +23316,16 @@ window.CURRICULUM_DATA = [
               "trajectory."
             ],
             "pool": [
-              "displayed",
+              "remarkable",
+              "upward",
               "production",
+              "plateau",
+              "a",
+              "size",
               "trajectory.",
               "Renewable",
-              "simultaneously",
-              "upward",
-              "remarkable",
-              "energy",
-              "a"
+              "displayed",
+              "energy"
             ],
             "targetChinese": "再生能源發電量呈現了顯著的向上攀升趨勢。",
             "targetSentence": "Renewable energy production displayed a remarkable upward trajectory."
@@ -21962,20 +23337,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "deadlock (談判僵局)",
+                "en": "deadlock",
+                "zh": "談判僵局",
+                "correct": false
+              },
+              {
+                "text": "synergy (協同綜效)",
+                "en": "synergy",
+                "zh": "協同綜效",
+                "correct": false
+              },
+              {
+                "text": "upward trajectory (向上爬升走勢)",
+                "en": "upward trajectory",
+                "zh": "向上爬升走勢",
+                "correct": false
+              },
+              {
                 "text": "plateau (趨於平緩穩定)",
+                "en": "plateau",
+                "zh": "趨於平緩穩定",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -22036,27 +23419,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「negotiation leverage」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "concession",
+                "zh": "退讓妥協",
+                "emoji": "🌐",
+                "correct": false
+              },
+              {
+                "en": "BATNA",
+                "zh": "最佳替代方案",
+                "emoji": "🏛️",
+                "correct": false
+              },
+              {
                 "en": "negotiation leverage",
                 "zh": "談判籌碼",
-                "emoji": "🤝",
+                "emoji": "🔬",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "macroeconomic policy",
+                "zh": "總體經濟政策",
+                "emoji": "📈",
                 "correct": false
               }
             ]
@@ -22077,15 +23460,16 @@ window.CURRICULUM_DATA = [
               "negotiations."
             ],
             "pool": [
-              "simultaneously",
-              "contractual",
+              "Understanding",
+              "BATNA",
+              "negotiations.",
+              "empirical",
               "leverage",
-              "your",
               "during",
               "strengthens",
-              "negotiations.",
-              "BATNA",
-              "Understanding"
+              "your",
+              "contractual",
+              "negotiation"
             ],
             "targetChinese": "了解您的談判最佳替代方案能強化合約協商籌碼。",
             "targetSentence": "Understanding your BATNA strengthens leverage during contractual negotiations."
@@ -22098,18 +23482,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "BATNA (最佳替代方案)",
+                "en": "BATNA",
+                "zh": "最佳替代方案",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "negotiation leverage (談判籌碼)",
+                "en": "negotiation leverage",
+                "zh": "談判籌碼",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "plateau (趨於平緩穩定)",
+                "en": "plateau",
+                "zh": "趨於平緩穩定",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "synergy (協同綜效)",
+                "en": "synergy",
+                "zh": "協同綜效",
                 "correct": false
               }
             ]
@@ -22171,27 +23563,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「merger and acquisition」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "due diligence",
+                "zh": "實地查核盡職調查",
+                "emoji": "📑",
+                "correct": false
+              },
+              {
                 "en": "merger and acquisition",
                 "zh": "跨國併購",
-                "emoji": "🏢",
+                "emoji": "🎯",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "sustainable aviation fuel",
+                "zh": "永續航空燃油SAF",
+                "emoji": "⚖️",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "corporate restructuring",
+                "zh": "企業架構重組",
+                "emoji": "📊",
                 "correct": false
               }
             ]
@@ -22213,16 +23605,17 @@ window.CURRICULUM_DATA = [
               "realistic."
             ],
             "pool": [
-              "organizational",
               "expected",
-              "Due",
-              "simultaneously",
               "realistic.",
-              "are",
-              "that",
-              "diligence",
+              "synergies",
+              "organizational",
               "ensures",
-              "synergies"
+              "diligence",
+              "are",
+              "Due",
+              "upward",
+              "resilience",
+              "that"
             ],
             "targetChinese": "盡職調查確保預期的企業綜效切實可行。",
             "targetSentence": "Due diligence ensures that expected organizational synergies are realistic."
@@ -22234,19 +23627,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "merger and acquisition (跨國併購)",
+                "en": "merger and acquisition",
+                "zh": "跨國併購",
+                "correct": false
+              },
+              {
+                "text": "plateau (趨於平緩穩定)",
+                "en": "plateau",
+                "zh": "趨於平緩穩定",
+                "correct": false
+              },
+              {
                 "text": "synergy (協同綜效)",
+                "en": "synergy",
+                "zh": "協同綜效",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "deadlock (談判僵局)",
+                "en": "deadlock",
+                "zh": "談判僵局",
                 "correct": false
               }
             ]
@@ -22310,25 +23711,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "macroeconomic policy",
                 "zh": "總體經濟政策",
-                "emoji": "💹",
+                "emoji": "🔬",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "inflationary pressure",
+                "zh": "通膨壓力",
+                "emoji": "🏛️",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "illustrative example",
+                "zh": "佐證範例",
+                "emoji": "📈",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "interest rate hike",
+                "zh": "央行升息",
+                "emoji": "🌐",
                 "correct": false
               }
             ]
@@ -22350,16 +23751,17 @@ window.CURRICULUM_DATA = [
               "inflation."
             ],
             "pool": [
-              "interest",
+              "adjust",
               "curb",
+              "plateau",
+              "Central",
               "inflation.",
               "rates",
+              "nuanced",
               "persistent",
+              "banks",
               "to",
-              "Central",
-              "simultaneously",
-              "adjust",
-              "banks"
+              "interest"
             ],
             "targetChinese": "各國央行調整利率以抑制持續存在的通貨膨脹。",
             "targetSentence": "Central banks adjust interest rates to curb persistent inflation."
@@ -22371,19 +23773,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "intellectual property (智慧財產權)",
+                "en": "intellectual property",
+                "zh": "智慧財產權",
+                "correct": false
+              },
+              {
                 "text": "inflationary pressure (通膨壓力)",
+                "en": "inflationary pressure",
+                "zh": "通膨壓力",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "macroeconomic policy (總體經濟政策)",
+                "en": "macroeconomic policy",
+                "zh": "總體經濟政策",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "semiconductor foundry (晶圓代工廠)",
+                "en": "semiconductor foundry",
+                "zh": "晶圓代工廠",
                 "correct": false
               }
             ]
@@ -22447,25 +23857,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "sustainable aviation fuel",
                 "zh": "永續航空燃油SAF",
-                "emoji": "✈️",
+                "emoji": "🎯",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "thermal efficiency",
+                "zh": "熱效率",
+                "emoji": "📊",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "hydrogen propulsion",
+                "zh": "氫能動力推進",
+                "emoji": "📑",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "merger and acquisition",
+                "zh": "跨國併購",
+                "emoji": "⚖️",
                 "correct": false
               }
             ]
@@ -22486,15 +23896,16 @@ window.CURRICULUM_DATA = [
               "emissions."
             ],
             "pool": [
-              "greenhouse",
-              "aircraft",
-              "emissions.",
-              "diminish",
-              "Sustainable",
-              "substantially",
-              "simultaneously",
+              "node",
               "aviation",
-              "fuels"
+              "aircraft",
+              "Sustainable",
+              "diminish",
+              "greenhouse",
+              "fuels",
+              "emissions.",
+              "fallacy",
+              "substantially"
             ],
             "targetChinese": "永續航空燃料大幅減少了飛機的溫室氣體排放。",
             "targetSentence": "Sustainable aviation fuels substantially diminish aircraft greenhouse emissions."
@@ -22507,18 +23918,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "hydrogen propulsion (氫能動力推進)",
+                "en": "hydrogen propulsion",
+                "zh": "氫能動力推進",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "multi-body dynamics (多體力學動態)",
+                "en": "multi-body dynamics",
+                "zh": "多體力學動態",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "sustainable aviation fuel (永續航空燃油SAF)",
+                "en": "sustainable aviation fuel",
+                "zh": "永續航空燃油SAF",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "macroeconomic policy (總體經濟政策)",
+                "en": "macroeconomic policy",
+                "zh": "總體經濟政策",
                 "correct": false
               }
             ]
@@ -22580,28 +23999,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「biomechanical analysis」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "corporate restructuring",
+                "zh": "企業架構重組",
+                "emoji": "📈",
+                "correct": false
+              },
+              {
+                "en": "kinetic chain",
+                "zh": "動力鏈傳遞",
+                "emoji": "🏛️",
+                "correct": false
+              },
+              {
+                "en": "torque generation",
+                "zh": "扭矩生成",
+                "emoji": "🌐",
+                "correct": false
+              },
+              {
                 "en": "biomechanical analysis",
                 "zh": "生物力學分析",
-                "emoji": "🏃",
+                "emoji": "🔬",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -22622,15 +24041,16 @@ window.CURRICULUM_DATA = [
               "fatigue."
             ],
             "pool": [
-              "chain",
-              "reduces",
-              "Optimizing",
-              "simultaneously",
-              "the",
-              "fatigue.",
-              "joint",
-              "pitcher",
               "shoulder",
+              "pitcher",
+              "deadlock",
+              "joint",
+              "chain",
+              "Optimizing",
+              "quantitative",
+              "fatigue.",
+              "reduces",
+              "the",
               "kinetic"
             ],
             "targetChinese": "優化動力鏈能減輕投手肩關節的疲勞負荷。",
@@ -22643,19 +24063,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "generative AI (生成式AI)",
+                "en": "generative AI",
+                "zh": "生成式AI",
+                "correct": false
+              },
+              {
+                "text": "due diligence (實地查核盡職調查)",
+                "en": "due diligence",
+                "zh": "實地查核盡職調查",
+                "correct": false
+              },
+              {
                 "text": "kinetic chain (動力鏈傳遞)",
+                "en": "kinetic chain",
+                "zh": "動力鏈傳遞",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "biomechanical analysis (生物力學分析)",
+                "en": "biomechanical analysis",
+                "zh": "生物力學分析",
                 "correct": false
               }
             ]
@@ -22717,28 +24145,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「stochastic modeling」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "biodiversity treaty",
+                "zh": "生物多樣性公約",
+                "emoji": "⚖️",
+                "correct": false
+              },
+              {
+                "en": "kinetic dissipation",
+                "zh": "動能耗散",
+                "emoji": "📊",
+                "correct": false
+              },
+              {
+                "en": "multi-body dynamics",
+                "zh": "多體力學動態",
+                "emoji": "📑",
+                "correct": false
+              },
+              {
                 "en": "stochastic modeling",
                 "zh": "隨機機率模型",
-                "emoji": "🎱",
+                "emoji": "🎯",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -22759,16 +24187,17 @@ window.CURRICULUM_DATA = [
               "collisions."
             ],
             "pool": [
-              "energy",
-              "simultaneously",
-              "collisions.",
-              "Advanced",
-              "cue",
-              "kinetic",
               "dissipation",
+              "diligence",
               "model",
+              "cue",
+              "policy",
+              "energy",
+              "Advanced",
+              "in",
+              "kinetic",
               "simulations",
-              "in"
+              "collisions."
             ],
             "targetChinese": "先進模擬技術精確模擬撞球桿碰撞時的動能耗散。",
             "targetSentence": "Advanced simulations model kinetic energy dissipation in cue collisions."
@@ -22780,19 +24209,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "stochastic modeling (隨機機率模型)",
+                "en": "stochastic modeling",
+                "zh": "隨機機率模型",
+                "correct": false
+              },
+              {
                 "text": "multi-body dynamics (多體力學動態)",
+                "en": "multi-body dynamics",
+                "zh": "多體力學動態",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "compelling rationale (令人信服之立論)",
+                "en": "compelling rationale",
+                "zh": "令人信服之立論",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "drastic fluctuation (劇烈震盪波動)",
+                "en": "drastic fluctuation",
+                "zh": "劇烈震盪波動",
                 "correct": false
               }
             ]
@@ -22854,27 +24291,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「ecosystem resilience」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "compelling rationale",
+                "zh": "令人信服之立論",
+                "emoji": "📈",
+                "correct": false
+              },
+              {
                 "en": "ecosystem resilience",
                 "zh": "生態韌性",
-                "emoji": "🌿",
+                "emoji": "🔬",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "biodiversity treaty",
+                "zh": "生物多樣性公約",
+                "emoji": "🌐",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "endangered species",
+                "zh": "瀕危物種",
+                "emoji": "🏛️",
                 "correct": false
               }
             ]
@@ -22894,15 +24331,15 @@ window.CURRICULUM_DATA = [
               "fragmentation."
             ],
             "pool": [
-              "treaties",
-              "consequently",
-              "combat",
               "fragmentation.",
-              "habitat",
-              "catastrophic",
               "International",
+              "argument",
+              "combat",
               "global",
-              "simultaneously"
+              "catastrophic",
+              "habitat",
+              "sustainable",
+              "treaties"
             ],
             "targetChinese": "國際公約致力於對抗災難性的全球棲地破碎化。",
             "targetSentence": "International treaties combat catastrophic global habitat fragmentation."
@@ -22915,18 +24352,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "endangered species (瀕危物種)",
+                "en": "endangered species",
+                "zh": "瀕危物種",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "dispute settlement (爭端解決機構)",
+                "en": "dispute settlement",
+                "zh": "爭端解決機構",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "ecosystem resilience (生態韌性)",
+                "en": "ecosystem resilience",
+                "zh": "生態韌性",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "torque generation (扭矩生成)",
+                "en": "torque generation",
+                "zh": "扭矩生成",
                 "correct": false
               }
             ]
@@ -22988,27 +24433,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「generative AI」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "copyright infringement",
+                "zh": "著作權侵權",
+                "emoji": "📊",
+                "correct": false
+              },
+              {
+                "en": "intellectual property",
+                "zh": "智慧財產權",
+                "emoji": "📑",
+                "correct": false
+              },
+              {
                 "en": "generative AI",
                 "zh": "生成式AI",
-                "emoji": "⚖️",
+                "emoji": "🎯",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "kinetic chain",
+                "zh": "動力鏈傳遞",
+                "emoji": "⚖️",
                 "correct": false
               }
             ]
@@ -23029,15 +24474,16 @@ window.CURRICULUM_DATA = [
               "use."
             ],
             "pool": [
-              "pretraining",
-              "model",
-              "simultaneously",
               "scrutinize",
-              "Courts",
               "constitutes",
+              "resilience",
+              "fair",
               "use.",
-              "whether",
-              "fair"
+              "model",
+              "pretraining",
+              "Courts",
+              "torque",
+              "whether"
             ],
             "targetChinese": "法院正嚴格審查模型預訓練是否構成合理使用。",
             "targetSentence": "Courts scrutinize whether model pretraining constitutes fair use."
@@ -23049,19 +24495,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "semiconductor foundry (晶圓代工廠)",
+                "en": "semiconductor foundry",
+                "zh": "晶圓代工廠",
+                "correct": false
+              },
+              {
+                "text": "generative AI (生成式AI)",
+                "en": "generative AI",
+                "zh": "生成式AI",
+                "correct": false
+              },
+              {
                 "text": "intellectual property (智慧財產權)",
+                "en": "intellectual property",
+                "zh": "智慧財產權",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "inflationary pressure (通膨壓力)",
+                "en": "inflationary pressure",
+                "zh": "通膨壓力",
                 "correct": false
               }
             ]
@@ -23123,28 +24577,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「EUV lithography」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "semiconductor foundry",
+                "zh": "晶圓代工廠",
+                "emoji": "🌐",
+                "correct": false
+              },
+              {
+                "en": "logical fallacy",
+                "zh": "邏輯謬誤",
+                "emoji": "📈",
+                "correct": false
+              },
+              {
+                "en": "nanometer node",
+                "zh": "奈米製程節點",
+                "emoji": "🏛️",
+                "correct": false
+              },
+              {
                 "en": "EUV lithography",
                 "zh": "極紫外光微影技術",
                 "emoji": "🔬",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -23164,15 +24618,16 @@ window.CURRICULUM_DATA = [
               "scale."
             ],
             "pool": [
-              "simultaneously",
-              "EUV",
-              "enables",
-              "atomic",
-              "scale.",
-              "fabrication",
-              "lithography",
               "at",
-              "precision"
+              "fabrication",
+              "torque",
+              "scale.",
+              "hydrogen",
+              "EUV",
+              "atomic",
+              "enables",
+              "precision",
+              "lithography"
             ],
             "targetChinese": "極紫外光微影技術實現了原子級尺度的精密製造。",
             "targetSentence": "EUV lithography enables precision fabrication at atomic scale."
@@ -23184,19 +24639,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "logical fallacy (邏輯謬誤)",
+                "en": "logical fallacy",
+                "zh": "邏輯謬誤",
+                "correct": false
+              },
+              {
+                "text": "EUV lithography (極紫外光微影技術)",
+                "en": "EUV lithography",
+                "zh": "極紫外光微影技術",
+                "correct": false
+              },
+              {
                 "text": "nanometer node (奈米製程節點)",
+                "en": "nanometer node",
+                "zh": "奈米製程節點",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "due diligence (實地查核盡職調查)",
+                "en": "due diligence",
+                "zh": "實地查核盡職調查",
                 "correct": false
               }
             ]
@@ -23258,28 +24721,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「international arbitration」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "corporate restructuring",
+                "zh": "企業架構重組",
+                "emoji": "⚖️",
+                "correct": false
+              },
+              {
+                "en": "jurisdiction",
+                "zh": "司法管轄權",
+                "emoji": "📑",
+                "correct": false
+              },
+              {
+                "en": "bilateral treaty",
+                "zh": "雙邊條約",
+                "emoji": "📊",
+                "correct": false
+              },
+              {
                 "en": "international arbitration",
                 "zh": "國際仲裁",
-                "emoji": "🏛️",
+                "emoji": "🎯",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -23301,17 +24764,18 @@ window.CURRICULUM_DATA = [
               "rights."
             ],
             "pool": [
+              "maritime",
+              "habitat",
+              "of",
+              "rights.",
+              "tribunal",
+              "unanimously",
+              "The",
               "favor",
               "in",
-              "of",
-              "The",
-              "tribunal",
-              "maritime",
-              "simultaneously",
+              "negotiation",
               "ruled",
-              "rights.",
-              "arbitration",
-              "unanimously"
+              "arbitration"
             ],
             "targetChinese": "仲裁法庭一致裁決支持海洋權利。",
             "targetSentence": "The arbitration tribunal ruled unanimously in favor of maritime rights."
@@ -23323,20 +24787,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "international arbitration (國際仲裁)",
+                "en": "international arbitration",
+                "zh": "國際仲裁",
+                "correct": false
+              },
+              {
+                "text": "counter-evidence (反面客觀證據)",
+                "en": "counter-evidence",
+                "zh": "反面客觀證據",
+                "correct": false
+              },
+              {
+                "text": "restitution (恢復係數)",
+                "en": "restitution",
+                "zh": "恢復係數",
+                "correct": false
+              },
+              {
                 "text": "jurisdiction (司法管轄權)",
+                "en": "jurisdiction",
+                "zh": "司法管轄權",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -23397,27 +24869,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「rebuttal strategy」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "professor stance",
+                "zh": "教授核心立場",
+                "emoji": "📈",
+                "correct": false
+              },
+              {
                 "en": "rebuttal strategy",
                 "zh": "駁斥策略",
-                "emoji": "🗣️",
+                "emoji": "🔬",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "logical fallacy",
+                "zh": "邏輯謬誤",
+                "emoji": "🏛️",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "straw man argument",
+                "zh": "稻草人謬誤",
+                "emoji": "🌐",
                 "correct": false
               }
             ]
@@ -23439,16 +24911,17 @@ window.CURRICULUM_DATA = [
               "fallacies."
             ],
             "pool": [
-              "premises",
-              "Skilled",
-              "debaters",
-              "simultaneously",
               "expose",
-              "hidden",
+              "premises",
               "logical",
-              "and",
+              "hidden",
               "deconstruct",
-              "fallacies."
+              "Skilled",
+              "and",
+              "fallacies.",
+              "academic",
+              "debaters",
+              "policy"
             ],
             "targetChinese": "資深辯手能解構隱藏的前提並揭露邏輯謬誤。",
             "targetSentence": "Skilled debaters deconstruct hidden premises and expose logical fallacies."
@@ -23460,20 +24933,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "injury prevention (運動創傷預防)",
+                "en": "injury prevention",
+                "zh": "運動創傷預防",
+                "correct": false
+              },
+              {
+                "text": "EUV lithography (極紫外光微影技術)",
+                "en": "EUV lithography",
+                "zh": "極紫外光微影技術",
+                "correct": false
+              },
+              {
+                "text": "rebuttal strategy (駁斥策略)",
+                "en": "rebuttal strategy",
+                "zh": "駁斥策略",
+                "correct": false
+              },
+              {
                 "text": "logical fallacy (邏輯謬誤)",
+                "en": "logical fallacy",
+                "zh": "邏輯謬誤",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -23534,28 +25015,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「cohesive paragraph」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "endangered species",
+                "zh": "瀕危物種",
+                "emoji": "⚖️",
+                "correct": false
+              },
+              {
+                "en": "synthesizing viewpoints",
+                "zh": "整合多元觀點",
+                "emoji": "📊",
+                "correct": false
+              },
+              {
+                "en": "nuanced argumentation",
+                "zh": "精緻深入論點",
+                "emoji": "📑",
+                "correct": false
+              },
+              {
                 "en": "cohesive paragraph",
                 "zh": "緊密段落結構",
-                "emoji": "✍️",
+                "emoji": "🎯",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -23576,16 +25057,17 @@ window.CURRICULUM_DATA = [
               "rationale."
             ],
             "pool": [
-              "compelling",
-              "simultaneously",
               "competing",
-              "into",
+              "hydrogen",
               "thesis",
-              "nuanced",
-              "synthesizes",
-              "perspectives",
               "rationale.",
-              "A"
+              "into",
+              "compelling",
+              "synthesizes",
+              "A",
+              "illustrative",
+              "perspectives",
+              "nuanced"
             ],
             "targetChinese": "細緻周延的主題句將對立觀點融合成極具說服力的論述。",
             "targetSentence": "A nuanced thesis synthesizes competing perspectives into compelling rationale."
@@ -23597,20 +25079,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "inflationary pressure (通膨壓力)",
+                "en": "inflationary pressure",
+                "zh": "通膨壓力",
+                "correct": false
+              },
+              {
+                "text": "semiconductor foundry (晶圓代工廠)",
+                "en": "semiconductor foundry",
+                "zh": "晶圓代工廠",
+                "correct": false
+              },
+              {
+                "text": "cohesive paragraph (緊密段落結構)",
+                "en": "cohesive paragraph",
+                "zh": "緊密段落結構",
+                "correct": false
+              },
+              {
                 "text": "nuanced argumentation (精緻深入論點)",
+                "en": "nuanced argumentation",
+                "zh": "精緻深入論點",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -23671,27 +25161,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「empirical methodology」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "inflationary pressure",
+                "zh": "通膨壓力",
+                "emoji": "📈",
+                "correct": false
+              },
+              {
+                "en": "intellectual property",
+                "zh": "智財權",
+                "emoji": "🌐",
+                "correct": false
+              },
+              {
                 "en": "empirical methodology",
                 "zh": "實證方法",
-                "emoji": "👑",
+                "emoji": "🔬",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "macroeconomic policy",
+                "zh": "總體經濟",
+                "emoji": "🏛️",
                 "correct": false
               }
             ]
@@ -23714,15 +25204,16 @@ window.CURRICULUM_DATA = [
             ],
             "pool": [
               "insight",
-              "simultaneously",
-              "societal",
               "Rigorous",
-              "profound",
-              "cultivates",
-              "and",
-              "transformation.",
               "academic",
-              "inquiry"
+              "and",
+              "profound",
+              "biodiversity",
+              "societal",
+              "compelling",
+              "inquiry",
+              "cultivates",
+              "transformation."
             ],
             "targetChinese": "嚴謹的學術探究培養深刻洞察並推動社會轉型。",
             "targetSentence": "Rigorous academic inquiry cultivates profound insight and societal transformation."
@@ -23734,19 +25225,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "ecosystem resilience (生態韌性)",
+                "en": "ecosystem resilience",
+                "zh": "生態韌性",
+                "correct": false
+              },
+              {
+                "text": "empirical methodology (實證方法)",
+                "en": "empirical methodology",
+                "zh": "實證方法",
+                "correct": false
+              },
+              {
                 "text": "macroeconomic policy (總體經濟)",
+                "en": "macroeconomic policy",
+                "zh": "總體經濟",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "negotiation leverage (談判籌碼)",
+                "en": "negotiation leverage",
+                "zh": "談判籌碼",
                 "correct": false
               }
             ]
@@ -23823,27 +25322,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「ephemeral」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "obfuscate",
+                "zh": "混淆混亂",
+                "emoji": "🏛️",
+                "correct": false
+              },
+              {
+                "en": "chiasmus",
+                "zh": "交錯迴文修辭",
+                "emoji": "📜",
+                "correct": false
+              },
+              {
                 "en": "ephemeral",
                 "zh": "短暫轉瞬即逝的",
-                "emoji": "💎",
+                "emoji": "🌍",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "ubiquitous",
+                "zh": "無所不在的",
+                "emoji": "⚖️",
                 "correct": false
               }
             ]
@@ -23866,17 +25365,18 @@ window.CURRICULUM_DATA = [
               "wisdom."
             ],
             "pool": [
-              "exemplified",
-              "synthesis",
-              "address",
               "the",
-              "simultaneously",
-              "and",
-              "of",
+              "scrutiny",
               "quintessential",
+              "exemplified",
               "wisdom.",
-              "His",
-              "eloquence"
+              "synthesis",
+              "of",
+              "eloquence",
+              "intelligence",
+              "and",
+              "address",
+              "His"
             ],
             "targetChinese": "他的演說體現了口才與智慧的經典融合。",
             "targetSentence": "His address exemplified the quintessential synthesis of eloquence and wisdom."
@@ -23888,20 +25388,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "anaphora (首字排比重複)",
+                "en": "anaphora",
+                "zh": "首字排比重複",
+                "correct": false
+              },
+              {
+                "text": "ephemeral (短暫轉瞬即逝的)",
+                "en": "ephemeral",
+                "zh": "短暫轉瞬即逝的",
+                "correct": false
+              },
+              {
+                "text": "chiasmus (交錯迴文修辭)",
+                "en": "chiasmus",
+                "zh": "交錯迴文修辭",
+                "correct": false
+              },
+              {
                 "text": "obfuscate (混淆混亂)",
+                "en": "obfuscate",
+                "zh": "混淆混亂",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -23962,28 +25470,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「The Economist」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "debt deflation",
+                "zh": "債務通縮螺旋",
+                "emoji": "🌐",
+                "correct": false
+              },
+              {
+                "en": "fiscal conservatism",
+                "zh": "財政穩健保守主義",
+                "emoji": "🧠",
+                "correct": false
+              },
+              {
+                "en": "systemic vulnerability",
+                "zh": "系統性脆弱",
+                "emoji": "🎓",
+                "correct": false
+              },
+              {
                 "en": "The Economist",
                 "zh": "經濟學人特刊",
-                "emoji": "📰",
+                "emoji": "💎",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -24004,16 +25512,17 @@ window.CURRICULUM_DATA = [
               "untenable."
             ],
             "pool": [
-              "deficits",
-              "render",
-              "simultaneously",
-              "long-term",
-              "budget",
-              "economically",
+              "Unchecked",
+              "Economist",
               "untenable.",
-              "public",
+              "remedy",
               "debts",
-              "Unchecked"
+              "deficits",
+              "economically",
+              "public",
+              "long-term",
+              "render",
+              "budget"
             ],
             "targetChinese": "不受約束的預算赤字使得長期公共債務在經濟上難以為繼。",
             "targetSentence": "Unchecked budget deficits render long-term public debts economically untenable."
@@ -24025,19 +25534,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "deterrence posture (軍事嚇阻姿態)",
+                "en": "deterrence posture",
+                "zh": "軍事嚇阻姿態",
+                "correct": false
+              },
+              {
                 "text": "fiscal conservatism (財政穩健保守主義)",
+                "en": "fiscal conservatism",
+                "zh": "財政穩健保守主義",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "antitrust litigation (反壟斷訴訟)",
+                "en": "antitrust litigation",
+                "zh": "反壟斷訴訟",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "The Economist (經濟學人特刊)",
+                "en": "The Economist",
+                "zh": "經濟學人特刊",
                 "correct": false
               }
             ]
@@ -24099,28 +25616,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「Foreign Affairs」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "deterrence posture",
+                "zh": "軍事嚇阻姿態",
+                "emoji": "⚖️",
+                "correct": false
+              },
+              {
+                "en": "semantic nuance",
+                "zh": "細微語意神髓",
+                "emoji": "📜",
+                "correct": false
+              },
+              {
+                "en": "multilateral alliance",
+                "zh": "多邊戰略聯盟",
+                "emoji": "🏛️",
+                "correct": false
+              },
+              {
                 "en": "Foreign Affairs",
                 "zh": "外交事務雜誌",
-                "emoji": "🌐",
+                "emoji": "🌍",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -24140,15 +25657,16 @@ window.CURRICULUM_DATA = [
               "deterrence."
             ],
             "pool": [
-              "simultaneously",
-              "stability",
-              "alliances",
-              "through",
-              "regional",
-              "Multilateral",
+              "foresight",
               "preserve",
+              "through",
+              "alliances",
+              "Multilateral",
+              "coordinated",
+              "regional",
+              "deterministic",
               "deterrence.",
-              "coordinated"
+              "stability"
             ],
             "targetChinese": "多邊聯盟透過協調一致的威懾力量維護區域穩定。",
             "targetSentence": "Multilateral alliances preserve regional stability through coordinated deterrence."
@@ -24160,19 +25678,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "deontological ethics (義務論倫理學)",
+                "en": "deontological ethics",
+                "zh": "義務論倫理學",
+                "correct": false
+              },
+              {
+                "text": "sports historiography (體育歷史編纂學)",
+                "en": "sports historiography",
+                "zh": "體育歷史編纂學",
+                "correct": false
+              },
+              {
                 "text": "multilateral alliance (多邊戰略聯盟)",
+                "en": "multilateral alliance",
+                "zh": "多邊戰略聯盟",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "Foreign Affairs (外交事務雜誌)",
+                "en": "Foreign Affairs",
+                "zh": "外交事務雜誌",
                 "correct": false
               }
             ]
@@ -24236,25 +25762,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "epistemology",
                 "zh": "知識認識論",
-                "emoji": "🏛️",
+                "emoji": "💎",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "ubiquitous",
+                "zh": "無所不在的",
+                "emoji": "🌐",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "deontological ethics",
+                "zh": "義務論倫理學",
+                "emoji": "🧠",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "utilitarianism",
+                "zh": "效益功利主義",
+                "emoji": "🎓",
                 "correct": false
               }
             ]
@@ -24276,16 +25802,17 @@ window.CURRICULUM_DATA = [
               "impermissible."
             ],
             "pool": [
-              "simultaneously",
-              "that",
-              "Deontological",
-              "impermissible.",
-              "ethics",
-              "certain",
+              "macroprudential",
               "actions",
               "are",
+              "policy",
+              "impermissible.",
               "posits",
-              "intrinsically"
+              "ethics",
+              "intrinsically",
+              "that",
+              "certain",
+              "Deontological"
             ],
             "targetChinese": "義務倫理學主張某些行為本質上就是不被允許的。",
             "targetSentence": "Deontological ethics posits that certain actions are intrinsically impermissible."
@@ -24297,19 +25824,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "cognitive processing (認知加工處置)",
+                "en": "cognitive processing",
+                "zh": "認知加工處置",
+                "correct": false
+              },
+              {
                 "text": "deontological ethics (義務論倫理學)",
+                "en": "deontological ethics",
+                "zh": "義務論倫理學",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "cultural iconography (文化標誌圖象)",
+                "en": "cultural iconography",
+                "zh": "文化標誌圖象",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "epistemology (知識認識論)",
+                "en": "epistemology",
+                "zh": "知識認識論",
                 "correct": false
               }
             ]
@@ -24371,27 +25906,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「anaphora」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "fidelity",
+                "zh": "忠實準確度",
+                "emoji": "📜",
+                "correct": false
+              },
+              {
                 "en": "anaphora",
                 "zh": "首字排比重複",
-                "emoji": "🖋️",
+                "emoji": "🌍",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "chiasmus",
+                "zh": "交錯迴文修辭",
+                "emoji": "⚖️",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "antithesis",
+                "zh": "對比對照修辭",
+                "emoji": "🏛️",
                 "correct": false
               }
             ]
@@ -24412,14 +25947,15 @@ window.CURRICULUM_DATA = [
               "crescendo."
             ],
             "pool": [
-              "Masterful",
               "employ",
+              "point",
               "emotional",
-              "anaphora",
+              "Masterful",
               "crescendo.",
-              "simultaneously",
               "orators",
               "to",
+              "anaphora",
+              "solemn",
               "build"
             ],
             "targetChinese": "高超的演說家善用首語重複法來營造情感高潮。",
@@ -24432,20 +25968,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "anaphora (首字排比重複)",
+                "en": "anaphora",
+                "zh": "首字排比重複",
+                "correct": false
+              },
+              {
+                "text": "decoupling (經濟與碳排脫鉤)",
+                "en": "decoupling",
+                "zh": "經濟與碳排脫鉤",
+                "correct": false
+              },
+              {
+                "text": "ephemeral (短暫轉瞬即逝的)",
+                "en": "ephemeral",
+                "zh": "短暫轉瞬即逝的",
+                "correct": false
+              },
+              {
                 "text": "antithesis (對比對照修辭)",
+                "en": "antithesis",
+                "zh": "對比對照修辭",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -24508,25 +26052,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "antitrust litigation",
                 "zh": "反壟斷訴訟",
-                "emoji": "⚖️",
+                "emoji": "💎",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "regulatory scrutiny",
+                "zh": "監管機構嚴格審查",
+                "emoji": "🎓",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "monopolistic abuse",
+                "zh": "壟斷濫用行徑",
+                "emoji": "🧠",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "presidential oratory",
+                "zh": "總統級演說風範",
+                "emoji": "🌐",
                 "correct": false
               }
             ]
@@ -24547,15 +26091,16 @@ window.CURRICULUM_DATA = [
               "foreclosure."
             ],
             "pool": [
-              "gatekeepers",
-              "prevent",
-              "Regulators",
-              "foreclosure.",
-              "scrutinized",
-              "simultaneously",
-              "platform",
+              "invocation",
               "monopolistic",
-              "to"
+              "trap",
+              "scrutinized",
+              "to",
+              "prevent",
+              "gatekeepers",
+              "foreclosure.",
+              "platform",
+              "Regulators"
             ],
             "targetChinese": "監管機構嚴密審查平台守門人以防止壟斷性市場封鎖。",
             "targetSentence": "Regulators scrutinized platform gatekeepers to prevent monopolistic foreclosure."
@@ -24567,19 +26112,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "interstellar probe (星際探測器)",
+                "en": "interstellar probe",
+                "zh": "星際探測器",
+                "correct": false
+              },
+              {
                 "text": "monopolistic abuse (壟斷濫用行徑)",
+                "en": "monopolistic abuse",
+                "zh": "壟斷濫用行徑",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "deterrence posture (軍事嚇阻姿態)",
+                "en": "deterrence posture",
+                "zh": "軍事嚇阻姿態",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "antitrust litigation (反壟斷訴訟)",
+                "en": "antitrust litigation",
+                "zh": "反壟斷訴訟",
                 "correct": false
               }
             ]
@@ -24641,27 +26194,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「gravitational wave」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "orbital insertion",
+                "zh": "軌道切入控制",
+                "emoji": "🏛️",
+                "correct": false
+              },
+              {
                 "en": "gravitational wave",
                 "zh": "重力引力波",
-                "emoji": "🌌",
+                "emoji": "🌍",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "interstellar probe",
+                "zh": "星際探測器",
+                "emoji": "⚖️",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "solemn invocation",
+                "zh": "莊嚴呼告",
+                "emoji": "📜",
                 "correct": false
               }
             ]
@@ -24683,16 +26236,17 @@ window.CURRICULUM_DATA = [
               "space."
             ],
             "pool": [
-              "mergers",
               "astronomy",
-              "in",
-              "Gravitational",
-              "reveals",
-              "space.",
-              "wave",
               "cataclysmic",
+              "ethics",
+              "space.",
+              "Gravitational",
+              "in",
+              "target",
+              "reveals",
+              "wave",
               "deep",
-              "simultaneously"
+              "mergers"
             ],
             "targetChinese": "重力波天文學揭示了深太空中的災難性天體合併。",
             "targetSentence": "Gravitational wave astronomy reveals cataclysmic mergers in deep space."
@@ -24705,18 +26259,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "orbital insertion (軌道切入控制)",
+                "en": "orbital insertion",
+                "zh": "軌道切入控制",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "bifurcation point (分岔臨界點)",
+                "en": "bifurcation point",
+                "zh": "分岔臨界點",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "gravitational wave (重力引力波)",
+                "en": "gravitational wave",
+                "zh": "重力引力波",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "solemn invocation (莊嚴呼告)",
+                "en": "solemn invocation",
+                "zh": "莊嚴呼告",
                 "correct": false
               }
             ]
@@ -24780,25 +26342,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "sports historiography",
                 "zh": "體育歷史編纂學",
-                "emoji": "⚾",
+                "emoji": "💎",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "civil rights integration",
+                "zh": "民權種族融合",
+                "emoji": "🧠",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "cultural iconography",
+                "zh": "文化標誌圖象",
+                "emoji": "🎓",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "categorical imperative",
+                "zh": "絕對律令",
+                "emoji": "🌐",
                 "correct": false
               }
             ]
@@ -24820,16 +26382,17 @@ window.CURRICULUM_DATA = [
               "society."
             ],
             "pool": [
+              "macroprudential",
               "across",
-              "integration",
-              "rights",
               "civil",
-              "broader",
-              "progress",
+              "adjustment",
               "catalyzed",
-              "Baseball",
+              "rights",
+              "progress",
+              "broader",
               "society.",
-              "simultaneously"
+              "Baseball",
+              "integration"
             ],
             "targetChinese": "棒球運動打破種族隔離促進了整個社會更廣泛的民權進步。",
             "targetSentence": "Baseball integration catalyzed broader civil rights progress across society."
@@ -24841,20 +26404,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "systemic financial risk (系統性金融風險)",
+                "en": "systemic financial risk",
+                "zh": "系統性金融風險",
+                "correct": false
+              },
+              {
+                "text": "sports historiography (體育歷史編纂學)",
+                "en": "sports historiography",
+                "zh": "體育歷史編纂學",
+                "correct": false
+              },
+              {
+                "text": "cultural iconography (文化標誌圖象)",
+                "en": "cultural iconography",
+                "zh": "文化標誌圖象",
+                "correct": false
+              },
+              {
                 "text": "civil rights integration (民權種族融合)",
+                "en": "civil rights integration",
+                "zh": "民權種族融合",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -24915,27 +26486,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「chaos theory」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "strange attractor",
+                "zh": "奇異吸子",
+                "emoji": "🏛️",
+                "correct": false
+              },
+              {
                 "en": "chaos theory",
                 "zh": "混沌理論",
-                "emoji": "🌀",
+                "emoji": "🌍",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "bifurcation point",
+                "zh": "分岔臨界點",
+                "emoji": "⚖️",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "liquidity trap",
+                "zh": "流動性陷阱",
+                "emoji": "📜",
                 "correct": false
               }
             ]
@@ -24957,15 +26528,16 @@ window.CURRICULUM_DATA = [
               "conditions."
             ],
             "pool": [
-              "conditions.",
-              "simultaneously",
+              "historiography",
+              "exhibit",
               "boundary",
               "systems",
-              "initial",
-              "on",
-              "dependence",
               "sensitive",
-              "exhibit",
+              "on",
+              "cognitive",
+              "initial",
+              "dependence",
+              "conditions.",
               "Nonlinear"
             ],
             "targetChinese": "非線性系統對初始邊界條件表現出極度敏感的依賴性。",
@@ -24979,18 +26551,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "strange attractor (奇異吸子)",
+                "en": "strange attractor",
+                "zh": "奇異吸子",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "chaos theory (混沌理論)",
+                "en": "chaos theory",
+                "zh": "混沌理論",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "emissions trading (碳排放交易)",
+                "en": "emissions trading",
+                "zh": "碳排放交易",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "solemn invocation (莊嚴呼告)",
+                "en": "solemn invocation",
+                "zh": "莊嚴呼告",
                 "correct": false
               }
             ]
@@ -25052,27 +26632,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「technological singularity」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "existential risk",
+                "zh": "人類存亡風險",
+                "emoji": "🎓",
+                "correct": false
+              },
+              {
                 "en": "technological singularity",
                 "zh": "技術奇異點",
-                "emoji": "🧠",
+                "emoji": "💎",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "artificial general intelligence",
+                "zh": "通用人工智慧AGI",
+                "emoji": "🧠",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "simultaneous interpretation",
+                "zh": "會議同步口譯",
+                "emoji": "🌐",
                 "correct": false
               }
             ]
@@ -25093,15 +26673,16 @@ window.CURRICULUM_DATA = [
               "superintelligence."
             ],
             "pool": [
-              "scrutinize",
               "with",
-              "simultaneously",
               "artificial",
-              "risks",
-              "superintelligence.",
               "associated",
+              "superintelligence.",
+              "scrutinize",
               "existential",
-              "Philosophers"
+              "Affairs",
+              "Philosophers",
+              "risks",
+              "invocation"
             ],
             "targetChinese": "哲學家們嚴格審視與人工超智慧相關的生存風險。",
             "targetSentence": "Philosophers scrutinize existential risks associated with artificial superintelligence."
@@ -25113,19 +26694,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "technological singularity (技術奇異點)",
+                "en": "technological singularity",
+                "zh": "技術奇異點",
+                "correct": false
+              },
+              {
+                "text": "existential risk (人類存亡風險)",
+                "en": "existential risk",
+                "zh": "人類存亡風險",
+                "correct": false
+              },
+              {
                 "text": "artificial general intelligence (通用人工智慧AGI)",
+                "en": "artificial general intelligence",
+                "zh": "通用人工智慧AGI",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "civil rights integration (民權種族融合)",
+                "en": "civil rights integration",
+                "zh": "民權種族融合",
                 "correct": false
               }
             ]
@@ -25187,27 +26776,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「carbon border adjustment」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "civil rights integration",
+                "zh": "民權種族融合",
+                "emoji": "📜",
+                "correct": false
+              },
+              {
                 "en": "carbon border adjustment",
                 "zh": "碳邊境調整機制CBAM",
-                "emoji": "🌿",
+                "emoji": "🌍",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "net-zero target",
+                "zh": "淨零目標",
+                "emoji": "⚖️",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "emissions trading",
+                "zh": "碳排放交易",
+                "emoji": "🏛️",
                 "correct": false
               }
             ]
@@ -25229,16 +26818,17 @@ window.CURRICULUM_DATA = [
               "industries."
             ],
             "pool": [
-              "level",
+              "competitive",
+              "cognitive",
               "for",
-              "fields",
-              "simultaneously",
-              "Carbon",
-              "industries.",
               "decarbonizing",
-              "border",
               "adjustments",
-              "competitive"
+              "fields",
+              "Carbon",
+              "border",
+              "level",
+              "industries.",
+              "obfuscate"
             ],
             "targetChinese": "碳邊境調整機制為推動脫碳的產業提供了公平競爭的環境。",
             "targetSentence": "Carbon border adjustments level competitive fields for decarbonizing industries."
@@ -25250,19 +26840,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "bifurcation point (分岔臨界點)",
+                "en": "bifurcation point",
+                "zh": "分岔臨界點",
+                "correct": false
+              },
+              {
+                "text": "carbon border adjustment (碳邊境調整機制CBAM)",
+                "en": "carbon border adjustment",
+                "zh": "碳邊境調整機制CBAM",
+                "correct": false
+              },
+              {
                 "text": "emissions trading (碳排放交易)",
+                "en": "emissions trading",
+                "zh": "碳排放交易",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "orbital insertion (軌道切入控制)",
+                "en": "orbital insertion",
+                "zh": "軌道切入控制",
                 "correct": false
               }
             ]
@@ -25324,27 +26922,27 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「systemic financial risk」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "civil rights integration",
+                "zh": "民權種族融合",
+                "emoji": "🌐",
+                "correct": false
+              },
+              {
+                "en": "debt deflation",
+                "zh": "債務通縮螺旋",
+                "emoji": "🎓",
+                "correct": false
+              },
+              {
                 "en": "systemic financial risk",
                 "zh": "系統性金融風險",
-                "emoji": "🏦",
+                "emoji": "💎",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "liquidity trap",
+                "zh": "流動性陷阱",
+                "emoji": "🧠",
                 "correct": false
               }
             ]
@@ -25366,16 +26964,17 @@ window.CURRICULUM_DATA = [
               "insolvencies."
             ],
             "pool": [
-              "insolvencies.",
-              "domino",
-              "simultaneously",
-              "economies",
               "from",
-              "bank",
               "systemic",
+              "Macroprudential",
+              "strange",
+              "domino",
               "shields",
+              "insolvencies.",
+              "economies",
               "regulation",
-              "Macroprudential"
+              "bank",
+              "legacy"
             ],
             "targetChinese": "總體審慎監管保護經濟體免受骨牌式銀行破產的系統性衝擊。",
             "targetSentence": "Macroprudential regulation shields economies from systemic domino bank insolvencies."
@@ -25387,19 +26986,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "systemic financial risk (系統性金融風險)",
+                "en": "systemic financial risk",
+                "zh": "系統性金融風險",
+                "correct": false
+              },
+              {
                 "text": "liquidity trap (流動性陷阱)",
+                "en": "liquidity trap",
+                "zh": "流動性陷阱",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "net-zero target (淨零目標)",
+                "en": "net-zero target",
+                "zh": "淨零目標",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "semantic nuance (細微語意神髓)",
+                "en": "semantic nuance",
+                "zh": "細微語意神髓",
                 "correct": false
               }
             ]
@@ -25463,25 +27070,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "presidential oratory",
                 "zh": "總統級演說風範",
-                "emoji": "👑",
+                "emoji": "🌍",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "solemn invocation",
+                "zh": "莊嚴呼告",
+                "emoji": "⚖️",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "rhetorical cadence",
+                "zh": "修辭節奏抑揚頓挫",
+                "emoji": "🏛️",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "deontological ethics",
+                "zh": "義務論倫理學",
+                "emoji": "📜",
                 "correct": false
               }
             ]
@@ -25503,16 +27110,17 @@ window.CURRICULUM_DATA = [
               "urgency."
             ],
             "pool": [
-              "urgency.",
-              "the",
               "with",
-              "peroration",
               "galvanized",
-              "The",
               "assembly",
+              "the",
+              "peroration",
+              "deflation",
               "poignant",
               "moral",
-              "simultaneously"
+              "urgency.",
+              "The",
+              "ephemeral"
             ],
             "targetChinese": "感人肺腑的演講結尾以強烈道德使命感鼓舞了全體聽眾。",
             "targetSentence": "The poignant peroration galvanized the assembly with moral urgency."
@@ -25524,19 +27132,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "presidential oratory (總統級演說風範)",
+                "en": "presidential oratory",
+                "zh": "總統級演說風範",
+                "correct": false
+              },
+              {
                 "text": "rhetorical cadence (修辭節奏抑揚頓挫)",
+                "en": "rhetorical cadence",
+                "zh": "修辭節奏抑揚頓挫",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "monopolistic abuse (壟斷濫用行徑)",
+                "en": "monopolistic abuse",
+                "zh": "壟斷濫用行徑",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "interstellar probe (星際探測器)",
+                "en": "interstellar probe",
+                "zh": "星際探測器",
                 "correct": false
               }
             ]
@@ -25600,25 +27216,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "simultaneous interpretation",
                 "zh": "會議同步口譯",
-                "emoji": "🎙️",
+                "emoji": "💎",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "technological singularity",
+                "zh": "技術奇異點",
+                "emoji": "🌐",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "semantic nuance",
+                "zh": "細微語意神髓",
+                "emoji": "🧠",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "cognitive processing",
+                "zh": "認知加工處置",
+                "emoji": "🎓",
                 "correct": false
               }
             ]
@@ -25640,16 +27256,17 @@ window.CURRICULUM_DATA = [
               "pressure."
             ],
             "pool": [
-              "Simultaneous",
-              "profound",
-              "simultaneously",
-              "under",
-              "interpreters",
-              "pressure.",
               "nuances",
-              "semantic",
               "preserve",
-              "intense"
+              "semantic",
+              "profound",
+              "interpreters",
+              "cadence",
+              "pressure.",
+              "under",
+              "artificial",
+              "intense",
+              "Simultaneous"
             ],
             "targetChinese": "同步口譯員在高壓環境下仍能精準保留深層的語意細微差異。",
             "targetSentence": "Simultaneous interpreters preserve profound semantic nuances under intense pressure."
@@ -25661,19 +27278,27 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "simultaneous interpretation (會議同步口譯)",
+                "en": "simultaneous interpretation",
+                "zh": "會議同步口譯",
+                "correct": false
+              },
+              {
+                "text": "Foreign Affairs (外交事務雜誌)",
+                "en": "Foreign Affairs",
+                "zh": "外交事務雜誌",
+                "correct": false
+              },
+              {
                 "text": "semantic nuance (細微語意神髓)",
+                "en": "semantic nuance",
+                "zh": "細微語意神髓",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
+                "text": "net-zero target (淨零目標)",
+                "en": "net-zero target",
+                "zh": "淨零目標",
                 "correct": false
               }
             ]
@@ -25737,25 +27362,25 @@ window.CURRICULUM_DATA = [
               {
                 "en": "policy white paper",
                 "zh": "政策白皮書",
-                "emoji": "🏛️",
+                "emoji": "🌍",
                 "correct": true
               },
               {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
+                "en": "countervailing measures",
+                "zh": "平衡反制措施",
+                "emoji": "⚖️",
                 "correct": false
               },
               {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
+                "en": "strategic foresight",
+                "zh": "前瞻戰略遠見",
+                "emoji": "🏛️",
                 "correct": false
               },
               {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
+                "en": "statutory reform",
+                "zh": "法規體制改革",
+                "emoji": "📜",
                 "correct": false
               }
             ]
@@ -25778,16 +27403,17 @@ window.CURRICULUM_DATA = [
               "engagement."
             ],
             "pool": [
-              "The",
-              "simultaneously",
-              "paper",
-              "international",
-              "provides",
+              "trap",
               "for",
-              "diplomatic",
-              "engagement.",
-              "white",
               "strategic",
+              "engagement.",
+              "conservatism",
+              "provides",
+              "The",
+              "white",
+              "paper",
+              "diplomatic",
+              "international",
               "foresight"
             ],
             "targetChinese": "該白皮書為國際外交參與提供了前瞻戰略遠見。",
@@ -25800,20 +27426,28 @@ window.CURRICULUM_DATA = [
             "instruction": "點擊喇叭聆聽發音，選出正確意思：",
             "options": [
               {
+                "text": "policy white paper (政策白皮書)",
+                "en": "policy white paper",
+                "zh": "政策白皮書",
+                "correct": false
+              },
+              {
+                "text": "interstellar probe (星際探測器)",
+                "en": "interstellar probe",
+                "zh": "星際探測器",
+                "correct": false
+              },
+              {
+                "text": "regulatory scrutiny (監管機構嚴格審查)",
+                "en": "regulatory scrutiny",
+                "zh": "監管機構嚴格審查",
+                "correct": false
+              },
+              {
                 "text": "strategic foresight (前瞻戰略遠見)",
+                "en": "strategic foresight",
+                "zh": "前瞻戰略遠見",
                 "correct": true
-              },
-              {
-                "text": "desk (書桌)",
-                "correct": false
-              },
-              {
-                "text": "morning (早晨)",
-                "correct": false
-              },
-              {
-                "text": "water (開水)",
-                "correct": false
               }
             ]
           },
@@ -25874,28 +27508,28 @@ window.CURRICULUM_DATA = [
             "instruction": "請問「quintessential」在繁體中文中是什麼意思？",
             "options": [
               {
+                "en": "multilateral alliance",
+                "zh": "多邊同盟",
+                "emoji": "🎓",
+                "correct": false
+              },
+              {
+                "en": "macroprudential",
+                "zh": "總體審慎監管",
+                "emoji": "🌐",
+                "correct": false
+              },
+              {
+                "en": "The Economist",
+                "zh": "經濟學人",
+                "emoji": "🧠",
+                "correct": false
+              },
+              {
                 "en": "quintessential",
                 "zh": "經典典範",
-                "emoji": "👑",
+                "emoji": "💎",
                 "correct": true
-              },
-              {
-                "en": "apple",
-                "zh": "蘋果",
-                "emoji": "🍎",
-                "correct": false
-              },
-              {
-                "en": "pencil",
-                "zh": "鉛筆",
-                "emoji": "✏️",
-                "correct": false
-              },
-              {
-                "en": "rocket",
-                "zh": "火箭",
-                "emoji": "🚀",
-                "correct": false
               }
             ]
           },
@@ -25917,17 +27551,18 @@ window.CURRICULUM_DATA = [
               "leadership."
             ],
             "pool": [
-              "Profound",
-              "simultaneously",
-              "integrity,",
-              "relentless",
-              "knowledge,",
-              "empower",
-              "perseverance",
-              "visionary",
-              "moral",
               "leadership.",
-              "and"
+              "knowledge,",
+              "relentless",
+              "integrity,",
+              "Profound",
+              "and",
+              "moral",
+              "empower",
+              "nuance",
+              "visionary",
+              "perseverance",
+              "deterrence"
             ],
             "targetChinese": "淵博的學識、高尚的道德品格與不懈的毅力造就遠見卓識的領導力。",
             "targetSentence": "Profound knowledge, moral integrity, and relentless perseverance empower visionary leadership."
@@ -25940,18 +27575,26 @@ window.CURRICULUM_DATA = [
             "options": [
               {
                 "text": "The Economist (經濟學人)",
+                "en": "The Economist",
+                "zh": "經濟學人",
                 "correct": true
               },
               {
-                "text": "desk (書桌)",
+                "text": "debt deflation (債務通縮螺旋)",
+                "en": "debt deflation",
+                "zh": "債務通縮螺旋",
                 "correct": false
               },
               {
-                "text": "morning (早晨)",
+                "text": "Foreign Affairs (外交事務雜誌)",
+                "en": "Foreign Affairs",
+                "zh": "外交事務雜誌",
                 "correct": false
               },
               {
-                "text": "water (開水)",
+                "text": "quintessential (經典典範)",
+                "en": "quintessential",
+                "zh": "經典典範",
                 "correct": false
               }
             ]

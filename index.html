@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="version" content="2.1.0">
-  <title>波波熱血英語大冒險 v2.1.0 - 全階段分級學習樂園 (小學・國中・高中・大學)</title>
+  <meta name="version" content="2.1.1">
+  <title>波波熱血英語大冒險 v2.1.1 - 全階段分級學習樂園 (小學・國中・高中・大學)</title>
   <style>
     :root {
       --primary: #58cc02;
@@ -1526,7 +1526,7 @@
       <!-- 版本號藥丸標籤 (點擊查看更新記錄) -->
       <button class="version-pill" id="header-version-pill" onclick="game.openChangelogModal()" title="點擊查看版本更新記錄">
         <span>✨</span>
-        <span id="header-version-text">v2.1.0</span>
+        <span id="header-version-text">v2.1.1</span>
       </button>
       <!-- 等級切換膠囊按鈕 -->
       <button class="tier-pill-btn" onclick="game.openTierModal()" id="current-tier-pill" title="點擊切換學習等級">
@@ -1604,7 +1604,7 @@
         <div class="site-footer-left">
           <span>🦉 <b>波波熱血英語大冒險</b></span>
           <span style="color:#94a3b8;">|</span>
-          <span>當前版本：<strong id="footer-version-text" style="color:var(--primary-dark);">v2.1.0</strong> (12 等級・192 關題庫)</span>
+          <span>當前版本：<strong id="footer-version-text" style="color:var(--primary-dark);">v2.1.1</strong> (12 等級・192 關題庫)</span>
         </div>
         <div class="site-footer-links">
           <button class="footer-link-btn" onclick="game.openChangelogModal()">
@@ -1756,7 +1756,7 @@
       <div style="font-size: 2.8rem;">⚙️</div>
       <h3>學習成就與系統設定</h3>
       <p style="margin-bottom: 14px;">
-        系統版本：<b id="settings-version-val" style="color:#6d28d9;">v2.1.0</b><br>
+        系統版本：<b id="settings-version-val" style="color:#6d28d9;">v2.1.1</b><br>
         目前累積 XP: <b id="settings-xp-val" style="color:var(--gold-dark);">0</b> 點 ｜ 全站通關總數: <b id="settings-unlocked-val" style="color:var(--secondary-dark);">0</b> / 192 關
       </p>
 
@@ -1797,14 +1797,28 @@
     <div class="modal-box" style="max-width: 580px;">
       <div style="font-size: 2.8rem;">📋</div>
       <h3>波波熱血英語大冒險 - 更新日誌</h3>
-      <p style="margin-bottom: 8px;">當前正式版本：<b id="changelog-current-ver" style="color:var(--primary-dark);">v2.1.0</b>（遵循全站版本對應規範）</p>
+      <p style="margin-bottom: 8px;">當前正式版本：<b id="changelog-current-ver" style="color:var(--primary-dark);">v2.1.1</b>（遵循全站版本對應規範）</p>
 
       <div class="changelog-list">
         <div class="changelog-item latest">
           <div class="changelog-version-header">
             <div class="changelog-version-tag">
-              <span>v2.1.0</span>
+              <span>v2.1.1</span>
               <span class="changelog-badge">最新版本</span>
+            </div>
+            <span class="changelog-date">2026-11-09</span>
+          </div>
+          <ul>
+            <li>🧠 <b>全 192 關誘答選項智慧升級</b>：移除過於簡單的固定跨級誘答字（如 `desk`、`morning`、`water`、`apple`），全面改採同等級、同字數規模之高鑑別度干擾項。</li>
+            <li>🎲 <b>選項位置動態隨機化與防洩題</b>：修正正確答案固定在第一格的問題；單字選擇題僅顯示中文釋義，避免題幹英文直接洩漏答案。</li>
+            <li>🔄 <b>修復闖關中切換等級的狀態同步</b>：於測驗中切換等級時自動返回新等級地圖，並將補血練習題升級為依當前等級動態出題。</li>
+          </ul>
+        </div>
+
+        <div class="changelog-item">
+          <div class="changelog-version-header">
+            <div class="changelog-version-tag">
+              <span>v2.1.0</span>
             </div>
             <span class="changelog-date">2026-11-09</span>
           </div>
@@ -2049,7 +2063,7 @@
     ========================================================================== */
     class GameEngine {
       constructor() {
-        this.version = window.BOBI_VERSION || '2.1.0';
+        this.version = window.BOBI_VERSION || '2.1.1';
         this.curriculum = window.CURRICULUM_DATA || [];
         this.currentCategory = 'elementary';
         this.currentTierId = 'elem_mid'; // 預設小學・中級
@@ -2059,6 +2073,7 @@
         this.comboStreak = 0;
         this.selectedAnswer = null;
         this.questionChecked = false;
+        this.currentDisplayOptions = [];
         this.matchedPairsCount = 0;
         this.totalPairs = 0;
         this.currentScrambleTokens = [];
@@ -2304,6 +2319,7 @@
         this.currentTierId = tierId;
         this.saveState();
         this.closeTierModal();
+        this.showScreen('map');
         const tier = this.getCurrentTier();
         document.getElementById('bobi-quote').innerHTML = `
           已為你切換至 <b>${tier.subLevelName}</b>！共有 ${tier.lessons.length} 關，準備好迎接挑戰了嗎？
@@ -2397,46 +2413,24 @@
 
       startPractice() {
         audioPlayer.play('click');
+        const curTier = this.getCurrentTier();
+        const lessons = (curTier && curTier.lessons && curTier.lessons.length >= 3) ? curTier.lessons : null;
+        let practiceQuestions = [];
+
+        if (lessons) {
+          const shuffledLessons = [...lessons].sort(() => Math.random() - 0.5);
+          const qChoice = shuffledLessons[0].questions.find(q => q.type === 'choice');
+          const qScramble = shuffledLessons[1].questions.find(q => q.type === 'scramble');
+          const qListen = shuffledLessons[2].questions.find(q => q.type === 'listen');
+          if (qChoice) practiceQuestions.push(JSON.parse(JSON.stringify(qChoice)));
+          if (qScramble) practiceQuestions.push(JSON.parse(JSON.stringify(qScramble)));
+          if (qListen) practiceQuestions.push(JSON.parse(JSON.stringify(qListen)));
+        }
+
         const practiceLesson = {
           id: 'practice-mode',
           title: '愛心補血特訓',
-          questions: [
-            {
-              type: "choice",
-              prompt: "全能複習題：核心詞彙",
-              en: "baseball",
-              audioText: "baseball",
-              instruction: "選出「baseball」的繁體中文：",
-              options: [
-                { en: "baseball", zh: "棒球", emoji: "⚾", correct: true },
-                { en: "airplane", zh: "飛機", emoji: "✈️", correct: false },
-                { en: "book", zh: "書本", emoji: "📖", correct: false },
-                { en: "apple", zh: "蘋果", emoji: "🍎", correct: false }
-              ]
-            },
-            {
-              type: "scramble",
-              prompt: "全能複習題：造句挑戰",
-              audioText: "Practice makes perfect every day.",
-              instruction: "請看中文重組成英文句子：「每天練習才能熟能生巧。」",
-              targetChinese: "每天練習才能熟能生巧。",
-              targetSentence: "Practice makes perfect every day.",
-              targetTokens: ["Practice", "makes", "perfect", "every", "day."],
-              pool: ["day.", "every", "perfect", "makes", "Practice", "often", "run"]
-            },
-            {
-              type: "listen",
-              prompt: "全能複習題：聽力辨識",
-              audioText: "airplane",
-              instruction: "點擊喇叭聆聽發音，選出正確單字：",
-              options: [
-                { text: "airplane (飛機)", correct: true },
-                { text: "pencil (鉛筆)", correct: false },
-                { text: "desk (書桌)", correct: false },
-                { text: "clock (時鐘)", correct: false }
-              ]
-            }
-          ]
+          questions: practiceQuestions
         };
         this.startLesson(practiceLesson, true);
       }
@@ -2459,6 +2453,7 @@
 
         this.selectedAnswer = null;
         this.questionChecked = false;
+        this.currentDisplayOptions = [];
         this.currentScrambleTokens = [];
         this.matchedPairsCount = 0;
 
@@ -2468,7 +2463,7 @@
 
         let innerHtml = `
           <div class="question-prompt">
-            <button class="audio-speaker-btn" onclick="speakText('${currentQ.audioText || currentQ.en || ''}')" title="點擊聆聽美式發音">
+            <button class="audio-speaker-btn" onclick="speakText('${(currentQ.audioText || currentQ.en || '').replace(/'/g, "\\'")}')" title="點擊聆聽美式發音">
               🔊
             </button>
             <div class="prompt-content">
@@ -2479,14 +2474,14 @@
         `;
 
         if (currentQ.type === 'choice') {
+          this.currentDisplayOptions = [...currentQ.options].sort(() => Math.random() - 0.5);
           innerHtml += `<div class="options-grid">`;
-          currentQ.options.forEach((opt, idx) => {
+          this.currentDisplayOptions.forEach((opt, idx) => {
             innerHtml += `
               <div class="option-card" onclick="game.selectChoice(${idx})">
                 <span class="key-hint" title="鍵盤快捷鍵 ${idx + 1}">${idx + 1}</span>
                 <span class="card-emoji">${opt.emoji}</span>
-                <span class="card-en">${opt.en}</span>
-                <span class="card-zh">${opt.zh}</span>
+                <span class="card-zh" style="font-size: 1.15rem; font-weight: 800; color: var(--text-main);">${opt.zh}</span>
               </div>
             `;
           });
@@ -2513,16 +2508,17 @@
           });
           innerHtml += `</div></div>`;
         } else if (currentQ.type === 'listen') {
+          this.currentDisplayOptions = [...currentQ.options].sort(() => Math.random() - 0.5);
           innerHtml += `
             <div style="text-align: center; margin-bottom: 24px;">
-              <button class="audio-speaker-btn big" onclick="speakText('${currentQ.audioText}')">
+              <button class="audio-speaker-btn big" onclick="speakText('${(currentQ.audioText || '').replace(/'/g, "\\'")}')">
                 🔊
               </button>
               <div style="font-weight: 800; color: #0284c7; margin-top: 8px;">點擊重新聆聽發音</div>
             </div>
             <div class="options-grid">
           `;
-          currentQ.options.forEach((opt, idx) => {
+          this.currentDisplayOptions.forEach((opt, idx) => {
             innerHtml += `
               <div class="option-card" onclick="game.selectListenOption(${idx})">
                 <span class="key-hint" title="鍵盤快捷鍵 ${idx + 1}">${idx + 1}</span>
@@ -2560,9 +2556,10 @@
         cards.forEach(c => c.classList.remove('selected'));
         cards[idx].classList.add('selected');
 
-        const curQ = this.currentLesson.questions[this.questionIndex];
-        this.selectedAnswer = curQ.options[idx].correct;
-        this.expectedAnswer = curQ.options.find(o => o.correct).en + ' (' + curQ.options.find(o => o.correct).zh + ')';
+        const opts = this.currentDisplayOptions.length ? this.currentDisplayOptions : this.currentLesson.questions[this.questionIndex].options;
+        const correctOpt = opts.find(o => o.correct);
+        this.selectedAnswer = opts[idx].correct;
+        this.expectedAnswer = correctOpt ? (correctOpt.en + ' (' + correctOpt.zh + ')') : '';
         this.showCheckButton();
       }
 
@@ -2574,9 +2571,10 @@
         cards.forEach(c => c.classList.remove('selected'));
         cards[idx].classList.add('selected');
 
-        const curQ = this.currentLesson.questions[this.questionIndex];
-        this.selectedAnswer = curQ.options[idx].correct;
-        this.expectedAnswer = curQ.options.find(o => o.correct).text;
+        const opts = this.currentDisplayOptions.length ? this.currentDisplayOptions : this.currentLesson.questions[this.questionIndex].options;
+        const correctOpt = opts.find(o => o.correct);
+        this.selectedAnswer = opts[idx].correct;
+        this.expectedAnswer = correctOpt ? correctOpt.text : '';
         this.showCheckButton();
       }
 

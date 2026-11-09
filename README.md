@@ -1,11 +1,11 @@
 # 🦉 波波熱血英語大冒險 (Bobi English Adventure)
 
-[![Version](https://img.shields.io/badge/Version-v2.1.0-58cc02?style=for-the-badge&logo=github)](https://github.com/zhijaysun0915/bobi-english-adventure/releases/tag/v2.1.0)
+[![Version](https://img.shields.io/badge/Version-v2.1.1-58cc02?style=for-the-badge&logo=github)](https://github.com/zhijaysun0915/bobi-english-adventure/releases/tag/v2.1.1)
 [![Curriculum](https://img.shields.io/badge/Curriculum-12_Tiers_%7C_192_Levels-1cb0f6?style=for-the-badge)](https://zhijaysun0915.github.io/bobi-english-adventure/)
 [![CEFR](https://img.shields.io/badge/CEFR-Pre--A1_to_C2-ff9600?style=for-the-badge)](https://zhijaysun0915.github.io/bobi-english-adventure/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-ce82ff?style=for-the-badge)](LICENSE)
 
-> **全階段・全能分級英語學習樂園 (`v2.1.0`)**  
+> **全階段・全能分級英語學習樂園 (`v2.1.1`)**  
 > 專為臺灣學生與進修者量身打造！完整涵蓋 **小學 (初/中/高)・國中 (初/中/高)・高中 (初/中/高)・大學與成人 (初/中/高)** 4 大階段、12 大等級、192 道豐富漸進關卡！  
 > 特別收錄超人氣熱血主題：**熱血棒球 ⚾・超音速噴射機 ✈️・撞球神童 🎱・侏儸紀暴龍 🦖・極速超跑 🏎️・AI 科技 🤖・太空探索 🚀**！  
 > 100% 繁體中文介面、可愛遊戲音效、標準美語發音、跨裝置進度備份、電腦鍵盤快捷鍵、免安裝即開即玩！
@@ -86,11 +86,11 @@
 
 | 序號 | 檔案名稱 | 對應位置與欄位 | 當前版本值 |
 | :---: | :--- | :--- | :---: |
-| **1** | [`package.json`](package.json) | `"version"` 欄位 | `2.1.0` |
-| **2** | [`curriculum.js`](curriculum.js) | 頂部 `window.BOBI_VERSION` 與 `window.CURRICULUM_VERSION` | `2.1.0` |
-| **3** | [`index.html`](index.html) | `<meta name="version">`、頂部導覽列 `.version-pill`、設定彈窗、Changelog 彈窗與頁尾 `.site-footer` | `v2.1.0` |
-| **4** | [`README.md`](README.md) | 頂部版本徽章、版本對應規範表與版本歷程表 | `v2.1.0` |
-| **5** | [`CHANGELOG.md`](CHANGELOG.md) | 更新日誌版本條目（遵循 Keep a Changelog 與 SemVer 規範） | `[2.1.0]` |
+| **1** | [`package.json`](package.json) | `"version"` 欄位 | `2.1.1` |
+| **2** | [`curriculum.js`](curriculum.js) | 頂部 `window.BOBI_VERSION` 與 `window.CURRICULUM_VERSION` | `2.1.1` |
+| **3** | [`index.html`](index.html) | `<meta name="version">`、頂部導覽列 `.version-pill`、設定彈窗、Changelog 彈窗與頁尾 `.site-footer` | `v2.1.1` |
+| **4** | [`README.md`](README.md) | 頂部版本徽章、版本對應規範表與版本歷程表 | `v2.1.1` |
+| **5** | [`CHANGELOG.md`](CHANGELOG.md) | 更新日誌版本條目（遵循 Keep a Changelog 與 SemVer 規範） | `[2.1.1]` |
 
 ---
 
@@ -100,6 +100,7 @@
 
 | 版本號 | 發布日期 | 重大更新摘要 |
 | :---: | :---: | :--- |
+| **v2.1.1** | `2026-11-09` | 全面升級 192 關選擇題與聽力題之同等級智慧誘答選項、動態選項洗牌、單字選擇題防英文洩題與切換等級畫面同步修復 |
 | **v2.1.0** | `2026-11-09` | 建立全站 5 大位置版本對應系統、遊戲內更新記錄彈窗 (`#changelog-modal`)、學習進度跨裝置 JSON 備份/還原、鍵盤快捷鍵 (`1~4` / `Enter`)、榮譽證書列印/PDF 與質感頁尾 |
 | **v2.0.1** | `2026-04-20` | 修復英文重組句子 (Scramble) 中文翻譯提示框與標點/大小寫答案容錯比對邏輯 |
 | **v2.0.0** | `2026-04-20` | 擴充為 4 大階段（小學/國中/高中/大學）、12 大等級、192 道關卡、CEFR Pre-A1 ~ C2 對應、重點單字庫與榮譽大師證書 |
