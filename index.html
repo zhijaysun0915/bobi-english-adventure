@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="version" content="2.1.1">
-  <title>波波熱血英語大冒險 v2.1.1 - 全階段分級學習樂園 (小學・國中・高中・大學)</title>
+  <meta name="version" content="2.2.0">
+  <title>波波熱血英語大冒險 v2.2.0 - 全階段分級學習樂園 (小學・國中・高中・大學 1,080 關)</title>
   <style>
     :root {
       --primary: #58cc02;
@@ -1526,7 +1526,7 @@
       <!-- 版本號藥丸標籤 (點擊查看更新記錄) -->
       <button class="version-pill" id="header-version-pill" onclick="game.openChangelogModal()" title="點擊查看版本更新記錄">
         <span>✨</span>
-        <span id="header-version-text">v2.1.1</span>
+        <span id="header-version-text">v2.2.0</span>
       </button>
       <!-- 等級切換膠囊按鈕 -->
       <button class="tier-pill-btn" onclick="game.openTierModal()" id="current-tier-pill" title="點擊切換學習等級">
@@ -1596,7 +1596,7 @@
         </button>
       </div>
 
-      <!-- 當前等級的 16~20 道關卡動態渲染區 -->
+      <!-- 當前等級的 90 道關卡動態渲染區 -->
       <div id="units-container"></div>
 
       <!-- 冒險地圖質感頁尾 (.site-footer) -->
@@ -1604,7 +1604,7 @@
         <div class="site-footer-left">
           <span>🦉 <b>波波熱血英語大冒險</b></span>
           <span style="color:#94a3b8;">|</span>
-          <span>當前版本：<strong id="footer-version-text" style="color:var(--primary-dark);">v2.1.1</strong> (12 等級・192 關題庫)</span>
+          <span>當前版本：<strong id="footer-version-text" style="color:var(--primary-dark);">v2.2.0</strong> (12 等級・1,080 關超大題庫)</span>
         </div>
         <div class="site-footer-links">
           <button class="footer-link-btn" onclick="game.openChangelogModal()">
@@ -1684,7 +1684,7 @@
     <div class="tier-modal-sheet">
       <div class="tier-modal-header">
         <h3>選擇學習等級與階段</h3>
-        <p>涵蓋小學、國中、高中至大學與成人，共 12 大等級、192 道漸進關卡！</p>
+        <p>涵蓋小學、國中、高中至大學與成人，共 12 大等級、1,080 道漸進關卡（每等級 90 關 3 個月天天闖關）！</p>
       </div>
 
       <!-- 四大學習階段分頁標籤 -->
@@ -1756,8 +1756,8 @@
       <div style="font-size: 2.8rem;">⚙️</div>
       <h3>學習成就與系統設定</h3>
       <p style="margin-bottom: 14px;">
-        系統版本：<b id="settings-version-val" style="color:#6d28d9;">v2.1.1</b><br>
-        目前累積 XP: <b id="settings-xp-val" style="color:var(--gold-dark);">0</b> 點 ｜ 全站通關總數: <b id="settings-unlocked-val" style="color:var(--secondary-dark);">0</b> / 192 關
+        系統版本：<b id="settings-version-val" style="color:#6d28d9;">v2.2.0</b><br>
+        目前累積 XP: <b id="settings-xp-val" style="color:var(--gold-dark);">0</b> 點 ｜ 全站通關總數: <b id="settings-unlocked-val" style="color:var(--secondary-dark);">0</b> / 1,080 關
       </p>
 
       <!-- 學習進度跨裝置遷移區 -->
@@ -1797,19 +1797,34 @@
     <div class="modal-box" style="max-width: 580px;">
       <div style="font-size: 2.8rem;">📋</div>
       <h3>波波熱血英語大冒險 - 更新日誌</h3>
-      <p style="margin-bottom: 8px;">當前正式版本：<b id="changelog-current-ver" style="color:var(--primary-dark);">v2.1.1</b>（遵循全站版本對應規範）</p>
+      <p style="margin-bottom: 8px;">當前正式版本：<b id="changelog-current-ver" style="color:var(--primary-dark);">v2.2.0</b>（遵循全站版本對應規範）</p>
 
       <div class="changelog-list">
         <div class="changelog-item latest">
           <div class="changelog-version-header">
             <div class="changelog-version-tag">
-              <span>v2.1.1</span>
+              <span>v2.2.0</span>
               <span class="changelog-badge">最新版本</span>
+            </div>
+            <span class="changelog-date">2026-11-10</span>
+          </div>
+          <ul>
+            <li>🚀 <b>題庫巨量升級：12 等級 × 90 關 = 1,080 道關卡全開</b>：每個等級由 16 關巨幅擴增至 90 關，天天闖一關可充實暢玩 3 個月！</li>
+            <li>📚 <b>多元跨界主題題庫</b>：全面涵蓋少棒戰術、大聯盟季後賽、超音速噴射機、撞球幾何、恐龍化石、極速超跑、變形機器人、野外求生、台灣夜市名勝、理化地科、SDGs、AI對齊、量子密碼等 4,320 個核心詞彙與實用語境。</li>
+            <li>🎯 <b>嚴格高鑑別度誘答與題庫驗證</b>：全 1,080 關均通過同一階層深度干擾項驗證與選項隨機排序，兼顧挑戰度與學習成效。</li>
+            <li>🏆 <b>等級大魔王證書連動</b>：支援通關第 90 關大魔王關卡獲頒終極專屬結業證書。</li>
+          </ul>
+        </div>
+
+        <div class="changelog-item">
+          <div class="changelog-version-header">
+            <div class="changelog-version-tag">
+              <span>v2.1.1</span>
             </div>
             <span class="changelog-date">2026-11-09</span>
           </div>
           <ul>
-            <li>🧠 <b>全 192 關誘答選項智慧升級</b>：移除過於簡單的固定跨級誘答字（如 `desk`、`morning`、`water`、`apple`），全面改採同等級、同字數規模之高鑑別度干擾項。</li>
+            <li>🧠 <b>全題庫誘答選項智慧升級</b>：移除過於簡單的固定跨級誘答字（如 `desk`、`morning`、`water`、`apple`），全面改採同等級、同字數規模之高鑑別度干擾項。</li>
             <li>🎲 <b>選項位置動態隨機化與防洩題</b>：修正正確答案固定在第一格的問題；單字選擇題僅顯示中文釋義，避免題幹英文直接洩漏答案。</li>
             <li>🔄 <b>修復闖關中切換等級的狀態同步</b>：於測驗中切換等級時自動返回新等級地圖，並將補血練習題升級為依當前等級動態出題。</li>
           </ul>
@@ -1916,7 +1931,7 @@
 
   <canvas id="confetti-canvas"></canvas>
 
-  <!-- 載入完整的 12 等級 192 道豐富題庫 -->
+  <!-- 載入完整的 12 等級 1,080 道豐富題庫 -->
   <script src="curriculum.js"></script>
 
   <script>
@@ -2063,7 +2078,7 @@
     ========================================================================== */
     class GameEngine {
       constructor() {
-        this.version = window.BOBI_VERSION || '2.1.1';
+        this.version = window.BOBI_VERSION || '2.2.0';
         this.curriculum = window.CURRICULUM_DATA || [];
         this.currentCategory = 'elementary';
         this.currentTierId = 'elem_mid'; // 預設小學・中級
@@ -2795,8 +2810,10 @@
 
         this.showScreen('summary');
 
-        // Check if completed the 16th level (Boss level of this tier)
-        if (this.currentLesson.id.endsWith('-l16')) {
+        // Check if completed the 90th level (Boss level of this tier)
+        const curTier = this.curriculum.find(t => t.id === this.currentTierId);
+        const isFinalLevel = (curTier && curTier.lessons.length > 0 && this.currentLesson.id === curTier.lessons[curTier.lessons.length - 1].id) || this.currentLesson.id.endsWith('-l90');
+        if (isFinalLevel) {
           setTimeout(() => {
             this.showCertificateModal();
           }, 1200);
