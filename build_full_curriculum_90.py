@@ -3,7 +3,7 @@
 build_full_curriculum_90.py
 Expands Bobi English Adventure curriculum from 16 levels to 90 levels per tier.
 12 tiers * 90 levels = 1,080 levels total.
-Sets window.BOBI_VERSION = '2.2.0'; and window.CURRICULUM_VERSION = '2.2.0';
+Sets window.BOBI_VERSION = '2.2.1'; and window.CURRICULUM_VERSION = '2.2.1';
 Ensures strict option validation: exactly 4 unique choices, 1 correct, same-tier distractors.
 """
 
@@ -252,8 +252,8 @@ def main():
         "// 波波熱血英語大冒險 (Bobi English Adventure)\n"
         "// 全階段・全能分級英語學習系統 (12 大等級・1,080 道熱血關卡，每等級 90 關 3 個月天天闖關)\n"
         "// 嚴格遵守版本對應規範：每次改版必須與 package.json, index.html, README.md, CHANGELOG.md 完全一致\n"
-        "window.BOBI_VERSION = '2.2.0';\n"
-        "window.CURRICULUM_VERSION = '2.2.0';\n\n"
+        "window.BOBI_VERSION = '2.2.1';\n"
+        "window.CURRICULUM_VERSION = '2.2.1';\n\n"
         "window.CURRICULUM_DATA = "
     )
 
@@ -263,7 +263,7 @@ def main():
     with open('curriculum.js', 'w', encoding='utf-8') as f:
         f.write(full_output)
 
-    print("Successfully wrote curriculum.js with version 2.2.0 and 1,080 levels!")
+    print("Successfully wrote curriculum.js with version 2.2.1 and 1,080 levels!")
 
 if __name__ == '__main__':
     main()
