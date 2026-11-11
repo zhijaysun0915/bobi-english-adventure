@@ -643,6 +643,13 @@
       transition: all 0.12s ease;
     }
 
+    .option-card > *,
+    .tier-card > *,
+    .word-tile > *,
+    .match-tile > * {
+      pointer-events: none;
+    }
+
     .option-card .key-hint {
       position: absolute;
       top: 10px;
@@ -2584,6 +2591,8 @@
         audioPlayer.play('click');
         const cards = document.querySelectorAll('.option-card');
         if (!cards[idx]) return;
+
+        const isAlreadySelected = cards[idx].classList.contains('selected');
         cards.forEach(c => c.classList.remove('selected'));
         cards[idx].classList.add('selected');
 
@@ -2592,6 +2601,11 @@
         this.selectedAnswer = opts[idx].correct;
         this.expectedAnswer = correctOpt ? (correctOpt.en + ' (' + correctOpt.zh + ')') : '';
         this.showCheckButton();
+
+        // 再次點擊已選中的選項可直接確認送出
+        if (isAlreadySelected) {
+          this.checkAnswer();
+        }
       }
 
       selectListenOption(idx) {
@@ -2599,6 +2613,8 @@
         audioPlayer.play('click');
         const cards = document.querySelectorAll('.option-card');
         if (!cards[idx]) return;
+
+        const isAlreadySelected = cards[idx].classList.contains('selected');
         cards.forEach(c => c.classList.remove('selected'));
         cards[idx].classList.add('selected');
 
@@ -2607,12 +2623,18 @@
         this.selectedAnswer = opts[idx].correct;
         this.expectedAnswer = correctOpt ? correctOpt.text : '';
         this.showCheckButton();
+
+        // 再次點擊已選中的選項可直接確認送出
+        if (isAlreadySelected) {
+          this.checkAnswer();
+        }
       }
 
       pickWordTile(word, poolIdx) {
         if (this.questionChecked) return;
         audioPlayer.play('click');
         const poolTile = document.getElementById(`tile-${poolIdx}`);
+        if (!poolTile || poolTile.classList.contains('used')) return;
         poolTile.classList.add('used');
 
         this.currentScrambleTokens.push({ word, poolIdx });
@@ -2703,9 +2725,9 @@
         sheet.style.display = 'flex';
         sheet.className = 'feedback-sheet';
         document.getElementById('feedback-icon').textContent = '🤔';
-        document.getElementById('feedback-title').textContent = '確認答案';
+        document.getElementById('feedback-title').textContent = '已選擇答案';
         document.getElementById('feedback-title').style.color = '#334155';
-        document.getElementById('feedback-detail').textContent = '檢查無誤後請點擊右邊按鈕（或按 Enter 鍵）';
+        document.getElementById('feedback-detail').textContent = '可直接再點一次選項送出，或點擊右邊按鈕（或按 Enter 鍵）';
         
         const actionBtn = document.getElementById('feedback-action-btn');
         actionBtn.textContent = '檢查答案 (Enter)';
