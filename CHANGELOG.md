@@ -14,6 +14,14 @@
 4. `README.md` 中的版本徽章、版本歷程表與「版本對應規範」章節
 5. `CHANGELOG.md` 中的更新日誌條目
 
+## [2.2.1] - 2026-11-10
+
+### 🐛 修復與測試防禦 (Fixed & Stability)
+- **修復按鍵與選單無反應之腳本解析錯誤**：修正 `finishLessonSummary()` 函式內部重複宣告 `curTier` 變數所引發之 `SyntaxError: Identifier 'curTier' has already been declared`，並在全域環境明確掛載 `window.game = game`，徹底解決首頁關卡按鍵、等級選單與設定彈窗點擊無反應之問題。
+- **自動化測試防禦強化**：在 `npm test` 中加入全自動行內 `<script>` 語法編譯檢查機制，全面預防未來改版時任何潛在之 JavaScript 語法錯誤漏網。
+
+---
+
 ## [2.2.0] - 2026-11-10
 
 ### ✨ 巨量擴充與功能升級 (Massive Curriculum Expansion)
