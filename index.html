@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="version" content="2.2.1">
+  <meta name="version" content="2.3.0">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <title>波波熱血英語大冒險 v2.2.1 - 全階段分級學習樂園 (小學・國中・高中・大學 1,080 關)</title>
+  <title>波波熱血英語大冒險 v2.3.0 - 全階段分級學習樂園 (1,080 關 + Duolingo 互動小遊戲)</title>
   <style>
     :root {
       --primary: #58cc02;
@@ -1516,6 +1516,542 @@
         display: none !important;
       }
     }
+
+    /* =========================================================
+       Duolingo 風格：互動小遊戲樂園 & 獎勵挑戰樣式 (v2.3.0)
+    ========================================================= */
+    .arcade-hub-card {
+      background: linear-gradient(135deg, #fffbeb 0%, #f0f9ff 50%, #f5f3ff 100%);
+      border: 3px solid #fde047;
+      border-radius: 26px;
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 22px rgba(245, 158, 11, 0.12);
+    }
+
+    .arcade-hub-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .arcade-hub-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .arcade-hub-title h3 {
+      font-size: 1.18rem;
+      font-weight: 900;
+      color: #1e293b;
+      margin: 0;
+    }
+
+    .arcade-hub-title p {
+      font-size: 0.84rem;
+      color: #475569;
+      font-weight: 700;
+      margin: 2px 0 0;
+    }
+
+    .ticket-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #fff;
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      font-weight: 900;
+      box-shadow: 0 3px 0 #b45309;
+    }
+
+    .arcade-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    @media (max-width: 720px) {
+      .arcade-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .arcade-game-btn {
+      background: #ffffff;
+      border: 2.5px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 14px 12px;
+      text-align: center;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 5px 0 #cbd5e1;
+      transition: all 0.15s ease;
+      position: relative;
+      font-family: inherit;
+    }
+
+    .arcade-game-btn > * {
+      pointer-events: none;
+    }
+
+    .arcade-game-btn:hover {
+      transform: translateY(-3px);
+      border-color: #38bdf8;
+      background: #f8fafc;
+    }
+
+    .arcade-game-btn:active {
+      transform: translateY(3px);
+      box-shadow: 0 2px 0 #cbd5e1;
+    }
+
+    .arcade-game-btn.g-match { border-color: #f97316; box-shadow: 0 5px 0 #ea580c; }
+    .arcade-game-btn.g-spell { border-color: #8b5cf6; box-shadow: 0 5px 0 #7c3aed; }
+    .arcade-game-btn.g-balloon { border-color: #0ea5e9; box-shadow: 0 5px 0 #0284c7; }
+    .arcade-game-btn.g-blitz { border-color: #10b981; box-shadow: 0 5px 0 #059669; }
+
+    .arcade-icon {
+      font-size: 2.1rem;
+      line-height: 1;
+    }
+
+    .arcade-name {
+      font-size: 0.96rem;
+      font-weight: 900;
+      color: #0f172a;
+    }
+
+    .arcade-desc {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #64748b;
+      line-height: 1.3;
+    }
+
+    .arcade-best {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #d97706;
+      background: #fef3c7;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-top: 2px;
+    }
+
+    /* 關卡結算：獎勵寶箱卡片 */
+    .summary-bonus-box {
+      background: linear-gradient(135deg, #fef9c3 0%, #ffedd5 100%);
+      border: 2.5px solid #f59e0b;
+      border-radius: 22px;
+      padding: 18px 16px;
+      margin-bottom: 20px;
+      text-align: center;
+      box-shadow: 0 6px 16px rgba(245, 158, 11, 0.16);
+    }
+
+    .summary-bonus-box h4 {
+      font-size: 1.08rem;
+      font-weight: 900;
+      color: #b45309;
+      margin-bottom: 6px;
+    }
+
+    .summary-bonus-box p {
+      font-size: 0.88rem;
+      color: #78350f;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .summary-bonus-actions {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    @media (max-width: 480px) {
+      .summary-bonus-actions {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* 互動小遊戲主舞台 (#screen-minigame) */
+    .minigame-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .minigame-hud {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .mg-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 14px;
+      font-weight: 900;
+      font-size: 0.96rem;
+      background: #fff;
+      border: 2px solid #e2e8f0;
+      box-shadow: 0 3px 0 #cbd5e1;
+      color: #1e293b;
+    }
+
+    .mg-pill.timer { border-color: #38bdf8; color: #0369a1; background: #f0f9ff; }
+    .mg-pill.timer.urgent { border-color: #ef4444; color: #dc2626; background: #fef2f2; animation: pulseUrgent 0.6s infinite alternate; }
+    .mg-pill.score { border-color: #fbbf24; color: #b45309; background: #fffbeb; }
+    .mg-pill.combo { border-color: #fb923c; color: #c2410c; background: #fff7ed; }
+    .mg-pill.bonus-x2 { border-color: #a855f7; color: #7e22ce; background: #faf5ff; }
+
+    @keyframes pulseUrgent {
+      from { transform: scale(1); }
+      to { transform: scale(1.06); }
+    }
+
+    .minigame-stage {
+      background: #ffffff;
+      border: 3px solid #e2e8f0;
+      border-radius: 26px;
+      padding: 22px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    }
+
+    .mg-title-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .mg-title-bar h3 {
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .mg-subtitle {
+      font-size: 0.88rem;
+      color: #64748b;
+      font-weight: 700;
+    }
+
+    /* 1. Match Madness 限時配對 */
+    .mm-board {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .mm-col {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .mm-tile {
+      background: #fff;
+      border: 2.5px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 14px 12px;
+      font-size: 1.04rem;
+      font-weight: 800;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0 4px 0 #cbd5e1;
+      transition: all 0.12s ease;
+      min-height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e293b;
+      user-select: none;
+    }
+
+    .mm-tile > * { pointer-events: none; }
+
+    .mm-tile:hover {
+      border-color: #38bdf8;
+      transform: translateY(-2px);
+    }
+
+    .mm-tile.selected {
+      background: #e0f2fe;
+      border-color: var(--secondary);
+      box-shadow: 0 4px 0 var(--secondary-dark);
+      color: var(--secondary-dark);
+    }
+
+    .mm-tile.matched-flash {
+      background: #dcfce7;
+      border-color: #22c55e;
+      color: #15803d;
+      transform: scale(0.95);
+    }
+
+    .mm-tile.wrong-shake {
+      background: #fee2e2;
+      border-color: #ef4444;
+      color: #b91c1c;
+      animation: shakeX 0.3s ease;
+    }
+
+    @keyframes shakeX {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-6px); }
+      75% { transform: translateX(6px); }
+    }
+
+    /* 2. Word Builder 字母拼圖衝刺 */
+    .wb-clue-box {
+      background: linear-gradient(135deg, #f5f3ff 0%, #eff6ff 100%);
+      border: 2.5px solid #c4b5fd;
+      border-radius: 20px;
+      padding: 18px;
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .wb-zh-meaning {
+      font-size: 1.45rem;
+      font-weight: 900;
+      color: #4c1d95;
+      margin: 6px 0;
+    }
+
+    .wb-slots {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin: 18px 0;
+      min-height: 56px;
+    }
+
+    .wb-slot {
+      width: 44px;
+      height: 52px;
+      border-radius: 14px;
+      border: 2.5px dashed #cbd5e1;
+      background: #f8fafc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: #1e293b;
+      cursor: pointer;
+      transition: all 0.12s ease;
+      text-transform: lowercase;
+    }
+
+    .wb-slot.filled {
+      border-style: solid;
+      border-color: var(--secondary);
+      background: #e0f2fe;
+      color: var(--secondary-dark);
+      box-shadow: 0 4px 0 var(--secondary-dark);
+    }
+
+    .wb-slot.correct-word {
+      border-color: #22c55e;
+      background: #dcfce7;
+      color: #15803d;
+      box-shadow: 0 4px 0 #16a34a;
+    }
+
+    .wb-pool {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .wb-key {
+      width: 46px;
+      height: 50px;
+      border-radius: 14px;
+      border: 2.5px solid #cbd5e1;
+      background: #fff;
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: #0f172a;
+      box-shadow: 0 4px 0 #cbd5e1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.1s ease;
+      font-family: inherit;
+    }
+
+    .wb-key:hover { border-color: #8b5cf6; transform: translateY(-2px); }
+    .wb-key:active { transform: translateY(3px); box-shadow: 0 1px 0 #cbd5e1; }
+    .wb-key.used { opacity: 0.25; pointer-events: none; box-shadow: none; }
+
+    .wb-controls {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    /* 3. Balloon Pop 單字氣球爆破戰 */
+    .balloon-target-bar {
+      background: linear-gradient(135deg, #0284c7, #2563eb);
+      color: #fff;
+      border-radius: 18px;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+
+    .balloon-target-text {
+      font-size: 1.28rem;
+      font-weight: 900;
+    }
+
+    .balloon-arena {
+      position: relative;
+      height: 360px;
+      background: linear-gradient(180deg, #bae6fd 0%, #e0f2fe 65%, #f0fdf4 100%);
+      border: 3px solid #7dd3fc;
+      border-radius: 22px;
+      overflow: hidden;
+      padding: 16px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 14px;
+      align-items: center;
+      justify-items: center;
+    }
+
+    @media (max-width: 560px) {
+      .balloon-arena {
+        height: 410px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+      }
+    }
+
+    .sky-balloon {
+      position: relative;
+      min-width: 112px;
+      max-width: 190px;
+      width: 100%;
+      padding: 18px 12px;
+      border-radius: 50% 50% 46% 46%;
+      color: #fff;
+      font-weight: 900;
+      font-size: 1rem;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: inset -6px -8px 0 rgba(0,0,0,0.12), 0 8px 16px rgba(0,0,0,0.12);
+      border: 2.5px solid rgba(255,255,255,0.65);
+      animation: floatBalloon 2.6s ease-in-out infinite alternate;
+      transition: transform 0.12s ease, opacity 0.15s ease;
+      user-select: none;
+      word-break: break-word;
+    }
+
+    .sky-balloon > * { pointer-events: none; }
+
+    .sky-balloon::after {
+      content: "";
+      position: absolute;
+      bottom: -16px;
+      left: 50%;
+      width: 2px;
+      height: 16px;
+      background: rgba(100, 116, 139, 0.5);
+    }
+
+    .sky-balloon:hover { transform: scale(1.07); }
+    .sky-balloon:active { transform: scale(0.92); }
+    .sky-balloon.popped { transform: scale(1.35); opacity: 0; pointer-events: none; }
+    .sky-balloon.wrong-shake { animation: shakeX 0.3s ease; }
+
+    @keyframes floatBalloon {
+      0% { transform: translateY(6px) rotate(-1.5deg); }
+      100% { transform: translateY(-8px) rotate(1.5deg); }
+    }
+
+    /* 4. Listening Blitz 聽音閃電戰 */
+    .blitz-speaker-wrap {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .blitz-status-pill {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 4px 14px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 800;
+      background: #e0f2fe;
+      color: #0369a1;
+    }
+
+    .blitz-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    @media (max-width: 520px) {
+      .blitz-grid { grid-template-columns: 1fr; }
+    }
+
+    .blitz-card {
+      position: relative;
+      background: #fff;
+      border: 2.5px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 18px 14px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 6px;
+      box-shadow: 0 5px 0 #cbd5e1;
+      transition: all 0.12s ease;
+    }
+
+    .blitz-card > * { pointer-events: none; }
+    .blitz-card:hover { border-color: #10b981; transform: translateY(-2px); }
+    .blitz-card.correct { background: #dcfce7; border-color: #22c55e; box-shadow: 0 5px 0 #16a34a; }
+    .blitz-card.wrong { background: #fee2e2; border-color: #ef4444; box-shadow: 0 5px 0 #dc2626; animation: shakeX 0.3s ease; }
   </style>
 </head>
 <body>
@@ -1536,7 +2072,7 @@
       <!-- 版本號藥丸標籤 (點擊查看更新記錄) -->
       <button class="version-pill" id="header-version-pill" onclick="game.openChangelogModal()" title="點擊查看版本更新記錄">
         <span>✨</span>
-        <span id="header-version-text">v2.2.1</span>
+        <span id="header-version-text">v2.3.0</span>
       </button>
       <!-- 等級切換膠囊按鈕 -->
       <button class="tier-pill-btn" onclick="game.openTierModal()" id="current-tier-pill" title="點擊切換學習等級">
@@ -1597,7 +2133,7 @@
             </svg>
           </div>
           <div class="speech-bubble" id="bobi-quote">
-            嗨！我是波波！點擊上方膠囊按鈕，隨時可切換「小學、國中、高中、大學」共 12 個階段等級喔！
+            嗨！我是波波！通關可拿獎勵遊戲券，快來玩 Duolingo 風格英文互動小遊戲賺雙倍寶石吧！
             <span class="click-hint">👉 點點我，聽聽波波為你歡呼！</span>
           </div>
         </div>
@@ -1605,6 +2141,50 @@
           <span>❤️ 練習補血</span>
         </button>
       </div>
+
+      <!-- Duolingo 風格：互動英語小遊戲獎勵樂園 -->
+      <section class="arcade-hub-card" aria-label="互動英語小遊戲樂園">
+        <div class="arcade-hub-header">
+          <div class="arcade-hub-title">
+            <span style="font-size: 2rem;">🎮</span>
+            <div>
+              <h3>波波英語互動小遊戲樂園 (Duolingo 獎勵挑戰)</h3>
+              <p>每通關 1 關送 1 張雙倍獎勵券！隨時開玩賺取 💎 寶石、XP 與 ❤️ 補血！</p>
+            </div>
+          </div>
+          <div class="ticket-pill" title="通關任意關卡即贈 1 張雙倍獎勵券">
+            <span>🎟️</span>
+            <span>雙倍獎勵券：<span id="bonus-ticket-count">3</span> 張</span>
+          </div>
+        </div>
+
+        <div class="arcade-grid">
+          <button class="arcade-game-btn g-match" onclick="game.startMiniGame('match_madness')">
+            <span class="arcade-icon">⚡</span>
+            <span class="arcade-name">限時配對狂熱</span>
+            <span class="arcade-desc">60秒極速中英配對<br>連擊加倍賺寶石</span>
+            <span class="arcade-best">最高 <span id="best-match_madness">0</span> 分</span>
+          </button>
+          <button class="arcade-game-btn g-spell" onclick="game.startMiniGame('word_builder')">
+            <span class="arcade-icon">🔤</span>
+            <span class="arcade-name">單字拼圖衝刺</span>
+            <span class="arcade-desc">聽發音拼出單字<br>支援鍵盤直接打字</span>
+            <span class="arcade-best">最高 <span id="best-word_builder">0</span> 分</span>
+          </button>
+          <button class="arcade-game-btn g-balloon" onclick="game.startMiniGame('balloon_pop')">
+            <span class="arcade-icon">🎈</span>
+            <span class="arcade-name">單字氣球爆破</span>
+            <span class="arcade-desc">看中文擊落氣球<br>搶答拿滿分爆擊</span>
+            <span class="arcade-best">最高 <span id="best-balloon_pop">0</span> 分</span>
+          </button>
+          <button class="arcade-game-btn g-blitz" onclick="game.startMiniGame('listen_blitz')">
+            <span class="arcade-icon">🎧</span>
+            <span class="arcade-name">聽音閃電戰</span>
+            <span class="arcade-desc">極速聽力辨識<br>訓練瞬間語感反射</span>
+            <span class="arcade-best">最高 <span id="best-listen_blitz">0</span> 分</span>
+          </button>
+        </div>
+      </section>
 
       <!-- 當前等級的 90 道關卡動態渲染區 -->
       <div id="units-container"></div>
@@ -1614,7 +2194,7 @@
         <div class="site-footer-left">
           <span>🦉 <b>波波熱血英語大冒險</b></span>
           <span style="color:#94a3b8;">|</span>
-          <span>當前版本：<strong id="footer-version-text" style="color:var(--primary-dark);">v2.2.1</strong> (12 等級・1,080 關超大題庫)</span>
+          <span>當前版本：<strong id="footer-version-text" style="color:var(--primary-dark);">v2.3.0</strong> (12 等級・1,080 關 + 4 大互動小遊戲)</span>
         </div>
         <div class="site-footer-links">
           <button class="footer-link-btn" onclick="game.openChangelogModal()">
@@ -1665,10 +2245,57 @@
           </div>
         </div>
 
+        <!-- 🎁 通關獎勵：Duolingo 風格互動小遊戲挑戰 -->
+        <div class="summary-bonus-box">
+          <h4>🎁 恭喜獲得「雙倍獎勵遊戲券 +1」！</h4>
+          <p>用本關學到的英語單字來一場趣味小遊戲吧，過關可再賺 <b>+30~100 💎 寶石</b>與額外 XP！</p>
+          <div class="summary-bonus-actions">
+            <button class="duo-btn" style="background:linear-gradient(135deg,#f59e0b,#ea580c); color:#fff; box-shadow:0 4px 0 #c2410c; padding:11px 14px; font-size:0.92rem;" onclick="game.startRandomBonusGame(true)">
+              🎲 隨機驚喜獎勵小遊戲
+            </button>
+            <button class="duo-btn btn-secondary" style="padding:11px 14px; font-size:0.92rem;" onclick="game.startMiniGame('match_madness', true)">
+              ⚡ 限時配對狂熱
+            </button>
+            <button class="duo-btn" style="background:#8b5cf6; color:#fff; box-shadow:0 4px 0 #6d28d9; padding:11px 14px; font-size:0.92rem;" onclick="game.startMiniGame('word_builder', true)">
+              🔤 單字拼圖衝刺
+            </button>
+            <button class="duo-btn" style="background:#10b981; color:#fff; box-shadow:0 4px 0 #059669; padding:11px 14px; font-size:0.92rem;" onclick="game.startMiniGame('balloon_pop', true)">
+              🎈 單字氣球爆破
+            </button>
+          </div>
+        </div>
+
         <button class="duo-btn btn-primary" style="width: 100%;" onclick="game.finishLesson()">
-          繼續前進！挑戰下一關 🚀
+          返回地圖，挑戰下一關 🚀
         </button>
       </div>
+    </div>
+
+    <!-- ==================== SCREEN 4: 互動獎勵小遊戲舞台 ==================== -->
+    <div id="screen-minigame" class="view-screen">
+      <div class="minigame-header">
+        <button class="close-lesson-btn" onclick="game.exitMiniGame()" title="離開小遊戲">✕</button>
+        <div class="minigame-hud">
+          <div class="mg-pill timer" id="mg-timer-pill">
+            <span>⏱️</span>
+            <span id="mg-timer-val">60</span>s
+          </div>
+          <div class="mg-pill score">
+            <span>⭐</span>
+            <span id="mg-score-val">0</span> 分
+          </div>
+          <div class="mg-pill combo">
+            <span>🔥</span>
+            <span id="mg-combo-val">0</span> 連擊
+          </div>
+          <div class="mg-pill bonus-x2" id="mg-x2-badge" style="display:none;">
+            <span>🎟️</span>
+            <span>2x 雙倍獎勵中</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="minigame-stage" id="minigame-stage"></div>
     </div>
 
   </main>
@@ -1766,7 +2393,7 @@
       <div style="font-size: 2.8rem;">⚙️</div>
       <h3>學習成就與系統設定</h3>
       <p style="margin-bottom: 14px;">
-        系統版本：<b id="settings-version-val" style="color:#6d28d9;">v2.2.1</b><br>
+        系統版本：<b id="settings-version-val" style="color:#6d28d9;">v2.3.0</b><br>
         目前累積 XP: <b id="settings-xp-val" style="color:var(--gold-dark);">0</b> 點 ｜ 全站通關總數: <b id="settings-unlocked-val" style="color:var(--secondary-dark);">0</b> / 1,080 關
       </p>
 
@@ -1802,19 +2429,68 @@
     </div>
   </div>
 
+  <!-- 小遊戲結算獎勵彈窗 -->
+  <div class="generic-modal-overlay" id="minigame-result-modal">
+    <div class="modal-box">
+      <div style="font-size: 3.8rem;" id="mg-res-icon">🏆</div>
+      <h3 id="mg-res-title" style="color: var(--gold-dark);">獎勵小遊戲挑戰完成！</h3>
+      <p id="mg-res-subtitle">太厲害了！你展現了超強的英語反應力！</p>
+
+      <div class="stats-reward-grid" style="margin: 16px 0;">
+        <div class="reward-box xp">
+          <div class="reward-label">獲得寶石</div>
+          <div class="reward-val" style="color: #0284c7;">+<span id="mg-res-gems">30</span> 💎</div>
+        </div>
+        <div class="reward-box acc">
+          <div class="reward-label">獲得 XP</div>
+          <div class="reward-val" style="color: #46a302;">+<span id="mg-res-xp">25</span> XP</div>
+        </div>
+        <div class="reward-box streak">
+          <div class="reward-label">最高連擊</div>
+          <div class="reward-val" style="color: #e07f00;"><span id="mg-res-combo">0</span> 🔥</div>
+        </div>
+      </div>
+
+      <p id="mg-res-extra" style="font-weight: 800; color: #7e22ce; min-height: 20px; margin-bottom: 14px;"></p>
+
+      <div class="modal-actions">
+        <button class="duo-btn btn-primary" onclick="game.replayMiniGame()">
+          再挑戰一次 🔄
+        </button>
+        <button class="duo-btn btn-secondary" onclick="game.closeMiniGameResult()">
+          收下獎勵並返回地圖 🗺️
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- 遊戲內版本更新記錄彈窗 (#changelog-modal) -->
   <div class="generic-modal-overlay" id="changelog-modal">
     <div class="modal-box" style="max-width: 580px;">
       <div style="font-size: 2.8rem;">📋</div>
       <h3>波波熱血英語大冒險 - 更新日誌</h3>
-      <p style="margin-bottom: 8px;">當前正式版本：<b id="changelog-current-ver" style="color:var(--primary-dark);">v2.2.1</b>（遵循全站版本對應規範）</p>
+      <p style="margin-bottom: 8px;">當前正式版本：<b id="changelog-current-ver" style="color:var(--primary-dark);">v2.3.0</b>（遵循全站版本對應規範）</p>
 
       <div class="changelog-list">
         <div class="changelog-item latest">
           <div class="changelog-version-header">
             <div class="changelog-version-tag">
-              <span>v2.2.1</span>
+              <span>v2.3.0</span>
               <span class="changelog-badge">最新版本</span>
+            </div>
+            <span class="changelog-date">2026-11-13</span>
+          </div>
+          <ul>
+            <li>🎮 <b>新增 Duolingo 風格「4 大英文互動獎勵小遊戲樂園」</b>：除了傳統選擇題，現在推出<b>⚡ 限時配對狂熱 (Match Madness)</b>、<b>🔤 單字拼圖衝刺 (支援實體鍵盤打字)</b>、<b>🎈 單字氣球爆破戰</b>、<b>🎧 聽音閃電戰</b>！</li>
+            <li>🎟️ <b>雙倍獎勵券與通關寶箱機制</b>：每次通關關卡皆贈送「🎟️ 雙倍獎勵券 +1」，並可於結算畫面直接啟動獎勵小遊戲，挑戰高分贏取雙倍 💎 寶石、XP 與 ❤️ 額外愛心補血！</li>
+            <li>🏆 <b>等級詞彙自適應出題</b>：4 大互動小遊戲皆根據目前所在等級（小學 Pre-A1 ~ 大學 GRE C2）動態抽取單字與美語發音，好玩又好記！</li>
+          </ul>
+        </div>
+
+        <div class="changelog-item">
+          <div class="changelog-version-header">
+            <div class="changelog-version-tag">
+              <span>v2.2.1</span>
             </div>
             <span class="changelog-date">2026-11-10</span>
           </div>
@@ -1955,7 +2631,7 @@
   <canvas id="confetti-canvas"></canvas>
 
   <!-- 載入完整的 12 等級 1,080 道豐富題庫 (加入版本快取破壞參數防止瀏覽器快取舊版) -->
-  <script src="curriculum.js?v=2.2.1"></script>
+  <script src="curriculum.js?v=2.3.0"></script>
 
   <script>
     /* ==========================================================================
@@ -2101,7 +2777,7 @@
     ========================================================================== */
     class GameEngine {
       constructor() {
-        this.version = window.BOBI_VERSION || '2.2.1';
+        this.version = window.BOBI_VERSION || '2.3.0';
         this.curriculum = window.CURRICULUM_DATA || [];
         this.currentCategory = 'elementary';
         this.currentTierId = 'elem_mid'; // 預設小學・中級
@@ -2117,6 +2793,21 @@
         this.currentScrambleTokens = [];
         this.practiceMode = false;
 
+        // Duolingo 風格互動小遊戲狀態
+        this.mg = {
+          active: false,
+          type: null,
+          timerId: null,
+          timeLeft: 0,
+          score: 0,
+          combo: 0,
+          maxCombo: 0,
+          cleared: 0,
+          isDoubleReward: false,
+          fromSummary: false,
+          pool: []
+        };
+
         this.loadState();
       }
 
@@ -2130,6 +2821,13 @@
             this.hearts = data.hearts !== undefined ? data.hearts : 5;
             this.xp = data.xp || 0;
             this.completedByTier = data.completedByTier || {};
+            this.bonusTickets = data.bonusTickets !== undefined ? data.bonusTickets : 3;
+            this.miniGameScores = data.miniGameScores || {
+              match_madness: 0,
+              word_builder: 0,
+              balloon_pop: 0,
+              listen_blitz: 0
+            };
             if (data.currentTierId && this.getTier(data.currentTierId)) {
               this.currentTierId = data.currentTierId;
             }
@@ -2148,6 +2846,13 @@
         this.xp = 0;
         this.completedByTier = {};
         this.currentTierId = 'elem_mid';
+        this.bonusTickets = 3;
+        this.miniGameScores = {
+          match_madness: 0,
+          word_builder: 0,
+          balloon_pop: 0,
+          listen_blitz: 0
+        };
       }
 
       saveState() {
@@ -2158,7 +2863,9 @@
           hearts: this.hearts,
           xp: this.xp,
           currentTierId: this.currentTierId,
-          completedByTier: this.completedByTier
+          completedByTier: this.completedByTier,
+          bonusTickets: this.bonusTickets,
+          miniGameScores: this.miniGameScores
         };
         localStorage.setItem('bobi_english_save_v4', JSON.stringify(data));
         this.updateHeaderStats();
@@ -2179,6 +2886,15 @@
         const lessonHeart = document.getElementById('lesson-heart-count');
         if (lessonHeart) lessonHeart.textContent = this.hearts;
 
+        const ticketEl = document.getElementById('bonus-ticket-count');
+        if (ticketEl) ticketEl.textContent = this.bonusTickets;
+        if (this.miniGameScores) {
+          ['match_madness', 'word_builder', 'balloon_pop', 'listen_blitz'].forEach(k => {
+            const bestEl = document.getElementById(`best-${k}`);
+            if (bestEl) bestEl.textContent = this.miniGameScores[k] || 0;
+          });
+        }
+
         // 同步全站版本號顯示
         const verStr = `v${this.version}`;
         ['header-version-text', 'footer-version-text', 'settings-version-val', 'changelog-current-ver'].forEach(id => {
@@ -2196,6 +2912,9 @@
       }
 
       showScreen(screenId) {
+        if (screenId !== 'minigame') {
+          this.stopMiniGame();
+        }
         document.querySelectorAll('.view-screen').forEach(el => el.classList.remove('active'));
         const target = document.getElementById(`screen-${screenId}`);
         if (target) target.classList.add('active');
@@ -2824,6 +3543,7 @@
           this.hearts = 5;
           this.gems += 25;
           this.xp += 20;
+          this.bonusTickets = (this.bonusTickets || 0) + 1;
           this.saveState();
           document.getElementById('summary-msg').textContent = '恭喜完成補血複習！你的愛心已完全補滿 ❤️❤️❤️❤️❤️！';
         } else {
@@ -2835,6 +3555,7 @@
             this.gems += 35;
           }
           this.xp += 30;
+          this.bonusTickets = (this.bonusTickets || 0) + 1;
           this.saveState();
           document.getElementById('summary-msg').textContent = `恭喜通過關卡！你又掌握了一項 ${curTier.subLevelName} 的重要英語技能！`;
         }
@@ -2864,6 +3585,732 @@
       confirmExitLesson() {
         if (confirm('要暫停並返回冒險地圖嗎？未完成的進度不會被記錄喔！')) {
           this.showScreen('map');
+        }
+      }
+
+      /* ======================================================================
+         Duolingo 風格：互動英語獎勵小遊戲引擎 (v2.3.0)
+      ====================================================================== */
+      getMiniGameVocabPool(preferCurrentLesson = false) {
+        const curTier = this.getCurrentTier();
+        const fallbackEmojis = ['🌟', '📘', '🎯', '🚀', '💡', '🔥', '⚾', '🦖', '💎', '🎓'];
+        const emojiMap = {};
+        const seenEn = new Set();
+        const seenZh = new Set();
+        const pool = [];
+
+        const pushItem = (enRaw, zhRaw, emojiRaw) => {
+          if (!enRaw || !zhRaw) return;
+          const en = String(enRaw).trim();
+          const zh = String(zhRaw).trim();
+          const enKey = en.toLowerCase();
+          if (!en || !zh || seenEn.has(enKey) || seenZh.has(zh)) return;
+          seenEn.add(enKey);
+          seenZh.add(zh);
+          pool.push({
+            en,
+            zh,
+            emoji: emojiRaw || emojiMap[enKey] || fallbackEmojis[pool.length % fallbackEmojis.length]
+          });
+        };
+
+        if (curTier && curTier.lessons) {
+          curTier.lessons.forEach(l => {
+            (l.questions || []).forEach(q => {
+              (q.options || []).forEach(o => {
+                if (o.en && o.emoji) emojiMap[o.en.trim().toLowerCase()] = o.emoji;
+              });
+            });
+          });
+        }
+
+        if (preferCurrentLesson && this.currentLesson && this.currentLesson.vocabularies) {
+          this.currentLesson.vocabularies.forEach(v => pushItem(v.en, v.zh));
+        }
+
+        if (curTier && curTier.lessons) {
+          const shuffledLessons = [...curTier.lessons].sort(() => Math.random() - 0.5);
+          shuffledLessons.forEach(l => {
+            (l.vocabularies || []).forEach(v => pushItem(v.en, v.zh));
+          });
+        }
+
+        return pool;
+      }
+
+      stopMiniGame() {
+        if (this.mg && this.mg.timerId) {
+          clearInterval(this.mg.timerId);
+          this.mg.timerId = null;
+        }
+        if (this.mg) {
+          this.mg.active = false;
+        }
+      }
+
+      startRandomBonusGame(fromSummary = false) {
+        const types = ['match_madness', 'word_builder', 'balloon_pop', 'listen_blitz'];
+        const pick = types[Math.floor(Math.random() * types.length)];
+        this.startMiniGame(pick, fromSummary);
+      }
+
+      startMiniGame(gameType, fromSummary = false) {
+        this.stopMiniGame();
+        audioPlayer.play('hop');
+
+        let isDoubleReward = false;
+        if (this.bonusTickets > 0) {
+          this.bonusTickets--;
+          isDoubleReward = true;
+          this.saveState();
+        }
+
+        const pool = this.getMiniGameVocabPool(fromSummary);
+        const durationMap = {
+          match_madness: 60,
+          word_builder: 75,
+          balloon_pop: 50,
+          listen_blitz: 45
+        };
+
+        this.mg = {
+          active: true,
+          type: gameType,
+          timerId: null,
+          timeLeft: durationMap[gameType] || 60,
+          score: 0,
+          combo: 0,
+          maxCombo: 0,
+          cleared: 0,
+          isDoubleReward,
+          fromSummary,
+          pool
+        };
+
+        this.showScreen('minigame');
+        this.updateMiniGameHUD();
+
+        const x2Badge = document.getElementById('mg-x2-badge');
+        if (x2Badge) x2Badge.style.display = isDoubleReward ? 'inline-flex' : 'none';
+
+        if (gameType === 'match_madness') {
+          this.initMatchMadness();
+        } else if (gameType === 'word_builder') {
+          this.initWordBuilder();
+        } else if (gameType === 'balloon_pop') {
+          this.initBalloonPop();
+        } else if (gameType === 'listen_blitz') {
+          this.initListeningBlitz();
+        }
+
+        this.mg.timerId = setInterval(() => {
+          if (!this.mg.active) return;
+          this.mg.timeLeft--;
+          this.updateMiniGameHUD();
+          if (this.mg.timeLeft <= 0) {
+            this.finishMiniGame();
+          }
+        }, 1000);
+      }
+
+      updateMiniGameHUD() {
+        const timerEl = document.getElementById('mg-timer-val');
+        const timerPill = document.getElementById('mg-timer-pill');
+        const scoreEl = document.getElementById('mg-score-val');
+        const comboEl = document.getElementById('mg-combo-val');
+
+        if (timerEl) timerEl.textContent = Math.max(0, this.mg.timeLeft);
+        if (timerPill) {
+          if (this.mg.timeLeft <= 10) timerPill.classList.add('urgent');
+          else timerPill.classList.remove('urgent');
+        }
+        if (scoreEl) scoreEl.textContent = this.mg.score;
+        if (comboEl) comboEl.textContent = this.mg.combo;
+      }
+
+      exitMiniGame() {
+        this.stopMiniGame();
+        this.showScreen('map');
+      }
+
+      replayMiniGame() {
+        document.getElementById('minigame-result-modal').classList.remove('active');
+        this.startMiniGame(this.mg.type || 'match_madness', false);
+      }
+
+      closeMiniGameResult() {
+        document.getElementById('minigame-result-modal').classList.remove('active');
+        this.showScreen('map');
+      }
+
+      finishMiniGame() {
+        this.stopMiniGame();
+        audioPlayer.play('win');
+        triggerConfetti();
+
+        const score = this.mg.score;
+        const mult = this.mg.isDoubleReward ? 2 : 1;
+        const baseGems = Math.max(10, Math.min(50, Math.round(score / 6) + 10));
+        const baseXp = Math.max(10, Math.min(45, Math.round(score / 8) + 10));
+        const earnedGems = baseGems * mult;
+        const earnedXp = baseXp * mult;
+
+        this.gems += earnedGems;
+        this.xp += earnedXp;
+
+        let extraMsg = '';
+        if (this.mg.isDoubleReward) {
+          extraMsg = '🎟️ 已自動套用【雙倍獎勵券】× 2 倍加成！';
+        }
+        if (this.mg.cleared >= 5 && this.hearts < 5) {
+          this.hearts = Math.min(5, this.hearts + 1);
+          extraMsg = (extraMsg ? extraMsg + ' ｜ ' : '') + '❤️ 高分達標額外補血 +1 愛心！';
+        }
+
+        const prevBest = this.miniGameScores[this.mg.type] || 0;
+        if (score > prevBest) {
+          this.miniGameScores[this.mg.type] = score;
+          extraMsg = '🏆 締造個人全新最高紀錄！' + (extraMsg ? ' ' + extraMsg : '');
+        }
+
+        this.saveState();
+
+        document.getElementById('mg-res-icon').textContent = score >= 100 ? '👑' : (score >= 40 ? '🏆' : '🎉');
+        document.getElementById('mg-res-title').textContent = `總得分 ${score} 分！（成功 ${this.mg.cleared} 題）`;
+        document.getElementById('mg-res-subtitle').textContent = this.mg.cleared >= 5
+          ? '太神啦！你的英文反射速度跟 Duolingo 大師一樣快！'
+          : '表現很棒！再接再厲挑戰更高連擊吧！';
+        document.getElementById('mg-res-gems').textContent = earnedGems;
+        document.getElementById('mg-res-xp').textContent = earnedXp;
+        document.getElementById('mg-res-combo').textContent = this.mg.maxCombo;
+        document.getElementById('mg-res-extra').textContent = extraMsg;
+
+        document.getElementById('minigame-result-modal').classList.add('active');
+      }
+
+      /* --- 小遊戲 1：⚡ 限時配對狂熱 (Match Madness) --- */
+      initMatchMadness() {
+        const pool = [...this.mg.pool].sort(() => Math.random() - 0.5);
+        this.mg.mmQueue = pool;
+        this.mg.mmIdx = 0;
+
+        const initialPairs = [];
+        for (let i = 0; i < 5 && this.mg.mmIdx < this.mg.mmQueue.length; i++) {
+          initialPairs.push(this.mg.mmQueue[this.mg.mmIdx++]);
+        }
+
+        this.mg.mmLeft = initialPairs.map((p, idx) => ({ slot: idx, en: p.en, zh: p.zh }));
+        const shuffledRight = [...initialPairs].sort(() => Math.random() - 0.5);
+        this.mg.mmRight = shuffledRight.map((p, idx) => ({ slot: idx, en: p.en, zh: p.zh }));
+        this.mg.mmSelLeft = null;
+        this.mg.mmSelRight = null;
+        this.mg.mmLocked = false;
+
+        this.renderMatchMadness();
+      }
+
+      renderMatchMadness() {
+        const stage = document.getElementById('minigame-stage');
+        let leftHtml = '';
+        let rightHtml = '';
+
+        this.mg.mmLeft.forEach((item, i) => {
+          const sel = this.mg.mmSelLeft === i ? 'selected' : '';
+          leftHtml += `<div class="mm-tile ${sel}" id="mm-l-${i}" onclick="game.clickMMTile('left', ${i})">${item.en}</div>`;
+        });
+        this.mg.mmRight.forEach((item, i) => {
+          const sel = this.mg.mmSelRight === i ? 'selected' : '';
+          rightHtml += `<div class="mm-tile ${sel}" id="mm-r-${i}" onclick="game.clickMMTile('right', ${i})">${item.zh}</div>`;
+        });
+
+        stage.innerHTML = `
+          <div class="mg-title-bar">
+            <h3><span>⚡</span><span>限時配對狂熱 (Match Madness)</span></h3>
+            <span class="mg-subtitle">點擊左邊英文與右邊對應的繁體中文，配對越多連擊越高！</span>
+          </div>
+          <div class="mm-board">
+            <div class="mm-col">${leftHtml}</div>
+            <div class="mm-col">${rightHtml}</div>
+          </div>
+        `;
+      }
+
+      clickMMTile(side, idx) {
+        if (!this.mg.active || this.mg.mmLocked) return;
+        audioPlayer.play('click');
+
+        if (side === 'left') {
+          this.mg.mmSelLeft = this.mg.mmSelLeft === idx ? null : idx;
+          if (this.mg.mmSelLeft !== null && this.mg.mmLeft[idx]) {
+            speakText(this.mg.mmLeft[idx].en);
+          }
+        } else {
+          this.mg.mmSelRight = this.mg.mmSelRight === idx ? null : idx;
+        }
+
+        if (this.mg.mmSelLeft !== null && this.mg.mmSelRight !== null) {
+          const lIdx = this.mg.mmSelLeft;
+          const rIdx = this.mg.mmSelRight;
+          const leftItem = this.mg.mmLeft[lIdx];
+          const rightItem = this.mg.mmRight[rIdx];
+          const lEl = document.getElementById(`mm-l-${lIdx}`);
+          const rEl = document.getElementById(`mm-r-${rIdx}`);
+
+          this.mg.mmLocked = true;
+
+          if (leftItem && rightItem && leftItem.en === rightItem.en) {
+            audioPlayer.play('correct');
+            this.mg.combo++;
+            this.mg.maxCombo = Math.max(this.mg.maxCombo, this.mg.combo);
+            this.mg.cleared++;
+            this.mg.score += 10 + this.mg.combo * 2;
+            this.updateMiniGameHUD();
+
+            if (lEl) lEl.classList.add('matched-flash');
+            if (rEl) rEl.classList.add('matched-flash');
+
+            setTimeout(() => {
+              if (!this.mg.active) return;
+              if (this.mg.mmIdx >= this.mg.mmQueue.length) {
+                this.mg.mmQueue = [...this.mg.pool].sort(() => Math.random() - 0.5);
+                this.mg.mmIdx = 0;
+              }
+              const activeEnSet = new Set(this.mg.mmLeft.map(x => x.en));
+              let nextPair = null;
+              for (let k = 0; k < this.mg.mmQueue.length; k++) {
+                const candidate = this.mg.mmQueue[(this.mg.mmIdx + k) % this.mg.mmQueue.length];
+                if (!activeEnSet.has(candidate.en)) {
+                  nextPair = candidate;
+                  this.mg.mmIdx = (this.mg.mmIdx + k + 1) % this.mg.mmQueue.length;
+                  break;
+                }
+              }
+              if (!nextPair) nextPair = this.mg.mmQueue[this.mg.mmIdx++];
+
+              this.mg.mmLeft[lIdx] = { slot: lIdx, en: nextPair.en, zh: nextPair.zh };
+              this.mg.mmRight[rIdx] = { slot: rIdx, en: nextPair.en, zh: nextPair.zh };
+
+              // 與隨機另一格交換右欄位置，避免新單字永遠在同一列
+              const swapIdx = (rIdx + 1 + Math.floor(Math.random() * 4)) % this.mg.mmRight.length;
+              const temp = this.mg.mmRight[rIdx];
+              this.mg.mmRight[rIdx] = this.mg.mmRight[swapIdx];
+              this.mg.mmRight[swapIdx] = temp;
+
+              this.mg.mmSelLeft = null;
+              this.mg.mmSelRight = null;
+              this.mg.mmLocked = false;
+              this.renderMatchMadness();
+            }, 220);
+          } else {
+            audioPlayer.play('wrong');
+            this.mg.combo = 0;
+            this.updateMiniGameHUD();
+            if (lEl) lEl.classList.add('wrong-shake');
+            if (rEl) rEl.classList.add('wrong-shake');
+
+            setTimeout(() => {
+              this.mg.mmSelLeft = null;
+              this.mg.mmSelRight = null;
+              this.mg.mmLocked = false;
+              if (this.mg.active) this.renderMatchMadness();
+            }, 280);
+          }
+        } else {
+          this.renderMatchMadness();
+        }
+      }
+
+      /* --- 小遊戲 2：🔤 單字拼圖衝刺 (Word Builder / Spelling Bee) --- */
+      initWordBuilder() {
+        let singleWords = this.mg.pool.filter(w => /^[A-Za-z]{3,14}$/.test(w.en));
+        if (singleWords.length < 8) {
+          // 補齊同階段其他清潔單字
+          this.curriculum.forEach(t => {
+            t.lessons.forEach(l => {
+              (l.vocabularies || []).forEach(v => {
+                if (/^[A-Za-z]{3,14}$/.test(v.en.trim())) {
+                  singleWords.push({ en: v.en.trim(), zh: v.zh, emoji: '🔤' });
+                }
+              });
+            });
+          });
+        }
+        this.mg.wbWords = singleWords.sort(() => Math.random() - 0.5).slice(0, 8);
+        this.mg.wbIndex = 0;
+        this.mg.wbHintsLeft = 3;
+        this.loadWordBuilderRound();
+      }
+
+      loadWordBuilderRound() {
+        if (!this.mg.active) return;
+        if (this.mg.wbIndex >= this.mg.wbWords.length) {
+          this.finishMiniGame();
+          return;
+        }
+        const target = this.mg.wbWords[this.mg.wbIndex];
+        const letters = target.en.toLowerCase().split('');
+        const extraCount = this.currentTierId.startsWith('elem_') ? 1 : 2;
+        const alpha = 'abcdefghijklmnopqrstuvwxyz';
+        const poolChars = [...letters];
+        for (let i = 0; i < extraCount; i++) {
+          poolChars.push(alpha[Math.floor(Math.random() * alpha.length)]);
+        }
+
+        this.mg.wbTarget = target;
+        this.mg.wbPool = poolChars.sort(() => Math.random() - 0.5).map((ch, idx) => ({
+          idx,
+          ch,
+          used: false
+        }));
+        this.mg.wbSlots = Array(letters.length).fill(null);
+        this.mg.wbLocked = false;
+
+        speakText(target.en);
+        this.renderWordBuilder();
+      }
+
+      renderWordBuilder(statusClass = '') {
+        const target = this.mg.wbTarget;
+        const stage = document.getElementById('minigame-stage');
+        const roundNum = this.mg.wbIndex + 1;
+        const totalRounds = this.mg.wbWords.length;
+
+        let slotsHtml = '';
+        this.mg.wbSlots.forEach((slot, i) => {
+          const filledClass = slot ? `filled ${statusClass}` : '';
+          slotsHtml += `<div class="wb-slot ${filledClass}" onclick="game.removeWBLetter(${i})">${slot ? slot.ch : ''}</div>`;
+        });
+
+        let poolHtml = '';
+        this.mg.wbPool.forEach((tile) => {
+          const usedClass = tile.used ? 'used' : '';
+          poolHtml += `<button class="wb-key ${usedClass}" onclick="game.pickWBLetter(${tile.idx})">${tile.ch}</button>`;
+        });
+
+        stage.innerHTML = `
+          <div class="mg-title-bar">
+            <h3><span>🔤</span><span>單字拼圖衝刺 (${roundNum}/${totalRounds})</span></h3>
+            <span class="mg-subtitle">點擊字母或直接使用鍵盤 A-Z 拼出英文單字！</span>
+          </div>
+          <div class="wb-clue-box">
+            <div style="font-size: 2.3rem;">${target.emoji}</div>
+            <div class="wb-zh-meaning">${target.zh}</div>
+            <button class="audio-speaker-btn" style="margin-top: 6px; width: auto; padding: 0 16px; font-size: 0.95rem; gap: 6px;" onclick="speakText('${target.en.replace(/'/g, "\\'")}')">
+              <span>🔊</span><span>重聽發音</span>
+            </button>
+          </div>
+          <div class="wb-slots">${slotsHtml}</div>
+          <div class="wb-pool">${poolHtml}</div>
+          <div class="wb-controls">
+            <button class="duo-btn btn-secondary" style="padding: 9px 16px; font-size: 0.88rem;" onclick="game.useWBHint()">
+              💡 提示字母 (${this.mg.wbHintsLeft})
+            </button>
+            <button class="duo-btn" style="background:#64748b; color:#fff; box-shadow:0 4px 0 #475569; padding: 9px 16px; font-size: 0.88rem;" onclick="game.clearWBSlots()">
+              ↺ 全部重填
+            </button>
+          </div>
+        `;
+      }
+
+      pickWBLetter(tileIdx) {
+        if (!this.mg.active || this.mg.wbLocked) return;
+        const tile = this.mg.wbPool.find(t => t.idx === tileIdx);
+        if (!tile || tile.used) return;
+        const emptyIdx = this.mg.wbSlots.findIndex(s => s === null);
+        if (emptyIdx === -1) return;
+
+        audioPlayer.play('click');
+        tile.used = true;
+        this.mg.wbSlots[emptyIdx] = { ch: tile.ch, tileIdx: tile.idx, hint: false };
+        this.checkWordBuilderAuto();
+      }
+
+      pickWBLetterByChar(ch) {
+        if (!this.mg.active || this.mg.wbLocked) return;
+        const lower = ch.toLowerCase();
+        const tile = this.mg.wbPool.find(t => !t.used && t.ch === lower);
+        if (tile) {
+          this.pickWBLetter(tile.idx);
+        }
+      }
+
+      removeWBLetter(slotIdx) {
+        if (!this.mg.active || this.mg.wbLocked) return;
+        const slot = this.mg.wbSlots[slotIdx];
+        if (!slot || slot.hint) return;
+        audioPlayer.play('click');
+        const tile = this.mg.wbPool.find(t => t.idx === slot.tileIdx);
+        if (tile) tile.used = false;
+        this.mg.wbSlots[slotIdx] = null;
+        this.renderWordBuilder();
+      }
+
+      removeLastWBLetter() {
+        if (!this.mg.active || this.mg.wbLocked) return;
+        for (let i = this.mg.wbSlots.length - 1; i >= 0; i--) {
+          if (this.mg.wbSlots[i] && !this.mg.wbSlots[i].hint) {
+            this.removeWBLetter(i);
+            return;
+          }
+        }
+      }
+
+      clearWBSlots() {
+        if (!this.mg.active || this.mg.wbLocked) return;
+        audioPlayer.play('click');
+        this.mg.wbSlots.forEach((slot, i) => {
+          if (slot && !slot.hint) {
+            const tile = this.mg.wbPool.find(t => t.idx === slot.tileIdx);
+            if (tile) tile.used = false;
+            this.mg.wbSlots[i] = null;
+          }
+        });
+        this.renderWordBuilder();
+      }
+
+      useWBHint() {
+        if (!this.mg.active || this.mg.wbLocked || this.mg.wbHintsLeft <= 0) return;
+        const answerChars = this.mg.wbTarget.en.toLowerCase().split('');
+        let targetSlot = this.mg.wbSlots.findIndex((s, i) => !s || s.ch !== answerChars[i]);
+        if (targetSlot === -1) return;
+
+        // 若該格有錯字先退回
+        if (this.mg.wbSlots[targetSlot]) {
+          const old = this.mg.wbSlots[targetSlot];
+          const oldTile = this.mg.wbPool.find(t => t.idx === old.tileIdx);
+          if (oldTile) oldTile.used = false;
+        }
+
+        const neededChar = answerChars[targetSlot];
+        const matchingTile = this.mg.wbPool.find(t => !t.used && t.ch === neededChar);
+        if (matchingTile) {
+          matchingTile.used = true;
+        } else {
+          // 若同字卡已被佔用在其他格，先清掉該格
+          const occupiedSlot = this.mg.wbSlots.findIndex(s => s && !s.hint && s.ch === neededChar);
+          if (occupiedSlot !== -1) {
+            const old = this.mg.wbSlots[occupiedSlot];
+            const t = this.mg.wbPool.find(x => x.idx === old.tileIdx);
+            if (t) t.used = true;
+            this.mg.wbSlots[occupiedSlot] = null;
+          }
+        }
+
+        audioPlayer.play('hop');
+        this.mg.wbHintsLeft--;
+        this.mg.wbSlots[targetSlot] = { ch: neededChar, tileIdx: matchingTile ? matchingTile.idx : -1, hint: true };
+        this.checkWordBuilderAuto();
+      }
+
+      checkWordBuilderAuto() {
+        const allFilled = this.mg.wbSlots.every(s => s !== null);
+        if (!allFilled) {
+          this.renderWordBuilder();
+          return;
+        }
+
+        const attempt = this.mg.wbSlots.map(s => s.ch).join('').toLowerCase();
+        const expected = this.mg.wbTarget.en.toLowerCase();
+
+        if (attempt === expected) {
+          this.mg.wbLocked = true;
+          audioPlayer.play('correct');
+          speakText(this.mg.wbTarget.en);
+          this.mg.combo++;
+          this.mg.maxCombo = Math.max(this.mg.maxCombo, this.mg.combo);
+          this.mg.cleared++;
+          this.mg.score += 25 + this.mg.combo * 5;
+          this.updateMiniGameHUD();
+          this.renderWordBuilder('correct-word');
+
+          setTimeout(() => {
+            if (!this.mg.active) return;
+            this.mg.wbIndex++;
+            this.loadWordBuilderRound();
+          }, 600);
+        } else {
+          audioPlayer.play('wrong');
+          this.mg.combo = 0;
+          this.updateMiniGameHUD();
+          this.renderWordBuilder('wrong-shake');
+          setTimeout(() => {
+            if (!this.mg.active) return;
+            this.clearWBSlots();
+          }, 420);
+        }
+      }
+
+      /* --- 小遊戲 3：🎈 單字氣球爆破戰 (Balloon Pop) --- */
+      initBalloonPop() {
+        this.mg.bpLocked = false;
+        this.loadBalloonWave();
+      }
+
+      loadBalloonWave() {
+        if (!this.mg.active) return;
+        const candidates = [...this.mg.pool].sort(() => Math.random() - 0.5).slice(0, 6);
+        const target = candidates[Math.floor(Math.random() * candidates.length)];
+        const colors = [
+          'linear-gradient(135deg, #f43f5e, #e11d48)',
+          'linear-gradient(135deg, #3b82f6, #2563eb)',
+          'linear-gradient(135deg, #10b981, #059669)',
+          'linear-gradient(135deg, #f59e0b, #d97706)',
+          'linear-gradient(135deg, #8b5cf6, #7c3aed)',
+          'linear-gradient(135deg, #ec4899, #db2777)'
+        ];
+
+        this.mg.bpTarget = target;
+        this.mg.bpBalloons = candidates.map((item, idx) => ({
+          ...item,
+          color: colors[idx % colors.length],
+          delay: (idx * 0.25).toFixed(2)
+        }));
+        this.mg.bpLocked = false;
+
+        this.renderBalloonWave();
+      }
+
+      renderBalloonWave() {
+        const stage = document.getElementById('minigame-stage');
+        const target = this.mg.bpTarget;
+        let balloonsHtml = '';
+        this.mg.bpBalloons.forEach((b, i) => {
+          balloonsHtml += `
+            <div class="sky-balloon" id="bp-balloon-${i}" style="background:${b.color}; animation-delay:${b.delay}s;" onclick="game.popBalloon(${i})">
+              <span>${b.en}</span>
+            </div>
+          `;
+        });
+
+        stage.innerHTML = `
+          <div class="mg-title-bar">
+            <h3><span>🎈</span><span>單字氣球爆破戰</span></h3>
+            <span class="mg-subtitle">根據上方中文意思，快速點擊正確的英文氣球！</span>
+          </div>
+          <div class="balloon-target-bar">
+            <div class="balloon-target-text">🎯 擊破目標：「${target.zh}」</div>
+            <button class="wordlist-btn" style="background:rgba(255,255,255,0.22); border-color:rgba(255,255,255,0.6);" onclick="speakText('${target.en.replace(/'/g, "\\'")}')">
+              🔊 聽發音提示
+            </button>
+          </div>
+          <div class="balloon-arena">
+            ${balloonsHtml}
+          </div>
+        `;
+      }
+
+      popBalloon(idx) {
+        if (!this.mg.active || this.mg.bpLocked) return;
+        const chosen = this.mg.bpBalloons[idx];
+        const el = document.getElementById(`bp-balloon-${idx}`);
+        if (!chosen || !el) return;
+
+        if (chosen.en === this.mg.bpTarget.en) {
+          this.mg.bpLocked = true;
+          audioPlayer.play('hop');
+          speakText(chosen.en);
+          el.classList.add('popped');
+          this.mg.combo++;
+          this.mg.maxCombo = Math.max(this.mg.maxCombo, this.mg.combo);
+          this.mg.cleared++;
+          this.mg.score += 15 + this.mg.combo * 3;
+          this.updateMiniGameHUD();
+
+          setTimeout(() => {
+            if (this.mg.active) this.loadBalloonWave();
+          }, 260);
+        } else {
+          audioPlayer.play('wrong');
+          this.mg.combo = 0;
+          this.mg.timeLeft = Math.max(1, this.mg.timeLeft - 2);
+          this.updateMiniGameHUD();
+          el.classList.remove('wrong-shake');
+          void el.offsetWidth;
+          el.classList.add('wrong-shake');
+        }
+      }
+
+      /* --- 小遊戲 4：🎧 聽音閃電戰 (Listening Blitz) --- */
+      initListeningBlitz() {
+        this.mg.lbLocked = false;
+        this.loadListeningBlitzWave();
+      }
+
+      loadListeningBlitzWave() {
+        if (!this.mg.active) return;
+        const candidates = [...this.mg.pool].sort(() => Math.random() - 0.5).slice(0, 4);
+        const target = candidates[Math.floor(Math.random() * candidates.length)];
+
+        this.mg.lbTarget = target;
+        this.mg.lbOptions = candidates;
+        this.mg.lbLocked = false;
+        this.mg.lbStatusMsg = '聆聽發音，選出正確中文意思（可用 1~4 鍵）';
+
+        speakText(target.en);
+        this.renderListeningBlitz();
+      }
+
+      renderListeningBlitz(selectedIdx = -1, resultState = '') {
+        const stage = document.getElementById('minigame-stage');
+        const target = this.mg.lbTarget;
+        let cardsHtml = '';
+        this.mg.lbOptions.forEach((opt, i) => {
+          let cls = '';
+          if (selectedIdx === i) cls = resultState;
+          if (resultState === 'wrong' && opt.en === target.en) cls = 'correct';
+          cardsHtml += `
+            <div class="blitz-card ${cls}" onclick="game.pickListeningBlitz(${i})">
+              <span class="key-hint" style="position:absolute; top:10px; left:10px; width:24px; height:24px; border-radius:7px; border:1.5px solid #cbd5e1; background:#f8fafc; color:#64748b; font-size:0.75rem; font-weight:800; display:flex; align-items:center; justify-content:center;">${i + 1}</span>
+              <span style="font-size:2rem;">${opt.emoji}</span>
+              <span style="font-size:1.12rem; font-weight:800; color:#0f172a;">${opt.zh}</span>
+            </div>
+          `;
+        });
+
+        stage.innerHTML = `
+          <div class="mg-title-bar">
+            <h3><span>🎧</span><span>聽音閃電戰 (Listening Blitz)</span></h3>
+            <span class="mg-subtitle">聽見美式發音後立即點擊對應卡片，連擊越長分數越高！</span>
+          </div>
+          <div class="blitz-speaker-wrap">
+            <button class="audio-speaker-btn big" onclick="speakText('${target.en.replace(/'/g, "\\'")}')">🔊</button>
+            <div class="blitz-status-pill">${this.mg.lbStatusMsg}</div>
+          </div>
+          <div class="blitz-grid">${cardsHtml}</div>
+        `;
+      }
+
+      pickListeningBlitz(idx) {
+        if (!this.mg.active || this.mg.lbLocked) return;
+        const opt = this.mg.lbOptions[idx];
+        if (!opt) return;
+
+        this.mg.lbLocked = true;
+        const isCorrect = opt.en === this.mg.lbTarget.en;
+
+        if (isCorrect) {
+          audioPlayer.play('correct');
+          this.mg.combo++;
+          this.mg.maxCombo = Math.max(this.mg.maxCombo, this.mg.combo);
+          this.mg.cleared++;
+          this.mg.score += 15 + this.mg.combo * 3;
+          this.mg.lbStatusMsg = `✅ 太棒了！${this.mg.lbTarget.en} = ${this.mg.lbTarget.zh}`;
+          this.updateMiniGameHUD();
+          this.renderListeningBlitz(idx, 'correct');
+
+          setTimeout(() => {
+            if (this.mg.active) this.loadListeningBlitzWave();
+          }, 420);
+        } else {
+          audioPlayer.play('wrong');
+          this.mg.combo = 0;
+          this.mg.lbStatusMsg = `💡 正確是：${this.mg.lbTarget.en}（${this.mg.lbTarget.zh}）`;
+          this.updateMiniGameHUD();
+          this.renderListeningBlitz(idx, 'wrong');
+
+          setTimeout(() => {
+            if (this.mg.active) this.loadListeningBlitzWave();
+          }, 680);
         }
       }
 
@@ -2913,7 +4360,9 @@
           hearts: this.hearts,
           xp: this.xp,
           currentTierId: this.currentTierId,
-          completedByTier: this.completedByTier
+          completedByTier: this.completedByTier,
+          bonusTickets: this.bonusTickets,
+          miniGameScores: this.miniGameScores
         };
         const blob = new Blob([JSON.stringify(backupData, null, 2)], { type: 'application/json' });
         const url = URL.createObjectURL(blob);
@@ -2952,6 +4401,8 @@
             this.hearts = data.hearts !== undefined ? Number(data.hearts) : 5;
             this.xp = Number(data.xp) || 0;
             this.completedByTier = data.completedByTier || {};
+            if (data.bonusTickets !== undefined) this.bonusTickets = Number(data.bonusTickets) || 0;
+            if (data.miniGameScores) this.miniGameScores = data.miniGameScores;
             if (data.currentTierId && this.getTier(data.currentTierId)) {
               this.currentTierId = data.currentTierId;
             }
@@ -3005,7 +4456,7 @@
     });
 
     /* ==========================================================================
-       4. 電腦端鍵盤快捷鍵支援 (1~4 數字鍵選答、Enter 鍵檢查或繼續)
+       4. 電腦端鍵盤快捷鍵支援 (1~4 數字鍵選答、Enter 鍵檢查或繼續、小遊戲快捷鍵)
     ========================================================================== */
     window.addEventListener('keydown', (e) => {
       // 忽略輸入框與文字區域的按鍵
@@ -3017,6 +4468,34 @@
 
       const lessonScreen = document.getElementById('screen-lesson');
       const summaryScreen = document.getElementById('screen-summary');
+      const minigameScreen = document.getElementById('screen-minigame');
+
+      // 互動小遊戲快捷鍵
+      if (minigameScreen && minigameScreen.classList.contains('active') && game.mg && game.mg.active) {
+        if (e.key === 'Escape') {
+          e.preventDefault();
+          game.exitMiniGame();
+          return;
+        }
+        if (game.mg.type === 'listen_blitz' && ['1', '2', '3', '4'].includes(e.key)) {
+          e.preventDefault();
+          game.pickListeningBlitz(parseInt(e.key, 10) - 1);
+          return;
+        }
+        if (game.mg.type === 'word_builder') {
+          if (/^[a-zA-Z]$/.test(e.key)) {
+            e.preventDefault();
+            game.pickWBLetterByChar(e.key);
+            return;
+          }
+          if (e.key === 'Backspace') {
+            e.preventDefault();
+            game.removeLastWBLetter();
+            return;
+          }
+        }
+        return;
+      }
 
       // 結算畫面按 Enter 可直接繼續下一關
       if (summaryScreen && summaryScreen.classList.contains('active') && e.key === 'Enter') {

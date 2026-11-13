@@ -1,8 +1,8 @@
 // 波波熱血英語大冒險 (Bobi English Adventure)
 // 全階段・全能分級英語學習系統 (12 大等級・1,080 道熱血關卡，每等級 90 關 3 個月天天闖關)
 // 嚴格遵守版本對應規範：每次改版必須與 package.json, index.html, README.md, CHANGELOG.md 完全一致
-window.BOBI_VERSION = '2.2.1';
-window.CURRICULUM_VERSION = '2.2.1';
+window.BOBI_VERSION = '2.3.0';
+window.CURRICULUM_VERSION = '2.3.0';
 
 window.CURRICULUM_DATA = [
   {

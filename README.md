@@ -1,11 +1,11 @@
 # 🦉 波波熱血英語大冒險 (Bobi English Adventure)
 
-[![Version](https://img.shields.io/badge/Version-v2.2.1-58cc02?style=for-the-badge&logo=github)](https://github.com/zhijaysun0915/bobi-english-adventure/releases/tag/v2.2.1)
+[![Version](https://img.shields.io/badge/Version-v2.3.0-58cc02?style=for-the-badge&logo=github)](https://github.com/zhijaysun0915/bobi-english-adventure/releases/tag/v2.3.0)
 [![Curriculum](https://img.shields.io/badge/Curriculum-12_Tiers_%7C_1080_Levels-1cb0f6?style=for-the-badge)](https://zhijaysun0915.github.io/bobi-english-adventure/)
 [![CEFR](https://img.shields.io/badge/CEFR-Pre--A1_to_C2-ff9600?style=for-the-badge)](https://zhijaysun0915.github.io/bobi-english-adventure/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-ce82ff?style=for-the-badge)](LICENSE)
 
-> **全階段・全能分級英語學習樂園 (`v2.2.1`)**  
+> **全階段・全能分級英語學習樂園 (`v2.3.0`)**  
 > 專為臺灣學生與進修者量身打造！完整涵蓋 **小學 (初/中/高)・國中 (初/中/高)・高中 (初/中/高)・大學與成人 (初/中/高)** 4 大階段、12 大等級、1,080 道豐富漸進關卡（每等級 90 關，1 天 1 關可暢玩 3 個月）！  
 > 特別收錄超人氣熱血主題：**熱血棒球 ⚾・超音速噴射機 ✈️・撞球神童 🎱・侏儸紀暴龍 🦖・極速超跑 🏎️・AI 科技 🤖・太空探索 🚀・SDGs 永續 🌍・量子密碼 ⚛️**！  
 > 100% 繁體中文介面、可愛遊戲音效、標準美語發音、跨裝置進度備份、電腦鍵盤快捷鍵、免安裝即開即玩！
@@ -77,6 +77,8 @@
    - 起始 5 顆愛心，答錯扣心；若愛心耗盡，可進行「快速複習練習」答對 3 題立即補滿 5 顆愛心！
 8. **專屬榮譽證書與一鍵列印 / 另存 PDF**：
    - 各等級完成第 90 關大魔王考驗後，可輸入學生姓名頒發金牌榮譽證書，並支援「🖨️ 列印 / 另存為 PDF」高畫質排版輸出！
+9. **Duolingo 風格 4 大英文互動獎勵小遊戲樂園 (`v2.3.0` 新增)**：
+   - 支援 **⚡ 限時配對狂熱 (Match Madness)**、**🔤 單字拼圖衝刺 (Word Builder)**、**🎈 單字氣球爆破戰 (Balloon Pop)** 與 **🎧 聽音閃電戰 (Listening Blitz)**，每次通關送「🎟️ 雙倍獎勵券」，挑戰贏取雙倍 💎 寶石、XP 與額外 ❤️ 補血！
 
 ---
 
@@ -86,11 +88,11 @@
 
 | 序號 | 檔案名稱 | 對應位置與欄位 | 當前版本值 |
 | :---: | :--- | :--- | :---: |
-| **1** | [`package.json`](package.json) | `"version"` 欄位 | `2.2.1` |
-| **2** | [`curriculum.js`](curriculum.js) | 頂部 `window.BOBI_VERSION` 與 `window.CURRICULUM_VERSION` | `2.2.1` |
-| **3** | [`index.html`](index.html) | `<meta name="version">`、頂部導覽列 `.version-pill`、設定彈窗、Changelog 彈窗與頁尾 `.site-footer` | `v2.2.1` |
-| **4** | [`README.md`](README.md) | 頂部版本徽章、版本對應規範表與版本歷程表 | `v2.2.1` |
-| **5** | [`CHANGELOG.md`](CHANGELOG.md) | 更新日誌版本條目（遵循 Keep a Changelog 與 SemVer 規範） | `[2.2.1]` |
+| **1** | [`package.json`](package.json) | `"version"` 欄位 | `2.3.0` |
+| **2** | [`curriculum.js`](curriculum.js) | 頂部 `window.BOBI_VERSION` 與 `window.CURRICULUM_VERSION` | `2.3.0` |
+| **3** | [`index.html`](index.html) | `<meta name="version">`、頂部導覽列 `.version-pill`、設定彈窗、Changelog 彈窗與頁尾 `.site-footer` | `v2.3.0` |
+| **4** | [`README.md`](README.md) | 頂部版本徽章、版本對應規範表與版本歷程表 | `v2.3.0` |
+| **5** | [`CHANGELOG.md`](CHANGELOG.md) | 更新日誌版本條目（遵循 Keep a Changelog 與 SemVer 規範） | `[2.3.0]` |
 
 ---
 
@@ -100,6 +102,7 @@
 
 | 版本號 | 發布日期 | 重大更新摘要 |
 | :---: | :---: | :--- |
+| **v2.3.0** | `2026-11-13` | 新增 Duolingo 風格 4 大互動獎勵小遊戲（限時配對狂熱、單字拼圖衝刺、單字氣球爆破、聽音閃電戰）與通關雙倍獎勵券寶箱系統 |
 | **v2.2.1** | `2026-11-10` | 緊急修復前端 `finishLessonSummary` 變數重複宣告致按鈕與選單無反應之語法錯誤、全域掛載 `window.game` 並於 `npm test` 強化行內腳本自動編譯檢查 |
 | **v2.2.0** | `2026-11-10` | 題庫巨量擴增至 12 等級 × 90 關 = 1,080 道關卡（1天1關暢玩3個月）、4,320 個核心詞彙、同級誘答選項智慧驗證與第 90 關大魔王證書 |
 | **v2.1.1** | `2026-11-09` | 全面升級 192 關選擇題與聽力題之同等級智慧誘答選項、動態選項洗牌、單字選擇題防英文洩題與切換等級畫面同步修復 |
