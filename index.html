@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="version" content="2.3.0">
+  <meta name="version" content="2.4.0">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <title>波波熱血英語大冒險 v2.3.0 - 全階段分級學習樂園 (1,080 關 + Duolingo 互動小遊戲)</title>
+  <title>波波熱血英語大冒險 v2.4.0 - 全階段分級學習樂園 (1,080 關 + 6 大互動動畫小遊戲)</title>
   <style>
     :root {
       --primary: #58cc02;
@@ -1573,7 +1573,7 @@
 
     .arcade-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 12px;
     }
 
@@ -1581,6 +1581,71 @@
       .arcade-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+    }
+
+    /* 難度選擇切換列 (簡單 / 標準 / 困難) */
+    .diff-selector-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.85);
+      border: 2px solid #cbd5e1;
+      border-radius: 16px;
+      padding: 8px 12px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+
+    .diff-label {
+      font-size: 0.86rem;
+      font-weight: 900;
+      color: #334155;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .diff-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .diff-pill-btn {
+      border: 2px solid #cbd5e1;
+      background: #ffffff;
+      color: #475569;
+      border-radius: 12px;
+      padding: 6px 12px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.14s ease;
+      font-family: inherit;
+      box-shadow: 0 3px 0 #cbd5e1;
+    }
+
+    .diff-pill-btn:hover { transform: translateY(-1px); }
+    .diff-pill-btn:active { transform: translateY(2px); box-shadow: none; }
+
+    .diff-pill-btn.active.diff-easy {
+      background: #dcfce7;
+      border-color: #22c55e;
+      color: #15803d;
+      box-shadow: 0 3px 0 #16a34a;
+    }
+    .diff-pill-btn.active.diff-normal {
+      background: #e0f2fe;
+      border-color: #0ea5e9;
+      color: #0369a1;
+      box-shadow: 0 3px 0 #0284c7;
+    }
+    .diff-pill-btn.active.diff-hard {
+      background: #fee2e2;
+      border-color: #ef4444;
+      color: #b91c1c;
+      box-shadow: 0 3px 0 #dc2626;
     }
 
     .arcade-game-btn {
@@ -1619,6 +1684,22 @@
     .arcade-game-btn.g-spell { border-color: #8b5cf6; box-shadow: 0 5px 0 #7c3aed; }
     .arcade-game-btn.g-balloon { border-color: #0ea5e9; box-shadow: 0 5px 0 #0284c7; }
     .arcade-game-btn.g-blitz { border-color: #10b981; box-shadow: 0 5px 0 #059669; }
+    .arcade-game-btn.g-battle { border-color: #ef4444; box-shadow: 0 5px 0 #dc2626; background: linear-gradient(180deg, #fff 60%, #fff1f2 100%); }
+    .arcade-game-btn.g-rocket { border-color: #6366f1; box-shadow: 0 5px 0 #4f46e5; background: linear-gradient(180deg, #fff 60%, #eef2ff 100%); }
+
+    .arcade-new-tag {
+      position: absolute;
+      top: -9px;
+      right: 10px;
+      background: linear-gradient(135deg, #f43f5e, #f59e0b);
+      color: #fff;
+      font-size: 0.68rem;
+      font-weight: 900;
+      padding: 2px 8px;
+      border-radius: 999px;
+      box-shadow: 0 2px 6px rgba(244, 63, 94, 0.35);
+      animation: pulseUrgent 1s infinite alternate;
+    }
 
     .arcade-icon {
       font-size: 2.1rem;
@@ -1721,6 +1802,9 @@
     .mg-pill.score { border-color: #fbbf24; color: #b45309; background: #fffbeb; }
     .mg-pill.combo { border-color: #fb923c; color: #c2410c; background: #fff7ed; }
     .mg-pill.bonus-x2 { border-color: #a855f7; color: #7e22ce; background: #faf5ff; }
+    .mg-pill.diff-easy { border-color: #22c55e; color: #15803d; background: #dcfce7; }
+    .mg-pill.diff-normal { border-color: #0ea5e9; color: #0369a1; background: #e0f2fe; }
+    .mg-pill.diff-hard { border-color: #ef4444; color: #b91c1c; background: #fee2e2; }
 
     @keyframes pulseUrgent {
       from { transform: scale(1); }
@@ -1941,7 +2025,7 @@
 
     .balloon-arena {
       position: relative;
-      height: 360px;
+      min-height: 360px;
       background: linear-gradient(180deg, #bae6fd 0%, #e0f2fe 65%, #f0fdf4 100%);
       border: 3px solid #7dd3fc;
       border-radius: 22px;
@@ -1955,17 +2039,29 @@
       justify-items: center;
     }
 
+    .balloon-arena.bp-easy {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    .balloon-arena.bp-hard {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+
     @media (max-width: 560px) {
-      .balloon-arena {
-        height: 410px;
+      .balloon-arena,
+      .balloon-arena.bp-hard {
+        height: auto;
+        min-height: 380px;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: auto;
       }
     }
 
     .sky-balloon {
       position: relative;
-      min-width: 112px;
+      min-width: 104px;
       max-width: 190px;
       width: 100%;
       padding: 18px 12px;
@@ -1982,6 +2078,9 @@
       user-select: none;
       word-break: break-word;
     }
+
+    .balloon-arena.bp-easy .sky-balloon { animation-duration: 3.8s; font-size: 1.08rem; }
+    .balloon-arena.bp-hard .sky-balloon { animation-duration: 1.5s; font-size: 0.92rem; padding: 15px 8px; }
 
     .sky-balloon > * { pointer-events: none; }
 
@@ -2052,6 +2151,428 @@
     .blitz-card:hover { border-color: #10b981; transform: translateY(-2px); }
     .blitz-card.correct { background: #dcfce7; border-color: #22c55e; box-shadow: 0 5px 0 #16a34a; }
     .blitz-card.wrong { background: #fee2e2; border-color: #ef4444; box-shadow: 0 5px 0 #dc2626; animation: shakeX 0.3s ease; }
+
+    /* ======================================================================
+       5. 🦖 動畫問答遊戲：怪獸問答對決 (Monster Quiz Duel)
+    ====================================================================== */
+    .qb-arena {
+      position: relative;
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4c1d95 100%);
+      border: 3px solid #6366f1;
+      border-radius: 22px;
+      padding: 20px 18px 18px;
+      margin-bottom: 16px;
+      color: #fff;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 168px;
+    }
+
+    .qb-arena::before {
+      content: "✨ ⚔️ ✨";
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.85rem;
+      letter-spacing: 6px;
+      opacity: 0.65;
+    }
+
+    .qb-fighter {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      gap: 6px;
+    }
+
+    .qb-sprite {
+      font-size: 3.6rem;
+      line-height: 1;
+      filter: drop-shadow(0 6px 10px rgba(0,0,0,0.35));
+      animation: qbBob 1.7s ease-in-out infinite alternate;
+      transition: transform 0.18s ease;
+    }
+
+    .qb-sprite.attack {
+      animation: qbHeroStrike 0.42s ease;
+    }
+
+    .qb-sprite.shield {
+      animation: qbShieldPop 0.45s ease;
+    }
+
+    .qb-sprite.monster-hit {
+      animation: qbMonsterHit 0.45s ease;
+    }
+
+    .qb-sprite.monster-lunge {
+      animation: qbMonsterLunge 0.42s ease;
+    }
+
+    .qb-fighter-name {
+      font-size: 0.88rem;
+      font-weight: 900;
+      background: rgba(15, 23, 42, 0.55);
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .qb-hp-wrap {
+      width: 100%;
+      max-width: 170px;
+    }
+
+    .qb-hp-track {
+      width: 100%;
+      height: 12px;
+      background: rgba(15, 23, 42, 0.7);
+      border-radius: 999px;
+      overflow: hidden;
+      border: 1.5px solid rgba(255,255,255,0.28);
+    }
+
+    .qb-hp-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #ef4444, #f97316);
+      border-radius: 999px;
+      transition: width 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .qb-hp-fill.hero {
+      background: linear-gradient(90deg, #22c55e, #4ade80);
+    }
+
+    .qb-hp-label {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #cbd5e1;
+      text-align: center;
+      margin-top: 3px;
+    }
+
+    .qb-projectile {
+      position: absolute;
+      left: 22%;
+      top: 46%;
+      font-size: 2.3rem;
+      z-index: 5;
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    .qb-projectile.fly-right {
+      animation: qbProjectileRight 0.42s ease-out forwards;
+    }
+
+    .qb-projectile.fly-left {
+      animation: qbProjectileLeft 0.42s ease-out forwards;
+    }
+
+    .qb-dmg-popup {
+      position: absolute;
+      top: 16px;
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: #fde047;
+      text-shadow: 0 3px 0 #b91c1c, 0 0 12px rgba(250, 204, 21, 0.7);
+      pointer-events: none;
+      z-index: 6;
+      animation: floatPopupUp 0.75s ease-out forwards;
+    }
+
+    .qb-ko-banner {
+      position: absolute;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.84);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 8;
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: #fde047;
+      animation: zoomIn 0.25s ease;
+    }
+
+    .qb-question-card {
+      background: #f8fafc;
+      border: 2.5px solid #cbd5e1;
+      border-radius: 18px;
+      padding: 16px 18px;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+
+    .qb-q-badge {
+      display: inline-block;
+      background: #ede9fe;
+      color: #6d28d9;
+      padding: 3px 12px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .qb-q-main {
+      font-size: 1.24rem;
+      font-weight: 900;
+      color: #0f172a;
+      line-height: 1.45;
+    }
+
+    .qb-q-hint {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #475569;
+      margin-top: 6px;
+    }
+
+    .qb-options-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    @media (max-width: 520px) {
+      .qb-options-grid { grid-template-columns: 1fr; }
+    }
+
+    .qb-option-btn {
+      position: relative;
+      background: #ffffff;
+      border: 2.5px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 14px 14px 14px 44px;
+      text-align: left;
+      font-size: 1.02rem;
+      font-weight: 800;
+      color: #1e293b;
+      cursor: pointer;
+      box-shadow: 0 4px 0 #cbd5e1;
+      transition: all 0.12s ease;
+      font-family: inherit;
+    }
+
+    .qb-option-btn > * { pointer-events: none; }
+    .qb-option-btn:hover { border-color: #8b5cf6; transform: translateY(-2px); background: #faf5ff; }
+    .qb-option-btn:active { transform: translateY(2px); box-shadow: 0 1px 0 #cbd5e1; }
+    .qb-option-btn.correct { background: #dcfce7; border-color: #22c55e; color: #15803d; box-shadow: 0 4px 0 #16a34a; }
+    .qb-option-btn.wrong { background: #fee2e2; border-color: #ef4444; color: #b91c1c; box-shadow: 0 4px 0 #dc2626; animation: shakeX 0.3s ease; }
+
+    @keyframes qbBob {
+      from { transform: translateY(0px); }
+      to { transform: translateY(-7px); }
+    }
+
+    @keyframes qbHeroStrike {
+      0% { transform: translateX(0) scale(1); }
+      45% { transform: translateX(36px) scale(1.18) rotate(8deg); }
+      100% { transform: translateX(0) scale(1); }
+    }
+
+    @keyframes qbShieldPop {
+      0% { transform: scale(1); filter: drop-shadow(0 0 0 #fde047); }
+      50% { transform: scale(1.15); filter: drop-shadow(0 0 18px #fde047); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes qbMonsterHit {
+      0% { transform: translateX(0); filter: brightness(1); }
+      25% { transform: translateX(12px) rotate(10deg); filter: brightness(2) saturate(2); }
+      55% { transform: translateX(-8px) rotate(-8deg); }
+      100% { transform: translateX(0); filter: brightness(1); }
+    }
+
+    @keyframes qbMonsterLunge {
+      0% { transform: translateX(0) scale(1); }
+      45% { transform: translateX(-34px) scale(1.16) rotate(-8deg); }
+      100% { transform: translateX(0) scale(1); }
+    }
+
+    @keyframes qbProjectileRight {
+      0% { left: 22%; opacity: 1; transform: scale(0.7) rotate(0deg); }
+      85% { left: 74%; opacity: 1; transform: scale(1.35) rotate(220deg); }
+      100% { left: 78%; opacity: 0; transform: scale(1.7); }
+    }
+
+    @keyframes qbProjectileLeft {
+      0% { left: 76%; opacity: 1; transform: scale(0.7); }
+      85% { left: 22%; opacity: 1; transform: scale(1.3); }
+      100% { left: 18%; opacity: 0; transform: scale(1.6); }
+    }
+
+    @keyframes floatPopupUp {
+      0% { opacity: 0; transform: translateY(10px) scale(0.8); }
+      25% { opacity: 1; transform: translateY(-6px) scale(1.15); }
+      100% { opacity: 0; transform: translateY(-34px) scale(1); }
+    }
+
+    @keyframes zoomIn {
+      from { opacity: 0; transform: scale(0.88); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* ======================================================================
+       6. 🚀 動畫問答遊戲：火箭升空快問快答 (Rocket Launch Q&A)
+    ====================================================================== */
+    .rq-space-track {
+      position: relative;
+      height: 122px;
+      background: linear-gradient(90deg, #0284c7 0%, #1d4ed8 45%, #312e81 80%, #0f172a 100%);
+      border: 3px solid #38bdf8;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      padding: 12px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #fff;
+    }
+
+    .rq-stars-layer {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.85;
+      font-size: 0.9rem;
+    }
+
+    .rq-star {
+      position: absolute;
+      animation: twinkleStar 1.8s ease-in-out infinite alternate;
+    }
+
+    .rq-top-hud {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.84rem;
+      font-weight: 900;
+    }
+
+    .rq-track-rail {
+      position: relative;
+      z-index: 3;
+      height: 12px;
+      background: rgba(255, 255, 255, 0.22);
+      border-radius: 999px;
+      margin: 26px 26px 8px 18px;
+    }
+
+    .rq-track-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #38bdf8, #fde047, #f97316);
+      border-radius: 999px;
+      transition: width 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .rq-rocket-actor {
+      position: absolute;
+      top: -28px;
+      transform: translateX(-50%);
+      transition: left 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+      display: flex;
+      align-items: center;
+      font-size: 2rem;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
+      animation: rocketIdle 0.85s ease-in-out infinite alternate;
+    }
+
+    .rq-rocket-actor.boosting {
+      animation: rocketBoostBurst 0.48s ease;
+    }
+
+    .rq-rocket-actor.wobble {
+      animation: shakeX 0.35s ease;
+    }
+
+    .rq-flame {
+      font-size: 1.15rem;
+      margin-right: -4px;
+      animation: flameFlicker 0.22s infinite alternate;
+    }
+
+    .rq-planet-goal {
+      position: absolute;
+      right: -18px;
+      top: -24px;
+      font-size: 2.1rem;
+      filter: drop-shadow(0 0 10px rgba(250, 204, 21, 0.65));
+    }
+
+    .rq-alt-popup {
+      position: absolute;
+      top: 14px;
+      right: 22px;
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: #fde047;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+      z-index: 6;
+      animation: floatPopupUp 0.75s ease-out forwards;
+      pointer-events: none;
+    }
+
+    .rq-options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .rq-option-btn {
+      position: relative;
+      background: #ffffff;
+      border: 2.5px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 13px 16px 13px 46px;
+      text-align: left;
+      font-size: 1rem;
+      font-weight: 800;
+      color: #1e293b;
+      cursor: pointer;
+      box-shadow: 0 4px 0 #cbd5e1;
+      transition: all 0.12s ease;
+      font-family: inherit;
+    }
+
+    .rq-option-btn > * { pointer-events: none; }
+    .rq-option-btn:hover { border-color: #6366f1; transform: translateX(4px); background: #eef2ff; }
+    .rq-option-btn.correct { background: #dcfce7; border-color: #22c55e; color: #15803d; box-shadow: 0 4px 0 #16a34a; }
+    .rq-option-btn.wrong { background: #fee2e2; border-color: #ef4444; color: #b91c1c; box-shadow: 0 4px 0 #dc2626; animation: shakeX 0.3s ease; }
+
+    @keyframes twinkleStar {
+      from { opacity: 0.35; transform: scale(0.85); }
+      to { opacity: 1; transform: scale(1.2); }
+    }
+
+    @keyframes rocketIdle {
+      from { transform: translateX(-50%) translateY(0px); }
+      to { transform: translateX(-50%) translateY(-4px); }
+    }
+
+    @keyframes rocketBoostBurst {
+      0% { transform: translateX(-50%) scale(1); }
+      50% { transform: translateX(-50%) scale(1.3) rotate(12deg); filter: drop-shadow(0 0 18px #fde047); }
+      100% { transform: translateX(-50%) scale(1); }
+    }
+
+    @keyframes flameFlicker {
+      from { transform: scale(0.9); opacity: 0.85; }
+      to { transform: scale(1.25); opacity: 1; }
+    }
   </style>
 </head>
 <body>
@@ -2072,7 +2593,7 @@
       <!-- 版本號藥丸標籤 (點擊查看更新記錄) -->
       <button class="version-pill" id="header-version-pill" onclick="game.openChangelogModal()" title="點擊查看版本更新記錄">
         <span>✨</span>
-        <span id="header-version-text">v2.3.0</span>
+        <span id="header-version-text">v2.4.0</span>
       </button>
       <!-- 等級切換膠囊按鈕 -->
       <button class="tier-pill-btn" onclick="game.openTierModal()" id="current-tier-pill" title="點擊切換學習等級">
@@ -2133,7 +2654,7 @@
             </svg>
           </div>
           <div class="speech-bubble" id="bobi-quote">
-            嗨！我是波波！通關可拿獎勵遊戲券，快來玩 Duolingo 風格英文互動小遊戲賺雙倍寶石吧！
+            嗨！我是波波！現在遊樂場可以自由切換「簡單／標準／困難」，還有全新動畫問答對決與火箭快問快答等你挑戰！
             <span class="click-hint">👉 點點我，聽聽波波為你歡呼！</span>
           </div>
         </div>
@@ -2148,8 +2669,8 @@
           <div class="arcade-hub-title">
             <span style="font-size: 2rem;">🎮</span>
             <div>
-              <h3>波波英語互動小遊戲樂園 (Duolingo 獎勵挑戰)</h3>
-              <p>每通關 1 關送 1 張雙倍獎勵券！隨時開玩賺取 💎 寶石、XP 與 ❤️ 補血！</p>
+              <h3>波波英語互動小遊戲樂園 (6 大遊戲 × 3 階難度)</h3>
+              <p>自由選擇簡單暖身或困難高分加成！每通關 1 關再送 1 張雙倍獎勵券！</p>
             </div>
           </div>
           <div class="ticket-pill" title="通關任意關卡即贈 1 張雙倍獎勵券">
@@ -2158,11 +2679,38 @@
           </div>
         </div>
 
+        <!-- 難度自由切換列 -->
+        <div class="diff-selector-bar">
+          <div class="diff-label">
+            <span>🎚️ 挑戰難度：</span>
+            <span id="arcade-diff-desc" style="color:#0369a1;">標準模式（時間與題數適中，1× 獎勵）</span>
+          </div>
+          <div class="diff-pills">
+            <button class="diff-pill-btn diff-easy" data-diff="easy" onclick="game.setMiniGameDifficulty('easy')">🌱 簡單 (0.85×)</button>
+            <button class="diff-pill-btn diff-normal active" data-diff="normal" onclick="game.setMiniGameDifficulty('normal')">⚔️ 標準 (1×)</button>
+            <button class="diff-pill-btn diff-hard" data-diff="hard" onclick="game.setMiniGameDifficulty('hard')">🔥 困難 (1.5×)</button>
+          </div>
+        </div>
+
         <div class="arcade-grid">
+          <button class="arcade-game-btn g-battle" onclick="game.startMiniGame('quiz_battle')">
+            <span class="arcade-new-tag">NEW 動畫</span>
+            <span class="arcade-icon">🦖</span>
+            <span class="arcade-name">怪獸問答對決</span>
+            <span class="arcade-desc">英文克漏字＆問答攻擊<br>打敗動畫大怪獸！</span>
+            <span class="arcade-best">最高 <span id="best-quiz_battle">0</span> 分</span>
+          </button>
+          <button class="arcade-game-btn g-rocket" onclick="game.startMiniGame('rocket_qa')">
+            <span class="arcade-new-tag">NEW 動畫</span>
+            <span class="arcade-icon">🚀</span>
+            <span class="arcade-name">火箭快問快答</span>
+            <span class="arcade-desc">答對噴射衝刺外太空<br>句意與情境閃電問答</span>
+            <span class="arcade-best">最高 <span id="best-rocket_qa">0</span> 分</span>
+          </button>
           <button class="arcade-game-btn g-match" onclick="game.startMiniGame('match_madness')">
             <span class="arcade-icon">⚡</span>
             <span class="arcade-name">限時配對狂熱</span>
-            <span class="arcade-desc">60秒極速中英配對<br>連擊加倍賺寶石</span>
+            <span class="arcade-desc">極速中英配對挑戰<br>連擊加倍賺寶石</span>
             <span class="arcade-best">最高 <span id="best-match_madness">0</span> 分</span>
           </button>
           <button class="arcade-game-btn g-spell" onclick="game.startMiniGame('word_builder')">
@@ -2194,7 +2742,7 @@
         <div class="site-footer-left">
           <span>🦉 <b>波波熱血英語大冒險</b></span>
           <span style="color:#94a3b8;">|</span>
-          <span>當前版本：<strong id="footer-version-text" style="color:var(--primary-dark);">v2.3.0</strong> (12 等級・1,080 關 + 4 大互動小遊戲)</span>
+          <span>當前版本：<strong id="footer-version-text" style="color:var(--primary-dark);">v2.4.0</strong> (12 等級・1,080 關 + 6 大互動動畫小遊戲)</span>
         </div>
         <div class="site-footer-links">
           <button class="footer-link-btn" onclick="game.openChangelogModal()">
@@ -2248,19 +2796,24 @@
         <!-- 🎁 通關獎勵：Duolingo 風格互動小遊戲挑戰 -->
         <div class="summary-bonus-box">
           <h4>🎁 恭喜獲得「雙倍獎勵遊戲券 +1」！</h4>
-          <p>用本關學到的英語單字來一場趣味小遊戲吧，過關可再賺 <b>+30~100 💎 寶石</b>與額外 XP！</p>
+          <p>挑選難度與互動動畫小遊戲來挑戰吧，過關可再賺 <b>+30~150 💎 寶石</b>與額外 XP！</p>
+          <div class="diff-pills" style="justify-content:center; margin-bottom:10px;">
+            <button class="diff-pill-btn diff-easy" data-diff="easy" onclick="game.setMiniGameDifficulty('easy')">🌱 簡單</button>
+            <button class="diff-pill-btn diff-normal active" data-diff="normal" onclick="game.setMiniGameDifficulty('normal')">⚔️ 標準</button>
+            <button class="diff-pill-btn diff-hard" data-diff="hard" onclick="game.setMiniGameDifficulty('hard')">🔥 困難 (1.5×)</button>
+          </div>
           <div class="summary-bonus-actions">
+            <button class="duo-btn" style="background:linear-gradient(135deg,#ef4444,#b91c1c); color:#fff; box-shadow:0 4px 0 #991b1b; padding:11px 14px; font-size:0.92rem;" onclick="game.startMiniGame('quiz_battle', true)">
+              🦖 怪獸問答對決
+            </button>
+            <button class="duo-btn" style="background:linear-gradient(135deg,#6366f1,#4338ca); color:#fff; box-shadow:0 4px 0 #3730a3; padding:11px 14px; font-size:0.92rem;" onclick="game.startMiniGame('rocket_qa', true)">
+              🚀 火箭快問快答
+            </button>
             <button class="duo-btn" style="background:linear-gradient(135deg,#f59e0b,#ea580c); color:#fff; box-shadow:0 4px 0 #c2410c; padding:11px 14px; font-size:0.92rem;" onclick="game.startRandomBonusGame(true)">
-              🎲 隨機驚喜獎勵小遊戲
+              🎲 隨機驚喜小遊戲
             </button>
             <button class="duo-btn btn-secondary" style="padding:11px 14px; font-size:0.92rem;" onclick="game.startMiniGame('match_madness', true)">
               ⚡ 限時配對狂熱
-            </button>
-            <button class="duo-btn" style="background:#8b5cf6; color:#fff; box-shadow:0 4px 0 #6d28d9; padding:11px 14px; font-size:0.92rem;" onclick="game.startMiniGame('word_builder', true)">
-              🔤 單字拼圖衝刺
-            </button>
-            <button class="duo-btn" style="background:#10b981; color:#fff; box-shadow:0 4px 0 #059669; padding:11px 14px; font-size:0.92rem;" onclick="game.startMiniGame('balloon_pop', true)">
-              🎈 單字氣球爆破
             </button>
           </div>
         </div>
@@ -2287,6 +2840,10 @@
           <div class="mg-pill combo">
             <span>🔥</span>
             <span id="mg-combo-val">0</span> 連擊
+          </div>
+          <div class="mg-pill diff-normal" id="mg-diff-pill">
+            <span>⚔️</span>
+            <span id="mg-diff-label">標準</span>
           </div>
           <div class="mg-pill bonus-x2" id="mg-x2-badge" style="display:none;">
             <span>🎟️</span>
@@ -2393,7 +2950,7 @@
       <div style="font-size: 2.8rem;">⚙️</div>
       <h3>學習成就與系統設定</h3>
       <p style="margin-bottom: 14px;">
-        系統版本：<b id="settings-version-val" style="color:#6d28d9;">v2.3.0</b><br>
+        系統版本：<b id="settings-version-val" style="color:#6d28d9;">v2.4.0</b><br>
         目前累積 XP: <b id="settings-xp-val" style="color:var(--gold-dark);">0</b> 點 ｜ 全站通關總數: <b id="settings-unlocked-val" style="color:var(--secondary-dark);">0</b> / 1,080 關
       </p>
 
@@ -2469,21 +3026,34 @@
     <div class="modal-box" style="max-width: 580px;">
       <div style="font-size: 2.8rem;">📋</div>
       <h3>波波熱血英語大冒險 - 更新日誌</h3>
-      <p style="margin-bottom: 8px;">當前正式版本：<b id="changelog-current-ver" style="color:var(--primary-dark);">v2.3.0</b>（遵循全站版本對應規範）</p>
+      <p style="margin-bottom: 8px;">當前正式版本：<b id="changelog-current-ver" style="color:var(--primary-dark);">v2.4.0</b>（遵循全站版本對應規範）</p>
 
       <div class="changelog-list">
         <div class="changelog-item latest">
           <div class="changelog-version-header">
             <div class="changelog-version-tag">
-              <span>v2.3.0</span>
+              <span>v2.4.0</span>
               <span class="changelog-badge">最新版本</span>
             </div>
             <span class="changelog-date">2026-11-13</span>
           </div>
           <ul>
-            <li>🎮 <b>新增 Duolingo 風格「4 大英文互動獎勵小遊戲樂園」</b>：除了傳統選擇題，現在推出<b>⚡ 限時配對狂熱 (Match Madness)</b>、<b>🔤 單字拼圖衝刺 (支援實體鍵盤打字)</b>、<b>🎈 單字氣球爆破戰</b>、<b>🎧 聽音閃電戰</b>！</li>
-            <li>🎟️ <b>雙倍獎勵券與通關寶箱機制</b>：每次通關關卡皆贈送「🎟️ 雙倍獎勵券 +1」，並可於結算畫面直接啟動獎勵小遊戲，挑戰高分贏取雙倍 💎 寶石、XP 與 ❤️ 額外愛心補血！</li>
-            <li>🏆 <b>等級詞彙自適應出題</b>：4 大互動小遊戲皆根據目前所在等級（小學 Pre-A1 ~ 大學 GRE C2）動態抽取單字與美語發音，好玩又好記！</li>
+            <li>🦖 <b>全新動畫問答遊戲 1：怪獸問答對決 (Monster Quiz Duel)</b>：結合英語克漏字填空、中文反推英文與語意問答，答對發射火球棒球痛擊動畫怪獸、爆字扣血；打倒怪獸接力登場更強 Boss！</li>
+            <li>🚀 <b>全新動畫問答遊戲 2：火箭快問快答 (Rocket Launch Q&amp;A)</b>：閱讀英語句子與生活情境問答，答對點燃火箭噴射引擎衝刺外太空星球，體驗滿滿視覺動畫快感！</li>
+            <li>🎚️ <b>全遊戲「簡單 / 標準 / 困難」三階難度自由切換</b>：簡單模式給更多思考時間、更少干擾選項、免費提示且答錯不扣秒；困難模式挑戰更多干擾項、更長單字與急速反應，並提供 <b>1.5× 寶石與 XP 加成</b>！</li>
+          </ul>
+        </div>
+
+        <div class="changelog-item">
+          <div class="changelog-version-header">
+            <div class="changelog-version-tag">
+              <span>v2.3.0</span>
+            </div>
+            <span class="changelog-date">2026-11-13</span>
+          </div>
+          <ul>
+            <li>🎮 <b>新增 Duolingo 風格「4 大英文互動獎勵小遊戲樂園」</b>：推出<b>⚡ 限時配對狂熱 (Match Madness)</b>、<b>🔤 單字拼圖衝刺 (支援實體鍵盤打字)</b>、<b>🎈 單字氣球爆破戰</b>、<b>🎧 聽音閃電戰</b>！</li>
+            <li>🎟️ <b>雙倍獎勵券與通關寶箱機制</b>：每次通關關卡皆贈送「🎟️ 雙倍獎勵券 +1」，並可於結算畫面直接啟動獎勵小遊戲，贏取雙倍 💎 寶石、XP 與 ❤️ 額外愛心補血！</li>
           </ul>
         </div>
 
@@ -2631,7 +3201,7 @@
   <canvas id="confetti-canvas"></canvas>
 
   <!-- 載入完整的 12 等級 1,080 道豐富題庫 (加入版本快取破壞參數防止瀏覽器快取舊版) -->
-  <script src="curriculum.js?v=2.3.0"></script>
+  <script src="curriculum.js?v=2.4.0"></script>
 
   <script>
     /* ==========================================================================
@@ -2761,12 +3331,12 @@
     /* ==========================================================================
        2. 美式英文發音 (Web Speech API)
     ========================================================================== */
-    function speakText(text) {
+    function speakText(text, rate = 0.88) {
       if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
         const utter = new SpeechSynthesisUtterance(text);
         utter.lang = 'en-US';
-        utter.rate = 0.88;
+        utter.rate = rate;
         utter.pitch = 1.05;
         window.speechSynthesis.speak(utter);
       }
@@ -2777,7 +3347,7 @@
     ========================================================================== */
     class GameEngine {
       constructor() {
-        this.version = window.BOBI_VERSION || '2.3.0';
+        this.version = window.BOBI_VERSION || '2.4.0';
         this.curriculum = window.CURRICULUM_DATA || [];
         this.currentCategory = 'elementary';
         this.currentTierId = 'elem_mid'; // 預設小學・中級
@@ -2797,6 +3367,7 @@
         this.mg = {
           active: false,
           type: null,
+          difficulty: 'normal',
           timerId: null,
           timeLeft: 0,
           score: 0,
@@ -2822,12 +3393,17 @@
             this.xp = data.xp || 0;
             this.completedByTier = data.completedByTier || {};
             this.bonusTickets = data.bonusTickets !== undefined ? data.bonusTickets : 3;
-            this.miniGameScores = data.miniGameScores || {
+            this.miniGameDifficulty = ['easy', 'normal', 'hard'].includes(data.miniGameDifficulty)
+              ? data.miniGameDifficulty
+              : 'normal';
+            this.miniGameScores = Object.assign({
               match_madness: 0,
               word_builder: 0,
               balloon_pop: 0,
-              listen_blitz: 0
-            };
+              listen_blitz: 0,
+              quiz_battle: 0,
+              rocket_qa: 0
+            }, data.miniGameScores || {});
             if (data.currentTierId && this.getTier(data.currentTierId)) {
               this.currentTierId = data.currentTierId;
             }
@@ -2847,11 +3423,14 @@
         this.completedByTier = {};
         this.currentTierId = 'elem_mid';
         this.bonusTickets = 3;
+        this.miniGameDifficulty = 'normal';
         this.miniGameScores = {
           match_madness: 0,
           word_builder: 0,
           balloon_pop: 0,
-          listen_blitz: 0
+          listen_blitz: 0,
+          quiz_battle: 0,
+          rocket_qa: 0
         };
       }
 
@@ -2865,6 +3444,7 @@
           currentTierId: this.currentTierId,
           completedByTier: this.completedByTier,
           bonusTickets: this.bonusTickets,
+          miniGameDifficulty: this.miniGameDifficulty,
           miniGameScores: this.miniGameScores
         };
         localStorage.setItem('bobi_english_save_v4', JSON.stringify(data));
@@ -2879,6 +3459,38 @@
         return this.getTier(this.currentTierId);
       }
 
+      setMiniGameDifficulty(diff) {
+        if (!['easy', 'normal', 'hard'].includes(diff)) return;
+        audioPlayer.play('click');
+        this.miniGameDifficulty = diff;
+        this.saveState();
+      }
+
+      updateDifficultyUI() {
+        const diff = this.miniGameDifficulty || 'normal';
+        document.querySelectorAll('.diff-pill-btn[data-diff]').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.diff === diff);
+        });
+        const descMap = {
+          easy: { text: '簡單模式（時間充足、選項較少、答錯不扣秒，0.85× 獎勵）', color: '#15803d', badge: '🌱 簡單' },
+          normal: { text: '標準模式（時間與題數適中，1× 獎勵）', color: '#0369a1', badge: '⚔️ 標準' },
+          hard: { text: '困難模式（急速限時、更多干擾項、高難題目，1.5× 爆擊獎勵！）', color: '#b91c1c', badge: '🔥 困難 1.5×' }
+        };
+        const info = descMap[diff] || descMap.normal;
+        const descEl = document.getElementById('arcade-diff-desc');
+        if (descEl) {
+          descEl.textContent = info.text;
+          descEl.style.color = info.color;
+        }
+        const hudPill = document.getElementById('mg-diff-pill');
+        const hudLabel = document.getElementById('mg-diff-label');
+        if (hudPill && hudLabel) {
+          hudPill.className = `mg-pill diff-${diff}`;
+          hudPill.firstElementChild.textContent = diff === 'easy' ? '🌱' : (diff === 'hard' ? '🔥' : '⚔️');
+          hudLabel.textContent = diff === 'easy' ? '簡單' : (diff === 'hard' ? '困難 1.5×' : '標準');
+        }
+      }
+
       updateHeaderStats() {
         document.getElementById('streak-count').textContent = this.streak;
         document.getElementById('gem-count').textContent = this.gems;
@@ -2889,11 +3501,12 @@
         const ticketEl = document.getElementById('bonus-ticket-count');
         if (ticketEl) ticketEl.textContent = this.bonusTickets;
         if (this.miniGameScores) {
-          ['match_madness', 'word_builder', 'balloon_pop', 'listen_blitz'].forEach(k => {
+          ['match_madness', 'word_builder', 'balloon_pop', 'listen_blitz', 'quiz_battle', 'rocket_qa'].forEach(k => {
             const bestEl = document.getElementById(`best-${k}`);
             if (bestEl) bestEl.textContent = this.miniGameScores[k] || 0;
           });
         }
+        this.updateDifficultyUI();
 
         // 同步全站版本號顯示
         const verStr = `v${this.version}`;
@@ -3589,8 +4202,52 @@
       }
 
       /* ======================================================================
-         Duolingo 風格：互動英語獎勵小遊戲引擎 (v2.3.0)
+         Duolingo 風格：互動英語獎勵小遊戲引擎 (v2.4.0 - 6大遊戲 × 3階難度)
       ====================================================================== */
+      getDifficultyConfig() {
+        const diff = this.miniGameDifficulty || 'normal';
+        if (diff === 'easy') {
+          return {
+            diff: 'easy',
+            label: '簡單',
+            timerMult: 1.3,
+            rewardMult: 0.85,
+            mmPairs: 4, mmPenalty: 0,
+            wbMinLen: 3, wbMaxLen: 7, wbExtras: 0, wbHints: 5, wbRounds: 6, wbAutoFirst: true, wbPenalty: 0,
+            bpCount: 4, bpPenalty: 0,
+            lbCount: 3, lbRate: 0.8, lbPenalty: 0,
+            qbOptCount: 3, qbMonsterHp: 70, qbHeroDmg: 35, qbPenalty: 0,
+            rqOptCount: 3, rqGoalMeters: 600, rqPenalty: 0
+          };
+        }
+        if (diff === 'hard') {
+          return {
+            diff: 'hard',
+            label: '困難',
+            timerMult: 0.78,
+            rewardMult: 1.5,
+            mmPairs: 6, mmPenalty: 2,
+            wbMinLen: 5, wbMaxLen: 14, wbExtras: 4, wbHints: 1, wbRounds: 10, wbAutoFirst: false, wbPenalty: 3,
+            bpCount: 8, bpPenalty: 3,
+            lbCount: 5, lbRate: 1.08, lbPenalty: 3,
+            qbOptCount: 5, qbMonsterHp: 140, qbHeroDmg: 35, qbPenalty: 4,
+            rqOptCount: 4, rqGoalMeters: 1200, rqPenalty: 4
+          };
+        }
+        return {
+          diff: 'normal',
+          label: '標準',
+          timerMult: 1.0,
+          rewardMult: 1.0,
+          mmPairs: 5, mmPenalty: 0,
+          wbMinLen: 3, wbMaxLen: 12, wbExtras: 2, wbHints: 3, wbRounds: 8, wbAutoFirst: false, wbPenalty: 0,
+          bpCount: 6, bpPenalty: 2,
+          lbCount: 4, lbRate: 0.88, lbPenalty: 0,
+          qbOptCount: 4, qbMonsterHp: 100, qbHeroDmg: 35, qbPenalty: 2,
+          rqOptCount: 4, rqGoalMeters: 800, rqPenalty: 2
+        };
+      }
+
       getMiniGameVocabPool(preferCurrentLesson = false) {
         const curTier = this.getCurrentTier();
         const fallbackEmojis = ['🌟', '📘', '🎯', '🚀', '💡', '🔥', '⚾', '🦖', '💎', '🎓'];
@@ -3649,7 +4306,7 @@
       }
 
       startRandomBonusGame(fromSummary = false) {
-        const types = ['match_madness', 'word_builder', 'balloon_pop', 'listen_blitz'];
+        const types = ['quiz_battle', 'rocket_qa', 'match_madness', 'word_builder', 'balloon_pop', 'listen_blitz'];
         const pick = types[Math.floor(Math.random() * types.length)];
         this.startMiniGame(pick, fromSummary);
       }
@@ -3665,19 +4322,26 @@
           this.saveState();
         }
 
+        const cfg = this.getDifficultyConfig();
         const pool = this.getMiniGameVocabPool(fromSummary);
-        const durationMap = {
+        const baseDurationMap = {
+          quiz_battle: 65,
+          rocket_qa: 60,
           match_madness: 60,
           word_builder: 75,
           balloon_pop: 50,
           listen_blitz: 45
         };
+        const baseSec = baseDurationMap[gameType] || 60;
+        const scaledTime = Math.round(baseSec * cfg.timerMult);
 
         this.mg = {
           active: true,
           type: gameType,
+          difficulty: cfg.diff,
+          cfg,
           timerId: null,
-          timeLeft: durationMap[gameType] || 60,
+          timeLeft: scaledTime,
           score: 0,
           combo: 0,
           maxCombo: 0,
@@ -3688,6 +4352,7 @@
         };
 
         this.showScreen('minigame');
+        this.updateDifficultyUI();
         this.updateMiniGameHUD();
 
         const x2Badge = document.getElementById('mg-x2-badge');
@@ -3701,6 +4366,10 @@
           this.initBalloonPop();
         } else if (gameType === 'listen_blitz') {
           this.initListeningBlitz();
+        } else if (gameType === 'quiz_battle') {
+          this.initQuizBattle();
+        } else if (gameType === 'rocket_qa') {
+          this.initRocketQA();
         }
 
         this.mg.timerId = setInterval(() => {
@@ -3735,7 +4404,7 @@
 
       replayMiniGame() {
         document.getElementById('minigame-result-modal').classList.remove('active');
-        this.startMiniGame(this.mg.type || 'match_madness', false);
+        this.startMiniGame(this.mg.type || 'quiz_battle', false);
       }
 
       closeMiniGameResult() {
@@ -3748,38 +4417,40 @@
         audioPlayer.play('win');
         triggerConfetti();
 
+        const cfg = this.mg.cfg || this.getDifficultyConfig();
         const score = this.mg.score;
-        const mult = this.mg.isDoubleReward ? 2 : 1;
-        const baseGems = Math.max(10, Math.min(50, Math.round(score / 6) + 10));
-        const baseXp = Math.max(10, Math.min(45, Math.round(score / 8) + 10));
-        const earnedGems = baseGems * mult;
-        const earnedXp = baseXp * mult;
+        const ticketMult = this.mg.isDoubleReward ? 2 : 1;
+        const totalMult = ticketMult * (cfg.rewardMult || 1);
+        const baseGems = Math.max(10, Math.min(60, Math.round(score / 6) + 10));
+        const baseXp = Math.max(10, Math.min(50, Math.round(score / 8) + 10));
+        const earnedGems = Math.max(8, Math.round(baseGems * totalMult));
+        const earnedXp = Math.max(8, Math.round(baseXp * totalMult));
 
         this.gems += earnedGems;
         this.xp += earnedXp;
 
-        let extraMsg = '';
+        let extraMsg = `🎚️ 難度：【${cfg.label}】(${cfg.rewardMult}×)`;
         if (this.mg.isDoubleReward) {
-          extraMsg = '🎟️ 已自動套用【雙倍獎勵券】× 2 倍加成！';
+          extraMsg += ' ｜ 🎟️【雙倍獎勵券】× 2！';
         }
         if (this.mg.cleared >= 5 && this.hearts < 5) {
           this.hearts = Math.min(5, this.hearts + 1);
-          extraMsg = (extraMsg ? extraMsg + ' ｜ ' : '') + '❤️ 高分達標額外補血 +1 愛心！';
+          extraMsg += ' ｜ ❤️ 達標補血 +1 愛心！';
         }
 
         const prevBest = this.miniGameScores[this.mg.type] || 0;
         if (score > prevBest) {
           this.miniGameScores[this.mg.type] = score;
-          extraMsg = '🏆 締造個人全新最高紀錄！' + (extraMsg ? ' ' + extraMsg : '');
+          extraMsg = '🏆 個人新紀錄！ ' + extraMsg;
         }
 
         this.saveState();
 
-        document.getElementById('mg-res-icon').textContent = score >= 100 ? '👑' : (score >= 40 ? '🏆' : '🎉');
+        document.getElementById('mg-res-icon').textContent = score >= 120 ? '👑' : (score >= 45 ? '🏆' : '🎉');
         document.getElementById('mg-res-title').textContent = `總得分 ${score} 分！（成功 ${this.mg.cleared} 題）`;
         document.getElementById('mg-res-subtitle').textContent = this.mg.cleared >= 5
-          ? '太神啦！你的英文反射速度跟 Duolingo 大師一樣快！'
-          : '表現很棒！再接再厲挑戰更高連擊吧！';
+          ? '太神啦！你的英語問答與反射速度跟 Duolingo 大師一樣快！'
+          : '表現很棒！可切換不同難度挑戰更高紀錄喔！';
         document.getElementById('mg-res-gems').textContent = earnedGems;
         document.getElementById('mg-res-xp').textContent = earnedXp;
         document.getElementById('mg-res-combo').textContent = this.mg.maxCombo;
@@ -3790,12 +4461,22 @@
 
       /* --- 小遊戲 1：⚡ 限時配對狂熱 (Match Madness) --- */
       initMatchMadness() {
-        const pool = [...this.mg.pool].sort(() => Math.random() - 0.5);
+        const cfg = this.mg.cfg;
+        let orderedPool = [...this.mg.pool];
+        if (cfg.diff === 'easy') {
+          orderedPool.sort((a, b) => a.en.length - b.en.length);
+          orderedPool = orderedPool.slice(0, Math.max(12, Math.floor(orderedPool.length * 0.6)));
+        } else if (cfg.diff === 'hard') {
+          orderedPool.sort((a, b) => b.en.length - a.en.length);
+          orderedPool = orderedPool.slice(0, Math.max(16, Math.floor(orderedPool.length * 0.7)));
+        }
+        const pool = orderedPool.sort(() => Math.random() - 0.5);
         this.mg.mmQueue = pool;
         this.mg.mmIdx = 0;
 
+        const pairCount = Math.min(cfg.mmPairs || 5, pool.length);
         const initialPairs = [];
-        for (let i = 0; i < 5 && this.mg.mmIdx < this.mg.mmQueue.length; i++) {
+        for (let i = 0; i < pairCount && this.mg.mmIdx < this.mg.mmQueue.length; i++) {
           initialPairs.push(this.mg.mmQueue[this.mg.mmIdx++]);
         }
 
@@ -3810,6 +4491,7 @@
       }
 
       renderMatchMadness() {
+        const cfg = this.mg.cfg;
         const stage = document.getElementById('minigame-stage');
         let leftHtml = '';
         let rightHtml = '';
@@ -3823,9 +4505,10 @@
           rightHtml += `<div class="mm-tile ${sel}" id="mm-r-${i}" onclick="game.clickMMTile('right', ${i})">${item.zh}</div>`;
         });
 
+        const penaltyText = cfg.mmPenalty > 0 ? `（${cfg.mmPairs}對／點錯扣 ${cfg.mmPenalty} 秒）` : `（${cfg.mmPairs}對／無扣時）`;
         stage.innerHTML = `
           <div class="mg-title-bar">
-            <h3><span>⚡</span><span>限時配對狂熱 (Match Madness)</span></h3>
+            <h3><span>⚡</span><span>限時配對狂熱 ${penaltyText}</span></h3>
             <span class="mg-subtitle">點擊左邊英文與右邊對應的繁體中文，配對越多連擊越高！</span>
           </div>
           <div class="mm-board">
@@ -3849,6 +4532,7 @@
         }
 
         if (this.mg.mmSelLeft !== null && this.mg.mmSelRight !== null) {
+          const cfg = this.mg.cfg;
           const lIdx = this.mg.mmSelLeft;
           const rIdx = this.mg.mmSelRight;
           const leftItem = this.mg.mmLeft[lIdx];
@@ -3872,7 +4556,7 @@
             setTimeout(() => {
               if (!this.mg.active) return;
               if (this.mg.mmIdx >= this.mg.mmQueue.length) {
-                this.mg.mmQueue = [...this.mg.pool].sort(() => Math.random() - 0.5);
+                this.mg.mmQueue = [...this.mg.mmQueue].sort(() => Math.random() - 0.5);
                 this.mg.mmIdx = 0;
               }
               const activeEnSet = new Set(this.mg.mmLeft.map(x => x.en));
@@ -3891,10 +4575,13 @@
               this.mg.mmRight[rIdx] = { slot: rIdx, en: nextPair.en, zh: nextPair.zh };
 
               // 與隨機另一格交換右欄位置，避免新單字永遠在同一列
-              const swapIdx = (rIdx + 1 + Math.floor(Math.random() * 4)) % this.mg.mmRight.length;
-              const temp = this.mg.mmRight[rIdx];
-              this.mg.mmRight[rIdx] = this.mg.mmRight[swapIdx];
-              this.mg.mmRight[swapIdx] = temp;
+              if (this.mg.mmRight.length > 1) {
+                const offset = 1 + Math.floor(Math.random() * (this.mg.mmRight.length - 1));
+                const swapIdx = (rIdx + offset) % this.mg.mmRight.length;
+                const temp = this.mg.mmRight[rIdx];
+                this.mg.mmRight[rIdx] = this.mg.mmRight[swapIdx];
+                this.mg.mmRight[swapIdx] = temp;
+              }
 
               this.mg.mmSelLeft = null;
               this.mg.mmSelRight = null;
@@ -3904,6 +4591,9 @@
           } else {
             audioPlayer.play('wrong');
             this.mg.combo = 0;
+            if (cfg.mmPenalty > 0) {
+              this.mg.timeLeft = Math.max(1, this.mg.timeLeft - cfg.mmPenalty);
+            }
             this.updateMiniGameHUD();
             if (lEl) lEl.classList.add('wrong-shake');
             if (rEl) rEl.classList.add('wrong-shake');
@@ -3922,9 +4612,13 @@
 
       /* --- 小遊戲 2：🔤 單字拼圖衝刺 (Word Builder / Spelling Bee) --- */
       initWordBuilder() {
-        let singleWords = this.mg.pool.filter(w => /^[A-Za-z]{3,14}$/.test(w.en));
-        if (singleWords.length < 8) {
-          // 補齊同階段其他清潔單字
+        const cfg = this.mg.cfg;
+        const regex = new RegExp(`^[A-Za-z]{${cfg.wbMinLen},${cfg.wbMaxLen}}$`);
+        let singleWords = this.mg.pool.filter(w => regex.test(w.en));
+        if (singleWords.length < cfg.wbRounds) {
+          singleWords = this.mg.pool.filter(w => /^[A-Za-z]{3,14}$/.test(w.en));
+        }
+        if (singleWords.length < cfg.wbRounds) {
           this.curriculum.forEach(t => {
             t.lessons.forEach(l => {
               (l.vocabularies || []).forEach(v => {
@@ -3935,9 +4629,9 @@
             });
           });
         }
-        this.mg.wbWords = singleWords.sort(() => Math.random() - 0.5).slice(0, 8);
+        this.mg.wbWords = singleWords.sort(() => Math.random() - 0.5).slice(0, cfg.wbRounds);
         this.mg.wbIndex = 0;
-        this.mg.wbHintsLeft = 3;
+        this.mg.wbHintsLeft = cfg.wbHints;
         this.loadWordBuilderRound();
       }
 
@@ -3947,9 +4641,10 @@
           this.finishMiniGame();
           return;
         }
+        const cfg = this.mg.cfg;
         const target = this.mg.wbWords[this.mg.wbIndex];
         const letters = target.en.toLowerCase().split('');
-        const extraCount = this.currentTierId.startsWith('elem_') ? 1 : 2;
+        const extraCount = cfg.wbExtras;
         const alpha = 'abcdefghijklmnopqrstuvwxyz';
         const poolChars = [...letters];
         for (let i = 0; i < extraCount; i++) {
@@ -3965,11 +4660,20 @@
         this.mg.wbSlots = Array(letters.length).fill(null);
         this.mg.wbLocked = false;
 
+        // 簡單模式自動顯示首字母作為免費提示
+        if (cfg.wbAutoFirst && letters.length >= 2) {
+          const firstCh = letters[0];
+          const firstTile = this.mg.wbPool.find(t => !t.used && t.ch === firstCh);
+          if (firstTile) firstTile.used = true;
+          this.mg.wbSlots[0] = { ch: firstCh, tileIdx: firstTile ? firstTile.idx : -1, hint: true };
+        }
+
         speakText(target.en);
         this.renderWordBuilder();
       }
 
       renderWordBuilder(statusClass = '') {
+        const cfg = this.mg.cfg;
         const target = this.mg.wbTarget;
         const stage = document.getElementById('minigame-stage');
         const roundNum = this.mg.wbIndex + 1;
@@ -3987,10 +4691,14 @@
           poolHtml += `<button class="wb-key ${usedClass}" onclick="game.pickWBLetter(${tile.idx})">${tile.ch}</button>`;
         });
 
+        const diffTip = cfg.diff === 'easy'
+          ? '簡單模式：已自動顯示開頭字母，無干擾字母！'
+          : (cfg.diff === 'hard' ? `困難模式：包含 ${cfg.wbExtras} 個干擾字母，拼錯扣 ${cfg.wbPenalty} 秒！` : '點擊字母或直接使用鍵盤 A-Z 拼出英文單字！');
+
         stage.innerHTML = `
           <div class="mg-title-bar">
             <h3><span>🔤</span><span>單字拼圖衝刺 (${roundNum}/${totalRounds})</span></h3>
-            <span class="mg-subtitle">點擊字母或直接使用鍵盤 A-Z 拼出英文單字！</span>
+            <span class="mg-subtitle">${diffTip}</span>
           </div>
           <div class="wb-clue-box">
             <div style="font-size: 2.3rem;">${target.emoji}</div>
@@ -4074,7 +4782,6 @@
         let targetSlot = this.mg.wbSlots.findIndex((s, i) => !s || s.ch !== answerChars[i]);
         if (targetSlot === -1) return;
 
-        // 若該格有錯字先退回
         if (this.mg.wbSlots[targetSlot]) {
           const old = this.mg.wbSlots[targetSlot];
           const oldTile = this.mg.wbPool.find(t => t.idx === old.tileIdx);
@@ -4086,7 +4793,6 @@
         if (matchingTile) {
           matchingTile.used = true;
         } else {
-          // 若同字卡已被佔用在其他格，先清掉該格
           const occupiedSlot = this.mg.wbSlots.findIndex(s => s && !s.hint && s.ch === neededChar);
           if (occupiedSlot !== -1) {
             const old = this.mg.wbSlots[occupiedSlot];
@@ -4109,6 +4815,7 @@
           return;
         }
 
+        const cfg = this.mg.cfg;
         const attempt = this.mg.wbSlots.map(s => s.ch).join('').toLowerCase();
         const expected = this.mg.wbTarget.en.toLowerCase();
 
@@ -4131,6 +4838,9 @@
         } else {
           audioPlayer.play('wrong');
           this.mg.combo = 0;
+          if (cfg.wbPenalty > 0) {
+            this.mg.timeLeft = Math.max(1, this.mg.timeLeft - cfg.wbPenalty);
+          }
           this.updateMiniGameHUD();
           this.renderWordBuilder('wrong-shake');
           setTimeout(() => {
@@ -4148,7 +4858,8 @@
 
       loadBalloonWave() {
         if (!this.mg.active) return;
-        const candidates = [...this.mg.pool].sort(() => Math.random() - 0.5).slice(0, 6);
+        const cfg = this.mg.cfg;
+        const candidates = [...this.mg.pool].sort(() => Math.random() - 0.5).slice(0, cfg.bpCount);
         const target = candidates[Math.floor(Math.random() * candidates.length)];
         const colors = [
           'linear-gradient(135deg, #f43f5e, #e11d48)',
@@ -4156,14 +4867,16 @@
           'linear-gradient(135deg, #10b981, #059669)',
           'linear-gradient(135deg, #f59e0b, #d97706)',
           'linear-gradient(135deg, #8b5cf6, #7c3aed)',
-          'linear-gradient(135deg, #ec4899, #db2777)'
+          'linear-gradient(135deg, #ec4899, #db2777)',
+          'linear-gradient(135deg, #06b6d4, #0891b2)',
+          'linear-gradient(135deg, #84cc16, #65a30d)'
         ];
 
         this.mg.bpTarget = target;
         this.mg.bpBalloons = candidates.map((item, idx) => ({
           ...item,
           color: colors[idx % colors.length],
-          delay: (idx * 0.25).toFixed(2)
+          delay: (idx * 0.22).toFixed(2)
         }));
         this.mg.bpLocked = false;
 
@@ -4171,6 +4884,7 @@
       }
 
       renderBalloonWave() {
+        const cfg = this.mg.cfg;
         const stage = document.getElementById('minigame-stage');
         const target = this.mg.bpTarget;
         let balloonsHtml = '';
@@ -4182,9 +4896,12 @@
           `;
         });
 
+        const arenaCls = cfg.diff === 'easy' ? 'bp-easy' : (cfg.diff === 'hard' ? 'bp-hard' : '');
+        const penaltyHint = cfg.bpPenalty > 0 ? `（${cfg.bpCount} 顆氣球／點錯 -${cfg.bpPenalty}s）` : `（${cfg.bpCount} 顆氣球／點錯不扣時）`;
+
         stage.innerHTML = `
           <div class="mg-title-bar">
-            <h3><span>🎈</span><span>單字氣球爆破戰</span></h3>
+            <h3><span>🎈</span><span>單字氣球爆破戰 ${penaltyHint}</span></h3>
             <span class="mg-subtitle">根據上方中文意思，快速點擊正確的英文氣球！</span>
           </div>
           <div class="balloon-target-bar">
@@ -4193,7 +4910,7 @@
               🔊 聽發音提示
             </button>
           </div>
-          <div class="balloon-arena">
+          <div class="balloon-arena ${arenaCls}">
             ${balloonsHtml}
           </div>
         `;
@@ -4201,6 +4918,7 @@
 
       popBalloon(idx) {
         if (!this.mg.active || this.mg.bpLocked) return;
+        const cfg = this.mg.cfg;
         const chosen = this.mg.bpBalloons[idx];
         const el = document.getElementById(`bp-balloon-${idx}`);
         if (!chosen || !el) return;
@@ -4222,7 +4940,9 @@
         } else {
           audioPlayer.play('wrong');
           this.mg.combo = 0;
-          this.mg.timeLeft = Math.max(1, this.mg.timeLeft - 2);
+          if (cfg.bpPenalty > 0) {
+            this.mg.timeLeft = Math.max(1, this.mg.timeLeft - cfg.bpPenalty);
+          }
           this.updateMiniGameHUD();
           el.classList.remove('wrong-shake');
           void el.offsetWidth;
@@ -4238,19 +4958,21 @@
 
       loadListeningBlitzWave() {
         if (!this.mg.active) return;
-        const candidates = [...this.mg.pool].sort(() => Math.random() - 0.5).slice(0, 4);
+        const cfg = this.mg.cfg;
+        const candidates = [...this.mg.pool].sort(() => Math.random() - 0.5).slice(0, cfg.lbCount);
         const target = candidates[Math.floor(Math.random() * candidates.length)];
 
         this.mg.lbTarget = target;
         this.mg.lbOptions = candidates;
         this.mg.lbLocked = false;
-        this.mg.lbStatusMsg = '聆聽發音，選出正確中文意思（可用 1~4 鍵）';
+        this.mg.lbStatusMsg = `聆聽發音，選出正確中文意思（可用 1~${cfg.lbCount} 鍵）`;
 
-        speakText(target.en);
+        speakText(target.en, cfg.lbRate);
         this.renderListeningBlitz();
       }
 
       renderListeningBlitz(selectedIdx = -1, resultState = '') {
+        const cfg = this.mg.cfg;
         const stage = document.getElementById('minigame-stage');
         const target = this.mg.lbTarget;
         let cardsHtml = '';
@@ -4269,11 +4991,11 @@
 
         stage.innerHTML = `
           <div class="mg-title-bar">
-            <h3><span>🎧</span><span>聽音閃電戰 (Listening Blitz)</span></h3>
+            <h3><span>🎧</span><span>聽音閃電戰 (${cfg.lbCount}選1・語速${cfg.lbRate}x)</span></h3>
             <span class="mg-subtitle">聽見美式發音後立即點擊對應卡片，連擊越長分數越高！</span>
           </div>
           <div class="blitz-speaker-wrap">
-            <button class="audio-speaker-btn big" onclick="speakText('${target.en.replace(/'/g, "\\'")}')">🔊</button>
+            <button class="audio-speaker-btn big" onclick="speakText('${target.en.replace(/'/g, "\\'")}', ${cfg.lbRate})">🔊</button>
             <div class="blitz-status-pill">${this.mg.lbStatusMsg}</div>
           </div>
           <div class="blitz-grid">${cardsHtml}</div>
@@ -4282,6 +5004,7 @@
 
       pickListeningBlitz(idx) {
         if (!this.mg.active || this.mg.lbLocked) return;
+        const cfg = this.mg.cfg;
         const opt = this.mg.lbOptions[idx];
         if (!opt) return;
 
@@ -4304,6 +5027,9 @@
         } else {
           audioPlayer.play('wrong');
           this.mg.combo = 0;
+          if (cfg.lbPenalty > 0) {
+            this.mg.timeLeft = Math.max(1, this.mg.timeLeft - cfg.lbPenalty);
+          }
           this.mg.lbStatusMsg = `💡 正確是：${this.mg.lbTarget.en}（${this.mg.lbTarget.zh}）`;
           this.updateMiniGameHUD();
           this.renderListeningBlitz(idx, 'wrong');
@@ -4311,6 +5037,468 @@
           setTimeout(() => {
             if (this.mg.active) this.loadListeningBlitzWave();
           }, 680);
+        }
+      }
+
+      /* ======================================================================
+         小遊戲 5：🦖 怪獸問答對決 (Monster Quiz Duel - 動畫版 Q&A)
+      ====================================================================== */
+      buildQuizBattleQuestions() {
+        const curTier = this.getCurrentTier();
+        const cfg = this.mg.cfg;
+        const optCount = cfg.qbOptCount || 4;
+        const vocabPool = this.mg.pool || [];
+        const allVocabWords = vocabPool
+          .map(v => v.en.trim())
+          .filter(w => /^[A-Za-z-]{3,16}$/.test(w));
+        const fallbackWords = ['happy', 'strong', 'brave', 'smart', 'clear', 'bright', 'quick', 'world', 'great', 'super'];
+        const questions = [];
+
+        if (curTier && curTier.lessons) {
+          const shuffledLessons = [...curTier.lessons].sort(() => Math.random() - 0.5);
+          shuffledLessons.forEach(l => {
+            (l.questions || []).forEach(q => {
+              // 1) 句子克漏字問答 (由 scramble 動態生成)
+              if (q.type === 'scramble' && Array.isArray(q.targetTokens) && q.targetTokens.length >= 3) {
+                const candidateTokenIndices = [];
+                q.targetTokens.forEach((tok, idx) => {
+                  const clean = tok.replace(/[^a-zA-Z]/g, '');
+                  if (clean.length >= 3) candidateTokenIndices.push({ idx, clean, raw: tok });
+                });
+                if (candidateTokenIndices.length > 0) {
+                  // 依難度挑字長
+                  candidateTokenIndices.sort((a, b) => cfg.diff === 'hard'
+                    ? b.clean.length - a.clean.length
+                    : a.clean.length - b.clean.length);
+                  const chosen = candidateTokenIndices[0];
+                  const maskedTokens = q.targetTokens.map((t, i) => i === chosen.idx ? t.replace(chosen.clean, '____') : t);
+                  const answerWord = chosen.clean;
+                  const tokenSet = new Set(q.targetTokens.map(t => t.replace(/[^a-zA-Z]/g, '').toLowerCase()));
+                  const distractors = [];
+                  const shuffledWords = [...allVocabWords, ...fallbackWords].sort(() => Math.random() - 0.5);
+                  for (const w of shuffledWords) {
+                    const wl = w.toLowerCase();
+                    if (wl !== answerWord.toLowerCase() && !tokenSet.has(wl) && !distractors.some(d => d.toLowerCase() === wl)) {
+                      distractors.push(w);
+                      if (distractors.length >= optCount - 1) break;
+                    }
+                  }
+                  if (distractors.length === optCount - 1) {
+                    const opts = [
+                      { label: answerWord, correct: true },
+                      ...distractors.map(d => ({ label: d, correct: false }))
+                    ].sort(() => Math.random() - 0.5);
+                    questions.push({
+                      badge: '📝 句子克漏字問答',
+                      prompt: maskedTokens.join(' '),
+                      hint: `中文提示：「${q.targetChinese}」`,
+                      audio: q.targetSentence,
+                      options: opts
+                    });
+                  }
+                }
+              }
+
+              // 2) 中翻英詞彙問答
+              if (q.type === 'choice' && q.options && q.options.length >= 4) {
+                const correctOpt = q.options.find(o => o.correct);
+                if (correctOpt) {
+                  const distractors = q.options.filter(o => !o.correct).map(o => o.en);
+                  while (distractors.length < optCount - 1) {
+                    const extra = vocabPool[Math.floor(Math.random() * vocabPool.length)];
+                    if (extra && extra.en !== correctOpt.en && !distractors.includes(extra.en)) {
+                      distractors.push(extra.en);
+                    } else {
+                      break;
+                    }
+                  }
+                  const pickedDistractors = distractors.slice(0, optCount - 1);
+                  if (pickedDistractors.length === optCount - 1) {
+                    const opts = [
+                      { label: correctOpt.en, correct: true },
+                      ...pickedDistractors.map(d => ({ label: d, correct: false }))
+                    ].sort(() => Math.random() - 0.5);
+                    questions.push({
+                      badge: '💬 中文反推英文問答',
+                      prompt: `「${correctOpt.zh}」的英文怎麼說？`,
+                      hint: cfg.diff === 'easy' ? `圖像線索：${correctOpt.emoji || '🌟'}` : '選出最精準的英文拼寫！',
+                      audio: correctOpt.en,
+                      options: opts
+                    });
+                  }
+                }
+              }
+            });
+          });
+        }
+
+        return questions.sort(() => Math.random() - 0.5);
+      }
+
+      initQuizBattle() {
+        const cfg = this.mg.cfg;
+        this.mg.qbQuestions = this.buildQuizBattleQuestions();
+        this.mg.qbQIdx = 0;
+        this.mg.qbLocked = false;
+        this.mg.qbBossLevel = 1;
+        this.mg.qbMonsters = [
+          { name: '詞彙史萊姆', sprite: '👾' },
+          { name: '文法哥布林', sprite: '👹' },
+          { name: '鋼鐵機器人', sprite: '🤖' },
+          { name: '暗黑暴龍王', sprite: '🐉' },
+          { name: '銀河大魔王', sprite: '🛸' }
+        ];
+        this.mg.qbMonsterMaxHp = cfg.qbMonsterHp;
+        this.mg.qbMonsterHp = cfg.qbMonsterHp;
+        this.mg.qbHeroHp = 100;
+        this.mg.qbAnimState = { hero: '', monster: '', proj: '', dmgText: '', koMsg: '' };
+        this.renderQuizBattle();
+      }
+
+      renderQuizBattle(selectedIdx = -1, resultState = '') {
+        const stage = document.getElementById('minigame-stage');
+        const cfg = this.mg.cfg;
+        if (!this.mg.qbQuestions.length) {
+          this.mg.qbQuestions = this.buildQuizBattleQuestions();
+        }
+        if (this.mg.qbQIdx >= this.mg.qbQuestions.length) {
+          this.mg.qbQuestions = this.mg.qbQuestions.sort(() => Math.random() - 0.5);
+          this.mg.qbQIdx = 0;
+        }
+
+        const q = this.mg.qbQuestions[this.mg.qbQIdx];
+        const monster = this.mg.qbMonsters[(this.mg.qbBossLevel - 1) % this.mg.qbMonsters.length];
+        const mHpPct = Math.max(0, Math.round((this.mg.qbMonsterHp / this.mg.qbMonsterMaxHp) * 100));
+        const hHpPct = Math.max(0, this.mg.qbHeroHp);
+        const anim = this.mg.qbAnimState || {};
+
+        let optsHtml = '';
+        q.options.forEach((opt, i) => {
+          let cls = '';
+          if (selectedIdx === i) cls = resultState;
+          if (resultState === 'wrong' && opt.correct) cls = 'correct';
+          optsHtml += `
+            <button class="qb-option-btn ${cls}" onclick="game.answerQuizBattle(${i})">
+              <span class="key-hint" style="position:absolute; top:50%; left:10px; transform:translateY(-50%); width:24px; height:24px; border-radius:7px; border:1.5px solid #cbd5e1; background:#f8fafc; color:#64748b; font-size:0.75rem; font-weight:800; display:flex; align-items:center; justify-content:center;">${i + 1}</span>
+              <span>${opt.label}</span>
+            </button>
+          `;
+        });
+
+        stage.innerHTML = `
+          <div class="mg-title-bar">
+            <h3><span>🦖</span><span>怪獸問答對決 (第 ${this.mg.qbBossLevel} 隻怪獸)</span></h3>
+            <span class="mg-subtitle">答對發動攻擊特效擊敗怪獸！（支援鍵盤 1~${q.options.length} 鍵）</span>
+          </div>
+
+          <div class="qb-arena">
+            <div class="qb-fighter">
+              <div class="qb-sprite ${anim.hero || ''}">🦖</div>
+              <div class="qb-fighter-name">波波勇者</div>
+              <div class="qb-hp-wrap">
+                <div class="qb-hp-track"><div class="qb-hp-fill hero" style="width:${hHpPct}%"></div></div>
+                <div class="qb-hp-label">護盾 ${hHpPct}%</div>
+              </div>
+            </div>
+
+            <div class="qb-projectile ${anim.proj || ''}">${anim.proj === 'fly-left' ? '💥' : '🔥'}</div>
+            ${anim.dmgText ? `<div class="qb-dmg-popup" style="${anim.dmgLeft ? 'left:18%' : 'right:18%'};">${anim.dmgText}</div>` : ''}
+
+            <div class="qb-fighter">
+              <div class="qb-sprite ${anim.monster || ''}">${monster.sprite}</div>
+              <div class="qb-fighter-name">Lv.${this.mg.qbBossLevel} ${monster.name}</div>
+              <div class="qb-hp-wrap">
+                <div class="qb-hp-track"><div class="qb-hp-fill" style="width:${mHpPct}%"></div></div>
+                <div class="qb-hp-label">HP ${this.mg.qbMonsterHp}/${this.mg.qbMonsterMaxHp}</div>
+              </div>
+            </div>
+
+            ${anim.koMsg ? `<div class="qb-ko-banner">${anim.koMsg}</div>` : ''}
+          </div>
+
+          <div class="qb-question-card">
+            <div class="qb-q-badge">${q.badge}</div>
+            <div class="qb-q-main">${q.prompt}</div>
+            <div class="qb-q-hint">${q.hint}
+              <button class="w-speaker-btn" style="display:inline-flex; width:28px; height:28px; font-size:0.9rem; margin-left:6px; vertical-align:middle;" onclick="speakText('${q.audio.replace(/'/g, "\\'")}')">🔊</button>
+            </div>
+          </div>
+
+          <div class="qb-options-grid">${optsHtml}</div>
+        `;
+      }
+
+      answerQuizBattle(idx) {
+        if (!this.mg.active || this.mg.qbLocked) return;
+        const cfg = this.mg.cfg;
+        const q = this.mg.qbQuestions[this.mg.qbQIdx];
+        const opt = q && q.options[idx];
+        if (!opt) return;
+
+        this.mg.qbLocked = true;
+
+        if (opt.correct) {
+          audioPlayer.play('combo');
+          speakText(q.audio);
+          this.mg.combo++;
+          this.mg.maxCombo = Math.max(this.mg.maxCombo, this.mg.combo);
+          this.mg.cleared++;
+
+          const critBonus = this.mg.combo >= 3 ? 15 : 0;
+          const dmg = cfg.qbHeroDmg + critBonus;
+          this.mg.qbMonsterHp = Math.max(0, this.mg.qbMonsterHp - dmg);
+          this.mg.score += 20 + this.mg.combo * 4;
+          this.updateMiniGameHUD();
+
+          const defeated = this.mg.qbMonsterHp <= 0;
+          this.mg.qbAnimState = {
+            hero: 'attack',
+            monster: 'monster-hit',
+            proj: 'fly-right',
+            dmgText: critBonus > 0 ? `-${dmg} CRIT! ⚡` : `-${dmg} 💥`,
+            dmgLeft: false,
+            koMsg: defeated ? `🎉 KO! 成功擊敗怪獸！+30 額外分！` : ''
+          };
+
+          if (defeated) {
+            this.mg.score += 30;
+            this.updateMiniGameHUD();
+            audioPlayer.play('win');
+          }
+
+          this.renderQuizBattle(idx, 'correct');
+
+          setTimeout(() => {
+            if (!this.mg.active) return;
+            if (defeated) {
+              this.mg.qbBossLevel++;
+              this.mg.qbMonsterMaxHp = Math.round(cfg.qbMonsterHp * (1 + (this.mg.qbBossLevel - 1) * 0.15));
+              this.mg.qbMonsterHp = this.mg.qbMonsterMaxHp;
+              this.mg.qbHeroHp = 100;
+            }
+            this.mg.qbAnimState = { hero: '', monster: '', proj: '', dmgText: '', koMsg: '' };
+            this.mg.qbQIdx++;
+            this.mg.qbLocked = false;
+            this.renderQuizBattle();
+          }, defeated ? 850 : 520);
+        } else {
+          audioPlayer.play('wrong');
+          this.mg.combo = 0;
+          if (cfg.qbPenalty > 0) {
+            this.mg.timeLeft = Math.max(1, this.mg.timeLeft - cfg.qbPenalty);
+            this.mg.qbHeroHp = Math.max(15, this.mg.qbHeroHp - 15);
+          }
+          this.updateMiniGameHUD();
+
+          this.mg.qbAnimState = cfg.qbPenalty === 0
+            ? { hero: 'shield', monster: 'monster-lunge', proj: 'fly-left', dmgText: '🛡️ 輕鬆格擋！不扣時', dmgLeft: true, koMsg: '' }
+            : { hero: '', monster: 'monster-lunge', proj: 'fly-left', dmgText: `-${cfg.qbPenalty}s ⏱️`, dmgLeft: true, koMsg: '' };
+
+          this.renderQuizBattle(idx, 'wrong');
+
+          setTimeout(() => {
+            if (!this.mg.active) return;
+            this.mg.qbAnimState = { hero: '', monster: '', proj: '', dmgText: '', koMsg: '' };
+            this.mg.qbQIdx++;
+            this.mg.qbLocked = false;
+            this.renderQuizBattle();
+          }, 760);
+        }
+      }
+
+      /* ======================================================================
+         小遊戲 6：🚀 火箭升空快問快答 (Rocket Launch Q&A - 動畫版情境問答)
+      ====================================================================== */
+      buildRocketQAQuestions() {
+        const curTier = this.getCurrentTier();
+        const cfg = this.mg.cfg;
+        const optCount = cfg.rqOptCount || 4;
+        const scrambleItems = [];
+
+        if (curTier && curTier.lessons) {
+          curTier.lessons.forEach(l => {
+            (l.questions || []).forEach(q => {
+              if (q.type === 'scramble' && q.targetSentence && q.targetChinese) {
+                scrambleItems.push({ en: q.targetSentence, zh: q.targetChinese });
+              }
+            });
+          });
+        }
+
+        const questions = [];
+        const shuffled = [...scrambleItems].sort(() => Math.random() - 0.5);
+        shuffled.forEach((item, idx) => {
+          const others = scrambleItems.filter(o => o.en !== item.en && o.zh !== item.zh).sort(() => Math.random() - 0.5).slice(0, optCount - 1);
+          if (others.length < optCount - 1) return;
+
+          // 困難模式混入中翻英整句選答；簡單/標準為英翻中快速問答
+          const isReverse = cfg.diff === 'hard' && idx % 2 === 1;
+          const opts = [
+            { label: isReverse ? item.en : item.zh, correct: true },
+            ...others.map(o => ({ label: isReverse ? o.en : o.zh, correct: false }))
+          ].sort(() => Math.random() - 0.5);
+
+          questions.push({
+            badge: isReverse ? '🔥 火箭進階英文句選答' : '🚀 句意快問快答',
+            prompt: isReverse ? `看到這句話「${item.zh}」，請選出正確的英文表達：` : item.en,
+            subHint: isReverse ? '選出對應最精準的英文句子！' : '請迅速理解句意並點選正確繁體中文翻譯！',
+            audio: item.en,
+            options: opts
+          });
+        });
+
+        return questions;
+      }
+
+      initRocketQA() {
+        const cfg = this.mg.cfg;
+        this.mg.rqQuestions = this.buildRocketQAQuestions();
+        this.mg.rqIdx = 0;
+        this.mg.rqLocked = false;
+        this.mg.rqAltitude = 0;
+        this.mg.rqGoal = cfg.rqGoalMeters || 800;
+        this.mg.rqPlanetsReached = 0;
+        this.mg.rqAnim = '';
+        this.mg.rqPopup = '';
+        this.loadRocketQARound();
+      }
+
+      loadRocketQARound() {
+        if (!this.mg.active) return;
+        if (!this.mg.rqQuestions.length || this.mg.rqIdx >= this.mg.rqQuestions.length) {
+          this.mg.rqQuestions = this.buildRocketQAQuestions();
+          this.mg.rqIdx = 0;
+        }
+        const q = this.mg.rqQuestions[this.mg.rqIdx];
+        if (q && q.audio) speakText(q.audio);
+        this.renderRocketQA();
+      }
+
+      renderRocketQA(selectedIdx = -1, resultState = '') {
+        const stage = document.getElementById('minigame-stage');
+        const q = this.mg.rqQuestions[this.mg.rqIdx];
+        const pct = Math.min(96, Math.max(5, Math.round((this.mg.rqAltitude / this.mg.rqGoal) * 90) + 5));
+        const planets = ['🪐', '🌕', '☄️', '🌌'];
+        const goalEmoji = planets[this.mg.rqPlanetsReached % planets.length];
+
+        let optsHtml = '';
+        q.options.forEach((opt, i) => {
+          let cls = '';
+          if (selectedIdx === i) cls = resultState;
+          if (resultState === 'wrong' && opt.correct) cls = 'correct';
+          optsHtml += `
+            <button class="rq-option-btn ${cls}" onclick="game.answerRocketQA(${i})">
+              <span class="key-hint" style="position:absolute; top:50%; left:12px; transform:translateY(-50%); width:24px; height:24px; border-radius:7px; border:1.5px solid #cbd5e1; background:#f8fafc; color:#64748b; font-size:0.75rem; font-weight:800; display:flex; align-items:center; justify-content:center;">${i + 1}</span>
+              <span>${opt.label}</span>
+            </button>
+          `;
+        });
+
+        stage.innerHTML = `
+          <div class="mg-title-bar">
+            <h3><span>🚀</span><span>火箭快問快答 (已抵達 ${this.mg.rqPlanetsReached} 顆星球)</span></h3>
+            <span class="mg-subtitle">答對點燃噴射引擎衝破天際！（支援鍵盤 1~${q.options.length} 鍵）</span>
+          </div>
+
+          <div class="rq-space-track">
+            <div class="rq-stars-layer">
+              <span class="rq-star" style="top:14%; left:12%;">✦</span>
+              <span class="rq-star" style="top:28%; left:34%; animation-delay:0.4s;">★</span>
+              <span class="rq-star" style="top:18%; left:58%; animation-delay:0.9s;">✦</span>
+              <span class="rq-star" style="top:32%; left:80%; animation-delay:0.2s;">✨</span>
+            </div>
+            <div class="rq-top-hud">
+              <span>🌍 飛行高度：${this.mg.rqAltitude}m / ${this.mg.rqGoal}m</span>
+              <span>🎯 目標：${goalEmoji}</span>
+            </div>
+            ${this.mg.rqPopup ? `<div class="rq-alt-popup">${this.mg.rqPopup}</div>` : ''}
+            <div class="rq-track-rail">
+              <div class="rq-track-fill" style="width:${pct}%;"></div>
+              <div class="rq-rocket-actor ${this.mg.rqAnim}" style="left:${pct}%;">
+                <span class="rq-flame">🔥</span><span>🚀</span>
+              </div>
+              <div class="rq-planet-goal">${goalEmoji}</div>
+            </div>
+          </div>
+
+          <div class="qb-question-card">
+            <div class="qb-q-badge">${q.badge}</div>
+            <div class="qb-q-main">${q.prompt}</div>
+            <div class="qb-q-hint">${q.subHint}
+              <button class="w-speaker-btn" style="display:inline-flex; width:28px; height:28px; font-size:0.9rem; margin-left:6px; vertical-align:middle;" onclick="speakText('${q.audio.replace(/'/g, "\\'")}')">🔊</button>
+            </div>
+          </div>
+
+          <div class="rq-options-list">${optsHtml}</div>
+        `;
+      }
+
+      answerRocketQA(idx) {
+        if (!this.mg.active || this.mg.rqLocked) return;
+        const cfg = this.mg.cfg;
+        const q = this.mg.rqQuestions[this.mg.rqIdx];
+        const opt = q && q.options[idx];
+        if (!opt) return;
+
+        this.mg.rqLocked = true;
+
+        if (opt.correct) {
+          audioPlayer.play('hop');
+          this.mg.combo++;
+          this.mg.maxCombo = Math.max(this.mg.maxCombo, this.mg.combo);
+          this.mg.cleared++;
+
+          const altGain = 150 + this.mg.combo * 25;
+          this.mg.rqAltitude += altGain;
+          this.mg.score += 18 + this.mg.combo * 4;
+          this.mg.rqAnim = 'boosting';
+          this.mg.rqPopup = `+${altGain}m 噴射加速！🚀`;
+
+          let reachedPlanet = false;
+          if (this.mg.rqAltitude >= this.mg.rqGoal) {
+            reachedPlanet = true;
+            this.mg.rqPlanetsReached++;
+            this.mg.score += 40;
+            this.mg.rqPopup = `🪐 登陸成功！+40 加碼分！`;
+            audioPlayer.play('win');
+          }
+
+          this.updateMiniGameHUD();
+          this.renderRocketQA(idx, 'correct');
+
+          setTimeout(() => {
+            if (!this.mg.active) return;
+            if (reachedPlanet) {
+              this.mg.rqAltitude = 0;
+              this.mg.rqGoal = Math.round(this.mg.rqGoal * 1.2);
+            }
+            this.mg.rqAnim = '';
+            this.mg.rqPopup = '';
+            this.mg.rqIdx++;
+            this.mg.rqLocked = false;
+            this.loadRocketQARound();
+          }, reachedPlanet ? 760 : 480);
+        } else {
+          audioPlayer.play('wrong');
+          this.mg.combo = 0;
+          if (cfg.rqPenalty > 0) {
+            this.mg.timeLeft = Math.max(1, this.mg.timeLeft - cfg.rqPenalty);
+            this.mg.rqPopup = `亂流來襲 -${cfg.rqPenalty}s 🌪️`;
+          } else {
+            this.mg.rqPopup = '💡 再看看答案，不扣時間！';
+          }
+          this.mg.rqAnim = 'wobble';
+          this.updateMiniGameHUD();
+          this.renderRocketQA(idx, 'wrong');
+
+          setTimeout(() => {
+            if (!this.mg.active) return;
+            this.mg.rqAnim = '';
+            this.mg.rqPopup = '';
+            this.mg.rqIdx++;
+            this.mg.rqLocked = false;
+            this.loadRocketQARound();
+          }, 720);
         }
       }
 
@@ -4362,6 +5550,7 @@
           currentTierId: this.currentTierId,
           completedByTier: this.completedByTier,
           bonusTickets: this.bonusTickets,
+          miniGameDifficulty: this.miniGameDifficulty,
           miniGameScores: this.miniGameScores
         };
         const blob = new Blob([JSON.stringify(backupData, null, 2)], { type: 'application/json' });
@@ -4402,7 +5591,19 @@
             this.xp = Number(data.xp) || 0;
             this.completedByTier = data.completedByTier || {};
             if (data.bonusTickets !== undefined) this.bonusTickets = Number(data.bonusTickets) || 0;
-            if (data.miniGameScores) this.miniGameScores = data.miniGameScores;
+            if (['easy', 'normal', 'hard'].includes(data.miniGameDifficulty)) {
+              this.miniGameDifficulty = data.miniGameDifficulty;
+            }
+            if (data.miniGameScores) {
+              this.miniGameScores = Object.assign({
+                match_madness: 0,
+                word_builder: 0,
+                balloon_pop: 0,
+                listen_blitz: 0,
+                quiz_battle: 0,
+                rocket_qa: 0
+              }, data.miniGameScores);
+            }
             if (data.currentTierId && this.getTier(data.currentTierId)) {
               this.currentTierId = data.currentTierId;
             }
@@ -4456,7 +5657,7 @@
     });
 
     /* ==========================================================================
-       4. 電腦端鍵盤快捷鍵支援 (1~4 數字鍵選答、Enter 鍵檢查或繼續、小遊戲快捷鍵)
+       4. 電腦端鍵盤快捷鍵支援 (1~5 數字鍵選答、Enter 鍵檢查或繼續、小遊戲快捷鍵)
     ========================================================================== */
     window.addEventListener('keydown', (e) => {
       // 忽略輸入框與文字區域的按鍵
@@ -4477,10 +5678,23 @@
           game.exitMiniGame();
           return;
         }
-        if (game.mg.type === 'listen_blitz' && ['1', '2', '3', '4'].includes(e.key)) {
-          e.preventDefault();
-          game.pickListeningBlitz(parseInt(e.key, 10) - 1);
-          return;
+        if (['1', '2', '3', '4', '5'].includes(e.key)) {
+          const idx = parseInt(e.key, 10) - 1;
+          if (game.mg.type === 'listen_blitz') {
+            e.preventDefault();
+            game.pickListeningBlitz(idx);
+            return;
+          }
+          if (game.mg.type === 'quiz_battle') {
+            e.preventDefault();
+            game.answerQuizBattle(idx);
+            return;
+          }
+          if (game.mg.type === 'rocket_qa') {
+            e.preventDefault();
+            game.answerRocketQA(idx);
+            return;
+          }
         }
         if (game.mg.type === 'word_builder') {
           if (/^[a-zA-Z]$/.test(e.key)) {
