@@ -1,0 +1,1994 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="version" content="2.5.0" />
+  <title>茄苳國小 四上第二次評量總複習大冒險 v2.5.0｜國語・數學・自然・社會・英語</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Noto+Sans+TC:wght@500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-page: #f0f9ff;
+      --bg-card: #ffffff;
+      --text-main: #0f172a;
+      --text-sub: #475569;
+      --border: #e2e8f0;
+      --green: #58cc02;
+      --green-dark: #46a302;
+      --blue: #1cb0f6;
+      --blue-dark: #0284c7;
+      --orange: #ff9600;
+      --orange-dark: #d97706;
+      --red: #ef4444;
+      --red-dark: #dc2626;
+      --purple: #8b5cf6;
+      --purple-dark: #6d28d9;
+      --emerald: #10b981;
+      --emerald-dark: #059669;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --shadow-card: 0 6px 0 #cbd5e1;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans TC', 'Fredoka', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(180deg, #e0f2fe 0%, #f8fafc 320px);
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 1.55;
+      padding-bottom: 48px;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.15s ease;
+    }
+    button:active { transform: translateY(2px); }
+
+    /* 頂部導覽列 */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 2px solid #bae6fd;
+      padding: 10px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .brand-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 900;
+      font-size: 1.05rem;
+      color: #0369a1;
+      background: #e0f2fe;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 2px solid #7dd3fc;
+    }
+
+    .ver-badge {
+      font-size: 0.78rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+
+    .back-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: #15803d;
+      background: #dcfce7;
+      border: 2px solid #86efac;
+      padding: 6px 12px;
+      border-radius: 12px;
+      text-decoration: none;
+    }
+    .back-link-btn:hover { filter: brightness(0.96); }
+
+    .nav-stats {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .stat-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 11px;
+      border-radius: 12px;
+      font-weight: 900;
+      font-size: 0.88rem;
+      background: #f8fafc;
+      border: 2px solid var(--border);
+    }
+    .stat-chip.gems { color: #0284c7; border-color: #bae6fd; background: #f0f9ff; }
+    .stat-chip.xp { color: #b45309; border-color: #fde68a; background: #fffbeb; }
+    .stat-chip.mistakes-btn {
+      color: #b91c1c;
+      border-color: #fecaca;
+      background: #fef2f2;
+      cursor: pointer;
+    }
+    .stat-chip.tool-btn {
+      color: #4338ca;
+      border-color: #c7d2fe;
+      background: #eef2ff;
+      cursor: pointer;
+    }
+
+    /* 主容器 */
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 20px 16px;
+    }
+
+    .screen { display: none; }
+    .screen.active { display: block; animation: fadeUp 0.25s ease; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Hero 學校資訊與考前總動員橫幅 */
+    .school-hero {
+      background: linear-gradient(135deg, #0284c7 0%, #2563eb 55%, #4f46e5 100%);
+      color: #fff;
+      border-radius: var(--radius-lg);
+      padding: 22px 24px;
+      box-shadow: 0 8px 0 #1e40af;
+      margin-bottom: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .hero-info h1 {
+      font-size: 1.55rem;
+      font-weight: 900;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .hero-meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .hero-tag {
+      background: rgba(255, 255, 255, 0.2);
+      border: 1.5px solid rgba(255, 255, 255, 0.4);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 220px;
+    }
+
+    .btn-3d {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 18px;
+      border-radius: 16px;
+      font-weight: 900;
+      font-size: 0.96rem;
+      color: #fff;
+    }
+    .btn-gold { background: linear-gradient(135deg, #f59e0b, #ea580c); box-shadow: 0 4px 0 #b45309; }
+    .btn-gold:active { box-shadow: 0 1px 0 #b45309; }
+    .btn-green { background: var(--green); box-shadow: 0 4px 0 var(--green-dark); }
+    .btn-green:active { box-shadow: 0 1px 0 var(--green-dark); }
+    .btn-blue { background: var(--blue); box-shadow: 0 4px 0 var(--blue-dark); }
+    .btn-purple { background: var(--purple); box-shadow: 0 4px 0 var(--purple-dark); }
+    .btn-red { background: var(--red); box-shadow: 0 4px 0 var(--red-dark); }
+    .btn-slate { background: #ffffff; color: #334155; border: 2px solid #cbd5e1; box-shadow: 0 4px 0 #cbd5e1; }
+
+    /* 考前複習樂園 & 難度列 */
+    .arcade-strip {
+      background: #ffffff;
+      border: 2.5px solid #cbd5e1;
+      border-radius: var(--radius-lg);
+      padding: 18px 20px;
+      margin-bottom: 22px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .arcade-strip-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .diff-pills {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .diff-btn {
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 900;
+      background: #f1f5f9;
+      color: #475569;
+      border: 2px solid #cbd5e1;
+    }
+    .diff-btn.active.easy { background: #dcfce7; color: #15803d; border-color: #22c55e; }
+    .diff-btn.active.normal { background: #e0f2fe; color: #0369a1; border-color: #0284c7; }
+    .diff-btn.active.hard { background: #fee2e2; color: #b91c1c; border-color: #ef4444; }
+
+    .arcade-cards-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    @media (max-width: 820px) {
+      .arcade-cards-row { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .mode-card-btn {
+      text-align: left;
+      padding: 14px;
+      border-radius: 16px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      position: relative;
+    }
+    .mode-card-btn .m-icon { font-size: 1.7rem; }
+    .mode-card-btn .m-title { font-size: 0.98rem; font-weight: 900; }
+    .mode-card-btn .m-sub { font-size: 0.78rem; opacity: 0.92; font-weight: 700; }
+    .mode-card-btn.c-monster { background: linear-gradient(135deg, #ef4444, #b91c1c); box-shadow: 0 4px 0 #7f1d1d; }
+    .mode-card-btn.c-match { background: linear-gradient(135deg, #f59e0b, #d97706); box-shadow: 0 4px 0 #92400e; }
+    .mode-card-btn.c-mock { background: linear-gradient(135deg, #3b82f6, #1d4ed8); box-shadow: 0 4px 0 #1e3a8a; }
+    .mode-card-btn.c-mistake { background: linear-gradient(135deg, #8b5cf6, #6d28d9); box-shadow: 0 4px 0 #4c1d95; }
+
+    /* 科目篩選列 */
+    .subject-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+      align-items: center;
+    }
+
+    .sub-tab {
+      padding: 9px 15px;
+      border-radius: 14px;
+      font-weight: 900;
+      font-size: 0.92rem;
+      background: #ffffff;
+      color: #475569;
+      border: 2px solid #cbd5e1;
+      box-shadow: 0 3px 0 #cbd5e1;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .sub-tab.active {
+      background: #0f172a;
+      color: #ffffff;
+      border-color: #0f172a;
+      box-shadow: 0 3px 0 #334155;
+    }
+
+    /* 科目大綱卡片 */
+    .subject-overview-card {
+      background: #fff;
+      border: 2.5px solid #cbd5e1;
+      border-radius: var(--radius-lg);
+      padding: 18px 20px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .sub-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding-bottom: 12px;
+      border-bottom: 2px dashed #e2e8f0;
+      margin-bottom: 14px;
+    }
+
+    .sub-title-block h2 {
+      font-size: 1.25rem;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .pub-badge {
+      font-size: 0.78rem;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-weight: 900;
+      color: #fff;
+    }
+    .scope-tip-banner {
+      margin-top: 8px;
+      padding: 8px 12px;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    /* 單元卡片網格 */
+    .units-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 14px;
+    }
+
+    .unit-card {
+      border: 2px solid #cbd5e1;
+      border-radius: 18px;
+      padding: 15px;
+      background: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+    .unit-card:hover { transform: translateY(-2px); border-color: #94a3b8; background: #fff; }
+    .unit-card.out-of-scope { opacity: 0.58; border-style: dashed; }
+
+    .unit-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+    .unit-no {
+      font-size: 0.78rem;
+      font-weight: 900;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: #e2e8f0;
+      color: #334155;
+    }
+    .scope-toggle-btn {
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: #dcfce7;
+      color: #15803d;
+      border: 1.5px solid #86efac;
+    }
+    .scope-toggle-btn.off {
+      background: #f1f5f9;
+      color: #64748b;
+      border-color: #cbd5e1;
+    }
+
+    .unit-card h3 { font-size: 1.04rem; font-weight: 900; color: #0f172a; margin: 2px 0; }
+    .unit-desc { font-size: 0.83rem; color: #475569; line-height: 1.45; }
+
+    .unit-progress-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: #475569;
+    }
+    .mini-bar {
+      flex: 1;
+      height: 8px;
+      border-radius: 999px;
+      background: #e2e8f0;
+      overflow: hidden;
+    }
+    .mini-bar-fill { height: 100%; background: var(--green); border-radius: 999px; transition: width 0.3s ease; }
+
+    .unit-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 2px;
+    }
+    .u-btn {
+      padding: 8px 10px;
+      border-radius: 12px;
+      font-size: 0.82rem;
+      font-weight: 900;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+    .u-btn-concept { background: #fffbeb; color: #b45309; border: 2px solid #fde68a; }
+    .u-btn-quiz { background: #eff6ff; color: #1d4ed8; border: 2px solid #bfdbfe; }
+    .u-btn-match {
+      grid-column: span 2;
+      background: #f0fdf4;
+      color: #15803d;
+      border: 2px solid #bbf7d0;
+    }
+
+    /* 重點觀念速記畫面 */
+    .panel-box {
+      background: #fff;
+      border: 2.5px solid #cbd5e1;
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      box-shadow: var(--shadow-card);
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .concept-card {
+      border: 2.5px solid #fde68a;
+      background: linear-gradient(180deg, #fffdf2 0%, #ffffff 100%);
+      border-radius: 20px;
+      padding: 20px;
+      margin-top: 14px;
+    }
+    .concept-card h3 { font-size: 1.2rem; font-weight: 900; color: #92400e; margin-bottom: 10px; }
+    .concept-body { font-size: 0.98rem; white-space: pre-line; color: #1e293b; margin-bottom: 14px; }
+    .concept-tip-box {
+      padding: 11px 14px;
+      border-radius: 14px;
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+    .tip-mnemonic { background: #ecfdf5; border: 2px solid #a7f3d0; color: #065f46; }
+    .tip-pitfall { background: #fef2f2; border: 2px solid #fecaca; color: #991b1b; }
+
+    /* 測驗與模擬考畫面 */
+    .quiz-hud {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .progress-track {
+      flex: 1;
+      min-width: 180px;
+      height: 14px;
+      background: #e2e8f0;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #22c55e, #10b981);
+      border-radius: 999px;
+      transition: width 0.3s ease;
+    }
+
+    .q-tags-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .q-pill {
+      font-size: 0.78rem;
+      font-weight: 900;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #e0f2fe;
+      color: #0369a1;
+    }
+
+    .q-prompt {
+      font-size: 1.18rem;
+      font-weight: 900;
+      color: #0f172a;
+      margin-bottom: 16px;
+      white-space: pre-line;
+      line-height: 1.6;
+    }
+
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .option-btn {
+      position: relative;
+      text-align: left;
+      padding: 14px 16px 14px 48px;
+      border-radius: 16px;
+      background: #f8fafc;
+      border: 2.5px solid #cbd5e1;
+      box-shadow: 0 3px 0 #cbd5e1;
+      font-size: 1rem;
+      font-weight: 800;
+      color: #0f172a;
+    }
+    .option-btn:hover:not(:disabled) { background: #eff6ff; border-color: #60a5fa; }
+    .option-btn .key-num {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      border-radius: 8px;
+      background: #ffffff;
+      border: 1.5px solid #cbd5e1;
+      font-size: 0.78rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+    }
+    .option-btn.selected { background: #e0f2fe; border-color: #0284c7; box-shadow: 0 3px 0 #0284c7; }
+    .option-btn.correct { background: #dcfce7; border-color: #22c55e; color: #14532d; box-shadow: 0 3px 0 #16a34a; }
+    .option-btn.wrong { background: #fee2e2; border-color: #ef4444; color: #7f1d1d; box-shadow: 0 3px 0 #dc2626; animation: shakeX 0.3s ease; }
+
+    @keyframes shakeX {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-6px); }
+      75% { transform: translateX(6px); }
+    }
+
+    .feedback-box {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      display: none;
+    }
+    .feedback-box.show { display: block; animation: fadeUp 0.2s ease; }
+    .feedback-box.ok { background: #dcfce7; border: 2px solid #22c55e; color: #14532d; }
+    .feedback-box.err { background: #fef2f2; border: 2px solid #ef4444; color: #7f1d1d; }
+
+    /* 動畫怪獸對決與配對小遊戲 */
+    .qb-arena {
+      position: relative;
+      background: linear-gradient(135deg, #1e1b4b, #312e81 60%, #4c1d95);
+      border-radius: 20px;
+      padding: 18px 20px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      overflow: hidden;
+      min-height: 150px;
+    }
+    .qb-fighter {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 36%;
+      z-index: 2;
+    }
+    .qb-sprite { font-size: 3.4rem; line-height: 1; transition: transform 0.2s ease; }
+    .qb-sprite.attack { animation: heroDash 0.42s ease; }
+    .qb-sprite.shield { animation: shieldPop 0.45s ease; }
+    .qb-sprite.m-hit { animation: monsterHit 0.42s ease; }
+    .qb-sprite.m-lunge { animation: monsterLunge 0.42s ease; }
+
+    @keyframes heroDash { 0% { transform: translateX(0); } 45% { transform: translateX(52px) scale(1.15); } 100% { transform: translateX(0); } }
+    @keyframes monsterLunge { 0% { transform: translateX(0); } 45% { transform: translateX(-52px) scale(1.15); } 100% { transform: translateX(0); } }
+    @keyframes monsterHit { 0%, 100% { transform: translateX(0); } 30% { transform: translateX(14px) rotate(12deg); filter: brightness(2); } 65% { transform: translateX(-8px); } }
+    @keyframes shieldPop { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.22); filter: drop-shadow(0 0 12px #38bdf8); } }
+
+    .hp-bar {
+      width: 100%;
+      height: 10px;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 6px;
+    }
+    .hp-fill { height: 100%; background: linear-gradient(90deg, #f43f5e, #fb923c); transition: width 0.3s ease; }
+    .hp-fill.hero { background: linear-gradient(90deg, #22c55e, #38bdf8); }
+
+    .qb-proj {
+      position: absolute;
+      left: 50%;
+      top: 44%;
+      transform: translate(-50%, -50%);
+      font-size: 2rem;
+      opacity: 0;
+      z-index: 3;
+    }
+    .qb-proj.right { animation: flyR 0.4s ease forwards; }
+    .qb-proj.left { animation: flyL 0.4s ease forwards; }
+    @keyframes flyR { 0% { left: 25%; opacity: 1; } 100% { left: 76%; opacity: 0; transform: translate(-50%,-50%) scale(1.4); } }
+    @keyframes flyL { 0% { left: 75%; opacity: 1; } 100% { left: 24%; opacity: 0; transform: translate(-50%,-50%) scale(1.4); } }
+
+    .qb-dmg {
+      position: absolute;
+      top: 14px;
+      font-weight: 900;
+      font-size: 1.05rem;
+      color: #fde047;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+      z-index: 4;
+    }
+    .qb-ko {
+      position: absolute;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.82);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: #fde047;
+      z-index: 5;
+    }
+
+    /* 配對遊戲面板 */
+    .match-board {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .match-col { display: flex; flex-direction: column; gap: 10px; }
+    .match-tile {
+      padding: 13px 14px;
+      border-radius: 14px;
+      background: #f8fafc;
+      border: 2.5px solid #cbd5e1;
+      box-shadow: 0 3px 0 #cbd5e1;
+      font-weight: 800;
+      font-size: 0.93rem;
+      cursor: pointer;
+      text-align: center;
+      min-height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .match-tile.selected { background: #e0f2fe; border-color: #0284c7; box-shadow: 0 3px 0 #0284c7; }
+    .match-tile.matched { background: #dcfce7; border-color: #22c55e; color: #15803d; }
+    .match-tile.wrong { background: #fee2e2; border-color: #ef4444; animation: shakeX 0.3s ease; }
+
+    /* Modal 彈窗 */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.55);
+      backdrop-filter: blur(4px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      z-index: 120;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal-card {
+      background: #fff;
+      border-radius: 22px;
+      max-width: 680px;
+      width: 100%;
+      max-height: 88vh;
+      overflow-y: auto;
+      padding: 22px;
+      border: 3px solid #cbd5e1;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.25);
+    }
+
+    textarea.json-box {
+      width: 100%;
+      min-height: 150px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.82rem;
+      padding: 12px;
+      border-radius: 12px;
+      border: 2px solid #cbd5e1;
+      background: #f8fafc;
+      margin: 10px 0;
+    }
+
+    .footer-note {
+      max-width: 1080px;
+      margin: 26px auto 0;
+      padding: 0 16px;
+      text-align: center;
+      color: #64748b;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <header class="top-nav">
+    <div class="nav-left">
+      <div class="brand-pill">
+        <span>🏫</span>
+        <span>桃園八德・茄苳國小 四上</span>
+      </div>
+      <span class="ver-badge" id="g4-version-badge">v2.5.0 框架版</span>
+      <a class="back-link-btn" href="index.html?v=2.5.0" title="返回波波熱血英語 1,080 關">🦉 英語 1,080 關主站</a>
+    </div>
+    <div class="nav-stats">
+      <div class="stat-chip">🔥 連對 <span id="stat-streak">0</span></div>
+      <div class="stat-chip gems">💎 <span id="stat-gems">0</span></div>
+      <div class="stat-chip xp">⭐ <span id="stat-xp">0</span> XP</div>
+      <button class="stat-chip mistakes-btn" onclick="g4App.openMistakesScreen()" title="查看與重練錯題">
+        🔍 錯題本 (<span id="stat-mistakes">0</span>)
+      </button>
+      <button class="stat-chip tool-btn" onclick="g4App.openExpandModal()" title="匯入或預覽後續評量題庫格式">
+        📥 評量擴充
+      </button>
+      <button class="stat-chip" onclick="g4App.toggleSound()" id="sound-btn" title="音效開關">🔊</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ==================== SCREEN 1: 總覽首頁 ==================== -->
+    <section id="screen-home" class="screen active">
+      <div class="school-hero">
+        <div class="hero-info">
+          <h1>
+            <span>🎒 115 四上第二次定期評量・五科總複習大冒險</span>
+          </h1>
+          <p id="hero-subtitle" style="opacity:0.95; font-weight:700; font-size:0.95rem;">
+            依循桃園市八德區茄苳國小四年級使用版本設計，整合重點觀念口訣、常考陷阱與考前動畫測驗！
+          </p>
+          <div class="hero-meta-pills">
+            <span class="hero-tag">📖 國語：翰林四上 (L7~L12)</span>
+            <span class="hero-tag">📐 數學：南一四上 (U6~U10)</span>
+            <span class="hero-tag">🔬 自然：翰林四上 (U3~U4)</span>
+            <span class="hero-tag">🌏 社會：翰林四上 (U4~U6)</span>
+            <span class="hero-tag">🇬🇧 英語：翰林 Here We Go 3 (U3~U4)</span>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <button class="btn-3d btn-gold" onclick="g4App.startMockExam('all')">
+            <span>🏆 開始五科綜合模擬考</span>
+          </button>
+          <button class="btn-3d btn-green" onclick="g4App.startMonsterBattle('all')">
+            <span>🦖 怪獸段考問答對決</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 互動復習遊樂場＆難度調整列 -->
+      <div class="arcade-strip">
+        <div class="arcade-strip-head">
+          <div>
+            <h2 style="font-size:1.15rem; font-weight:900;">🎮 考前互動強化區（依目前選擇科目／範圍出題）</h2>
+            <p style="font-size:0.84rem; color:#475569; font-weight:700;">切換簡單或困難模式，從觀念速記到搶答模擬一次搞定！</p>
+          </div>
+          <div class="diff-pills">
+            <span style="font-size:0.82rem; font-weight:900; color:#334155;">🎚️ 難度：</span>
+            <button class="diff-btn easy" data-diff="easy" onclick="g4App.setDifficulty('easy')">🌱 簡單 (基礎觀念)</button>
+            <button class="diff-btn normal active" data-diff="normal" onclick="g4App.setDifficulty('normal')">⚔️ 標準 (段考難度)</button>
+            <button class="diff-btn hard" data-diff="hard" onclick="g4App.setDifficulty('hard')">🔥 困難 (陷阱競速)</button>
+          </div>
+        </div>
+
+        <div class="arcade-cards-row">
+          <button class="mode-card-btn c-monster" onclick="g4App.startMonsterBattle(g4App.activeSubjectFilter)">
+            <span class="m-icon">🦖</span>
+            <span class="m-title">段考怪獸對決</span>
+            <span class="m-sub">動畫火球攻擊・答對 KO 魔王</span>
+          </button>
+          <button class="mode-card-btn c-match" onclick="g4App.startMatchGame(g4App.activeSubjectFilter)">
+            <span class="m-icon">⚡</span>
+            <span class="m-title">觀念閃電配對</span>
+            <span class="m-sub">成語/算式/實驗/英文連擊配對</span>
+          </button>
+          <button class="mode-card-btn c-mock" onclick="g4App.startMockExam(g4App.activeSubjectFilter)">
+            <span class="m-icon">🏆</span>
+            <span class="m-title">模擬定期評量</span>
+            <span class="m-sub">計時挑戰＋分科弱點成績單</span>
+          </button>
+          <button class="mode-card-btn c-mistake" onclick="g4App.openMistakesScreen()">
+            <span class="m-icon">🔍</span>
+            <span class="m-title">考前錯題搶救</span>
+            <span class="m-sub">自動收集答錯題・重練到全對</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 科目切換列 -->
+      <div class="subject-tabs" id="subject-tabs"></div>
+
+      <!-- 科目與單元列表容器 -->
+      <div id="subjects-container"></div>
+    </section>
+
+    <!-- ==================== SCREEN 2: 重點觀念速記卡 ==================== -->
+    <section id="screen-concepts" class="screen">
+      <div class="panel-box">
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:12px;">
+          <button class="btn-3d btn-slate" style="padding:8px 14px; font-size:0.85rem;" onclick="g4App.showScreen('home')">← 返回五科地圖</button>
+          <div style="font-weight:900; color:#0369a1;" id="concept-header-label">單元重點觀念</div>
+        </div>
+        <div id="concepts-stage"></div>
+      </div>
+    </section>
+
+    <!-- ==================== SCREEN 3: 單元測驗 & 模擬評量 ==================== -->
+    <section id="screen-quiz" class="screen">
+      <div class="panel-box">
+        <div class="quiz-hud">
+          <button class="btn-3d btn-slate" style="padding:7px 13px; font-size:0.84rem;" onclick="g4App.exitQuiz()">✕ 結束</button>
+          <div class="progress-track"><div class="progress-fill" id="quiz-progress-fill" style="width:0%"></div></div>
+          <div style="font-weight:900; font-size:0.9rem; color:#0f172a;" id="quiz-counter">1 / 10</div>
+          <div class="stat-chip" id="quiz-timer-chip" style="display:none;">⏱️ <span id="quiz-timer-val">0</span>s</div>
+        </div>
+        <div id="quiz-stage"></div>
+      </div>
+    </section>
+
+    <!-- ==================== SCREEN 4: 動畫小遊戲舞台 ==================== -->
+    <section id="screen-game" class="screen">
+      <div class="panel-box">
+        <div class="quiz-hud">
+          <button class="btn-3d btn-slate" style="padding:7px 13px; font-size:0.84rem;" onclick="g4App.exitMiniGame()">← 離開挑戰</button>
+          <div class="stat-chip">⏱️ <span id="mg-time">60</span>s</div>
+          <div class="stat-chip gems">分數：<span id="mg-score">0</span></div>
+          <div class="stat-chip xp">🔥 連擊 <span id="mg-combo">0</span></div>
+        </div>
+        <div id="game-stage"></div>
+      </div>
+    </section>
+
+    <!-- ==================== SCREEN 5: 考前錯題本 ==================== -->
+    <section id="screen-mistakes" class="screen">
+      <div class="panel-box">
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:14px;">
+          <button class="btn-3d btn-slate" style="padding:8px 14px; font-size:0.85rem;" onclick="g4App.showScreen('home')">← 返回五科地圖</button>
+          <h2 style="font-size:1.2rem; font-weight:900;">🔍 考前錯題急救本</h2>
+          <button class="btn-3d btn-red" style="padding:8px 14px; font-size:0.85rem;" onclick="g4App.startMistakesQuiz()" id="btn-retry-mistakes">🔥 全部錯題重練一次</button>
+        </div>
+        <div id="mistakes-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-note">
+    🏫 桃園市八德區茄苳國小 四年級上學期（115 學年度）第二次定期評量 總複習架構｜版本 <span id="footer-ver">v2.5.0</span>｜後續提供校內評量後可持續更新題庫
+  </footer>
+
+  <!-- 評量擴充 & 自訂題庫 Modal -->
+  <div class="modal-overlay" id="expand-modal">
+    <div class="modal-card">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+        <h2 style="font-size:1.2rem; font-weight:900;">📥 評量題庫擴充工作台（預留架構）</h2>
+        <button class="stat-chip" onclick="g4App.closeExpandModal()">✕</button>
+      </div>
+      <p style="font-size:0.88rem; color:#475569; font-weight:700;">
+        目前已為茄苳國小 5 大科目建置好單元結構與核心觀念。當您取得實際評量或測驗卷時，只要將題目整理成下方格式（或直接貼給開發者），即可無縫寫入 <code>curriculum_g4_jdes.js</code>，或於此處先匯入到本機試玩！
+      </p>
+      <textarea class="json-box" id="custom-json-input" placeholder='貼上要新增的題目 JSON 陣列...'></textarea>
+      <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end;">
+        <button class="btn-3d btn-slate" style="padding:8px 14px; font-size:0.84rem;" onclick="g4App.fillSampleTemplate()">📋 載入擴充範本</button>
+        <button class="btn-3d btn-red" style="padding:8px 14px; font-size:0.84rem;" onclick="g4App.clearCustomQuestions()">🗑️ 清除自訂題目</button>
+        <button class="btn-3d btn-green" style="padding:8px 14px; font-size:0.84rem;" onclick="g4App.importCustomQuestions()">✅ 立即匯入題庫</button>
+      </div>
+      <p id="custom-import-status" style="margin-top:10px; font-size:0.85rem; font-weight:800; color:#0369a1;"></p>
+    </div>
+  </div>
+
+  <script src="curriculum_g4_jdes.js?v=2.5.0"></script>
+  <script>
+    /* Web Audio API 輕量音效 */
+    const g4Audio = {
+      ctx: null,
+      muted: false,
+      init() {
+        if (!this.ctx) {
+          const AC = window.AudioContext || window.webkitAudioContext;
+          if (AC) this.ctx = new AC();
+        }
+        if (this.ctx && this.ctx.state === 'suspended') {
+          this.ctx.resume().catch(() => {});
+        }
+      },
+      play(type) {
+        if (this.muted) return;
+        this.init();
+        if (!this.ctx) return;
+        const now = this.ctx.currentTime;
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+        if (type === 'ok') {
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(523, now);
+          osc.frequency.exponentialRampToValueAtTime(784, now + 0.14);
+          gain.gain.setValueAtTime(0.14, now);
+          gain.gain.exponentialRampToValueAtTime(0.01, now + 0.18);
+          osc.start(now);
+          osc.stop(now + 0.19);
+        } else if (type === 'err') {
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(240, now);
+          osc.frequency.exponentialRampToValueAtTime(140, now + 0.18);
+          gain.gain.setValueAtTime(0.15, now);
+          gain.gain.exponentialRampToValueAtTime(0.01, now + 0.22);
+          osc.start(now);
+          osc.stop(now + 0.23);
+        } else {
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(660, now);
+          gain.gain.setValueAtTime(0.07, now);
+          gain.gain.exponentialRampToValueAtTime(0.01, now + 0.08);
+          osc.start(now);
+          osc.stop(now + 0.09);
+        }
+      }
+    };
+
+    function speakEnglish(text) {
+      if (!text || g4Audio.muted || !('speechSynthesis' in window)) return;
+      try {
+        window.speechSynthesis.cancel();
+        const u = new SpeechSynthesisUtterance(text);
+        u.lang = 'en-US';
+        u.rate = 0.88;
+        window.speechSynthesis.speak(u);
+      } catch (e) {}
+    }
+
+    class JdesGrade4App {
+      constructor() {
+        this.saveKey = 'jdes_g4_exam2_save_v1';
+        this.baseData = window.JDES_G4_DATA || { meta: { version: '2.5.0' }, subjects: [] };
+        this.activeSubjectFilter = 'all';
+        this.difficulty = 'normal';
+        this.gems = 0;
+        this.xp = 0;
+        this.streak = 0;
+        this.masteredConcepts = {};
+        this.masteredQuestions = {};
+        this.mistakes = {};
+        this.unitScopeOverrides = {};
+        this.customQuestions = [];
+        this.quiz = null;
+        this.mg = { active: false, timerId: null };
+
+        this.loadState();
+        this.applyCustomQuestions();
+      }
+
+      loadState() {
+        try {
+          const raw = localStorage.getItem(this.saveKey);
+          if (raw) {
+            const s = JSON.parse(raw);
+            this.difficulty = s.difficulty || 'normal';
+            this.gems = Number(s.gems) || 0;
+            this.xp = Number(s.xp) || 0;
+            this.streak = Number(s.streak) || 0;
+            this.masteredConcepts = s.masteredConcepts || {};
+            this.masteredQuestions = s.masteredQuestions || {};
+            this.mistakes = s.mistakes || {};
+            this.unitScopeOverrides = s.unitScopeOverrides || {};
+            this.customQuestions = Array.isArray(s.customQuestions) ? s.customQuestions : [];
+          }
+        } catch (e) {}
+      }
+
+      saveState() {
+        try {
+          localStorage.setItem(this.saveKey, JSON.stringify({
+            difficulty: this.difficulty,
+            gems: this.gems,
+            xp: this.xp,
+            streak: this.streak,
+            masteredConcepts: this.masteredConcepts,
+            masteredQuestions: this.masteredQuestions,
+            mistakes: this.mistakes,
+            unitScopeOverrides: this.unitScopeOverrides,
+            customQuestions: this.customQuestions
+          }));
+        } catch (e) {}
+        this.updateStatsUI();
+      }
+
+      applyCustomQuestions() {
+        // 先移除之前動態掛入的 custom 題目，避免重複堆疊
+        this.baseData.subjects.forEach(sub => {
+          sub.units.forEach(u => {
+            u.questions = u.questions.filter(q => !q._isCustom);
+          });
+        });
+        this.customQuestions.forEach(cq => {
+          const sub = this.baseData.subjects.find(s => s.id === cq.subjectId);
+          if (!sub) return;
+          const unit = sub.units.find(u => u.id === cq.unitId) || sub.units[0];
+          if (unit) {
+            unit.questions.push({ ...cq, _isCustom: true });
+          }
+        });
+      }
+
+      isUnitInScope(unit) {
+        if (this.unitScopeOverrides.hasOwnProperty(unit.id)) {
+          return Boolean(this.unitScopeOverrides[unit.id]);
+        }
+        return unit.inExam2Scope !== false;
+      }
+
+      toggleUnitScope(unitId) {
+        g4Audio.play('click');
+        const unit = this.findUnit(unitId);
+        if (!unit) return;
+        this.unitScopeOverrides[unitId] = !this.isUnitInScope(unit);
+        this.saveState();
+        this.renderHome();
+      }
+
+      findUnit(unitId) {
+        for (const sub of this.baseData.subjects) {
+          const found = sub.units.find(u => u.id === unitId);
+          if (found) return { ...found, subject: sub };
+        }
+        return null;
+      }
+
+      setDifficulty(diff) {
+        g4Audio.play('click');
+        this.difficulty = diff;
+        document.querySelectorAll('.diff-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.diff === diff);
+        });
+        this.saveState();
+      }
+
+      setSubjectFilter(subId) {
+        g4Audio.play('click');
+        this.activeSubjectFilter = subId;
+        this.renderHome();
+      }
+
+      toggleSound() {
+        g4Audio.muted = !g4Audio.muted;
+        document.getElementById('sound-btn').textContent = g4Audio.muted ? '🔇' : '🔊';
+      }
+
+      updateStatsUI() {
+        document.getElementById('stat-gems').textContent = this.gems;
+        document.getElementById('stat-xp').textContent = this.xp;
+        document.getElementById('stat-streak').textContent = this.streak;
+        document.getElementById('stat-mistakes').textContent = Object.keys(this.mistakes).length;
+        document.querySelectorAll('.diff-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.diff === this.difficulty);
+        });
+      }
+
+      showScreen(name) {
+        document.querySelectorAll('.screen').forEach(el => el.classList.remove('active'));
+        const target = document.getElementById(`screen-${name}`);
+        if (target) target.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      renderHome() {
+        this.updateStatsUI();
+
+        // 科目頁籤
+        const tabsEl = document.getElementById('subject-tabs');
+        let tabsHtml = `<button class="sub-tab ${this.activeSubjectFilter === 'all' ? 'active' : ''}" onclick="g4App.setSubjectFilter('all')">📚 全部 5 科總覽</button>`;
+        this.baseData.subjects.forEach(s => {
+          const qTotal = s.units.filter(u => this.isUnitInScope(u)).reduce((acc, u) => acc + u.questions.length, 0);
+          tabsHtml += `<button class="sub-tab ${this.activeSubjectFilter === s.id ? 'active' : ''}" onclick="g4App.setSubjectFilter('${s.id}')">${s.icon} ${s.shortName} (${qTotal}題)</button>`;
+        });
+        tabsEl.innerHTML = tabsHtml;
+
+        // 渲染科目與單元卡片
+        const container = document.getElementById('subjects-container');
+        const visibleSubs = this.activeSubjectFilter === 'all'
+          ? this.baseData.subjects
+          : this.baseData.subjects.filter(s => s.id === this.activeSubjectFilter);
+
+        container.innerHTML = visibleSubs.map(sub => {
+          const unitCards = sub.units.map(u => {
+            const inScope = this.isUnitInScope(u);
+            const totalQ = u.questions.length;
+            const doneQ = u.questions.filter(q => this.masteredQuestions[q.id]).length;
+            const pct = totalQ ? Math.round((doneQ / totalQ) * 100) : 0;
+            const matchCount = (u.matchPairs || []).length;
+
+            return `
+              <div class="unit-card ${inScope ? '' : 'out-of-scope'}">
+                <div>
+                  <div class="unit-top">
+                    <span class="unit-no">${u.unitNo}</span>
+                    <button class="scope-toggle-btn ${inScope ? '' : 'off'}" onclick="g4App.toggleUnitScope('${u.id}')" title="切換是否納入本次段考練習範圍">
+                      ${inScope ? '✓ 二次段考範圍' : '○ 暫不納入'}
+                    </button>
+                  </div>
+                  <h3>${u.title}</h3>
+                  <p class="unit-desc">${u.summary}</p>
+                </div>
+                <div>
+                  <div class="unit-progress-row">
+                    <span>熟練 ${doneQ}/${totalQ} 題</span>
+                    <div class="mini-bar"><div class="mini-bar-fill" style="width:${pct}%"></div></div>
+                    <span>${pct}%</span>
+                  </div>
+                  <div class="unit-actions" style="margin-top:10px;">
+                    <button class="u-btn u-btn-concept" onclick="g4App.openConcepts('${sub.id}', '${u.id}')">💡 重點觀念 (${u.keyConcepts.length})</button>
+                    <button class="u-btn u-btn-quiz" onclick="g4App.startUnitQuiz('${sub.id}', '${u.id}')">📝 單元測驗 (${totalQ})</button>
+                    ${matchCount >= 2 ? `<button class="u-btn u-btn-match" onclick="g4App.startMatchGame('${sub.id}', '${u.id}')">⚡ 單元閃電配對 (${matchCount} 組)</button>` : ''}
+                  </div>
+                </div>
+              </div>
+            `;
+          }).join('');
+
+          return `
+            <div class="subject-overview-card">
+              <div class="sub-head">
+                <div class="sub-title-block">
+                  <h2>
+                    <span>${sub.icon} ${sub.name}</span>
+                    <span class="pub-badge" style="background:${sub.color}">${sub.version}</span>
+                    <span style="font-size:0.86rem; color:#475569; font-weight:800;">｜範圍：${sub.examScope}</span>
+                  </h2>
+                  <div class="scope-tip-banner" style="background:${sub.accentBg}; border:1.5px solid ${sub.color}33;">
+                    📌 <strong>考前必背攻略：</strong>${sub.examTips}
+                  </div>
+                </div>
+                <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                  <button class="btn-3d btn-blue" style="padding:8px 14px; font-size:0.84rem;" onclick="g4App.startMockExam('${sub.id}')">🎯 ${sub.shortName}模擬考</button>
+                  <button class="btn-3d btn-red" style="padding:8px 14px; font-size:0.84rem;" onclick="g4App.startMonsterBattle('${sub.id}')">🦖 ${sub.shortName}怪獸戰</button>
+                </div>
+              </div>
+              <div class="units-grid">${unitCards}</div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      /* ======================================================================
+         重點觀念速記卡模組
+      ====================================================================== */
+      openConcepts(subId, unitId) {
+        g4Audio.play('click');
+        const info = this.findUnit(unitId);
+        if (!info) return;
+        document.getElementById('concept-header-label').textContent = `${info.subject.icon} ${info.subject.name}｜${info.unitNo} ${info.title}`;
+
+        const cardsHtml = info.keyConcepts.map((c, idx) => {
+          const cid = `${unitId}-c${idx}`;
+          const known = Boolean(this.masteredConcepts[cid]);
+          return `
+            <div class="concept-card">
+              <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:8px;">
+                <span class="unit-no">觀念卡 ${idx + 1} / ${info.keyConcepts.length}</span>
+                <button class="scope-toggle-btn ${known ? '' : 'off'}" onclick="g4App.toggleConceptMastered('${subId}', '${unitId}', '${cid}')">
+                  ${known ? '✅ 已記熟！' : '○ 標記已記熟'}
+                </button>
+              </div>
+              <h3>💡 ${c.title}</h3>
+              <div class="concept-body">${c.summary}</div>
+              <div class="concept-tip-box tip-mnemonic">🧠 <strong>考前記憶口訣：</strong>${c.mnemonic}</div>
+              <div class="concept-tip-box tip-pitfall">⚠️ <strong>考場常錯地雷：</strong>${c.pitfall}</div>
+            </div>
+          `;
+        }).join('');
+
+        document.getElementById('concepts-stage').innerHTML = `
+          ${cardsHtml}
+          <div style="display:flex; gap:10px; justify-content:flex-end; margin-top:16px; flex-wrap:wrap;">
+            <button class="btn-3d btn-blue" onclick="g4App.startUnitQuiz('${subId}', '${unitId}')">📝 立刻測驗本單元 (${info.questions.length} 題) →</button>
+          </div>
+        `;
+        this.showScreen('concepts');
+      }
+
+      toggleConceptMastered(subId, unitId, cid) {
+        g4Audio.play('ok');
+        this.masteredConcepts[cid] = !this.masteredConcepts[cid];
+        if (this.masteredConcepts[cid]) {
+          this.xp += 5;
+        }
+        this.saveState();
+        this.openConcepts(subId, unitId);
+      }
+
+      /* ======================================================================
+         測驗與模擬段考引擎
+      ====================================================================== */
+      gatherQuestions(subFilter = 'all', unitId = null) {
+        let pool = [];
+        this.baseData.subjects.forEach(sub => {
+          if (subFilter !== 'all' && sub.id !== subFilter) return;
+          sub.units.forEach(u => {
+            if (unitId && u.id !== unitId) return;
+            if (!unitId && !this.isUnitInScope(u)) return;
+            u.questions.forEach(q => {
+              pool.push({
+                ...q,
+                subjectId: sub.id,
+                subjectName: sub.shortName,
+                subjectIcon: sub.icon,
+                unitId: u.id,
+                unitLabel: `${u.unitNo} ${u.title}`
+              });
+            });
+          });
+        });
+
+        // 依難度排序加權：simple 優先 easy/normal；hard 優先 hard/normal
+        if (this.difficulty === 'easy') {
+          pool.sort((a, b) => (a.difficulty === 'easy' ? 0 : 1) - (b.difficulty === 'easy' ? 0 : 1));
+        } else if (this.difficulty === 'hard') {
+          pool.sort((a, b) => (a.difficulty === 'hard' ? 0 : 1) - (b.difficulty === 'hard' ? 0 : 1));
+        }
+        return pool;
+      }
+
+      shuffleOptionsQuestion(q) {
+        const mapped = q.options.map((text, idx) => ({
+          text,
+          isCorrect: idx === q.correctIndex
+        }));
+        // 是非題維持 O 在上 X 在下，選擇題隨機洗牌選項避免背位置
+        const finalOpts = q.type === 'tf' ? mapped : [...mapped].sort(() => Math.random() - 0.5);
+        return {
+          ...q,
+          shuffledOptions: finalOpts
+        };
+      }
+
+      startUnitQuiz(subId, unitId) {
+        const raw = this.gatherQuestions(subId, unitId);
+        if (!raw.length) return alert('此單元目前尚無題目，請從右上「📥 評量擴充」匯入或等待後續題庫更新！');
+        this.launchQuiz({
+          mode: 'unit',
+          title: raw[0].unitLabel,
+          questions: raw.map(q => this.shuffleOptionsQuestion(q)),
+          timed: false
+        });
+      }
+
+      startMockExam(subFilter = 'all') {
+        const raw = this.gatherQuestions(subFilter, null);
+        if (!raw.length) return alert('目前範圍內沒有勾選啟用的單元題目！');
+        const limit = this.difficulty === 'easy' ? 10 : (this.difficulty === 'hard' ? 20 : 15);
+        const picked = [...raw].sort(() => Math.random() - 0.5).slice(0, Math.min(limit, raw.length));
+        const secPerQ = this.difficulty === 'easy' ? 35 : (this.difficulty === 'hard' ? 20 : 25);
+
+        this.launchQuiz({
+          mode: 'mock',
+          title: subFilter === 'all' ? '五科綜合模擬定期評量' : `${picked[0].subjectName} 模擬段考`,
+          questions: picked.map(q => this.shuffleOptionsQuestion(q)),
+          timed: true,
+          timeLeft: picked.length * secPerQ
+        });
+      }
+
+      startMistakesQuiz() {
+        const list = Object.values(this.mistakes);
+        if (!list.length) return alert('目前錯題本是空的！你太強了！');
+        this.launchQuiz({
+          mode: 'mistake',
+          title: '🔍 考前錯題急救特訓',
+          questions: list.map(q => this.shuffleOptionsQuestion(q)),
+          timed: false
+        });
+      }
+
+      launchQuiz({ mode, title, questions, timed, timeLeft = 0 }) {
+        if (this.quiz && this.quiz.timerId) clearInterval(this.quiz.timerId);
+        this.quiz = {
+          mode,
+          title,
+          questions,
+          idx: 0,
+          selected: -1,
+          answered: false,
+          correctCount: 0,
+          bySubject: {},
+          timed,
+          timeLeft,
+          timerId: null
+        };
+
+        const timerChip = document.getElementById('quiz-timer-chip');
+        if (timed) {
+          timerChip.style.display = 'inline-flex';
+          document.getElementById('quiz-timer-val').textContent = timeLeft;
+          this.quiz.timerId = setInterval(() => {
+            if (!this.quiz) return;
+            this.quiz.timeLeft--;
+            document.getElementById('quiz-timer-val').textContent = Math.max(0, this.quiz.timeLeft);
+            if (this.quiz.timeLeft <= 0) {
+              this.finishQuiz();
+            }
+          }, 1000);
+        } else {
+          timerChip.style.display = 'none';
+        }
+
+        this.showScreen('quiz');
+        this.renderQuizQuestion();
+      }
+
+      renderQuizQuestion() {
+        const qz = this.quiz;
+        if (!qz || qz.idx >= qz.questions.length) {
+          this.finishQuiz();
+          return;
+        }
+        const q = qz.questions[qz.idx];
+        const total = qz.questions.length;
+        document.getElementById('quiz-progress-fill').style.width = `${Math.round((qz.idx / total) * 100)}%`;
+        document.getElementById('quiz-counter').textContent = `${qz.idx + 1} / ${total}`;
+
+        const diffLabel = q.difficulty === 'easy' ? '🌱 基礎' : (q.difficulty === 'hard' ? '🔥 進階陷阱' : '⚔️ 標準');
+        const optsHtml = q.shuffledOptions.map((o, i) => `
+          <button class="option-btn" id="q-opt-${i}" onclick="g4App.pickQuizOption(${i})">
+            <span class="key-num">${i + 1}</span>
+            <span>${o.text}</span>
+          </button>
+        `).join('');
+
+        document.getElementById('quiz-stage').innerHTML = `
+          <div class="q-tags-row">
+            <span class="q-pill">${q.subjectIcon} ${q.subjectName}</span>
+            <span class="q-pill">${q.unitLabel}</span>
+            <span class="q-pill">${q.tag || '段考複習'}</span>
+            <span class="q-pill">${diffLabel}</span>
+            ${q.audioEn ? `<button class="scope-toggle-btn" onclick="speakEnglish('${q.audioEn.replace(/'/g, "\\'")}')">🔊 聽英文發音</button>` : ''}
+          </div>
+          <div class="q-prompt">${q.prompt}</div>
+          <div class="options-list">${optsHtml}</div>
+          <div class="feedback-box" id="quiz-feedback"></div>
+          <div style="margin-top:16px; display:flex; justify-content:flex-end;">
+            <button class="btn-3d btn-green" id="quiz-action-btn" onclick="g4App.submitOrNextQuiz()" disabled style="opacity:0.5;">
+              送出檢查 (Enter)
+            </button>
+          </div>
+        `;
+
+        if (q.audioEn) speakEnglish(q.audioEn);
+      }
+
+      pickQuizOption(i) {
+        if (!this.quiz || this.quiz.answered) return;
+        g4Audio.play('click');
+        this.quiz.selected = i;
+        document.querySelectorAll('.option-btn').forEach((el, idx) => {
+          el.classList.toggle('selected', idx === i);
+        });
+        const btn = document.getElementById('quiz-action-btn');
+        btn.disabled = false;
+        btn.style.opacity = '1';
+      }
+
+      submitOrNextQuiz() {
+        const qz = this.quiz;
+        if (!qz) return;
+        if (qz.answered) {
+          qz.idx++;
+          qz.selected = -1;
+          qz.answered = false;
+          this.renderQuizQuestion();
+          return;
+        }
+        if (qz.selected < 0) return;
+
+        qz.answered = true;
+        const q = qz.questions[qz.idx];
+        const chosen = q.shuffledOptions[qz.selected];
+        const ok = Boolean(chosen && chosen.isCorrect);
+
+        if (!qz.bySubject[q.subjectName]) qz.bySubject[q.subjectName] = { ok: 0, total: 0 };
+        qz.bySubject[q.subjectName].total++;
+
+        document.querySelectorAll('.option-btn').forEach((el, idx) => {
+          el.disabled = true;
+          if (q.shuffledOptions[idx].isCorrect) el.classList.add('correct');
+          else if (idx === qz.selected) el.classList.add('wrong');
+        });
+
+        const fb = document.getElementById('quiz-feedback');
+        if (ok) {
+          g4Audio.play('ok');
+          qz.correctCount++;
+          qz.bySubject[q.subjectName].ok++;
+          this.streak++;
+          this.gems += this.difficulty === 'hard' ? 8 : 5;
+          this.xp += 10;
+          this.masteredQuestions[q.id] = true;
+          if (this.mistakes[q.id]) delete this.mistakes[q.id];
+          fb.className = 'feedback-box show ok';
+          fb.innerHTML = `<strong>🎉 答對了！</strong><div style="margin-top:4px; font-size:0.9rem;">${q.explanation}</div>`;
+        } else {
+          g4Audio.play('err');
+          this.streak = 0;
+          this.mistakes[q.id] = {
+            ...q,
+            userWrongText: chosen ? chosen.text : ''
+          };
+          fb.className = 'feedback-box show err';
+          const rightOpt = q.shuffledOptions.find(o => o.isCorrect);
+          fb.innerHTML = `<strong>💡 差一點！正確答案是「${rightOpt ? rightOpt.text : ''}」（已加入錯題本）</strong><div style="margin-top:4px; font-size:0.9rem;">${q.explanation}</div>`;
+        }
+        this.saveState();
+
+        const btn = document.getElementById('quiz-action-btn');
+        btn.textContent = qz.idx + 1 >= qz.questions.length ? '查看本次成績單 🏆' : '下一題 (Enter) →';
+      }
+
+      finishQuiz() {
+        const qz = this.quiz;
+        if (!qz) return;
+        if (qz.timerId) clearInterval(qz.timerId);
+        document.getElementById('quiz-timer-chip').style.display = 'none';
+        document.getElementById('quiz-progress-fill').style.width = '100%';
+
+        const total = qz.questions.length;
+        const pct = total ? Math.round((qz.correctCount / total) * 100) : 0;
+        const bonusGems = Math.round((pct / 100) * (this.difficulty === 'hard' ? 30 : 20));
+        this.gems += bonusGems;
+        this.saveState();
+
+        const subBreakdown = Object.entries(qz.bySubject).map(([name, stat]) => {
+          const sp = Math.round((stat.ok / stat.total) * 100);
+          return `<div style="display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px dashed #e2e8f0; font-weight:800;">
+            <span>${name}</span><span>${stat.ok} / ${stat.total} 題 (${sp}%)</span>
+          </div>`;
+        }).join('');
+
+        document.getElementById('quiz-stage').innerHTML = `
+          <div style="text-align:center; padding:10px 0;">
+            <div style="font-size:3.2rem;">${pct >= 85 ? '🏆' : (pct >= 60 ? '🎯' : '💪')}</div>
+            <h2 style="font-size:1.5rem; font-weight:900; margin:6px 0;">${qz.title} 完成！</h2>
+            <p style="font-size:1.15rem; font-weight:900; color:#0284c7;">得分：${pct} 分（答對 ${qz.correctCount} / ${total} 題）</p>
+            <p style="margin-top:4px; font-size:0.9rem; color:#475569; font-weight:700;">額外獲得 +${bonusGems} 💎 寶石！</p>
+          </div>
+          <div style="background:#f8fafc; border:2px solid #e2e8f0; border-radius:16px; padding:14px; margin:16px 0;">
+            <div style="font-weight:900; margin-bottom:6px; color:#334155;">📊 各科戰力統計</div>
+            ${subBreakdown}
+          </div>
+          <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+            <button class="btn-3d btn-green" onclick="g4App.exitQuiz()">返回五科總覽</button>
+            ${Object.keys(this.mistakes).length ? `<button class="btn-3d btn-red" onclick="g4App.startMistakesQuiz()">🔍 立即重練錯題 (${Object.keys(this.mistakes).length})</button>` : ''}
+          </div>
+        `;
+        this.quiz = null;
+        this.renderHome();
+      }
+
+      exitQuiz() {
+        if (this.quiz && this.quiz.timerId) clearInterval(this.quiz.timerId);
+        this.quiz = null;
+        this.showScreen('home');
+        this.renderHome();
+      }
+
+      /* ======================================================================
+         動畫小遊戲 1：🦖 怪獸問答對決 & 小遊戲 2：⚡ 觀念閃電配對
+      ====================================================================== */
+      stopMiniGame() {
+        if (this.mg && this.mg.timerId) clearInterval(this.mg.timerId);
+        this.mg = { active: false, timerId: null };
+      }
+
+      exitMiniGame() {
+        this.stopMiniGame();
+        this.showScreen('home');
+        this.renderHome();
+      }
+
+      startMonsterBattle(subFilter = 'all') {
+        const pool = this.gatherQuestions(subFilter, null);
+        if (!pool.length) return alert('請先在「二次段考範圍」保留至少一個單元！');
+        this.stopMiniGame();
+
+        const diff = this.difficulty;
+        const maxHp = diff === 'easy' ? 70 : (diff === 'hard' ? 140 : 100);
+        const startSec = diff === 'easy' ? 85 : (diff === 'hard' ? 50 : 65);
+
+        this.mg = {
+          active: true,
+          type: 'monster',
+          timeLeft: startSec,
+          score: 0,
+          combo: 0,
+          questions: [...pool].sort(() => Math.random() - 0.5).map(q => this.shuffleOptionsQuestion(q)),
+          qIdx: 0,
+          bossLv: 1,
+          bossHp: maxHp,
+          bossMaxHp: maxHp,
+          heroHp: 100,
+          locked: false,
+          anim: {},
+          monsters: [
+            { name: '粗心計算怪', sprite: '👾' },
+            { name: '錯字迷霧龍', sprite: '🐉' },
+            { name: '段考大魔王', sprite: '👹' }
+          ],
+          timerId: null
+        };
+
+        this.showScreen('game');
+        this.renderMonsterBattle();
+        this.startMgTimer();
+      }
+
+      startMgTimer() {
+        this.updateMgHud();
+        this.mg.timerId = setInterval(() => {
+          if (!this.mg.active) return;
+          this.mg.timeLeft--;
+          this.updateMgHud();
+          if (this.mg.timeLeft <= 0) {
+            this.finishMiniGame();
+          }
+        }, 1000);
+      }
+
+      updateMgHud() {
+        document.getElementById('mg-time').textContent = Math.max(0, this.mg.timeLeft);
+        document.getElementById('mg-score').textContent = this.mg.score;
+        document.getElementById('mg-combo').textContent = this.mg.combo;
+      }
+
+      renderMonsterBattle(selIdx = -1, resCls = '') {
+        if (!this.mg.active) return;
+        if (this.mg.qIdx >= this.mg.questions.length) {
+          this.mg.questions = [...this.mg.questions].sort(() => Math.random() - 0.5);
+          this.mg.qIdx = 0;
+        }
+        const q = this.mg.questions[this.mg.qIdx];
+        const m = this.mg.monsters[(this.mg.bossLv - 1) % this.mg.monsters.length];
+        const mPct = Math.max(0, Math.round((this.mg.bossHp / this.mg.bossMaxHp) * 100));
+        const a = this.mg.anim || {};
+
+        const optsHtml = q.shuffledOptions.map((o, i) => {
+          let cls = '';
+          if (selIdx === i) cls = resCls;
+          if (resCls === 'wrong' && o.isCorrect) cls = 'correct';
+          return `<button class="option-btn ${cls}" onclick="g4App.answerMonster(${i})">
+            <span class="key-num">${i + 1}</span><span>${o.text}</span>
+          </button>`;
+        }).join('');
+
+        document.getElementById('game-stage').innerHTML = `
+          <div class="qb-arena">
+            <div class="qb-fighter">
+              <div class="qb-sprite ${a.hero || ''}">🦉</div>
+              <div style="font-weight:900; font-size:0.9rem; margin-top:4px;">波波學霸</div>
+              <div class="hp-bar"><div class="hp-fill hero" style="width:${this.mg.heroHp}%"></div></div>
+            </div>
+            <div class="qb-proj ${a.proj || ''}">${a.proj === 'left' ? '💥' : '🔥'}</div>
+            ${a.dmg ? `<div class="qb-dmg" style="${a.dmgLeft ? 'left:16%' : 'right:16%'}">${a.dmg}</div>` : ''}
+            <div class="qb-fighter">
+              <div class="qb-sprite ${a.monster || ''}">${m.sprite}</div>
+              <div style="font-weight:900; font-size:0.9rem; margin-top:4px;">Lv.${this.mg.bossLv} ${m.name}</div>
+              <div class="hp-bar"><div class="hp-fill" style="width:${mPct}%"></div></div>
+            </div>
+            ${a.ko ? `<div class="qb-ko">${a.ko}</div>` : ''}
+          </div>
+          <div class="q-tags-row">
+            <span class="q-pill">${q.subjectIcon} ${q.subjectName}</span>
+            <span class="q-pill">${q.unitLabel}</span>
+            ${q.audioEn ? `<button class="scope-toggle-btn" onclick="speakEnglish('${q.audioEn.replace(/'/g, "\\'")}')">🔊 聽英文</button>` : ''}
+          </div>
+          <div class="q-prompt" style="font-size:1.08rem;">${q.prompt}</div>
+          <div class="options-list">${optsHtml}</div>
+        `;
+      }
+
+      answerMonster(idx) {
+        if (!this.mg.active || this.mg.locked) return;
+        const q = this.mg.questions[this.mg.qIdx];
+        const opt = q && q.shuffledOptions[idx];
+        if (!opt) return;
+        this.mg.locked = true;
+
+        if (opt.isCorrect) {
+          g4Audio.play('ok');
+          if (q.audioEn) speakEnglish(q.audioEn);
+          this.mg.combo++;
+          const dmg = 35 + (this.mg.combo >= 3 ? 15 : 0);
+          this.mg.bossHp = Math.max(0, this.mg.bossHp - dmg);
+          this.mg.score += 20 + this.mg.combo * 5;
+          this.masteredQuestions[q.id] = true;
+          const ko = this.mg.bossHp <= 0;
+          if (ko) this.mg.score += 40;
+          this.mg.anim = {
+            hero: 'attack',
+            monster: 'm-hit',
+            proj: 'right',
+            dmg: `-${dmg} 💥`,
+            ko: ko ? `🎉 KO！擊敗第 ${this.mg.bossLv} 隻段考怪獸！` : ''
+          };
+          this.updateMgHud();
+          this.renderMonsterBattle(idx, 'correct');
+
+          setTimeout(() => {
+            if (!this.mg.active) return;
+            if (ko) {
+              this.mg.bossLv++;
+              this.mg.bossMaxHp = Math.round(this.mg.bossMaxHp * 1.15);
+              this.mg.bossHp = this.mg.bossMaxHp;
+              this.mg.heroHp = 100;
+            }
+            this.mg.anim = {};
+            this.mg.qIdx++;
+            this.mg.locked = false;
+            this.renderMonsterBattle();
+          }, ko ? 800 : 480);
+        } else {
+          g4Audio.play('err');
+          this.mg.combo = 0;
+          this.mistakes[q.id] = { ...q, userWrongText: opt.text };
+          const penalty = this.difficulty === 'easy' ? 0 : (this.difficulty === 'hard' ? 4 : 2);
+          if (penalty > 0) {
+            this.mg.timeLeft = Math.max(1, this.mg.timeLeft - penalty);
+            this.mg.heroHp = Math.max(15, this.mg.heroHp - 15);
+          }
+          this.mg.anim = {
+            hero: penalty === 0 ? 'shield' : '',
+            monster: 'm-lunge',
+            proj: 'left',
+            dmgLeft: true,
+            dmg: penalty === 0 ? '🛡️ 格擋！不扣秒' : `-${penalty}s ⏱️`
+          };
+          this.updateMgHud();
+          this.renderMonsterBattle(idx, 'wrong');
+
+          setTimeout(() => {
+            if (!this.mg.active) return;
+            this.mg.anim = {};
+            this.mg.qIdx++;
+            this.mg.locked = false;
+            this.renderMonsterBattle();
+          }, 720);
+        }
+        this.saveState();
+      }
+
+      /* 小遊戲 2：⚡ 觀念閃電配對 */
+      startMatchGame(subFilter = 'all', unitId = null) {
+        let pairs = [];
+        this.baseData.subjects.forEach(sub => {
+          if (subFilter !== 'all' && sub.id !== subFilter) return;
+          sub.units.forEach(u => {
+            if (unitId && u.id !== unitId) return;
+            if (!unitId && !this.isUnitInScope(u)) return;
+            (u.matchPairs || []).forEach(p => {
+              pairs.push({ ...p, subName: sub.shortName });
+            });
+          });
+        });
+
+        if (pairs.length < 3) {
+          // 補滿同科全部單元確保至少有 4 對可玩
+          this.baseData.subjects.forEach(sub => {
+            if (subFilter !== 'all' && sub.id !== subFilter) return;
+            sub.units.forEach(u => {
+              (u.matchPairs || []).forEach(p => pairs.push({ ...p, subName: sub.shortName }));
+            });
+          });
+        }
+
+        if (pairs.length < 2) return alert('配對資料不足！');
+        this.stopMiniGame();
+
+        const diff = this.difficulty;
+        const pairCount = Math.min(diff === 'easy' ? 4 : (diff === 'hard' ? 6 : 5), pairs.length);
+        const startSec = diff === 'easy' ? 75 : (diff === 'hard' ? 45 : 60);
+        const shuffled = [...pairs].sort(() => Math.random() - 0.5);
+        const boardPairs = shuffled.slice(0, pairCount);
+
+        this.mg = {
+          active: true,
+          type: 'match',
+          timeLeft: startSec,
+          score: 0,
+          combo: 0,
+          queue: shuffled,
+          queueIdx: pairCount,
+          left: boardPairs.map((p, i) => ({ ...p, slot: i })),
+          right: [...boardPairs].sort(() => Math.random() - 0.5).map((p, i) => ({ ...p, slot: i })),
+          selL: null,
+          selR: null,
+          locked: false,
+          timerId: null
+        };
+
+        this.showScreen('game');
+        this.renderMatchBoard();
+        this.startMgTimer();
+      }
+
+      renderMatchBoard() {
+        const lHtml = this.mg.left.map((item, i) =>
+          `<div class="match-tile ${this.mg.selL === i ? 'selected' : ''}" id="m-l-${i}" onclick="g4App.pickMatch('l', ${i})">${item.left}</div>`
+        ).join('');
+        const rHtml = this.mg.right.map((item, i) =>
+          `<div class="match-tile ${this.mg.selR === i ? 'selected' : ''}" id="m-r-${i}" onclick="g4App.pickMatch('r', ${i})">${item.right}</div>`
+        ).join('');
+
+        document.getElementById('game-stage').innerHTML = `
+          <div style="margin-bottom:10px;">
+            <h2 style="font-size:1.15rem; font-weight:900;">⚡ 觀念閃電配對戰</h2>
+            <p style="font-size:0.86rem; color:#475569; font-weight:700;">將左邊的觀念／題目與右邊正確的解釋配成一對！</p>
+          </div>
+          <div class="match-board">
+            <div class="match-col">${lHtml}</div>
+            <div class="match-col">${rHtml}</div>
+          </div>
+        `;
+      }
+
+      pickMatch(side, idx) {
+        if (!this.mg.active || this.mg.locked) return;
+        g4Audio.play('click');
+        if (side === 'l') this.mg.selL = this.mg.selL === idx ? null : idx;
+        else this.mg.selR = this.mg.selR === idx ? null : idx;
+
+        if (this.mg.selL !== null && this.mg.selR !== null) {
+          const lIdx = this.mg.selL;
+          const rIdx = this.mg.selR;
+          const lItem = this.mg.left[lIdx];
+          const rItem = this.mg.right[rIdx];
+          this.mg.locked = true;
+
+          if (lItem && rItem && lItem.left === rItem.left) {
+            g4Audio.play('ok');
+            this.mg.combo++;
+            this.mg.score += 12 + this.mg.combo * 3;
+            this.updateMgHud();
+            document.getElementById(`m-l-${lIdx}`)?.classList.add('matched');
+            document.getElementById(`m-r-${rIdx}`)?.classList.add('matched');
+
+            setTimeout(() => {
+              if (!this.mg.active) return;
+              const activeLeftSet = new Set(this.mg.left.map(x => x.left));
+              let next = null;
+              for (let k = 0; k < this.mg.queue.length; k++) {
+                const cand = this.mg.queue[(this.mg.queueIdx + k) % this.mg.queue.length];
+                if (!activeLeftSet.has(cand.left)) {
+                  next = cand;
+                  this.mg.queueIdx = (this.mg.queueIdx + k + 1) % this.mg.queue.length;
+                  break;
+                }
+              }
+              if (!next) next = this.mg.queue[this.mg.queueIdx++ % this.mg.queue.length];
+              this.mg.left[lIdx] = { ...next, slot: lIdx };
+              this.mg.right[rIdx] = { ...next, slot: rIdx };
+              if (this.mg.right.length > 1) {
+                const swapIdx = (rIdx + 1) % this.mg.right.length;
+                const tmp = this.mg.right[rIdx];
+                this.mg.right[rIdx] = this.mg.right[swapIdx];
+                this.mg.right[swapIdx] = tmp;
+              }
+              this.mg.selL = null;
+              this.mg.selR = null;
+              this.mg.locked = false;
+              this.renderMatchBoard();
+            }, 220);
+          } else {
+            g4Audio.play('err');
+            this.mg.combo = 0;
+            this.updateMgHud();
+            document.getElementById(`m-l-${lIdx}`)?.classList.add('wrong');
+            document.getElementById(`m-r-${rIdx}`)?.classList.add('wrong');
+            setTimeout(() => {
+              this.mg.selL = null;
+              this.mg.selR = null;
+              this.mg.locked = false;
+              if (this.mg.active) this.renderMatchBoard();
+            }, 280);
+          }
+        } else {
+          this.renderMatchBoard();
+        }
+      }
+
+      finishMiniGame() {
+        const score = this.mg.score || 0;
+        const typeLabel = this.mg.type === 'monster' ? '🦖 段考怪獸對決' : '⚡ 觀念閃電配對戰';
+        this.stopMiniGame();
+        const mult = this.difficulty === 'hard' ? 1.5 : (this.difficulty === 'easy' ? 0.85 : 1);
+        const earnedGems = Math.max(8, Math.round((score / 6 + 8) * mult));
+        const earnedXp = Math.max(10, Math.round((score / 5 + 10) * mult));
+        this.gems += earnedGems;
+        this.xp += earnedXp;
+        this.saveState();
+
+        document.getElementById('game-stage').innerHTML = `
+          <div style="text-align:center; padding:18px 8px;">
+            <div style="font-size:3.2rem;">🏆</div>
+            <h2 style="font-size:1.5rem; font-weight:900; margin:6px 0;">${typeLabel} 挑戰結束！</h2>
+            <p style="font-size:1.15rem; font-weight:900; color:#0284c7;">本局積分：${score} 分</p>
+            <p style="font-size:0.94rem; color:#475569; font-weight:800; margin-top:6px;">
+              獲得 +${earnedGems} 💎 寶石・+${earnedXp} ⭐ XP！
+            </p>
+            <div style="margin-top:18px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+              <button class="btn-3d btn-green" onclick="g4App.exitMiniGame()">返回五科總覽</button>
+            </div>
+          </div>
+        `;
+      }
+
+      /* ======================================================================
+         錯題本＆評量擴充彈窗
+      ====================================================================== */
+      openMistakesScreen() {
+        g4Audio.play('click');
+        const list = Object.values(this.mistakes);
+        const retryBtn = document.getElementById('btn-retry-mistakes');
+        retryBtn.style.display = list.length ? 'inline-flex' : 'none';
+
+        const container = document.getElementById('mistakes-list');
+        if (!list.length) {
+          container.innerHTML = `<div style="text-align:center; padding:28px; color:#475569; font-weight:800;">
+            🎉 目前沒有任何錯題！繼續挑戰模擬段考或怪獸對決吧！
+          </div>`;
+        } else {
+          container.innerHTML = list.map(m => {
+            const rightAns = m.options[m.correctIndex] || '';
+            return `
+              <div style="border:2px solid #fecaca; background:#fef2f2; border-radius:16px; padding:14px; margin-bottom:12px;">
+                <div class="q-tags-row">
+                  <span class="q-pill">${m.subjectIcon || '📌'} ${m.subjectName || ''}</span>
+                  <span class="q-pill">${m.unitLabel || ''}</span>
+                </div>
+                <div style="font-weight:900; margin-bottom:6px;">${m.prompt}</div>
+                <div style="font-size:0.88rem; color:#b91c1c; font-weight:800;">❌ 曾誤選：${m.userWrongText || '未作答'}</div>
+                <div style="font-size:0.88rem; color:#15803d; font-weight:800;">✅ 正確答案：${rightAns}</div>
+                <div style="font-size:0.85rem; color:#334155; margin-top:6px; background:#fff; padding:8px 10px; border-radius:10px;">💡 ${m.explanation}</div>
+              </div>
+            `;
+          }).join('');
+        }
+        this.showScreen('mistakes');
+      }
+
+      openExpandModal() {
+        g4Audio.play('click');
+        document.getElementById('custom-import-status').textContent = `目前已在本機載入 ${this.customQuestions.length} 題自訂擴充題目。`;
+        document.getElementById('expand-modal').classList.add('active');
+      }
+
+      closeExpandModal() {
+        document.getElementById('expand-modal').classList.remove('active');
+      }
+
+      fillSampleTemplate() {
+        const sample = [
+          {
+            id: 'custom-exam2-1',
+            subjectId: 'math',
+            unitId: 'math-u8',
+            type: 'choice',
+            tag: '校內評量補充',
+            difficulty: 'normal',
+            prompt: '一盒蘋果有 12 顆，媽媽買了 3 盒，吃掉 5 顆後，還剩下幾顆蘋果？',
+            options: ['31 顆', '21 顆', '17 顆', '41 顆'],
+            correctIndex: 0,
+            explanation: '先乘後減：12 × 3 - 5 = 36 - 5 = 31 顆！'
+          }
+        ];
+        document.getElementById('custom-json-input').value = JSON.stringify(sample, null, 2);
+      }
+
+      importCustomQuestions() {
+        const raw = document.getElementById('custom-json-input').value.trim();
+        if (!raw) return;
+        try {
+          const arr = JSON.parse(raw);
+          if (!Array.isArray(arr) || !arr.length) throw new Error('請輸入題目 JSON 陣列');
+          arr.forEach((q, idx) => {
+            if (!q.subjectId || !q.prompt || !Array.isArray(q.options) || q.options.length < 2) {
+              throw new Error(`第 ${idx + 1} 題缺少必要欄位 (subjectId, prompt, options)`);
+            }
+          });
+          this.customQuestions = [...this.customQuestions, ...arr];
+          this.applyCustomQuestions();
+          this.saveState();
+          this.renderHome();
+          document.getElementById('custom-import-status').textContent = `✅ 成功匯入 ${arr.length} 題！已立即加入對應科目測驗中！`;
+        } catch (err) {
+          document.getElementById('custom-import-status').textContent = `❌ 格式錯誤：${err.message}`;
+        }
+      }
+
+      clearCustomQuestions() {
+        this.customQuestions = [];
+        this.applyCustomQuestions();
+        this.saveState();
+        this.renderHome();
+        document.getElementById('custom-import-status').textContent = '🗑️ 已清除本機自訂擴充題目。';
+      }
+    }
+
+    const g4App = new JdesGrade4App();
+    window.g4App = g4App;
+
+    window.addEventListener('DOMContentLoaded', () => {
+      g4App.renderHome();
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;
+      const modalOpen = document.querySelector('.modal-overlay.active');
+      if (modalOpen) return;
+
+      const quizActive = document.getElementById('screen-quiz').classList.contains('active') && g4App.quiz;
+      const gameActive = document.getElementById('screen-game').classList.contains('active') && g4App.mg.active;
+
+      if (quizActive) {
+        if (['1', '2', '3', '4'].includes(e.key)) {
+          e.preventDefault();
+          g4App.pickQuizOption(parseInt(e.key, 10) - 1);
+        } else if (e.key === 'Enter') {
+          e.preventDefault();
+          g4App.submitOrNextQuiz();
+        }
+      } else if (gameActive && g4App.mg.type === 'monster') {
+        if (['1', '2', '3', '4'].includes(e.key)) {
+          e.preventDefault();
+          g4App.answerMonster(parseInt(e.key, 10) - 1);
+        } else if (e.key === 'Escape') {
+          e.preventDefault();
+          g4App.exitMiniGame();
+        }
+      }
+    });
+  </script>
+</body>
+</html>
