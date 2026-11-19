@@ -1,11 +1,11 @@
 # 🦉 波波熱血英語大冒險 (Bobi English Adventure)
 
-[![Version](https://img.shields.io/badge/Version-v2.6.0-58cc02?style=for-the-badge&logo=github)](https://github.com/zhijaysun0915/bobi-english-adventure/releases/tag/v2.6.0)
+[![Version](https://img.shields.io/badge/Version-v2.6.1-58cc02?style=for-the-badge&logo=github)](https://github.com/zhijaysun0915/bobi-english-adventure/releases/tag/v2.6.0)
 [![Curriculum](https://img.shields.io/badge/Curriculum-12_Tiers_%7C_1080_Levels-1cb0f6?style=for-the-badge)](https://zhijaysun0915.github.io/bobi-english-adventure/)
 [![JDES Grade 4](https://img.shields.io/badge/JDES_G4_Exam2-國語・數學・自然・社會・英語-ff9600?style=for-the-badge)](grade4.html)
 [![License: MIT](https://img.shields.io/badge/License-MIT-ce82ff?style=for-the-badge)](LICENSE)
 
-> **全階段・全能分級英語學習樂園 ＋ 桃園八德茄苳國小 四上第二次評量複習分支 (`v2.6.0`)**  
+> **全階段・全能分級英語學習樂園 ＋ 桃園八德茄苳國小 四上第二次評量複習分支 (`v2.6.1`)**  
 > 專為臺灣學生與進修者量身打造！完整涵蓋 **小學 (初/中/高)・國中 (初/中/高)・高中 (初/中/高)・大學與成人 (初/中/高)** 4 大階段、12 大等級、1,080 道豐富漸進關卡（每等級 90 關，1 天 1 關可暢玩 3 個月）！  
 > 特別加開 **`grade4.html`｜桃園市八德區茄苳國小 115 四上第二次定期評量（國語翰林／數學南一／自然翰林／社會翰林／英語翰林 Here We Go 3）五科重點觀念與互動考前複習架構**！
 
@@ -80,7 +80,7 @@
 9. **Duolingo 風格 6 大英文互動動畫獎勵小遊戲 × 3 階難度 (`v2.4.0` 全面升級)**：
    - 支援 **🦖 怪獸問答對決 (動畫 RPG 克漏字 & 中英問答)**、**🚀 火箭快問快答 (動畫太空衝刺句意問答)**、**⚡ 限時配對狂熱**、**🔤 單字拼圖衝刺**、**🎈 單字氣球爆破** 與 **🎧 聽音閃電戰**！
    - 全遊戲支援 **🌱 簡單 / ⚔️ 標準 / 🔥 困難 (1.5×獎勵)** 三階難度自由切換，每次通關送「🎟️ 雙倍獎勵券」，挑戰贏取高倍 💎 寶石、XP 與 ❤️ 補血！
-10. **🏫 桃園八德茄苳國小・115 四上第二次評量五科總複習分支架構 ([`grade4.html`](grade4.html), `v2.6.0`)**：
+10. **🏫 桃園八德茄苳國小・115 四上第二次評量五科總複習分支架構 ([`grade4.html`](grade4.html), `v2.6.1`)**：
     - 依茄苳國小 115 學年度採用版本（國語翰林、數學南一、自然翰林、社會翰林、英語翰林 Here We Go 3）收錄考前重點觀念口訣、陷阱提醒、分單元測驗、五科模擬評量、動畫怪獸戰、錯題本與評量擴充匯入介面！
 
 ---
@@ -91,11 +91,11 @@
 
 | 序號 | 檔案名稱 | 對應位置與欄位 | 當前版本值 |
 | :---: | :--- | :--- | :---: |
-| **1** | [`package.json`](package.json) | `"version"` 欄位 | `2.6.0` |
-| **2** | [`curriculum.js`](curriculum.js) | 頂部 `window.BOBI_VERSION` 與 `window.CURRICULUM_VERSION` | `2.6.0` |
-| **3** | [`index.html`](index.html) / [`grade4.html`](grade4.html) | `<meta name="version">`、頂部導覽列 `.version-pill`、設定彈窗、Changelog 彈窗與頁尾 `.site-footer` | `v2.6.0` |
-| **4** | [`README.md`](README.md) | 頂部版本徽章、版本對應規範表與版本歷程表 | `v2.6.0` |
-| **5** | [`CHANGELOG.md`](CHANGELOG.md) | 更新日誌版本條目（遵循 Keep a Changelog 與 SemVer 規範） | `[2.6.0]` |
+| **1** | [`package.json`](package.json) | `"version"` 欄位 | `2.6.1` |
+| **2** | [`curriculum.js`](curriculum.js) | 頂部 `window.BOBI_VERSION` 與 `window.CURRICULUM_VERSION` | `2.6.1` |
+| **3** | [`index.html`](index.html) / [`grade4.html`](grade4.html) | `<meta name="version">`、頂部導覽列 `.version-pill`、設定彈窗、Changelog 彈窗與頁尾 `.site-footer` | `v2.6.1` |
+| **4** | [`README.md`](README.md) | 頂部版本徽章、版本對應規範表與版本歷程表 | `v2.6.1` |
+| **5** | [`CHANGELOG.md`](CHANGELOG.md) | 更新日誌版本條目（遵循 Keep a Changelog 與 SemVer 規範） | `[2.6.1]` |
 
 ---
 
@@ -105,6 +105,7 @@
 
 | 版本號 | 發布日期 | 重大更新摘要 |
 | :---: | :---: | :--- |
+| **v2.6.1** | `2026-11-19` | iPad 版面與文字大小調整、各單元逐步講解擴充 |
 | **v2.6.0** | `2026-11-19` | 四年級總複習新增各單元「動畫圖解」（`g4_visuals.js`） |
 | **v2.5.0** | `2026-11-19` | 新增桃園八德茄苳國小 115 四上第二次評量五科總複習分支架構 ([`grade4.html`](grade4.html) + [`curriculum_g4_jdes.js`](curriculum_g4_jdes.js)) |
 | **v2.4.0** | `2026-11-13` | 新增 2 款動畫英語問答小遊戲（🦖 怪獸問答對決、🚀 火箭快問快答）與全遊樂場「簡單 / 標準 / 困難 (1.5×)」3 階難度自由切換 |

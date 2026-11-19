@@ -37,6 +37,20 @@
   @keyframes g4vFlip{0%,30%{fill:var(--a)}70%,100%{fill:var(--b)}}
   .g4v-play .grow{animation:g4vGrow 3s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:center}
   @keyframes g4vGrow{from{transform:scale(1)}to{transform:scale(var(--s,1.35))}}
+  .g4v-steps{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+  .g4v-ex{display:flex;gap:10px;align-items:flex-start;background:#fff;border:2.5px solid #e2e8f0;border-radius:14px;padding:10px 12px;font-size:1rem;color:#1e293b;opacity:0;transform:translateX(-14px)}
+  .g4v-ex .n{flex:none;width:30px;height:30px;border-radius:50%;background:#0ea5e9;color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center}
+  .g4v-ex span:not(.n){color:#475569;font-weight:600}
+  .g4v-play .g4v-ex{animation:g4vEx .5s ease forwards;animation-delay:calc(var(--i)*.45s)}
+  @keyframes g4vEx{to{opacity:1;transform:none}}
+  /* iPad / 平板放大 */
+  html{font-size:calc(16px * var(--g4-scale,1))}
+  @media (min-width:700px){
+    .g4v-box{padding:22px}.g4v-head h3{font-size:1.4rem}.g4v-cap{font-size:1.1rem}
+    .g4v-step{min-width:130px;max-width:190px;padding:14px}.g4v-step .e{font-size:2.8rem}.g4v-step .t{font-size:1.05rem}
+    .g4v-ex{font-size:1.2rem;padding:14px 16px}.g4v-ex .n{width:38px;height:38px}
+    .g4v-svg{max-width:820px}.g4v-replay{font-size:1rem;padding:8px 18px;min-height:44px}
+  }
   `;
   if (typeof document !== 'undefined' && !document.getElementById('g4v-style')) {
     const st = document.createElement('style');
@@ -163,6 +177,74 @@
       html: flow([['🐝','zzz… zebra /z/'],['🦓','zoo / zero'],['🐍','sss… six /s/'],['☀️','sun / soup']]) }];
   V['eng-rev2'] = [{ title: '單複數＋點餐＋各國美食', caption: '單數 It\'s，複數 They\'re；遞東西說 Here you are.　bubble tea、beef noodles 是臺灣代表美食。',
     html: flow([['🍔','What\'s this? It\'s a hamburger.'],['🍔🍔','What are these? They\'re hamburgers.'],['🧋','bubble tea'],['🍜','beef noodles']]) }];
+
+  /* ============ 逐步講解 / 範例（v2.6.1 加強） ============ */
+  function steps(items) {
+    return '<div class="g4v-steps">' + items.map((s, i) =>
+      `<div class="g4v-ex" style="--i:${i}"><span class="n">${i + 1}</span><div><b>${s[0]}</b>${s[1] ? '<br><span>' + s[1] + '</span>' : ''}</div></div>`).join('') + '</div>';
+  }
+  function more(id, arr) { (V[id] = V[id] || []).push(...arr); }
+
+  more('chi-u7', [{ title: '修辭一次搞懂', caption: '考試常考：判斷句子用了哪一種修辭。',
+    html: steps([['誇飾：說得比事實更誇張', '「焦掉的麵包堆得跟大樹一樣高」'],['擬人：把動物或物品當成人','「松鼠先生說話、流淚、難過」'],['譬喻：甲像乙（像、好像、如）','「淚水像雨一樣落下」'],['摹寫：描寫看到、聽到、聞到的感覺','「香噴噴的麵包」→ 嗅覺摹寫']]) }]);
+  more('chi-u8', [{ title: '形近字・成語小教室', caption: '讀音相近或字形相近的字，要看意思分辨。',
+    html: steps([['省吃儉用', '很節省，不亂花錢（陳樹菊的生活態度）'],['助人為樂', '幫助別人讓自己快樂'],['平凡 ≠ 平庸', '平凡指普通；真正的大俠在於行動'],['答題技巧', '問「為什麼稱大俠」→ 答：雖然平凡，但長期默默幫助別人']]) }]);
+  more('chi-u9', [{ title: '多音字「折」', caption: '同一個字，讀音不同、意思也不同。',
+    html: steps([['ㄓㄜˊ（折斷、折扣、折返）', '「一支箭一折就斷」'],['ㄕㄜˊ（虧本）', '「折本」＝賠錢（少用）'],['ㄓㄜ（翻轉）', '「折騰」'],['成語配對', '同心協力、眾志成城、團結合作']]) }]);
+  more('chi-u10', [{ title: '珊瑚礁小知識', caption: '珊瑚礁面積不到海洋 1%，卻養活近 1/4 的海洋生物。',
+    html: svg('0 0 520 150', `
+      <rect x="40" y="30" width="200" height="30" rx="8" fill="#e2e8f0"/><rect class="grow" style="--s:1" x="40" y="30" width="2" height="30" fill="#0ea5e9"/>
+      <rect class="pop" style="--i:0" x="40" y="30" width="2" height="30" fill="#0ea5e9"/><text x="250" y="52" font-size="15" fill="#0369a1">面積：不到 1%</text>
+      <rect x="40" y="85" width="200" height="30" rx="8" fill="#e2e8f0"/><rect class="pop" style="--i:1.5" x="40" y="85" width="50" height="30" rx="8" fill="#f97316"/><text x="250" y="107" font-size="15" fill="#c2410c">養活：約 1/4 的海洋生物</text>`) +
+    steps([['珊瑚是動物', '屬於刺絲胞動物，不是植物也不是石頭'],['共生藻', '住在珊瑚體內提供養分與顏色'],['保護方式', '減塑、減碳、不亂踩珊瑚']]) }]);
+  more('chi-u11', [{ title: '反語與主旨怎麼寫', caption: '寫心得或回答「作者想說什麼」的步驟。',
+    html: steps([['看標題', '「美食島」→ 表面好吃'],['看內容', '其實都是塑膠垃圾'],['找反差', '標題與事實相反，形成諷刺'],['寫主旨', '提醒大家減少塑膠，保護海洋生物']]) }]);
+  more('chi-u12', [{ title: '關聯詞造句範例', caption: '用對關聯詞，句子才通順。',
+    html: steps([['不但…而且…（遞進）', '他不但會彈琴，而且會作曲。'],['雖然…但是…（轉折）', '雖然很安靜，但是聽見了蟲鳴。'],['只要…就…（有條件就成功）', '只要用心聽，就能聽見大自然的音樂。'],['只有…才…（唯一條件）', '只有靜下心，才能聽到細微的聲音。']]) }]);
+
+  more('math-u6', [{ title: '分數圖形：幾分之幾', caption: '把一個整體平分，取其中幾份，就是幾分之幾。',
+    html: svg('0 0 520 130', `${[0,1,2,3].map(i => `<rect class="pop" style="--i:${i*.4}" x="${40+i*100}" y="25" width="90" height="70" rx="8" fill="${i<3?'#fbbf24':'#fff'}" stroke="#f59e0b" stroke-width="3"/>`).join('')}<text x="130" y="122" font-size="18" fill="#92400e">3/4：平分成 4 份，取 3 份（分母＝總份數，分子＝取幾份）</text>`) +
+    steps([['真分數：分子 < 分母', '例：3/4（小於 1）'],['假分數：分子 ≥ 分母', '例：5/4（大於或等於 1）'],['帶分數：整數＋真分數', '例：1又1/4']]) }]);
+  more('math-u6', [{ title: '範例練習：9/4 換帶分數', caption: '照步驟算，不容易錯。',
+    html: steps([['看分子 ÷ 分母', '9 ÷ 4 = 2 餘 1'],['商當整數', '整數部分是 2'],['餘數當分子', '分數部分是 1/4'],['答案', '2又1/4；驗算：2×4+1 = 9 ✔']]) }]);
+  more('math-u7', [{ title: '奇數與偶數', caption: '個位數是 0、2、4、6、8 為偶數，1、3、5、7、9 為奇數。',
+    html: steps([['奇 ＋ 奇', '＝ 偶（3＋5＝8）'],['偶 ＋ 偶', '＝ 偶（2＋4＝6）'],['奇 ＋ 偶', '＝ 奇（3＋4＝7）'],['奇 × 偶', '＝ 偶；奇 × 奇 ＝ 奇']]) },
+    { title: '範例：第 25 個是什麼顏色？', caption: '🔴🔵🟢 三個一組重複。',
+    html: steps([['找週期', '3 個一組'],['25 ÷ 3', '＝ 8 餘 1'],['看餘數', '餘 1 → 和第 1 個一樣'],['答案', '🔴 紅色']]) }]);
+  more('math-u8', [{ title: '範例：一步一步算', caption: '先看括號，再看乘除，最後加減。',
+    html: steps([['題目', '36 ÷ 6 + (8 − 3) × 2'],['① 括號', '8 − 3 = 5'],['② 乘除（由左到右）', '36 ÷ 6 = 6，5 × 2 = 10'],['③ 加減', '6 + 10 = 16']]) },
+    { title: '應用題四步驟', caption: '讀題 → 圈數字 → 列式 → 檢查。',
+    html: flow([['📖','讀兩遍題目'],['⭕','圈出數字與問題'],['✍️','列出算式'],['✅','檢查單位與答案']]) }]);
+  more('math-u9', [{ title: '小數的位值與大小比較', caption: '從左到右依序比：整數、十分位、百分位。',
+    html: steps([['3.45 的位值', '3 個一、4 個 0.1、5 個 0.01'],['比 3.5 和 3.45', '十分位 5 > 4，所以 3.5 > 3.45'],['3.5 = 3.50', '小數後面補 0，大小不變'],['減法：5 − 2.37', '5.00 − 2.37 = 2.63（先補 0 再對齊）']]) }]);
+  more('math-u10', [{ title: '範例：換算練習', caption: '大單位換小單位用乘；小單位換大單位用除。',
+    html: steps([['3 公里 = ? 公尺', '3 × 1000 = 3000 公尺'],['2500 公尺 = ? 公里', '2500 ÷ 1000 = 2.5 公里'],['1 公里 200 公尺 = ? 公尺', '1000 + 200 = 1200 公尺'],['比較長度', '先換成相同單位再比']]) }]);
+
+  more('sci-u3', [{ title: '物理變化 vs 化學變化', caption: '有沒有產生「新物質」是關鍵。',
+    html: steps([['物理變化', '只改變形狀或狀態：冰融化、撕紙、水沸騰'],['化學變化', '產生新物質：鐵生鏽、紙燃燒、食物腐壞'],['判斷方法', '能不能變回原來的樣子？產生氣泡、顏色、氣味？'],['溫度影響', '加熱：膨脹、融化；降溫：收縮、凝固']]) },
+    { title: '酸性與鹼性生活例子', caption: '用指示劑可以分辨，但不能亂嘗試！',
+    html: steps([['酸性', '檸檬汁、醋、汽水'],['鹼性', '肥皂水、小蘇打水、洗衣粉水'],['中性', '食鹽水、糖水、純水'],['安全提醒', '不可以嘗味道或直接聞，要戴手套與護目鏡']]) }]);
+  more('sci-u4', [{ title: '音量與音調差在哪', caption: '大聲≠高音！',
+    html: steps([['響度（大小聲）', '振動幅度大 → 聲音大'],['音調（高低音）', '振動越快 → 聲音越高（細短的弦）'],['傳聲介質', '固體 > 液體 > 氣體；真空不能傳聲'],['生活例子', '土電話、敲桌子聽聲音、水中說話']]) },
+    { title: '光的路徑與影子大小', caption: '影子要有光源、擋光物和屏幕。',
+    html: steps([['光直進', '光沿直線前進，不會拐彎'],['影子形成', '光被不透明物擋住'],['物體靠近光源', '影子變大；遠離光源影子變小'],['鏡子反射', '入射角 = 反射角']]) }]);
+
+  more('soc-u3b', [{ title: '人口金字塔怎麼看', caption: '少子化＝底部變窄；高齡化＝頂部變寬。',
+    html: steps([['出生率下降', '新生兒變少 → 少子化'],['平均壽命延長', '醫療進步 → 高齡化'],['家鄉需求', '長照據點、無障礙設施、樂齡學習'],['人口移動', '就業、教育機會吸引人遷入']]) }]);
+  more('soc-u4', [{ title: '原住民族命名文化', caption: '不同族群有不同命名方式。',
+    html: steps([['名字可能代表', '家族、部落、長輩名字、期待或自然景物'],['尊重文化', '不要隨意取笑名字或發音'],['飲食搭配自然', '山野菜、小米酒、竹筒飯'],['多元共融', '主動認識、尊重、欣賞不同文化']]) }]);
+  more('soc-u5', [{ title: '生命禮俗：生・長・婚・老', caption: '人生重要階段都有祝福與紀念儀式。',
+    html: flow([['👶','出生：滿月、收涎'],['🎒','成長：週歲、成年禮'],['💍','婚嫁：訂婚、結婚'],['🎂','老年：祝壽、敬老']]) +
+    steps([['國曆節日', '元旦、兒童節、教師節、國慶日'],['農曆節日', '春節、元宵、端午、中秋'],['陷阱', '清明節看節氣，國曆固定 4/4 或 4/5']]) }]);
+  more('soc-u6', [{ title: '導覽稿範例架構', caption: '開場、介紹、結尾三段式。',
+    html: steps([['開場', '大家好，我是導覽員，今天要介紹八德的……'],['介紹', '地點、歷史、特色、最推薦的理由'],['互動', '提問、請同學猜、分享照片'],['結尾', '謝謝大家，歡迎再來！']]) }]);
+
+  more('eng-u3', [{ title: '複數變化規則', caption: '名詞變複數有三種常見方法。',
+    html: steps([['一般加 s', 'book → books，cat → cats'],['s, x, ch, sh 結尾加 es', 'box → boxes，watch → watches'],['不規則', 'child → children，fish → fish'],['疑問句型', 'What are these? They\'re ___.']]) }]);
+  more('eng-u4', [{ title: '點餐情境完整對話', caption: '自己照著唸一次，最容易記住。',
+    html: steps([['A: What do you want?', '你想要什麼？'],['B: I want some juice, please.', '我想要一些果汁，麻煩了。'],['A: Here you are.', '給你。'],['B: Thank you!', '謝謝！']]) }]);
+  more('eng-rev2', [{ title: '考前自我檢查表', caption: '每項都會了才算準備好。',
+    html: steps([['會分辨單複數嗎？', 'What\'s this? / What are these?'],['會禮貌點餐嗎？', 'Yes, please. / No, thank you.'],['會聽出 v/f、z/s 嗎？', '嘴型與喉嚨震動不同'],['會拼單字嗎？', 'zebra, zero, van, five']]) }]);
 
   // 產生卡片 HTML（含重播鈕）
   root.G4_VISUALS = V;

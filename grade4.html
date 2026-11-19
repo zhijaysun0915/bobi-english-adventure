@@ -2,9 +2,11 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="version" content="2.6.0" />
-  <title>茄苳國小 四上第二次評量總複習大冒險 v2.6.0｜國語・數學・自然・社會・英語</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="version" content="2.6.1" />
+  <title>茄苳國小 四上第二次評量總複習大冒險 v2.6.1｜國語・數學・自然・社會・英語</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Noto+Sans+TC:wght@500;700;900&display=swap" rel="stylesheet" />
@@ -746,6 +748,22 @@
       font-size: 0.82rem;
       font-weight: 700;
     }
+
+    /* ===== iPad／平板優化（v2.6.1）===== */
+    * { -webkit-tap-highlight-color: transparent; }
+    button, a, .stat-chip { touch-action: manipulation; }
+    body { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); padding-bottom: env(safe-area-inset-bottom); -webkit-text-size-adjust: 100%; }
+    .font-ctrl { display:inline-flex; gap:4px; align-items:center; }
+    .font-ctrl button { border:2px solid #cbd5e1; background:#fff; border-radius:10px; font-weight:900; min-width:44px; min-height:40px; font-size:1rem; cursor:pointer; }
+    @media (min-width: 700px) {
+      .container { max-width: 1180px; }
+      .concept-card { max-width: 980px; margin-left:auto; margin-right:auto; padding: 26px; }
+      .concept-card h3 { font-size: 1.5rem; }
+      .concept-body { font-size: 1.2rem; line-height: 1.85; }
+      .concept-tip-box { font-size: 1.1rem; line-height: 1.7; padding: 14px 18px; }
+      .stat-chip, .btn-3d, .u-btn, .scope-toggle-btn { min-height: 46px; font-size: 1.05rem; }
+      #concepts-stage .g4v-box { max-width: 980px; margin-left:auto; margin-right:auto; }
+    }
   </style>
 </head>
 <body>
@@ -755,8 +773,8 @@
         <span>🏫</span>
         <span>桃園八德・茄苳國小 四上</span>
       </div>
-      <span class="ver-badge" id="g4-version-badge">v2.6.0 框架版</span>
-      <a class="back-link-btn" href="index.html?v=2.6.0" title="返回波波熱血英語 1,080 關">🦉 英語 1,080 關主站</a>
+      <span class="ver-badge" id="g4-version-badge">v2.6.1 框架版</span>
+      <a class="back-link-btn" href="index.html?v=2.6.1" title="返回波波熱血英語 1,080 關">🦉 英語 1,080 關主站</a>
     </div>
     <div class="nav-stats">
       <div class="stat-chip">🔥 連對 <span id="stat-streak">0</span></div>
@@ -768,6 +786,7 @@
       <button class="stat-chip tool-btn" onclick="g4App.openExpandModal()" title="匯入或預覽後續評量題庫格式">
         📥 評量擴充
       </button>
+      <span class="font-ctrl" title="調整圖文大小"><button onclick="G4_setScale(-0.1)" aria-label="縮小文字">A−</button><button onclick="G4_setScale(0.1)" aria-label="放大文字">A＋</button></span>
       <button class="stat-chip" onclick="g4App.toggleSound()" id="sound-btn" title="音效開關">🔊</button>
     </div>
   </header>
@@ -898,7 +917,7 @@
   </main>
 
   <footer class="footer-note">
-    🏫 桃園市八德區茄苳國小 四年級上學期（115 學年度）第二次定期評量 總複習架構｜版本 <span id="footer-ver">v2.6.0</span>｜後續提供校內評量後可持續更新題庫
+    🏫 桃園市八德區茄苳國小 四年級上學期（115 學年度）第二次定期評量 總複習架構｜版本 <span id="footer-ver">v2.6.1</span>｜後續提供校內評量後可持續更新題庫
   </footer>
 
   <!-- 評量擴充 & 自訂題庫 Modal -->
@@ -921,8 +940,17 @@
     </div>
   </div>
 
-  <script src="curriculum_g4_jdes.js?v=2.6.0"></script>
-  <script src="g4_visuals.js?v=2.6.0"></script>
+  <script src="curriculum_g4_jdes.js?v=2.6.1"></script>
+  <script src="g4_visuals.js?v=2.6.1"></script>
+  <script>
+    (function () {
+      var k = 'g4_text_scale', sc = parseFloat(localStorage.getItem(k));
+      if (!sc) sc = (window.innerWidth >= 700) ? 1.15 : 1;
+      function apply() { document.documentElement.style.setProperty('--g4-scale', sc); }
+      window.G4_setScale = function (d) { sc = Math.min(1.6, Math.max(0.9, Math.round((sc + d) * 100) / 100)); localStorage.setItem(k, sc); apply(); };
+      apply();
+    })();
+  </script>
   <script>
     /* Web Audio API 輕量音效 */
     const g4Audio = {
@@ -987,7 +1015,7 @@
     class JdesGrade4App {
       constructor() {
         this.saveKey = 'jdes_g4_exam2_save_v1';
-        this.baseData = window.JDES_G4_DATA || { meta: { version: '2.6.0' }, subjects: [] };
+        this.baseData = window.JDES_G4_DATA || { meta: { version: '2.6.1' }, subjects: [] };
         this.activeSubjectFilter = 'all';
         this.difficulty = 'normal';
         this.gems = 0;
