@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="version" content="2.5.0" />
-  <title>茄苳國小 四上第二次評量總複習大冒險 v2.5.0｜國語・數學・自然・社會・英語</title>
+  <meta name="version" content="2.6.0" />
+  <title>茄苳國小 四上第二次評量總複習大冒險 v2.6.0｜國語・數學・自然・社會・英語</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Noto+Sans+TC:wght@500;700;900&display=swap" rel="stylesheet" />
@@ -755,8 +755,8 @@
         <span>🏫</span>
         <span>桃園八德・茄苳國小 四上</span>
       </div>
-      <span class="ver-badge" id="g4-version-badge">v2.5.0 框架版</span>
-      <a class="back-link-btn" href="index.html?v=2.5.0" title="返回波波熱血英語 1,080 關">🦉 英語 1,080 關主站</a>
+      <span class="ver-badge" id="g4-version-badge">v2.6.0 框架版</span>
+      <a class="back-link-btn" href="index.html?v=2.6.0" title="返回波波熱血英語 1,080 關">🦉 英語 1,080 關主站</a>
     </div>
     <div class="nav-stats">
       <div class="stat-chip">🔥 連對 <span id="stat-streak">0</span></div>
@@ -898,7 +898,7 @@
   </main>
 
   <footer class="footer-note">
-    🏫 桃園市八德區茄苳國小 四年級上學期（115 學年度）第二次定期評量 總複習架構｜版本 <span id="footer-ver">v2.5.0</span>｜後續提供校內評量後可持續更新題庫
+    🏫 桃園市八德區茄苳國小 四年級上學期（115 學年度）第二次定期評量 總複習架構｜版本 <span id="footer-ver">v2.6.0</span>｜後續提供校內評量後可持續更新題庫
   </footer>
 
   <!-- 評量擴充 & 自訂題庫 Modal -->
@@ -921,7 +921,8 @@
     </div>
   </div>
 
-  <script src="curriculum_g4_jdes.js?v=2.5.0"></script>
+  <script src="curriculum_g4_jdes.js?v=2.6.0"></script>
+  <script src="g4_visuals.js?v=2.6.0"></script>
   <script>
     /* Web Audio API 輕量音效 */
     const g4Audio = {
@@ -986,7 +987,7 @@
     class JdesGrade4App {
       constructor() {
         this.saveKey = 'jdes_g4_exam2_save_v1';
-        this.baseData = window.JDES_G4_DATA || { meta: { version: '2.5.0' }, subjects: [] };
+        this.baseData = window.JDES_G4_DATA || { meta: { version: '2.6.0' }, subjects: [] };
         this.activeSubjectFilter = 'all';
         this.difficulty = 'normal';
         this.gems = 0;
@@ -1223,7 +1224,9 @@
           `;
         }).join('');
 
+        const visualsHtml = (window.G4_renderVisuals ? window.G4_renderVisuals(unitId) : '');
         document.getElementById('concepts-stage').innerHTML = `
+          ${visualsHtml}
           ${cardsHtml}
           <div style="display:flex; gap:10px; justify-content:flex-end; margin-top:16px; flex-wrap:wrap;">
             <button class="btn-3d btn-blue" onclick="g4App.startUnitQuiz('${subId}', '${unitId}')">📝 立刻測驗本單元 (${info.questions.length} 題) →</button>

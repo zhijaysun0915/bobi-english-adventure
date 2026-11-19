@@ -19,7 +19,7 @@
   const JDES_G4_DATA = {
     meta: {
       appTitle: '茄苳國小 四上第二次評量 總複習大冒險',
-      version: '2.5.0',
+      version: '2.6.0',
       school: '桃園市八德區茄苳國民小學',
       district: '桃園市八德區',
       grade: '四年級上學期（四上）',
